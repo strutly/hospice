@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "toptips":"/components/topTips/index"
+    "toptips":"/components/topTips/index",
+    "tab":"/components/edition/index"
   }
 }

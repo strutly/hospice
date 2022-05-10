@@ -15,6 +15,25 @@ App({
   },
   globalData: {
     auth: false,
-    login: false
+    login: false,
+    systemFontSize:"14px",
+    change:false
+  },
+  watch(method) {
+    var obj = this.globalData;
+    Object.defineProperty(obj, 'systemFontSize', {
+      configurable: true,
+      enumerable: true,
+      set: function (value) {
+        this._name = value;
+        method(value);
+      },
+      get: function () {
+        return this._name;
+      }
+    })
+    if (obj.change) {
+      method(obj.systemFontSize);
+    }
   }
 })

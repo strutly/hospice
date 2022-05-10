@@ -4,26 +4,26 @@
   <view class="padding-xl bg-gradual-orange margin radius-xl">
     <view class="padding-rl-xl text-center text-xxl">我心永在</view>
   </view>
-  <view class="grid col-2 grid-square padding" bindtap="develop">
-    <view class="text-center">
+  <view class="grid col-2 padding" bindtap="develop">
+    <view class="text-center padding-sm">
       <view class="bg-gradual-red padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-1.png"></image>
       </view>
       <view class="margin-top">寄语</view>
     </view>
-    <view class="text-center">
+    <view class="text-center padding-sm">
       <view class="bg-gradual-blue padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-2.png"></image>
       </view>
       <view class="margin-top">点歌</view>
     </view>
-    <view class="text-center">
+    <view class="text-center padding-sm">
       <view class="bg-gradual-green padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-3.png"></image>
       </view>
       <view class="margin-top">送花</view>
     </view>
-    <view class="text-center">
+    <view class="text-center padding-sm">
       <view class="bg-gradual-pink padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-4.png"></image>
       </view>

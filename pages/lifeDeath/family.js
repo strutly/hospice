@@ -43,6 +43,13 @@ Page({
       systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
     })
   },
+  onReady(){
+    getApp().watch(function (value) {      
+      that.setData({
+        systemFontSize:value
+      })      
+    });
+  },
   develop(){
     that.setData({
       show:true,

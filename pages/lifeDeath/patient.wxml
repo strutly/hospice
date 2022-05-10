@@ -1,6 +1,8 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <videoPlay id="video"></videoPlay>
+<tab systemFontSize="{{systemFontSize}}"></tab>
 <navBar title='生死两相安--患者' iconTheme="white" color="#fff" back="true">
+  
   <view class="cu-bar bg-white search">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
@@ -31,9 +33,8 @@
     </view>
   </view>
   <view class="flex text-center align-center">
-    <navigator url="/pages/article/detail?id=25" class="bg-orange flex-sub margin-lr-sm padding radius-xl">科学认识疼痛</navigator>
-    <navigator url="/pages/article/detail?id=27" class="bg-orange flex-sub margin-lr-sm padding radius-xl">非药物止疼</navigator>
-    <navigator url="/pages/article/detail?id=26" class="bg-orange flex-sub margin-lr-sm padding radius-xl">药物止疼</navigator>
+    <navigator url="/pages/article/detail?id=48" class="bg-orange flex-sub margin-lr-sm padding radius-xl">科学认识疼痛</navigator>
+    <navigator url="/pages/article/text?id=26&title=缓解疼痛方法" class="bg-orange flex-sub margin-lr-sm padding radius-xl">缓解疼痛方法</navigator>
   </view>
   <view class="cu-list menu">
     <view class="cu-item">

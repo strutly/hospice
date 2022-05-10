@@ -7,6 +7,13 @@ Page({
   onLoad(options) {
     that = this;
   },
+  onReady(){
+    getApp().watch(function (value) {      
+      that.setData({
+        systemFontSize:value
+      })      
+    });
+  },
   onShow() {
     that.setData({
       systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
@@ -19,5 +26,14 @@ Page({
       type:"error",
       msg:"该功能开发中~"
     })
+  },
+  change(){
+    console.log(1)
+    let systemFontSize = wx.getStorageSync('systemFontSize')||"14px";
+    systemFontSize = systemFontSize=="14px"?'22px':'14px'
+    that.setData({
+      systemFontSize:systemFontSize
+    })
+    wx.setStorageSync('systemFontSize', systemFontSize);
   }
 })
