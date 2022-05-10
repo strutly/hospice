@@ -13,7 +13,8 @@
     "pages/index/identity",
     "pages/life/living",
     "pages/article/video",
-    "pages/share/together"
+    "pages/share/together",
+    "pages/help/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -103,17 +103,15 @@
   </view>
 
   <view class="flex margin">
-    <view bindtap="develop" class="flex-sub bg-purple light padding margin-right radius-xl">
+    <navigator url="/pages/help/index" bindtap="develop" class="flex-sub bg-purple light padding margin-right radius-xl">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">学会求助</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-7.png"></image>
       </view>
       <view class="text-grey text-sm">
         收集点点滴滴,满满的回忆及寄托,感谢此生,有你相伴.
-
       </view>
-
-    </view>
+    </navigator>
     <navigator url="/pages/article/detail?id=27"  class="flex-sub bg-purple light padding margin-left radius-xl">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">自我放松</view>

@@ -1,8 +1,14 @@
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
+    firework:{
+      type:Boolean,
+      value:false,
+      observer: '_fireworkChange'
+    },
+    showImg:{
+      type:Boolean,
+      value:false
+    },
     marqueeDistance: {        //初始滚动距离
       type: [String, Number],
       value: 0        
@@ -28,18 +34,30 @@ Component({
       value: 1
     }
   },
- 
-  /**
-   * 组件的初始数据
-   */
   data: {
-    
+    showImg:true
   },
- 
-  /**
-   * 组件的方法列表
-   */
   methods: {
- 
+    _fireworkChange(newVal){
+      if (newVal) {
+        setTimeout(() => {
+          this.setData({
+            firework: false
+          }, () => {
+            this.triggerEvent('hide', {}, {});
+          });
+        }, 2000);
+      }
+      this.setData({
+        firework: newVal
+      });
+    },
+    showImg(e){
+      console.log(e)
+      this.setData({
+        showImg:!this.data.showImg,
+        pic:e.currentTarget.dataset.pic
+      })
+    }
   }
 })

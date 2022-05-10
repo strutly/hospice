@@ -8,9 +8,9 @@
   </view>
 
   <view class="share-box flex">
-    <view class="flex-sub bg-gradual-orange padding-tb-lg padding-lr margin radius-xl align-center">我要分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <view class="flex-sub bg-gradual-orange padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </view>
-    <view class="flex-sub bg-gradual-pink padding-tb-lg padding-lr margin radius-xl align-center">我的收藏<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <view class="flex-sub bg-gradual-pink padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的收藏<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </view>
   </view>
   <view class="cu-list menu">

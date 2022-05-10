@@ -1,69 +1,93 @@
 .horse-race-lamp {
-  height: 115rpx;
-  line-height: 115rpx;
-  background: #FA443A;
-  border: 1px solid #fa3228;
+  position: relative;
+  height: 100%;
 }
- 
 .example {
   display: block;
   height: 60rpx;
-  color: #FFFFFF;
   line-height: 60rpx;
- }
- 
- .marquee-box {
+}
+
+.marquee-box {
   width: 100%;
   position: relative;
- }
- 
- .marquee-text {
+}
+.marquee-text {
   white-space: nowrap;
   position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: row;
- }
- 
-.marquee-con {
-  background-color: #FF7D74;
-  padding: 0 30rpx 0 30rpx;
-  border-top-right-radius: 10rpx;
-  border-bottom-right-radius: 10rpx;
-  margin-top: 28rpx;
-  margin-left: -10rpx;
 }
- 
+.marquee-con {
+  padding: 20rpx 30rpx;
+  background-color: #deeff3;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+}
 .user-head {
-  width: 81rpx;
-  height: 81rpx;
+  width: 60rpx;
+  height: 60rpx;
   border-radius: 50%;
   border: 1px solid #FFFFFF;
-  display: block;
+  display: inline-block;
+  margin-right: 20rpx;
 }
- 
+
 .marquee-monomer {
   display: flex;
   margin-top: 10rpx;
   margin-right: 60rpx;
 }
- 
 .marquee-monomer:last-child {
   margin-right: 0;
 }
- 
 .marquee-monomer-left {
   z-index: 99;
 }
- 
+
 .marquee-monomer-left-desc {
   font-size: 20rpx;
   color: #fa9551;
-  background: linear-gradient(135deg,  #fff4ec, #fccdae);
+  background: linear-gradient(135deg, #fff4ec, #fccdae);
   height: 28rpx;
   line-height: 28rpx;
   width: 79rpx;
   text-align: center;
   border-radius: 5rpx;
   margin: -20rpx auto 0;
+}
+.firework{
+  width:100rpx;
+  height: 100rpx;
+  position:absolute;
+}
+.left{
+  width:100rpx;
+  height: 100rpx;
+  position:absolute;
+  left:50rpx;
+  bottom:100px;
+}
+.right{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 70px;
+  right:70px;
+}
+.mask{
+  background-color: rgb(0,0,0,0.5);
+  
+  width: 100%;
+  height: 100%;
+  z-index: 1000000000;
+}
+.scan{
+  z-index:1000000001;
+  display: block;
+  width: 80%;
+  margin: auto;
+  position: fixed;  
+  bottom: calc(300rpx + constant(safe-area-inset-bottom));
+  bottom: calc(300rpx + env(safe-area-inset-bottom));
+  left:10%;
 }

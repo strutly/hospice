@@ -18,7 +18,7 @@
     </swiper-item>
   </swiper>
   <view class="flex text-center align-center">
-    <navigator url="/pages/article/text?id=28&title=生前医嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前医嘱</text>
+    <navigator url="/pages/article/text?id=28&title=生前预嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前预嘱</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </navigator>
     <navigator url="/pages/article/text?id=29&title=安宁疗护" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
