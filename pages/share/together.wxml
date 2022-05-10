@@ -1,0 +1,67 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='我心永在' iconTheme="white" color="#fff" back="true">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view class="padding-xl bg-gradual-orange margin radius-xl">
+    <view class="padding-rl-xl text-center text-xxl">我心永在</view>
+  </view>
+
+  <view class="flex text-center align-center" bindtap="develop">
+    <view class="bg-gradual-orange flex-sub margin-lr padding radius-xl">全家福定制</view>
+    <view class="bg-gradual-pink flex-sub margin-lr padding radius-xl">时光相册</view>
+  </view>
+
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 其言也善
+    </view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+      <view class="content flex-sub">
+        <view class="text-grey">
+        <text class="text-cut">正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔
+        </text>
+        </view>
+        <view class="text-gray text-sm flex justify-between">
+          十天前
+          <view class="text-gray text-sm">
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+      <view class="content flex-sub">
+        <view class="text-grey">正义天使 凯尔</view>
+        <view class="text-gray text-sm flex justify-between">
+          十天前
+          <view class="text-gray text-sm">
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+      <view class="content flex-sub">
+        <view class="text-grey">正义天使 凯尔</view>
+        <view class="text-gray text-sm flex justify-between">
+          十天前
+          <view class="text-gray text-sm">
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</navBar>

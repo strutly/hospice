@@ -1,0 +1,19 @@
+.container{  
+  width: 100%;
+  background-image: url("http://gridpic.tsing-tec.com/hospice/background.png");
+  background-size: 100%;
+  background-repeat:no-repeat;
+}
+.checkbox-sm .wx-checkbox-input {
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;  
+}
+checkbox::before {	
+  font-size: 0.8rem;
+  left:20%;	
+}
+
+
+
+

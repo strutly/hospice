@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "horse-race-lamp":"/components/horse-race-lamp/index"
+  }
+}

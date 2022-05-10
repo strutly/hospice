@@ -1,0 +1,25 @@
+.cu-list.menu>.cu-item.arrow {
+  padding-right: 60rpx;
+}
+.icon-img{
+  width:2.5rem;
+  height: 2.5rem;
+}
+.share {
+  position: relative;
+}
+.share:after {
+  content: ' ';
+  display: inline-block;
+  -webkit-transform: rotate(314deg);
+  -ms-transform: rotate(314deg);
+  transform: rotate(314deg);
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 0 2px 2px 0;
+  border-color: rgba(255, 0, 0, 0.562);
+  border-style: solid;
+  position: absolute;
+  top: 16rpx;
+  right: 30rpx;
+}

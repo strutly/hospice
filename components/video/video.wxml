@@ -1,0 +1,16 @@
+<video
+  wx:if="{{playVideo}}"
+  src="{{url}}"
+  id="myvideo"
+  style="z-index:{{zindex}}"
+  picture-in-picture-mode="{{['push', 'pop']}}"
+  autoplay="{{playVideo}}"
+  direction="{{direction}}"
+  show-casting-button="true"
+  show-fullscreen-btn="true"
+  show-screen-lock-button="true"
+  enable-auto-rotation="true"
+  enable-progress-gesture="{{false}}"
+  bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' bindfullscreenchange="screenChange"
+  binderror="videoErrorCallback">
+</video>

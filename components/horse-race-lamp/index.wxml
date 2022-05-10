@@ -1,0 +1,12 @@
+<view class="horse-race-lamp">
+  <!-- 跑马灯效果 -->
+  <view class="example">
+    <view class="marquee-box">
+      <view class="marquee-text" style="font-size: {{size}}px;left:{{marqueeDistance}}px;">
+        <view class="marquee-monomer" wx:for="{{horseRaceLampList}}" wx:key="index">
+          <view class="marquee-con">{{item.text}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

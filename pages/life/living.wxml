@@ -1,0 +1,52 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='万物生灵皆平等' iconTheme="white" color="#fff" back="true">
+  <view class="cu-bar">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 书籍推荐
+    </view>
+  </view>
+  <view class="books">
+    <view class="flex margin-sm book light bg-blue padding radius-lg align-center">
+      <image class="radius-lg" style="width:200rpx; height: 250rpx;" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="scaleToFill"></image>
+      <view class="desc margin-left" style="flex:1;">
+        <view class="title text-black text-bold text-cut text-lg">《七星灯》</view>
+        <view class="title text-grey margin-top text-sm">这本书主要讲述了小碎一家与妖蛾的恩怨演变。</view>
+      </view>
+    </view>
+
+    <view class="flex margin-sm book light bg-brown padding radius-lg align-center">
+      <image class="radius-lg" style="width:200rpx; height: 250rpx;" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="scaleToFill"></image>
+      <view class="desc margin-left" style="flex:1;">
+        <view class="title text-black text-bold text-cut text-lg">《雪狐狸》</view>
+        <view class="title text-grey margin-top text-sm">这本书主要讲述了小碎一家与妖蛾的恩怨演变。</view>
+      </view>
+    </view>
+  
+  </view>
+  <view class="cu-bar">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 影师推荐
+    </view>
+  </view>
+
+
+
+  <view class="flex padding-bottom-xl">
+    <view class="cu-card case flex flex-wrap margin-sm">
+      <view class="cu-item shadow">
+        <view class="image video-thumb">
+          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
+          <text class="cuIcon-video margin-right-xs play"></text>
+        </view>
+        <view class="cu-item">
+          <view class="content padding-sm">
+            <view>阿凡达</view>
+            <view class="text-gray text-sm margin-top-sm">
+              该片主要讲述人类到遥远的星球潘多拉开采资源。并能利用人类和纳美人的基因创造出属于自己的阿凡达，可用意念操控。受伤后以轮椅代步的前海军高官杰克，自愿接受实验并以他的阿凡达探索潘多拉星球。在结识并爱上了当地纳美族人公主涅提妮之后，杰克在一场人类与潘多拉军民的战争中陷入两难。
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</navBar>

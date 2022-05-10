@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "topTips":"/components/topTips/index"
+  }
+}

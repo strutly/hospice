@@ -1,0 +1,103 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='分享社区' iconTheme="white" color="#fff" back="true"> 
+  <view class="cu-bar bg-white search" :style="[{top:CustomBar + 'px'}]">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+    </view>
+  </view>
+
+  <view class="share-box flex">
+    <view class="flex-sub bg-gradual-orange padding-tb-lg padding-lr margin radius-xl align-center">我要分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </view>
+    <view class="flex-sub bg-gradual-pink padding-tb-lg padding-lr margin radius-xl align-center">我的收藏<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </view>
+  </view>
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-grey">分享主题</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="grid col-2">
+    <view class="padding-lr padding-tb-sm">
+      <view class="bg-gradual-red padding radius text-center shadow-blur">
+        <view class="text-lg">#美食分享#</view>
+      </view>
+    </view>
+    <view class="padding-lr padding-tb-sm">
+      <view class="bg-gradual-orange padding radius text-center shadow-blur">
+        <view class="text-lg">#服装分享#</view>
+      </view>
+    </view>
+    <view class="padding-lr padding-tb-sm">
+      <view class="bg-gradual-green padding radius text-center shadow-blur">
+        <view class="text-lg">#书籍影视分享#</view>
+      </view>
+    </view>
+    <view class="padding-lr padding-tb-sm">
+      <view class="bg-gradual-blue padding radius text-center shadow-blur">
+        <view class="text-lg">#点滴故事分享#</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="text-bold">热门帖子</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">查看全部</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex padding-bottom-xl">
+    <view class="cu-card case flex flex-wrap margin-sm justify-between response">
+      <navigator url="/pages/life/living" class="cu-item shadow">
+        <view class="image video-thumb">
+          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
+          <text class="cuIcon-video margin-right-xs play"></text>
+        </view>
+        <view class="cu-item">
+          <view class="content  padding-tb-sm">
+            <view>道谢、道歉、道别、道爱</view>
+            <view class="text-gray text-sm margin-top-sm flex justify-between">
+              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
+              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
+              <text class="cuIcon-video margin-right-xs flex-sub"> 1235</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    
+      <navigator url="/pages/life/living" class="cu-item shadow">
+        <view class="image video-thumb">
+          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
+          <text class="cuIcon-video margin-right-xs play"></text>
+        </view>
+        <view class="cu-item">
+          <view class="content padding-tb-sm">
+            <view>道谢、道歉、道别、道爱</view>
+            <view class="text-gray text-sm margin-top-sm flex justify-between">
+              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
+              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
+              <text class="cuIcon-video margin-right-xs flex-sub"> 1235</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+</navBar>

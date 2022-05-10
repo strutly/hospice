@@ -1,0 +1,69 @@
+.horse-race-lamp {
+  height: 115rpx;
+  line-height: 115rpx;
+  background: #FA443A;
+  border: 1px solid #fa3228;
+}
+ 
+.example {
+  display: block;
+  height: 60rpx;
+  color: #FFFFFF;
+  line-height: 60rpx;
+ }
+ 
+ .marquee-box {
+  width: 100%;
+  position: relative;
+ }
+ 
+ .marquee-text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+ }
+ 
+.marquee-con {
+  background-color: #FF7D74;
+  padding: 0 30rpx 0 30rpx;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  margin-top: 28rpx;
+  margin-left: -10rpx;
+}
+ 
+.user-head {
+  width: 81rpx;
+  height: 81rpx;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  display: block;
+}
+ 
+.marquee-monomer {
+  display: flex;
+  margin-top: 10rpx;
+  margin-right: 60rpx;
+}
+ 
+.marquee-monomer:last-child {
+  margin-right: 0;
+}
+ 
+.marquee-monomer-left {
+  z-index: 99;
+}
+ 
+.marquee-monomer-left-desc {
+  font-size: 20rpx;
+  color: #fa9551;
+  background: linear-gradient(135deg,  #fff4ec, #fccdae);
+  height: 28rpx;
+  line-height: 28rpx;
+  width: 79rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  margin: -20rpx auto 0;
+}

@@ -1,0 +1,7 @@
+.cu-list.menu>.cu-item.arrow {
+  padding-right: 60rpx;
+}
+.icon-img{
+  width:2.5rem;
+  height: 2.5rem;
+}

@@ -1,0 +1,157 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<videoPlay id="video"></videoPlay>
+<navBar title='生死两相安--家属安顿' iconTheme="white" color="#fff" back="true">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view class="cu-bar bg-white search">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+    </view>
+  </view>
+  <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
+      <image src="{{item.url}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+  <view class="flex text-center align-center">
+    <navigator url="/pages/article/text?id=28&title=生前医嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前医嘱</text>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
+    </navigator>
+    <navigator url="/pages/article/text?id=29&title=安宁疗护" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
+    </navigator>
+  </view>
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold">缓解病人痛苦</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex text-center align-center">
+    <navigator url="/pages/article/text?id=12&title=身体照护" class="bg-yellow light flex-sub margin-lr-sm padding radius align-center flex">
+      <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-1.png"></image>
+      <text class="flex-sub">身体照护</text>
+    </navigator>
+    <navigator url="/pages/article/text?id=13&title=心理照护" class="bg-yellow light flex-sub margin-lr-sm padding radius align-center flex">
+      <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-2.png"></image>
+      <text class="flex-sub">心理照护</text>
+    </navigator>
+    <navigator url="/pages/article/detail?id=28" class="bg-yellow light flex-sub margin-lr-sm padding radius align-center flex">
+      <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-3.png"></image>
+      <text class="flex-sub">紧急处理</text>
+    </navigator>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold">缓解决策困境</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="flex justify-center text-center">
+    <navigator url="/pages/article/detail?id=9" class="flex-sub" bindtap="playVideo">
+      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/family-4.png"></image>
+      <view>医疗决策前提</view>
+    </navigator>
+    <navigator url="/pages/article/text?id=16&title=告别如何说出口" class="flex-sub">
+      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/family-5.png"></image>
+      <view>告别如何说出口</view>
+    </navigator>
+    <navigator url="/pages/article/detail?id=13" class="flex-sub">
+      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/family-6.png"></image>
+      <view>参考专业建议</view>
+    </navigator>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold">处理身后事</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex justify-center text-center">
+    <navigator url="/pages/article/text?id=18&title=如何选择" class="flex-sub bg-blue light margin padding-sm radius-xl" bindtap="playVideo">
+      如何选择
+    </navigator>
+    <navigator url="/pages/article/detail?id=16" class="flex-sub bg-blue light margin padding-sm radius-xl">
+      物品准备
+    </navigator>
+    <navigator url="/pages/article/detail?id=17" class="flex-sub bg-blue light margin padding-sm radius-xl">
+      物流准备
+    </navigator>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold">自我照护</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex margin">
+    <view bindtap="develop" class="flex-sub bg-purple light padding margin-right radius-xl">
+      <view class="flex align-end">
+        <view class="flex-sub text-black text-xl">学会求助</view>
+        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-7.png"></image>
+      </view>
+      <view class="text-grey text-sm">
+        收集点点滴滴,满满的回忆及寄托,感谢此生,有你相伴.
+
+      </view>
+
+    </view>
+    <navigator url="/pages/article/detail?id=27"  class="flex-sub bg-purple light padding margin-left radius-xl">
+      <view class="flex align-end">
+        <view class="flex-sub text-black text-xl">自我放松</view>
+        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-8.png"></image>
+      </view>
+      <view class="text-grey text-sm">
+        生活一点一滴消逝,不变的是我心永在.
+      </view>
+    </navigator>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold">度过悲伤</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex margin">
+    <view bindtap="develop" class="flex-sub bg-purple light padding margin-right radius-xl">
+      <view class="flex align-end">
+        <view class="flex-sub text-black text-xl">哀伤历程</view>
+        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-9.png"></image>
+      </view>
+      <view class="text-grey text-sm">
+        收集点点滴滴,满满的回忆及寄托,感谢此生,有你相伴.
+      </view>
+    </view>
+    <view bindtap="develop" class="flex-sub bg-purple light padding margin-left radius-xl">
+      <view class="flex align-end">
+        <view class="flex-sub text-black text-xl">如何应对</view>
+        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-10.png"></image>
+      </view>
+      <view class="text-grey text-sm">
+        生活一点一滴消逝,不变的是我心永在.
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+</navBar>

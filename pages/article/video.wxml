@@ -1,0 +1,29 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<videoPlay id="video"></videoPlay>
+<navBar title='四道人生' iconTheme="white" color="#fff" back="true">
+  <view class="padding-xl bg-gradual-orange margin radius-xl">
+    <view class="padding-rl-xl text-center text-xxl">四道人生</view>
+    <view class="text-center text-xs">视频来源:腾讯视频</view>
+  </view>
+
+  <view class="bg-white">
+    <view class="grid margin-bottom col-{{systemFontSize=='14px'?2:1}}">
+      <view bindtap="playVideo" data-url="{{item.videos}}" class="padding" wx:for="{{articles}}" wx:key="index">
+        <view class="image video-thumb">
+          <image src="{{domain+item.videosPics}}"></image>
+          <text class="cuIcon-video margin-right-xs play"></text>
+        </view>
+        <view class="cu-item">
+          <view class="content padding-sm">
+            <view>{{item.name}}</view>
+            <view class="text-gray text-sm margin-top-sm">
+              <text class="cuIcon-time margin-right-xs"></text> {{item.reviewCount}}
+              <text class="fr"><text class="cuIcon-video margin-right-xs"></text> {{item.hits}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</navBar>

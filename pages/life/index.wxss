@@ -1,0 +1,19 @@
+/* pages/life/index.wxss */
+.video-thumb{
+  display: flex;
+}
+.cu-item{
+  min-width: 8.5rem;
+  flex:1;
+}
+.cu-card>.cu-item{
+  margin:10rpx;
+}
+.play{
+  position: absolute;  
+  color:#fff;  
+  font-size: 80rpx;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%,-50%,0);
+}

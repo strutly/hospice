@@ -1,0 +1,35 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<videoPlay id="video"></videoPlay>
+<wxs src="/utils/Tools.wxs" module="tools" />
+<navBar title='{{article.name}}' iconTheme="white" color="#fff" back="true" home="true">
+  <view class="flex text-orange text-center margin-top margin-lr text-lg align-center">
+    <view class="flex-twice align-center text-left">
+      <text class="cuIcon-time  margin-right-xs"></text>{{tools.dateFormat(article.createTime,'yyyy-MM-dd')}}
+    </view>
+    <view class="flex-sub">
+      <text class="cuIcon-attention margin-right-xs"></text>{{article.hits}}
+    </view>
+    <button class="cu-btn text-right bg-white padding-lr-xs" open-type="share">
+      <text class="cuIcon-share text-orange"></text>
+    </button>
+  </view>
+  <view class="text-gray text-df text-right margin-right">
+    文章来源:{{article.origin}}
+  </view>
+  <view class="flex" wx:if="{{article.videos}}" wx:key="index">
+    <view bindtap="playVideo" data-url="{{item}}" class="video-box flex-sub margin" wx:for="{{videos}}">
+      <image src="{{domain}}/{{videosPics[index]}}" style="width:100%;height: {{400/videos.length}}rpx;" class="image"></image>
+      <text class="cuIcon-video margin-right-xs play"></text>
+    </view>
+  </view>
+  <view class="flex padding-sm solid margin radius-xl" wx:if="{{article.audios}}">
+    <text class="cuIcon-sound text-gray text-xxl"></text>
+    <view class="flex-sub"></view>
+    <text class="cuIcon-{{play?'stop':'playfill'}} text-xxl" bindtap="{{play?'stop':'play'}}"></text>
+  </view>
+  <view class="padding">
+    <rich-text nodes="{{htmlSnip}}"></rich-text>
+  </view>
+
+
+</navBar>

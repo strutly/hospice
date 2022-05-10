@@ -1,0 +1,37 @@
+.container{
+  position: relative;  
+  width: calc(100% - 100rpx);
+  background-position-y: 100rpx;
+  background-position-x: 20%;
+  background-image: url("http://gridpic.tsing-tec.com/hospice/choose.png?v=1");
+  background-size: 100%;
+  background-repeat:no-repeat;  
+  margin: 20rpx 50rpx 0;
+  box-sizing: border-box;  
+}
+.patient{
+  border-width: 6rpx;  
+  position: absolute;
+  top: -5rpx;
+  left: 0rpx;
+  z-index:100000;
+  opacity: 1;
+  background-color: #fff;
+}
+.family{
+  position: absolute;
+  top: 785rpx;
+  left: 0rpx;
+}
+.professional{
+  position: absolute;
+  top: 830rpx;
+  right: 10rpx;
+}
+.stranger{
+  position: absolute;
+  top:950rpx;
+  width: 100%;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}

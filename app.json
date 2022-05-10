@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/share/forever",
+    "pages/share/index",
+    "pages/article/detail",
+    "pages/article/textImage",
+    "pages/article/text",
+    "pages/lifeDeath/family",
+    "pages/lifeDeath/patient",
+    "pages/life/index",
+    "pages/index/mode",
+    "pages/index/identity",
+    "pages/life/living",
+    "pages/article/video",
+    "pages/share/together"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "发表Record"
+  },
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar"
+  },
+  "disableScroll": true,
+  "sitemapLocation": "sitemap.json"
+}
