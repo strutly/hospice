@@ -5,3 +5,29 @@
   padding-bottom: calc(50rpx + constant(safe-area-inset-bottom));
   padding-bottom: calc(50rpx + env(safe-area-inset-bottom));
 }
+/* pages/life/index.wxss */
+.video-thumb{
+  display: flex;
+  width: 100%;
+}
+.cu-item{
+  
+  flex:1;
+}
+.cu-card>.cu-item{
+  margin:10rpx;
+}
+.play{
+  position: absolute;  
+  color:#fff;  
+  font-size: 80rpx;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%,-50%,0);
+}
+.main-title{
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-size: 2rem;
+  letter-spacing: 6px;
+}

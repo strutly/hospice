@@ -1,9 +1,11 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='我心永在' iconTheme="white" color="#fff" back="true">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
-  <view class="padding-xl bg-gradual-orange margin radius-xl">
-    <view class="padding-rl-xl text-center text-xxl">我心永在</view>
+  
+  <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
+    <view class="padding-tb text-center text-xxl main-title">我心永在</view>
   </view>
+  
   <view class="grid col-2 padding" bindtap="develop">
     <view class="text-center padding-sm">
       <view class="bg-gradual-red padding-xl">

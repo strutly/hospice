@@ -15,7 +15,7 @@
   </view>
   <view class="flex" wx:if="{{article.videos}}" wx:key="index">
     <view bindtap="playVideo" data-url="{{item}}" class="video-box flex-sub margin" wx:for="{{videos}}">
-      <image src="{{domain}}/{{videosPics[index]}}" style="width:100%;height: {{400/videos.length}}rpx;" class="image"></image>
+      <image src="{{videosPics[index]}}" style="width:100%;height: {{400/videos.length}}rpx;" class="image"></image>
       <text class="cuIcon-video margin-right-xs play"></text>
     </view>
   </view>
@@ -28,7 +28,7 @@
     <rich-text nodes="{{htmlSnip}}"></rich-text>
   </view>
   
-  <view class="text-gray text-df text-center margin-right">
+  <view class="text-gray text-df text-center">
     文章来源:{{article.origin}}
   </view>
 

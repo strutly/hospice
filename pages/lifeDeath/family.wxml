@@ -16,7 +16,7 @@
 
   <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
     <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
-      <image src="{{domain+item.pic}}" mode="aspectFill"></image>
+      <image src="{{item.pic}}" mode="aspectFill"></image>
     </swiper-item>
   </swiper>
 
@@ -24,7 +24,7 @@
     <navigator url="/pages/article/text?id=28&title=生前预嘱" class="bg-blue flex-sub padding radius-xl align-center flex margin-rignt"><text class="flex-sub">生前预嘱</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </navigator>
-    <navigator url="/pages/article/text?id=29&title=安宁疗护" class="bg-blue flex-sub padding radius-xl align-center flex margin-left"><text class="flex-sub">安宁疗护</text>
+    <navigator url="/pages/article/textImage" class="bg-blue flex-sub padding radius-xl align-center flex margin-left"><text class="flex-sub">安宁疗护</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </navigator>
   </view>
@@ -132,7 +132,7 @@
   </view>
 
   <view class="flex margin-lr">
-    <view bindtap="develop" class="flex-sub padding margin-right radius-xl" style="background-color: #fff7cf;">
+    <navigator url="/pages/article/text?id=22&title=哀伤历程" class="flex-sub padding margin-right radius-xl" style="background-color: #fff7cf;">
       <view class="flex align-center">
         <view class="flex-sub text-black text-xl">哀伤历程</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-9.png"></image>
@@ -140,8 +140,8 @@
       <view class="text-gray text-sm">
         收集点点滴滴,满满的回忆及寄托,感谢此生,有你相伴.
       </view>
-    </view>
-    <view bindtap="develop" class="flex-sub padding radius-xl" style="background-color: #fff7cf;">
+    </navigator>
+    <navigator url="/pages/article/text?id=23&title=如何应对" class="flex-sub padding radius-xl" style="background-color: #fff7cf;">
       <view class="flex align-center">
         <view class="flex-sub text-black text-xl">如何应对</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-10.png"></image>
@@ -149,7 +149,7 @@
       <view class="text-gray text-sm">
         生活一点一滴消逝,不变的是我心永在.
       </view>
-    </view>
+    </navigator>
   </view>
 
 

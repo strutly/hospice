@@ -1,16 +1,17 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <videoPlay id="video"></videoPlay>
-<navBar title='四道人生' iconTheme="white" color="#fff" back="true">
-  <view class="padding-xl bg-gradual-orange margin radius-xl">
-    <view class="padding-rl-xl text-center text-xxl">四道人生</view>
+<navBar title='{{title}}' iconTheme="white" color="#fff" back="true"> 
+
+  <view class="padding-xl margin radius-xl text-white" style="background-color: #e99149;">
+    <view class="padding-tb text-center text-xxl main-title">{{title}}</view>
     <view class="text-center text-xs">视频来源:腾讯视频</view>
   </view>
 
   <view class="bg-white">
     <view class="grid margin-bottom col-{{systemFontSize=='14px'?2:1}}">
-      <view bindtap="playVideo" data-url="{{item.videos}}" class="padding" wx:for="{{articles}}" wx:key="index">
+      <view bindtap="playVideo" data-url="{{item.videos}}" class="padding-lr-sm padding-tb" wx:for="{{articles}}" wx:key="index">
         <view class="image video-thumb">
-          <image src="{{domain+item.videosPics}}"></image>
+          <image src="{{item.videosPics}}" style="height: {{systemFontSize=='14px'?'200rpx':'320rpx'}};"></image>
           <text class="cuIcon-video margin-right-xs play"></text>
         </view>
         <view class="cu-item">

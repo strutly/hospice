@@ -1,84 +1,24 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='遗产公正' iconTheme="white" color="#fff" back="true">
-  <view class="padding-xl bg-gradual-orange margin radius-xl">
-    <view class="padding-rl-xl text-center text-xxl">遗产公正</view>
+<videoPlay id="video"></videoPlay>
+<navBar title='安宁疗护' iconTheme="white" color="#fff" back="true">
+
+  
+  <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
+    <view class="padding-tb text-center text-xxl main-title">安宁疗护</view>
   </view>
 
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-      <text class="cuIcon-titles text-orange"></text> 安宁概述
-    </view>
-  </view>
-
-  <view class="flex padding-bottom-xl">
-    <view class="cu-card case flex flex-wrap margin-sm">
-      <view class="cu-item shadow">
-        <view class="image video-thumb">
-          <image src="{{article.cover}}" mode="widthFix"></image>
-          <text class="cuIcon-video margin-right-xs play"></text>
-        </view>
-        <view class="cu-item">
-          <view class="content padding-sm">
-            <view>{{article.name}}</view>
-            <view class="text-gray text-sm margin-top-sm">
-              {{article.des}}
-            </view>
-          </view>
-        </view>
-      </view>
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">安宁概述</text>
     </view>
   </view>
 
 
-
-
-
-
-
-  <view class="cu-list menu-avatar">
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">
-        <text class="text-cut">正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔
-        </text>
-        </view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
+  <view class="cu-card case flex-wrap margin-sm" bindtap="playVideo" data-url="{{article.videos}}">
+    <view class="cu-item shadow">
+      <view class="image video-thumb">
+        <image src="{{article.videosPics}}" mode="widthFix"></image>
+        <text class="cuIcon-video margin-right-xs play"></text>
       </view>
     </view>
   </view>
@@ -86,55 +26,69 @@
 
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-      <text class="cuIcon-titles text-orange"></text> 家属分享
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">病房故事</text>
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+    <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{bingfang}}">
+      <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
         <view class="text-grey">
-        <text class="text-cut">正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔
-        </text>
+          <text class="text-cut">{{item.name}}
+          </text>
         </view>
         <view class="text-gray text-sm flex justify-between">
-          十天前
+          {{item.createTime}}
           <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.hits}}
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.enjoyCount}}
+            <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.reviewCount}}
           </view>
         </view>
       </view>
+    </navigator>
+
+
+  </view>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">团队故事</text>
     </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{tuandui}}">
+      <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
+        <view class="text-grey">
+          <text class="text-cut">{{item.name}}
+          </text>
+        </view>
         <view class="text-gray text-sm flex justify-between">
-          十天前
+          {{item.createTime}}
           <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.hits}}
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.enjoyCount}}
+            <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.reviewCount}}
           </view>
         </view>
       </view>
+    </navigator>
+  </view>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">安宁资源</text>
     </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
+  </view>
+
+  <view class="cu-card case flex-wrap margin-sm" bindtap="previewImage" data-url="{{ziyuan.pic}}">
+    <view class="cu-item shadow">
+      <view class="image video-thumb">
+        <image src="{{ziyuan.pic}}" mode="widthFix"></image>
       </view>
     </view>
   </view>
+
 
 </navBar>
