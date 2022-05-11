@@ -23,3 +23,6 @@
   top: 16rpx;
   right: 30rpx;
 }
+.bg-blue{
+  background-color: #7ccef3;
+}

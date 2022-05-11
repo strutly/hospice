@@ -13,9 +13,6 @@
       <text class="cuIcon-share text-orange"></text>
     </button>
   </view>
-  <view class="text-gray text-df text-right margin-right">
-    文章来源:{{article.origin}}
-  </view>
   <view class="flex" wx:if="{{article.videos}}" wx:key="index">
     <view bindtap="playVideo" data-url="{{item}}" class="video-box flex-sub margin" wx:for="{{videos}}">
       <image src="{{domain}}/{{videosPics[index]}}" style="width:100%;height: {{400/videos.length}}rpx;" class="image"></image>
@@ -30,6 +27,9 @@
   <view class="padding">
     <rich-text nodes="{{htmlSnip}}"></rich-text>
   </view>
-
+  
+  <view class="text-gray text-df text-center margin-right">
+    文章来源:{{article.origin}}
+  </view>
 
 </navBar>

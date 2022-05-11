@@ -17,6 +17,9 @@ Page({
       id:options.id
     })
     var jsonDa = JSON.stringify(res.data.content).replace(/<img/gi, "<img class='richImg'");
+    var arr = jsonDa.split(/([\d\.\-]+?)px/);
+    arr.forEach(function(v,k){if(k%2==1){arr[k]=parseInt(v)/14+"rem"}});
+    jsonDa=arr.join("");
     var newResData = JSON.parse(jsonDa);
 
     that.setData({

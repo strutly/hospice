@@ -12,7 +12,7 @@
 .patient{
   border-width: 6rpx;  
   position: absolute;
-  top: -5rpx;
+  top: 30rpx;
   left: 0rpx;
   z-index:100000;
   opacity: 1;
@@ -30,7 +30,7 @@
 }
 .stranger{
   position: absolute;
-  top:950rpx;
+  top:1000rpx;
   width: 100%;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);

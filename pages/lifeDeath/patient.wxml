@@ -9,82 +9,83 @@
       <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
     </view>
     <view class="action">
-      <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+      <button class="cu-btn bg-orange shadow-blur round">搜索</button>
     </view>
   </view>
+
   <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
     <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
-      <image src="{{item.url}}" mode="aspectFill"></image>
+      <image src="{{domain+item.pic}}" mode="aspectFill"></image>
     </swiper-item>
   </swiper>
-  <view class="flex text-center align-center">
+  <view class="flex text-center align-center text-lg">
     <navigator url="/pages/article/text?id=28&title=生前预嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前预嘱</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </navigator>
-    <navigator url="/pages/article/text?id=29&title=安宁疗护" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
+    <navigator url="/pages/article/text?ids=34,35&title=安宁疗护" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </navigator>
   </view>
-  <view class="cu-list menu">
+  <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold">减轻痛苦</text>
+        <text class="text-bold text-xl">减轻痛苦</text>
       </view>
     </view>
   </view>
-  <view class="flex text-center align-center">
-    <navigator url="/pages/article/detail?id=48" class="bg-orange flex-sub margin-lr-sm padding radius-xl">科学认识疼痛</navigator>
-    <navigator url="/pages/article/text?id=26&title=缓解疼痛方法" class="bg-orange flex-sub margin-lr-sm padding radius-xl">缓解疼痛方法</navigator>
+  <view class="flex text-center align-center text-lg text-white">
+    <navigator url="/pages/article/detail?id=48" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">科学认识疼痛</navigator>
+    <navigator url="/pages/article/text?id=26&title=缓解疼痛方法" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">缓解疼痛方法</navigator>
   </view>
-  <view class="cu-list menu">
+  <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold">告别准备</text>
+        <text class="text-bold  text-xl">告别准备</text>
       </view>
     </view>
   </view>
 
-  <view class="flex justify-center text-center">
+  <view class="flex justify-center text-center text-lg">
     <navigator url="/pages/article/detail?id=29" class="flex-sub">
-      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/patient-3.png"></image>
+      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-3.png"></image>
       <view>重要嘱托</view>
     </navigator>
     <navigator url="/pages/article/detail?id=34" class="flex-sub">
-      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
+      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
       <view>遗体器官捐献</view>
     </navigator>
     <navigator url="/pages/article/detail?id=36" class="flex-sub">
-      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
+      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
       <view>遗愿清单</view>
     </navigator>
     <navigator url="/pages/article/video?id=30&title=四道人生" class="flex-sub">
-      <image style="width:100rpx;height: 100rpx;" src="http://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
+      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
       <view>四道人生</view>
     </navigator>
   </view>
 
-  <view class="cu-list menu">
+  <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold">维持品质生活</text>
+        <text class="text-bold text-xl">维持品质生活</text>
       </view>
     </view>
   </view>
-  <navigator url="/pages/share/index" class="bg-red light flex align-center margin radius-xl">
+  <navigator url="/pages/share/index" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
     <image class="margin" style="width:60rpx;height:60rpx" src="http://gridpic.tsing-tec.com/hospice/patient-7.png"></image>
     <view class="flex-sub text-black share">品质生活分享</view>
   </navigator>
 
-  <view class="cu-list menu">
+  <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold">陪伴与寄托</text>
+        <text class="text-bold text-xl">陪伴与寄托</text>
       </view>
     </view>
   </view>
 
-  <view class="flex margin">
-    <navigator url="/pages/share/together" class="flex-sub bg-purple light padding margin-right radius-xl">
+  <view class="flex margin-lr">
+    <navigator url="/pages/share/together" class="flex-sub padding margin-right radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">一生相伴</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-8.png"></image>
@@ -95,7 +96,7 @@
       </view>
 
     </navigator>
-    <navigator url="/pages/share/forever" class="flex-sub bg-purple light padding margin-left radius-xl">
+    <navigator url="/pages/share/forever" class="flex-sub padding margin-left radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">我心永在</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-9.png"></image>

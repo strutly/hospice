@@ -1,49 +1,27 @@
+import Api from "../../config/api";
 var that;
 Page({
   data: {
+    domain:Api.domain,
     cardCur: 0,
-    swiperList: [{
-      id: 0,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
-    }, {
-      id: 1,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
-    }, {
-      id: 2,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
-    }, {
-      id: 3,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
-    }, {
-      id: 4,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
-    }, {
-      id: 5,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
-    }, {
-      id: 6,
-      type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
-    }],
+    swiperList: [],
     dotStyle: false,
     towerStart: 0,
     direction: ''
   },
-  onLoad(options) {
+  async onLoad(options) {
     that = this;
-  },  
+    let res = await Api.getArticle({
+      catalogId:32
+    });
+    that.setData({
+      swiperList:res.data.content
+    })
+  },   
   onShow() {    
     that.setData({
       systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
-    })
-  },
-  onReady(){
+    });
     getApp().watch(function (value) {      
       that.setData({
         systemFontSize:value

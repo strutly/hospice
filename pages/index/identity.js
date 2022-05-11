@@ -7,17 +7,15 @@ Page({
   onLoad(options) {
     that = this;
   },
-  onReady(){
-    getApp().watch(function (value) {      
+  onShow() {
+    that.setData({
+      systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
+    });
+    getApp().watch(function (value) {
       that.setData({
         systemFontSize:value
       })      
     });
-  },
-  onShow() {
-    that.setData({
-      systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
-    })
   },
   showTips(){
     console.log(2)

@@ -2,6 +2,9 @@
   padding-right: 60rpx;
 }
 .icon-img{
-  width:2.5rem;
-  height: 2.5rem;
+  width:80rpx;
+  height: 80rpx;
+}
+.bg-blue{
+  background-color: #7ccef3;
 }
