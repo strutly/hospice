@@ -21,7 +21,6 @@ App({
   },
   watch(method) {
     var obj = this.globalData;
-    console.log(123)
     Object.defineProperty(obj, 'systemFontSize', {
       configurable: true,
       enumerable: true,
