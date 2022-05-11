@@ -5,7 +5,7 @@
   <horseRace horseRaceLampList="{{horseRaceLampList}}" marqueeDistance="{{marqueeDistance}}" interval="{{interval}}" orientation="{{orientation}}" size="{{size}}" marqueePace="{{marqueePace}}" firework="{{firework}}"></horseRace>
   <form bindsubmit="submit">
     <view class="cu-bar foot input padding-top-sm">
-      <input name="content" class="solid-bottom bg-gray radius-lg padding-left" maxlength="20" cursor-spacing="10" placeholder="发表弹幕"></input>
+      <input value="{{content}}" name="content" class="solid-bottom bg-gray radius-lg padding-left" maxlength="20" cursor-spacing="10" placeholder="发表弹幕"></input>
       <button class="cu-btn bg-green shadow" form-type="submit" wx:if="{{auth}}">发送</button>
       <button class="cu-btn bg-green shadow" bindtap="authModal" wx:else>发送</button>
     </view>

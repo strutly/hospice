@@ -6,7 +6,7 @@ Page({
     horseRaceLampList: [],// 跑马灯内容
     marqueePace: 1,// 跑马灯滚动速度
     marqueeDistance: 0,// 跑马灯滚动距离
-    interval: 20,// 跑马灯时间间隔
+    interval: 50,// 跑马灯时间间隔
     orientation: 'left',// 跑马灯滚定方向
     firework: false,
     size: 14,
@@ -117,8 +117,10 @@ Page({
       console.log(res);
       if (res.code == 0) {
         that.showTips("提交成功~", "success");
+        that.onLoad({});
         that.setData({
-          firework: true
+          firework: true,
+          content:""
         })
       } else {
         that.showTips(res.msg, "error");

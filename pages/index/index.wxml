@@ -1,12 +1,12 @@
-<page-meta root-font-size="14px"></page-meta>
+<page-meta root-font-size="16px"></page-meta>
 <navBar title='安宁疗护' iconTheme="white" color="#fff">
-  <view class="padding-xl text-xxl">
-    <view class="padding-top-xl text-center text-bold text-sl">我的奇妙之旅</view>
+  <view class="padding-xl text-xl">
+    <view class="padding-top-xl text-center text-bold text-xxl">我的奇妙之旅</view>
     <view class="text-right margin-right-xl">—— 起航须知</view>
-    <view class="padding-lr-xl padding-tb-sm">1、本次的浏览踪迹信息将会严格保密。请放心观赏旅途中的美景；</view>
-    <view class="padding-lr-xl padding-tb-sm">2、若您有任何心理上的担忧、焦虑等不适，可随时退出此次旅程，您无须为此担责或感到愧疚，您在调整过后亦可选择随时出发；</view>
-    <view class="padding-lr-xl padding-tb-sm">3、此次旅程攻略完备，希望给您带来优良体验，您是旅程的主人，旅途结束后，请随时告知我们您期待的更多优美的景点。</view>
-    <lable class="padding-xl text-df">
+    <view class="padding-lr-xl padding-tb">1、本次的浏览踪迹信息将会严格保密。请放心观赏旅途中的美景；</view>
+    <view class="padding-lr-xl padding-tb">2、若您有任何心理上的担忧、焦虑等不适，可随时退出此次旅程，您无须为此担责或感到愧疚，您在调整过后亦可选择随时出发；</view>
+    <view class="padding-lr-xl padding-tb">3、此次旅程攻略完备，希望给您带来优良体验，您是旅程的主人，旅途结束后，请随时告知我们您期待的更多优美的景点。</view>
+    <lable class="padding-xl text-sm">
       <checkbox class="radio checkbox-sm orange margin-right-xs"></checkbox>同意并签署《安宁疗护免责条款》
     </lable>
     <view class="padding-xl flex align-center flex-direction">

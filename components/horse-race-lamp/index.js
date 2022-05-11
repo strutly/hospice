@@ -46,7 +46,7 @@ Component({
           }, () => {
             this.triggerEvent('hide', {}, {});
           });
-        }, 2000);
+        }, 5000);
       }
       this.setData({
         firework: newVal

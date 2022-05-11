@@ -2,6 +2,7 @@
 <toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
 <tab systemFontSize="{{systemFontSize}}"></tab>
 <navBar title='选择身份' iconTheme="white" color="#fff" back="true">
+  <image class="" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/choose.png?v=1"  style="width: 100%;margin-top: 100rpx;" />
   <navigator url="/pages/lifeDeath/patient" class="cu-btn lines-orange margin-tb-sm padding-xl patient">我是患者</navigator>
   <navigator url="/pages/lifeDeath/family" class="cu-btn lines-orange margin-tb-sm padding-xl family">我是家属</navigator>
   <button url="/pages/life/index" class="cu-btn lines-orange margin-tb-sm padding-xl professional" bindtap="showTips">专业人士</button>

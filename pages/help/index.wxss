@@ -5,6 +5,8 @@
   background-size: cover;
   background-repeat:no-repeat;  
   box-sizing: border-box;  
+  padding-bottom: 0;
+  padding-bottom: 0;
 }
 .foot{
   padding-bottom: constant(safe-area-inset-bottom);
