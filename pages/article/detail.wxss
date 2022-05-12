@@ -19,3 +19,10 @@ rich-text .richImg{
   top:50%;
   transform: translate3d(-50%,-50%,0);
 }
+.solid::after {
+  border: 1rpx solid black;
+}
+
+video{
+  width:100%;
+}

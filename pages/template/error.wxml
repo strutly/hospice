@@ -1,0 +1,17 @@
+<view class="warn" wx:if="{{warn}}">{{warnMsg}}</view>
+<view class="prompt-box" wx:if="{{code==999}}">
+  <view class="prompt">
+    <view class="prompt-icon">
+      <image src="/images/error.png"></image>
+    </view>
+    <view class="prompt-msg">糟糕!好像出现错误了,尝试<text bindtap="refresh" class="prompt-refresh">刷新</text>看看!</view>    
+  </view>  
+</view>
+<view class="prompt-box" wx:if="{{prompt}}">
+  <view class="prompt">
+    <view class="prompt-icon">
+      <image src="/images/error.png"></image>
+    </view>
+    <view class="prompt-msg">糟糕!好像出现错误了,尝试<text bindtap="refresh" class="prompt-refresh">刷新</text>看看!</view>    
+  </view>  
+</view>

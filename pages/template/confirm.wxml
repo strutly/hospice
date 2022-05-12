@@ -1,0 +1,14 @@
+<view class='mask' wx:if="{{confirm}}"  catchtouchmove='ture'>
+  <view class='modal-content'>
+    <view class="modal-cancle" bindtap="no">
+      <image class="cancle-image" src="/images/cancle.png"></image>
+    </view>
+    <icon class="modal-icon" type="info" color="#FFB13B" size="90"></icon>
+    <view class='modal-title'>
+      {{confirmMsg}}
+    </view>    
+    <view class='modal-btns'>          
+        <button class='modal-btn' bindtap="yes">确认</button>
+    </view>    
+  </view>
+</view>

@@ -8,6 +8,7 @@ Page({
   data: {
     domain:Api.domain,
     article:{},
+    videoThumb:""
   },
 
   /**
@@ -15,6 +16,7 @@ Page({
    */
   async onLoad(options) {
     that = this;
+    that.video = that.selectComponent("#video");
     let articleRes = await Api.getArticleDetail({
       id:66
     });
@@ -44,12 +46,16 @@ Page({
     })
   },
   onReady(){
-    that.video = that.selectComponent("#video");
+    
+  },
+  onUnload(){
+    console.log("停止播放");
+    that.video.stop();
   },
   playVideo(e){
     console.log(e);
     that.video.playVideo(e.currentTarget.dataset.url);
-    
+    that.setData({videoThumb:"hide"});
   },
   previewImage(e){
     wx.previewImage({

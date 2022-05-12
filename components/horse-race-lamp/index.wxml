@@ -1,5 +1,5 @@
 <view class="horse-race-lamp">
-  <view class="marquee-text" wx:for="{{horseRaceLampList}}" wx:key="index" style="font-size: {{size}}px;left:{{(index%4)*100+marqueeDistance}}px;top:{{index*80+30}}px">
+  <view class="marquee-text" wx:for="{{horseRaceLampList}}" wx:key="index" style="font-size: {{size/14}}rem;left:{{(index%4)*100+marqueeDistance}}px;top:{{index*80+30}}px">
     <view class="marquee-con">
       <image class="user-head" src="{{item.maUser.avatarUrl}}"></image>{{item.content}}
     </view>

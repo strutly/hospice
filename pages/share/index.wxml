@@ -8,8 +8,8 @@
   </view>
 
   <view class="share-box flex">
-    <view class="flex-sub bg-gradual-orange padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
-    </view>
+    <navigator url="/pages/life/form" class="flex-sub bg-gradual-orange padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
     <view class="flex-sub bg-gradual-pink padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的收藏<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </view>
   </view>
@@ -23,36 +23,36 @@
 
   <view class="grid col-2">
     <view class="padding-lr padding-tb-sm">
-      <view class="bg-gradual-red padding radius text-center shadow-blur">
+      <navigator url="/pages/life/index?type=0" class="bg-gradual-red padding radius text-center shadow-blur">
         <view class="text-lg">#美食分享#</view>
-      </view>
+      </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <view class="bg-gradual-orange padding radius text-center shadow-blur">
+      <navigator url="/pages/life/index?type=1" class="bg-gradual-orange padding radius text-center shadow-blur">
         <view class="text-lg">#服装分享#</view>
-      </view>
+      </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <view class="bg-gradual-green padding radius text-center shadow-blur">
+      <navigator url="/pages/life/index?type=2"  class="bg-gradual-green padding radius text-center shadow-blur">
         <view class="text-lg">#书籍影视分享#</view>
-      </view>
+      </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <view class="bg-gradual-blue padding radius text-center shadow-blur">
+      <navigator url="/pages/life/index?type=3"  class="bg-gradual-blue padding radius text-center shadow-blur">
         <view class="text-lg">#点滴故事分享#</view>
-      </view>
+      </navigator>
     </view>
   </view>
 
   <view class="cu-list menu">
-    <view class="cu-item arrow">
+    <navigator url="/pages/life/index" class="cu-item arrow">
       <view class="content">
         <text class="text-bold">热门帖子</text>
       </view>
       <view class="action">
         <text class="text-grey text-sm">查看全部</text>
       </view>
-    </view>
+    </navigator>
   </view>
   <view class="flex padding-bottom-xl">
     <view class="cu-card case flex flex-wrap margin-sm justify-between response">

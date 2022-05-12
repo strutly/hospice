@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "topTips":"/components/topTips/index"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText":"发表Record",
+  "navigationStyle":"custom",
+  "backgroundColor":"#FFB13B"
+}

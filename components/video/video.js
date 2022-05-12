@@ -16,13 +16,19 @@ Component({
       console.log(url);
       //执行全屏方法  
       videoContext = wx.createVideoContext('myvideo', that);
-      videoContext.requestFullScreen();
+      // videoContext.requestFullScreen();
       that.setData({
         playVideo: true,
         direction: 90,
         zindex:10000,
         url: url
       })
+    },
+    stop:function(){
+      videoContext.stop();
+    },
+    fullScreen:function(){
+      videoContext.requestFullScreen();
     },
     screenChange(e) {
       let that = this;

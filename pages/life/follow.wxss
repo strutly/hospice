@@ -1,0 +1,49 @@
+.fans-list{
+  display: flex;  
+  flex-wrap: wrap;
+  padding:1rem 0.5rem;
+  text-align: center;
+}
+.fans-item{
+  flex:1;  
+  margin:0.25rem;
+  min-width: 40%;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.fans-head{
+  margin-top: 2rem;
+}
+.fans-head image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #FFB13B;
+}
+.fans-nickName{
+  font-size: 32rpx;
+  color:#333;
+}
+.fans-follow-time{
+  font-size: 24rpx;
+  color: #999999;
+}
+.fans-follow{
+  display: flex;
+  margin: 24rpx auto 60rpx;
+  width: fit-content;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 10rpx 24rpx;
+  border-radius: 48rpx;
+  color: #fff;
+  background-color: #FFB13B; 
+}
+.fans-follow image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+.fans-follow text{
+  flex: 1;
+}

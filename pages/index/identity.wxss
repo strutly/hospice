@@ -6,7 +6,7 @@
   background-image: url("http://gridpic.tsing-tec.com/hospice/choose.png?v=1");
   background-size: 100%;
   background-repeat:no-repeat;   */
-  margin: 20rpx 50rpx 0;
+  margin: 0 50rpx 0;
   box-sizing: border-box;  
 }
 .patient{

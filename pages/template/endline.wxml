@@ -1,0 +1,5 @@
+<view class="wrapper" wx:if="{{endline}}">
+    <text class="line"></text>
+    <text class="line-msg">我是有底线的</text>
+    <text class="line"></text>
+  </view>

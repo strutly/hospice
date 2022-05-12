@@ -13,18 +13,19 @@ Page({
   },
   async onLoad(options) {
     that = this;
+    that.video = that.selectComponent("#video");
     let res = await Api.getArticleDetail({
       id:options.id
     })
-    var jsonDa = JSON.stringify(res.data.content).replace(/<img/gi, "<img class='richImg'");
+    var jsonDa = res.data.content.replace(/<img/gi, "<img class='richImg'");
     var arr = jsonDa.split(/([\d\.\-]+?)px/);
     arr.forEach(function(v,k){if(k%2==1){arr[k]=parseInt(v)/14+"rem"}});
     jsonDa=arr.join("");
-    var newResData = JSON.parse(jsonDa);
+    // var newResData = JSON.parse(jsonDa);
 
     that.setData({
       article:res.data,
-      htmlSnip: newResData,
+      htmlSnip: jsonDa,
       videos:res.data.videos.split(",")||[],
       videosPics:res.data.videosPics.split(",")||[]
     })
@@ -34,15 +35,19 @@ Page({
       systemFontSize: wx.getStorageSync('systemFontSize') || "14px"
     })
   },
+  onUnload(){
+    innerAudioContext.stop();
+  },
   onReady(){
     innerAudioContext = wx.createInnerAudioContext();
     console.log(innerAudioContext)
     //innerAudioContext.autoplay = true
-    innerAudioContext.src = that.data.article.audios||"";
-    that.video = that.selectComponent("#video");
+    
+    
   },
   play(){
     console.log(innerAudioContext)
+    innerAudioContext.src = that.data.article.audios||"";
     innerAudioContext.play()
     that.setData({
       play:true
@@ -57,9 +62,8 @@ Page({
   playVideo(e){
     console.log(e);
     that.video.playVideo(e.currentTarget.dataset.url);
-    
+    // that.video.fullScreen();
   },
-
   onShareAppMessage(){
     return {
       title: that.data.article.name,

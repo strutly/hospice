@@ -1,0 +1,148 @@
+.cards{
+  padding-bottom: 32rpx;
+}
+.card{
+  padding: 32rpx;
+  background-color: #fff;
+  margin-top: 28rpx;
+}
+.card-head{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.head-image{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+}
+.card-des{
+  margin-left: 24rpx;
+}
+.card-nickname{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+}
+.card-time{
+  color:#999;
+  font-size: 26rpx;
+}
+.card-content{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.4;
+  text-align: justify;
+}
+.image-item{
+  flex:1;
+  height: 240rpx;
+  position: relative;
+  margin:0.25rem 0;
+  min-width: 30%;
+}
+.image-item:nth-child(3n+2){
+  margin:0.25rem 0.5rem;
+}
+.card-image{
+  width: 100%;
+  height: 100%;
+}
+.image-one{
+  height: 360rpx;
+}
+.image-two{
+  height: 320rpx;
+}
+.card-handles{
+  text-align: right;
+  font-size: 24rpx;
+}
+.handle-item{
+  display: inline-block;
+  margin-left: 24rpx;
+  vertical-align: middle;
+}
+.handle-item image{
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  margin: 0 12rpx;
+}
+.handle-item view{  
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-likes{
+  vertical-align: middle;
+  border-top: 1rpx solid #e3e3e3;
+  margin-top: 30rpx;
+  padding-top: 16rpx;
+  line-height: 1;
+}
+.like-image{
+  width:30rpx;
+  height: 30rpx;
+  margin-right: 12rpx;
+}
+.like-name{
+  color:#FFB13B;
+  display: inline-block;
+  margin-right: 12rpx;
+  font-size: 24rpx;
+}
+
+.content{
+  
+}
+.panel{
+  margin-top: 1rem;
+}
+.media-box{
+  display: flex;
+  margin: 0.75rem 0;
+  background-color: #f5f5f5;
+  align-items: center;
+}
+.media-hd{
+  width: 192rpx;
+  height: 144rpx;
+  /**margin-right: 0.5rem;*/
+}
+.media-hd image{
+  width: 100%;
+  height: 100%;
+}
+.media-bd{
+  flex:1;
+  background-color: #f5f5f5;
+  padding:24rpx;
+}
+.media-des{
+  font-size: 28rpx;
+  color:#666;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;  
+}
+.media-title{
+  color:#999;
+  font-size: 0.625rem;
+}
+.comment-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1rpx solid #e3e3e3;
+}
+.comment-box input{
+  width:100%;
+  height: 100%;
+  padding:1rem;
+}

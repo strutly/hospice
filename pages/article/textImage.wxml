@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<videoPlay id="video"></videoPlay>
+
 <navBar title='安宁疗护' iconTheme="white" color="#fff" back="true">
 
   
@@ -14,15 +14,16 @@
   </view>
 
 
-  <view class="cu-card case flex-wrap margin-sm" bindtap="playVideo" data-url="{{article.videos}}">
+  <view class="cu-card case flex-wrap margin-sm {{videoThumb}}" bindtap="playVideo" data-url="{{article.videos}}">
     <view class="cu-item shadow">
       <view class="image video-thumb">
         <image src="{{article.videosPics}}" mode="widthFix"></image>
         <text class="cuIcon-video margin-right-xs play"></text>
       </view>
+      
     </view>
   </view>
-
+  <videoPlay id="video"></videoPlay>
 
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">

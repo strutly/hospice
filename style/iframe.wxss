@@ -17,7 +17,8 @@ section,span,p,br,strong,div {
 body,rich-text {
     width: 100%;
     margin: 0;
-    padding: 1.0714285714285714rem !important;
+    /* 这里有很大的空行 */
+    /* padding: 1.0714285714285714rem !important; */
     font-size: 1.2142857142857142rem;
     overflow-x: hidden;
     font-family: "微软雅黑","Microsoft YaHei", sans-serif;

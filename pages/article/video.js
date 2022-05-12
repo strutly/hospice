@@ -8,6 +8,7 @@ Page({
 
   async onLoad(options) {
     that = this;
+    that.video = that.selectComponent("#video");
     let res = await Api.getCatalogVideo({
       catalogId:options.id
     });
@@ -24,6 +25,7 @@ Page({
   },
   playVideo(e){
     console.log(e);
-    that.video.playVideo(e.currentTarget.dataset.url);    
+    that.video.playVideo(e.currentTarget.dataset.url);
+    // that.video.fullScreen();
   }
 })

@@ -1,12 +1,12 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<videoPlay id="video"></videoPlay>
-<navBar title='{{title}}' iconTheme="white" color="#fff" back="true"> 
 
+<navBar title='{{title}}' iconTheme="white" color="#fff" back="true"> 
+  
   <view class="padding-xl margin radius-xl text-white" style="background-color: #e99149;">
     <view class="padding-tb text-center text-xxl main-title">{{title}}</view>
     <view class="text-center text-xs">视频来源:腾讯视频</view>
   </view>
-
+  <videoPlay id="video"></videoPlay>
   <view class="bg-white">
     <view class="grid margin-bottom col-{{systemFontSize=='14px'?2:1}}">
       <view bindtap="playVideo" data-url="{{item.videos}}" class="padding-lr-sm padding-tb" wx:for="{{articles}}" wx:key="index">

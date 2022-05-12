@@ -1,0 +1,14 @@
+<view class="video-mask" bindtap="hiddenVideo" wx:if="{{playVideo}}"  catchtouchmove='ture'></view>
+<video
+  wx:if="{{playVideo}}"
+  src="{{url}}"
+  picture-in-picture-mode="{{['push', 'pop']}}"
+  autoplay="{{playVideo}}"
+  show-casting-button="true"
+  show-fullscreen-btn="true"
+  show-screen-lock-button="true"
+  enable-auto-rotation="true"
+  enable-progress-gesture="{{false}}"
+  bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' bindfullscreenchange="screenChange"
+  binderror="videoErrorCallback">
+</video>

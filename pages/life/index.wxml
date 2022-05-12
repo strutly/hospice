@@ -1,48 +1,36 @@
-<page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='四道人生' iconTheme="white" color="#fff" back="true">
-  <view class="padding-xl bg-gradual-orange margin radius-xl">
-    <view class="padding-rl-xl text-center text-xxl">四道人生</view>
-    <view class="text-center text-xs">视频来源:腾讯视频</view>
-  </view>
-
-  <view class="flex padding-bottom-xl">
-    <view class="cu-card case flex flex-wrap margin-sm justify-between response">
-      <navigator url="/pages/life/living" class="cu-item shadow">
-        <view class="image video-thumb">
-          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-          <text class="cuIcon-video margin-right-xs play"></text>
-        </view>
-        <view class="cu-item">
-          <view class="content padding-sm">
-            <view>道谢、道歉、道别、道爱</view>
-            <view class="text-gray text-sm margin-top-sm">
-              <text class="cuIcon-time margin-right-xs"></text> 3:30
-              <text class="fr"><text class="cuIcon-video margin-right-xs"></text> 1235</text>
+<wxs src="../../utils/Tools.wxs" module="tools"/>
+<include src="/pages/template/auth.wxml"></include>
+<include src="/pages/template/error.wxml"></include>
+<include src="/pages/template/confirm.wxml"></include>
+<!--index.wxml-->
+<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <view class="cards">
+  <block wx:for="{{datas}}" wx:for-item="item">
+    <navigator url="/pages/life/detail?id={{item.id}}" class="card" wx:if="{{!tools.indexOf(black,item.miniUser.id)}}">
+      <view class="card-head">
+        <image class="head-image" src="{{item.maUser.avatarUrl||'/images/head.jpg'}}" data-uid="{{item.miniUser.id}}" bindlongpress="{{uid==item.miniUser.id?'':'confirm'}}"></image>
+        <view class="card-des">
+          <view class="card-nickname">{{item.maUser.nickName||'未授权用户'}}</view>
+          <view class="card-time">{{tools.dateFormat(item.createTime,'MM-dd hh:mm')}}</view>
+        </view>        
+      </view>    
+      <view>
+        <view class="card-content">{{item.msg}}</view>
+        <view class="card-images">
+          <view class="image-item {{item.imgs.length==1?'image-one':''}} {{item.imgs.length==2?'image-two':''}}" wx:for="{{item.imgs}}" wx:for-item="src" wx:if="{{index<3}}">
+            <image class="card-image {{item.imgs.length==1?'image-one':''}} {{item.imgs.length==2?'image-two':''}}"  mode="aspectFill" src="{{src.cover}}"></image>
+            <view class="image-delete-box" wx:if="{{item.imgs.length>3 && index==2}}">
+              <image src="/images/more.png" class="image-delete"></image>
+              <text class="image-more">{{item.imgs.length-3}}</text>
             </view>
-          </view>
+          </view>         
         </view>
-      </navigator>
-    
-      <navigator url="/pages/life/living" class="cu-item shadow">
-        <view class="image video-thumb">
-          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-          <text class="cuIcon-video margin-right-xs play"></text>
-        </view>
-        <view class="cu-item">
-          <view class="content padding-sm">
-            <view>道谢、道歉、道别、道爱</view>
-            <view class="text-gray text-sm margin-top-sm">
-              <text class="cuIcon-time margin-right-xs"></text> 3:30
-              <text class="fr"><text class="cuIcon-video margin-right-xs"></text> 1235</text>
-            </view>
-          </view>
-        </view>
-      </navigator>
-    </view>
-
-  </view>
-
-
-
+      </view>
+    </navigator>
+  </block>
+</view>
 
 </navBar>
+
+
+

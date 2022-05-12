@@ -1,0 +1,28 @@
+<include src="/pages/template/auth.wxml"></include>
+<include src="/pages/template/confirm.wxml"></include>
+<include src="/pages/template/error.wxml"></include>
+<wxs src="../../utils/Tools.wxs" module="tools"/>
+<view class="cards">  
+  <view class="card" wx:for="{{lists}}" wx:key>
+    <view class="card-head" bindtap="toUrl" data-url="/pages/index/you?uid={{item.uid}}">
+      <image class="head-image" src="{{item.avatarUrl}}"></image>
+      <view class="card-des">
+        <view class="card-nickname">{{item.nickName}}</view>
+        <view class="card-time">{{tools.dateFormat(item.createTime,'MM-dd hh:mm')}}</view>
+      </view>        
+    </view>
+    <view class="" bindtap="toUrl" data-url="/pages/index/detail?id={{item.rid}}">
+      <view class="card-content">{{item.content}}</view>
+      <view class="media-box">
+        <view class="media-hd">
+          <image src="{{item.pic}}"></image>
+        </view>
+        <view class="media-bd">          
+          <view class="media-des">{{item.msg}}</view>
+        </view>
+      </view>
+    </view>    
+  </view>
+  <include src="/pages/template/no-data.wxml"></include>
+  <include src="/pages/template/endline.wxml"></include>  
+</view>

@@ -1,0 +1,17 @@
+<include src="/pages/template/error.wxml"></include>
+<wxs src="../../utils/Tools.wxs" module="tools"/>
+<view class="fans-list">  
+  <view class="fans-item" wx:for="{{fans}}" wx:key>
+    <view bindtap="toUrl" data-url="/pages/index/you?uid={{item.to.id}}">
+      <view class="fans-head"><image src="{{item.to.avatarUrl}}"></image></view>
+      <view class="fans-nickName">{{item.to.nickName}}</view>
+      <view class="fans-follow-time">关注时间:{{tools.dateFormat(item.createTime,'yyyy-MM-dd')}}</view>
+    </view>    
+    <view class="fans-follow" bindtap="follow" data-uid="{{item.to.id}}" data-index="{{index}}">
+      <image src="/images/follow1.png"></image>
+      <text>已关注</text>
+    </view>
+  </view>  
+</view>
+
+<include src="/pages/template/no-data.wxml"></include>

@@ -2,7 +2,8 @@ import Api from "./config/api";
 App({
   onLaunch() {
     let that = this;
-    Api.login().then(res => {      
+    Api.login().then(res => {
+      console.log(res)      
       setTimeout(function () {
         that.globalData.login = true;
         if (res.code == 0) {

@@ -1,4 +1,4 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {"videoPlay":"/components/video/video"}
 }

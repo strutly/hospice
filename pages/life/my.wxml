@@ -1,0 +1,61 @@
+<include src="/pages/template/error.wxml"></include>
+<wxs src="../../utils/Tools.wxs" module="tools"/>
+<view class="head">
+  <view class="personal">
+    <view class="headimg" bindtap="auth">
+      <open-data  type='userAvatarUrl'></open-data>
+    </view>    
+    <!-- <image class="headimg" bindtap="auth" src="{{userInfo.miniUser.avatarUrl||user.avatarUrl}}"></image> -->
+    <!-- <view class="nickname" bindtap="auth">{{userInfo.miniUser.nickName||user.nickName}}</view> -->
+    <open-data class="nickname" type="userNickName"></open-data>    
+    <view class="my-list">
+      <view class="my-item" bindtap="toUrl" data-url="/pages/index/fans">
+        <view>我的粉丝</view>
+        <view class="my-num">{{userInfo.counts.sum1||0}}</view>
+      </view>
+      <view class="my-item" bindtap="toUrl" data-url="/pages/index/follow">
+        <view>我的关注</view>
+        <view class="my-num">{{userInfo.counts.sum2||0}}</view>
+      </view>
+      <view class="my-item" bindtap="toUrl" data-url="/pages/index/comment">
+        <view>我的评论</view>
+        <view class="my-num">{{userInfo.counts.sum3||0}}</view>
+      </view>
+    </view>    
+  </view>  
+</view>
+<view url="/pages/index/notice" class="notice" bindtap="notice" wx:if="{{num>0}}">
+    <image class="notice-image" src="/images/notice.png"></image>您有{{num}}条未读信息    
+</view>
+<view class="content">
+  
+  <view class="panel" wx:for="{{myRecords}}" wx:for-index='key' wx:for-item="records">
+    <view class="panel-title">{{key}}</view>
+    <view class="media-box {{(move && item.id==moveIndex)?'media-active':''}}" wx:for="{{records}}">
+      <view class="media-content" data-index="{{item.id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-url="/pages/index/detail?id={{item.id}}" bindtap="toUrl">
+        <view class="media-hd">
+          <image mode="aspectFill" src="{{item.imgs[0].url}}"></image>
+        </view>
+        <view class="media-bd">
+          <view class="media-title">{{tools.dateFormat(item.createTime,'MM月dd日')}}</view>
+          <view class="media-des">{{item.msg}}</view>
+        </view>
+      </view>
+      <view class="media-delete">
+        <view class="media-delete-item {{delete?'hide':''}}" bindtap="{{put?'handle':'confirm'}}" data-id="{{item.id}}"  data-type="put">{{item.open?'不公开':'公开'}}{{put?'这条记录':''}}</view>
+        <view class="media-delete-item media-delete-item-warm  {{put?'hide':''}}" bindtap="{{delete?'handle':'confirm'}}"  data-id="{{item.id}}" data-type="delete">删除{{delete?'这条记录':''}}</view>
+      </view>
+    </view>
+  </view>  
+  <view class="no-data-box" wx:if="{{myRecords.length<1}}">
+  <view class="no-data">
+    <view class="no-data-icon">
+      <image class="no-data-image" src="/images/no-data.png"></image>
+    </view>
+    <view class="no-data-msg">天呐~您还未记录任何日志哦!</view>  
+  </view>  
+</view>
+  <include src="/pages/template/endline.wxml"></include>
+</view>
+
+<!-- <include src="/pages/template/tab.wxml"></include> -->
