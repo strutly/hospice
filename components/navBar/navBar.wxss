@@ -17,6 +17,15 @@ page {
   box-sizing: border-box;
 }
 
+.lxy-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index:1000000000;
+}
+
+
 .lxy-nav-bar .ios {
   --height: 44px;
   /* 4*2+32 */
