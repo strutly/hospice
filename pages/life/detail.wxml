@@ -1,5 +1,4 @@
 <include src="/pages/template/error.wxml"></include>
-<include src="/pages/template/video.wxml"></include>
 <navBar title='详细' iconTheme="white" color="#fff" back="true">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="container" wx:if="{{detail}}">

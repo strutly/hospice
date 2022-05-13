@@ -1,7 +1,4 @@
 <wxs src="../../utils/Tools.wxs" module="tools"/>
-<include src="/pages/template/auth.wxml"></include>
-<include src="/pages/template/error.wxml"></include>
-<include src="/pages/template/confirm.wxml"></include>
 <!--index.wxml-->
 <navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}" bindreachBottom="onReachBottom">
   <view class="cards">

@@ -1,6 +1,3 @@
-<include src="/pages/template/auth.wxml"></include>
-<include src="/pages/template/confirm.wxml"></include>
-<include src="/pages/template/error.wxml"></include>
 <wxs src="../../utils/Tools.wxs" module="tools"/>
 <view class="cards">  
   <view class="card" wx:for="{{lists}}" wx:key>

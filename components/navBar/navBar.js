@@ -1,7 +1,8 @@
 Component({
   options: {
     multipleSlots: true,
-    addGlobalClass: true
+    addGlobalClass: true,
+    
   },
   properties: {
     extClass: {
@@ -30,27 +31,11 @@ Component({
       type: Boolean,
       value: false
     },
-    back: {
-      type: Boolean,
-      value: false
-    },
-    home: {
-      type: Boolean,
-      value: false
-    },
+    
     iconTheme: {
       type: String,
       value: 'black'
     },
-    /* animated: {
-      type: Boolean,
-      value: true
-    },
-    show: {
-      type: Boolean,
-      value: true,
-      observer: '_showChange'
-    }, */
     delta: {
       type: Number,
       value: 1
@@ -58,11 +43,30 @@ Component({
   },
   created: function() {
     this.getSystemInfo();
+    
   },
   attached: function() {
     this.setStyle(); //设置样式
+    let pages = getCurrentPages();
+      if(pages.length==1){
+        this.setData({
+          back:false,
+          home:true
+        })
+      }else{
+        this.setData({
+          back:true,
+          home:true
+        })
+      }
+
+
+      console.log(pages.length)
   },
-  data: {},
+  data: {
+    back:false,
+    home:false
+  },
   pageLifetimes: {
     show: function() {
       if (getApp().globalSystemInfo.ios) {

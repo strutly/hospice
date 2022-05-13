@@ -133,7 +133,7 @@ Page({
   },
   authModal() {
     that.setData({
-      authModal: !that.data.authModal
+      auth: !that.data.auth
     })
   },
   showTips(msg, type="error") {
