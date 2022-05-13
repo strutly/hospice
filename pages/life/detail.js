@@ -5,6 +5,7 @@ var that;
 Page({
   data:{
     like:0,
+    store:0,
     comment:false,
     uid:wx.getStorageSync('uid')||"",
     confirmMsg:"确认删除这条评论吗?",

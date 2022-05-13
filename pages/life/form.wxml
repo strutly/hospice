@@ -3,7 +3,7 @@
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <progress percent="{{progress}}" color="#e75e58" active wx:if="{{upload}}" />
   <view class="padding">
-    <textarea bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="开始分享您的内容..." />
+    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="开始分享您的内容..." />
     <view class="image-box">
       <view class="image-item" wx:for="{{formData.imgs}}">
         <image class="image-thumb {{item.type?'image-video':''}}" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item.cover}}" src="{{item.cover}}"></image>
@@ -18,26 +18,26 @@
       </view>
     </view>
 
-    <view class="margin-top"><text class="cuIcon-titles text-orange"></text>标签类型</view>
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
     <view class="grid col-2">
       <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="0">
-        <view class="solid padding radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
-          <view class="text-lg">#美食分享#</view>
+        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
+          <view class="text-df">#美食分享#</view>
         </view>
       </view>
       <view class="padding-left padding-tb-sm " bindtap="chooseType" data-type="1">
-        <view class="solid padding radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
-          <view class="text-lg">#服装分享#</view>
+        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
+          <view class="text-df">#服装分享#</view>
         </view>
       </view>
       <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="2">
-        <view class="{{formData.type==2?'bg-orange':''}} solid padding radius text-center shadow-blur ">
-          <view class="text-lg">#书籍影视分享#</view>
+        <view class="{{formData.type==2?'bg-orange':''}} solid padding-sm radius text-center shadow-blur ">
+          <view class="text-df">#书籍影视分享#</view>
         </view>
       </view>
       <view class="padding-left padding-tb-sm" bindtap="chooseType" data-type="3">
-        <view class="solid padding radius text-center shadow-blur {{formData.type==3?'bg-orange':''}}">
-          <view class="text-lg">#点滴故事分享#</view>
+        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==3?'bg-orange':''}}">
+          <view class="text-df">#点滴故事分享#</view>
         </view>
       </view>
     </view>

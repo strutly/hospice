@@ -85,6 +85,7 @@ Page({
     }
   },
   onReachBottom() {
+    console.log(123)
     let endline = that.data.endline;
     if (!endline) {
       let pageNo = that.data.pageNo + 1;

@@ -3,10 +3,10 @@
 <include src="/pages/template/error.wxml"></include>
 <include src="/pages/template/confirm.wxml"></include>
 <!--index.wxml-->
-<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}" bindreachBottom="onReachBottom">
   <view class="cards">
   <block wx:for="{{datas}}" wx:for-item="item">
-    <navigator url="/pages/life/detail?id={{item.id}}" class="card" wx:if="{{!tools.indexOf(black,item.miniUser.id)}}">
+    <navigator url="/pages/life/detail?id={{item.id}}" class="card solid-bottom" wx:if="{{!tools.indexOf(black,item.miniUser.id)}}">
       <view class="card-head">
         <image class="head-image" src="{{item.maUser.avatarUrl||'/images/head.jpg'}}" data-uid="{{item.miniUser.id}}" bindlongpress="{{uid==item.miniUser.id?'':'confirm'}}"></image>
         <view class="card-des">

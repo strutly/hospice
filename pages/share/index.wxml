@@ -1,45 +1,45 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='分享社区' iconTheme="white" color="#fff" back="true"> 
-  <view class="cu-bar bg-white search" :style="[{top:CustomBar + 'px'}]">
+  <!-- <view class="cu-bar bg-white search" :style="[{top:CustomBar + 'px'}]">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
       <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
     </view>
-  </view>
+  </view> -->
 
-  <view class="share-box flex">
-    <navigator url="/pages/life/form" class="flex-sub bg-gradual-orange padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+  <view class="share-box flex text-white">
+    <navigator style="background-color: #FF894B;" url="/pages/life/form" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
-    <view class="flex-sub bg-gradual-pink padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的收藏<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
-    </view>
+    <navigator style="background-color: #8170FD;" url="/pages/life/my" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
   </view>
   <view class="cu-list menu">
     <view class="cu-item">
       <view class="content">
-        <text class="text-grey">分享主题</text>
+        <text class="text-grey text-lg text-bold">分享主题</text>
       </view>
     </view>
   </view>
 
-  <view class="grid col-2">
+  <view class="grid col-2 text-white">
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=0" class="bg-gradual-red padding radius text-center shadow-blur">
-        <view class="text-lg">#美食分享#</view>
+      <navigator url="/pages/life/index?type=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#美食分享#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=1" class="bg-gradual-orange padding radius text-center shadow-blur">
-        <view class="text-lg">#服装分享#</view>
+      <navigator url="/pages/life/index?type=1" style="background-color: #4DA5FE;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#服装分享#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=2"  class="bg-gradual-green padding radius text-center shadow-blur">
-        <view class="text-lg">#书籍影视分享#</view>
+      <navigator url="/pages/life/index?type=2" style="background-color: #47BD9B;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#书籍影视分享#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=3"  class="bg-gradual-blue padding radius text-center shadow-blur">
-        <view class="text-lg">#点滴故事分享#</view>
+      <navigator url="/pages/life/index?type=3" style="background-color: #CA93CA;"  class="padding radius text-center shadow-blur">
+        <view class="text-df">#点滴故事分享#</view>
       </navigator>
     </view>
   </view>
@@ -47,50 +47,27 @@
   <view class="cu-list menu">
     <navigator url="/pages/life/index" class="cu-item arrow">
       <view class="content">
-        <text class="text-bold">热门帖子</text>
+        <text class="text-bold text-lg">热门帖子</text>
       </view>
       <view class="action">
-        <text class="text-grey text-sm">查看全部</text>
+        <text class="text-grey text-df">查看全部</text>
       </view>
     </navigator>
   </view>
-  <view class="flex padding-bottom-xl">
-    <view class="cu-card case flex flex-wrap margin-sm justify-between response">
-      <navigator url="/pages/life/living" class="cu-item shadow">
+
+
+  <view class="grid margin-bottom col-2">
+    <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
         <view class="image video-thumb">
-          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-          <text class="cuIcon-video margin-right-xs play"></text>
+          <image src="{{item.imgs[0].cover}}" style="height:320rpx;"></image>
         </view>
         <view class="cu-item">
-          <view class="content  padding-tb-sm">
-            <view>道谢、道歉、道别、道爱</view>
-            <view class="text-gray text-sm margin-top-sm flex justify-between">
-              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
-              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
-              <text class="cuIcon-video margin-right-xs flex-sub"> 1235</text>
-            </view>
+          <view class="content padding-sm">
+            <view class="text-cut">{{item.msg}}</view>
           </view>
         </view>
-      </navigator>
-    
-      <navigator url="/pages/life/living" class="cu-item shadow">
-        <view class="image video-thumb">
-          <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix"></image>
-          <text class="cuIcon-video margin-right-xs play"></text>
-        </view>
-        <view class="cu-item">
-          <view class="content padding-tb-sm">
-            <view>道谢、道歉、道别、道爱</view>
-            <view class="text-gray text-sm margin-top-sm flex justify-between">
-              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
-              <text class="cuIcon-time margin-right-xs flex-sub"> 3:30</text>
-              <text class="cuIcon-video margin-right-xs flex-sub"> 1235</text>
-            </view>
-          </view>
-        </view>
-      </navigator>
+      </view>
     </view>
-  </view>
 
 
 

@@ -14,68 +14,16 @@ Page({
   },  
   async onLoad(options) {
     that = this;
-    let uid = options.id || wx.getStorageSync('uid');   
-    that.setData({
-      uid:uid,
-      options:options||{}
-    })
-    console.log(uid);
-    let res = await api.userInfo({id:uid});
-    that.setData({
-      userInfo:res.data
-    })
+    
     that.recordList(1);
   },
   async onShow(){
-    if (typeof that.getTabBar === 'function' && that.getTabBar()) {
-      that.getTabBar().setData({
-        selected: 2
-      })
-    }
-    let res = await api.notice({});
-    that.setData({
-      num:res.data.length||0
-    })
+    
   },
-  async auth(e){
-    console.log(e)
-    let res = {};
-    try {
-      res = await wx.getUserProfile({
-        desc: '用于更新会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      })
-    } catch (error) {
-      console.log(error)
-      return util.warn(that,"授权失败,请重试~");
-    }
-    let code = await api.getCode();
-    console.log(res)
-    if(res.errMsg=="getUserProfile:ok"){
-      let userInfo = res.userInfo
-      wx.setStorageSync('userInfo', userInfo);      
-      let authRes = await api.authorize({
-        code:code,
-        encryptedData:res.encryptedData,
-        iv:res.iv,
-        signature:res.signature,
-        rawData:res.rawData
-      });
-      wx.setStorageSync('token', authRes.data);
-      wx.setStorageSync('uid', authRes.data.id);
-      wx.setStorageSync('ifAuth', true);
-      if(authRes.code==0){
-        util.warn(that,"用户信息更新成功");
-      }else{
-        util.warn(that,authRes.msg);
-      }
-    }else{
-      util.warn(that,"授权失败,请重试~");
-    }       
-  },  
+
   async recordList(pageNo){
-    let datas = that.data.datas||[];
-    let id = wx.getStorageSync('uid');
-    let res = await api.recordByUid({pageNo:pageNo,uid:id});
+    let datas = that.data.datas||[];    
+    let res = await api.getRecordMy({pageNo:pageNo});
     datas = datas.concat(res.data.content);
     let arr = util.groupBy(datas,(data)=>{
       return util.dateFormat(data.createTime,'yyyy年MM月')
@@ -102,9 +50,9 @@ Page({
       return value.id == id;
     })
     console.log(index)
-    let res = await api.recordById({id:id,type:type});
+    let res = await api.editRecord({id:id,type:type});
     console.log(res);
-    util.warn(that,"操作成功!");
+    
     that.setData({
       move:false
     })

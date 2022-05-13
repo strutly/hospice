@@ -1,5 +1,5 @@
 <view class="lxy-nav-bar {{extClass}}" style="background: {{backgroundColorTop}};height: {{imgHeight}}px;">
-  <image class="backgroundimg" src="/images/customBar.png"  style="width:100%;height:{{imgHeight}}px" />
+  <image class="backgroundimg" src="/images/customBar.png"  style="width:100%;height:{{imgHeight}}px;z-index:2;" />
     <view class="lxy-nav-bar__placeholder {{ios ? 'ios' : 'android'}}" style="padding-top: {{navBarHeight+ navBarExtendHeight}}px;visibility: hidden;"></view>
     <view class="lxy-nav-bar__inner {{ios ? 'ios' : 'android'}}" style="{{navigationbarinnerStyle}}{{displayStyle}}">
         
@@ -41,6 +41,6 @@
         </view>
     </view>
 </view>
-<scroll-view scroll-y="true" class="container safe-bottom" style="height: calc(100vh - {{imgHeight}}px);">
+<view class="container safe-bottom" style="min-height: calc(100vh - {{imgHeight}}px);">
   <slot></slot>
-</scroll-view>
+</view>

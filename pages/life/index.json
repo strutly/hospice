@@ -1,6 +1,4 @@
 {
   "usingComponents": {
-  },
-  "enablePullDownRefresh": true,
-  "navigationBarTitleText":"Baby-Record"
+  }
 }
