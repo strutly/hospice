@@ -16,37 +16,32 @@ Component({
   methods: {
     playVideo:function(url) {
       let that = this;
-      console.log(url);
       //执行全屏方法  
       videoContext = wx.createVideoContext('myvideo', that);
       // videoContext.requestFullScreen();
       that.setData({
         playVideo: true,
         direction: 90,
-        zindex:10000,
+        zindex:100000000,
         url: url
       })
     },
     stop:function(){
       videoContext.stop();
     },
-    fullScreen:function(){
-      videoContext.requestFullScreen();
-    },
     screenChange(e) {
       let that = this;
       console.log(e);
       let fullScreen = e.detail.fullScreen;
-      if (fullScreen) {
-        videoContext.requestFullScreen();
+      if (fullScreen) {        
         that.setData({
           direction: 90
         })
+        videoContext.requestFullScreen();
+        console.log(that.data)
       } else {
-        that.setData({
-          playVideo: false,
-          zindex:-1
-        })
+
+        videoContext.exitFullScreen();
       }
     },
     videoErrorCallback(e) {
