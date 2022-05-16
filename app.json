@@ -32,5 +32,6 @@
     "navBar": "/components/navBar/navBar"
   },
   "disableScroll": true,
+  "lazyCodeLoading": "requiredComponents",
   "sitemapLocation": "sitemap.json"
 }
