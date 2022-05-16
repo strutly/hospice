@@ -15,6 +15,8 @@ App({
     });
   },
   globalData: {
+    normalFontSize:"14px",
+    elderlyFontSize:"22px",
     auth: false,
     login: false,
     systemFontSize:"14px",

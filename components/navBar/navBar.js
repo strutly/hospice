@@ -2,14 +2,14 @@ Component({
   options: {
     multipleSlots: true,
     addGlobalClass: true,
-    
+
   },
   properties: {
     extClass: {
       type: String,
       value: ''
     },
-    
+
     backgroundColorTop: {
       type: String,
       value: 'rgba(255, 255, 255, 1)',
@@ -31,7 +31,7 @@ Component({
       type: Boolean,
       value: false
     },
-    
+
     iconTheme: {
       type: String,
       value: 'black'
@@ -41,44 +41,42 @@ Component({
       value: 1
     }
   },
-  created: function() {
-    this.getSystemInfo();
+  created: function () {
     
+    this.getSystemInfo();
+
   },
-  attached: function() {
-    this.setStyle(); //设置样式
+  attached: function () {
     let pages = getCurrentPages();
-      if(pages.length==1){
-        this.setData({
-          back:false,
-          home:true
-        })
-      }else{
-        this.setData({
-          back:true,
-          home:true
-        })
-      }
+    if (pages.length == 1) {
+      this.setData({
+        back: false,
+        home: true
+      })
+    } else {
+      this.setData({
+        back: true,
+        home: true
+      })
+    }
+    this.setStyle('attached'); //设置样式
 
-
-      console.log(pages.length)
   },
   data: {
-    back:false,
-    home:false
+    back: false,
+    home: false
   },
   pageLifetimes: {
-    show: function() {
+    show: function () {
       if (getApp().globalSystemInfo.ios) {
-        console.log(123)
         this.getSystemInfo();
         this.setStyle(); //设置样式1
       }
     },
-    hide: function() {}
+    hide: function () { }
   },
   methods: {
-    setStyle: function(life) {
+    setStyle: function (life) {
       const {
         statusBarHeight,
         navBarHeight,
@@ -101,6 +99,9 @@ Component({
         `padding-right:${leftWidth}px`,
         `padding-bottom:${navBarExtendHeight}px`
       ].join(';');
+
+
+
       let navBarLeft = [];
       if ((back && !home) || (!back && home)) {
         navBarLeft = [`width:${capsulePosition.width}px`, `height:${capsulePosition.height}px`].join(';');
@@ -135,21 +136,21 @@ Component({
         });
       }
     },
-    _showChange: function(value) {
+    _showChange: function (value) {
       this.setStyle();
     },
     // 返回事件
-    back: function() {
+    back: function () {
       wx.navigateBack({
         delta: -1,
       })
     },
-    home: function() {
+    home: function () {
       wx.reLaunch({
         url: '/pages/index/index',
       })
     },
-    search: function() {
+    search: function () {
       this.triggerEvent('search', {});
     },
     getSystemInfo() {
@@ -200,13 +201,13 @@ Component({
             top: systemInfo.statusBarHeight + gap,
             width: width
           };
-          
+
         }
 
         let navBarHeight = '';
         if (!systemInfo.statusBarHeight) {
           systemInfo.statusBarHeight = systemInfo.screenHeight - systemInfo.windowHeight - 20;
-          navBarHeight = (function() {
+          navBarHeight = (function () {
             let gap = rect.top - systemInfo.statusBarHeight;
             return 2 * gap + rect.height;
           })();
@@ -214,7 +215,7 @@ Component({
           systemInfo.statusBarHeight = 0;
           systemInfo.navBarExtendHeight = 0; //下方扩展4像素高度 防止下方边距太小
         } else {
-          navBarHeight = (function() {
+          navBarHeight = (function () {
             let gap = rect.top - systemInfo.statusBarHeight;
             return systemInfo.statusBarHeight + 2 * gap + rect.height;
           })();
@@ -229,7 +230,7 @@ Component({
         systemInfo.ios = ios; //是否ios
 
         app.globalSystemInfo = systemInfo; //将信息保存到全局变量中,后边再用就不用重新异步获取了
-        
+
         return systemInfo;
       }
     }
