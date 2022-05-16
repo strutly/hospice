@@ -8,7 +8,8 @@ Page({
   data: {
     domain:Api.domain,
     article:{},
-    videoThumb:""
+    videoThumb:"",
+    videoStyle:'position: absolute;left:0;top:0;'
   },
 
   /**

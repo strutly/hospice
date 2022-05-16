@@ -2,7 +2,7 @@
   wx:if="{{playVideo}}"
   src="{{url}}"
   id="myvideo"
-  style="z-index:{{zindex}}"
+  style="z-index:{{zindex}};{{vstyle}}"
   autoplay="{{playVideo}}"
   direction="{{direction}}"
   show-casting-button="true"

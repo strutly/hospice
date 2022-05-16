@@ -2,7 +2,10 @@
 var videoContext;
 Component({
   properties: {
-
+    vstyle:{
+      type:String,
+      value:''
+    }
   },
   data: {
     playVideo:false,

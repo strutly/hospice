@@ -14,7 +14,7 @@
   </view>
 
 
-  <view class="cu-card case flex-wrap margin-sm {{videoThumb}}" bindtap="playVideo" data-url="{{article.videos}}">
+  <view class="cu-card case flex-wrap margin-sm" bindtap="playVideo" data-url="{{article.videos}}" style="position: relative;">
     <view class="cu-item shadow">
       <view class="image video-thumb">
         <image src="{{article.videosPics}}" mode="widthFix"></image>
@@ -22,8 +22,9 @@
       </view>
       
     </view>
+    <videoPlay id="video" vstyle="{{videoStyle}}"></videoPlay>
   </view>
-  <videoPlay id="video"></videoPlay>
+  
 
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
