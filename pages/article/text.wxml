@@ -3,7 +3,7 @@
   <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
     <view class="padding-tb text-center text-xxl main-title">{{listData.title}}</view>
   </view>
-  <view class="padding">
+  <view class="padding-lr">
     <z-tree treeArr="{{listData.children}}" child="{{false}}" wx:key="index"></z-tree>
   </view>
 </navBar>

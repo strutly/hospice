@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "topTips":"/components/topTips/index",
-    "navBar": "/components/navBar/navBar"
-  },
-  "navigationBarTitleText":"Record详细"
-}

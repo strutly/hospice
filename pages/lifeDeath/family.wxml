@@ -65,7 +65,7 @@
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-4.png"></image>
       <view>医疗决策前提</view>
     </navigator>
-    <navigator url="/pages/goodbye/index" class="flex-sub">
+    <navigator url="/pages/article/text?id=28" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-5.png"></image>
       <view>告别如何说出口</view>
     </navigator>

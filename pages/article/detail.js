@@ -9,9 +9,14 @@ Page({
     that = this;
     let res = await Api.getMaterilaDetail({
       id:options.id
-    });    
+    });
+    let article = res.data;
+    if(article && article.url){
+      article.url = article.url.replace(/&amp;/g, '&');
+      article.oldUrl = article.oldUrl.replace(/&amp;/g, '&');
+    }
     that.setData({
-      article:res.data
+      article:article
     })
   },
   onShow() {

@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<web-view src="{{systemFontSize=='14px'?article.url:article.oldUrl||article.url}}" wx:if="{{article.url}}"></web-view>
+<web-view decode="true" src="{{systemFontSize=='14px'?article.url:article.oldUrl||article.url}}" wx:if="{{article.url}}"></web-view>
 <view class="container padding margin text-lg text-center">
   <text class="lg text-blue cuIcon-warn margin-right-sm"></text>该内容不存在!!!
 </view>

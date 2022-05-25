@@ -13,7 +13,6 @@ Page({
     canIUseGetUserProfile: false,
     authModal: false,
     auth: wx.getStorageSync('auth') || false,
-    viewHtml:"<view class='bg-red'>红色</view>"
   },
   async onLoad(options) {
     that = this;

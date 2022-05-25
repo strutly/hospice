@@ -58,11 +58,12 @@ Page({
     } catch (error) {
       return that.showTips("授权失败,请重试~");
     }
-    let code = await api.getCode();
+    
     console.log(res)
     if(res.errMsg=="getUserProfile:ok"){
       let userInfo = res.userInfo
-      wx.setStorageSync('userInfo', userInfo);      
+      wx.setStorageSync('userInfo', userInfo);
+      let code = await api.getCode();      
       let authRes = await api.auth({
         code:code,
         encryptedData:res.encryptedData,
@@ -193,7 +194,7 @@ Page({
   },
   authModal() {
     that.setData({
-      authModal: !that.data.authModal
+      auth: !that.data.auth
     })
   },
   confirm(e){

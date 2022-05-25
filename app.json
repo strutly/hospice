@@ -19,8 +19,7 @@
     "pages/life/my",
     "pages/life/notice",
     "pages/life/comment",
-    "pages/life/detail",
-    "pages/goodbye/index"
+    "pages/life/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
