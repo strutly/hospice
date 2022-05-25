@@ -1,12 +1,10 @@
 .container{
   position: relative;  
   width: 100%;  
-  background-image: url("http://gridpic.tsing-tec.com/hospice/help-bg.png?v=1");
-  background-size: cover;
-  background-repeat:no-repeat;  
-  box-sizing: border-box;  
-  padding-bottom: 0;
-  padding-bottom: 0;
+  background-image: url("http://gridpic.tsing-tec.com/hospice/help-bg.png?imageMogr2");  
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  background-size: 100% auto;
 }
 .foot{
   padding-bottom: constant(safe-area-inset-bottom);

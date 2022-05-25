@@ -1,36 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-
-<wxs src="/utils/Tools.wxs" module="tools" />
-<navBar title='{{article.name}}' iconTheme="white" color="#fff" back="true" home="true">
-  <view class="flex text-orange text-center margin-top margin-lr text-lg align-center">
-    <view class="flex-twice align-center text-left">
-      <text class="cuIcon-time  margin-right-xs"></text>{{tools.dateFormat(article.createTime,'yyyy-MM-dd')}}
-    </view>
-    <view class="flex-sub" style="text-align: right;padding-right: 10rpx;">
-      <text class="cuIcon-attention margin-right-xs"></text>{{article.hits}}
-    </view>
-    <button class="cu-btn text-right bg-white padding-lr-xs" open-type="share">
-      <text class="cuIcon-share text-orange"></text>
-    </button>
-  </view>
-  <view class="flex" style="flex-flow: row wrap;align-content: flex-start;" wx:if="{{article.videos}}" wx:key="index">
-    <view bindtap="playVideo" data-url="{{item}}" class="video-box flex-sub margin" wx:for="{{videos}}" style="flex:0 0 33.33333%">
-      <image src="{{videosPics[index]}}" style="width:100%;"mode="widthFix" class="image"></image>
-      <text class="cuIcon-video margin-right-xs play"></text>
-    </view>
-  </view>
-  <videoPlay id="video"></videoPlay>
-  <view class="flex padding-sm solid margin radius-xl" wx:if="{{article.audios}}">
-    <text class="cuIcon-sound text-gray text-xxl"></text>
-    <view class="flex-sub"></view>
-    <text class="cuIcon-{{play?'stop':'playfill'}} text-xxl" bindtap="{{play?'stop':'play'}}"></text>
-  </view>
-  <view class="padding">
-    <rich-text nodes="{{htmlSnip}}"></rich-text>
-  </view>
-  
-  <view class="text-gray text-df text-center padding-bottom">
-    文章来源:{{article.origin}}
-  </view>
-
-</navBar>
+<web-view src="{{systemFontSize=='14px'?article.url:article.oldUrl||article.url}}" wx:if="{{article.url}}"></web-view>
+<view class="container padding margin text-lg text-center">
+  <text class="lg text-blue cuIcon-warn margin-right-sm"></text>该内容不存在!!!
+</view>

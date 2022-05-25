@@ -1,4 +1,5 @@
 const app = getApp();
+import util from '../../utils/util.js';
 import Api from '../../config/api.js';
 var that;
 Page({
@@ -6,14 +7,12 @@ Page({
     index: 0,
     endline: false,
     datas: [],
-    titles:['分享社区','其言也善','树洞']
   },
   async onLoad(options) {
     that = this;
     that.setData({
       options: options,
       datas: [],
-      source:options.source||0,
       endline: false
     });
     that.listRecord(1);
@@ -21,13 +20,13 @@ Page({
   async listRecord(pageNo) {
     let datas = that.data.datas;
     let param = {
-      pageNo: pageNo,
-      source: that.data.options.source || 0
+      pageNo: pageNo
     }
     if (that.data.options.type) {
       param.type = that.data.options.type
     }
     let res = await Api.getRecord(param);
+    console.log(res)
     that.setData({
       pageNo: pageNo,
       endline: res.data.last,

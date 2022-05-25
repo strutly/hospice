@@ -18,15 +18,15 @@
       </view>
       <view class="card-handles">
         <view class="handle-item" bindtap="like" data-type="3">
-          <image src="/images/store{{detail.store?1:0}}.png"></image>          
+          <image src="/images/store{{store}}.png"></image>          
         </view>
         <view class="handle-item" bindtap="like" data-type="1">
-          <image src="/images/like{{detail.like?1:0}}.png"></image>
-          <view>{{detail.likes.length}}</view>
+          <image src="/images/like{{like}}.png"></image>
+          <view>{{likes.length}}</view>
         </view>
         <view class="handle-item" bindtap="comment">
           <image src="/images/comment.png"></image>
-          <view>{{detail.replys.length}}</view>
+          <view>{{replys.length}}</view>
         </view>
         <view class="handle-item">
           <button class="share" open-type='share' title="{{detail.msg}}">
@@ -34,13 +34,13 @@
           </button>
         </view>
       </view>
-      <view class="card-likes" wx:if="{{detail.likes.length>0}}">
+      <view class="card-likes" wx:if="{{likes.length>0}}">
         <image class="like-image" src="/images/like1.png"></image>
-        <view class="like-name" wx:for="{{detail.likes}}">{{item.nickName}}</view>
+        <view class="like-name" wx:for="{{likes}}" data-uid="{{item.uid}}" bindtap="userHome">{{item.nickName}}</view>
       </view>
     </view>
     <view class="card-comments">
-      <view class="comment-item" wx:for="{{detail.replys}}">
+      <view class="comment-item" wx:for="{{replys}}">
         <view class="comment-head">
           <image class="comment-image" src="{{item.avatarUrl}}"></image>
           <view class="comment-des">

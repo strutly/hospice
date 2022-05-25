@@ -8,22 +8,15 @@ Page({
     navTop: app.globalData.navTop,
     delete: false,
     pageName: '发表日志'
-
   },
   onLoad(options) {
     that = this;
     let formData = wx.getStorageSync('formData') || { open: 1, imgs: [], type: 0 };
+    formData.source = options.source||0;
     that.setData({
       formData: formData,
       options: options
     })
-  },
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 1,
-      })
-    }
   },
   chooseType(e) {
     console.log(e);
@@ -132,13 +125,6 @@ Page({
         // complete
       }
     })
-  },
-  onReady() {
-    this.videoContext = wx.createVideoContext('myVideo')
-  },
-  videoErrorCallback(e) {
-    console.log('视频错误信息:')
-    console.log(e.detail.errMsg)
   },
   async upload(tempFilePath, cover) {
     console.log(tempFilePath)

@@ -10,58 +10,36 @@
     <view class="bg-gradual-pink flex-sub margin-lr padding radius-xl">时光相册</view>
   </view>
 
-
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class="action">
-      <text class="cuIcon-titles text-orange"></text> 其言也善
-    </view>
+  <view class="cu-list menu solid-bottom margin-top">
+    <navigator url="/pages/life/index?source=1" class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-titles text-orange"></text>热门帖子
+      </view>
+      <view class="action">
+        <text class="text-grey text-df">查看全部</text>
+      </view>
+    </navigator>
   </view>
+
+
   <view class="cu-list menu-avatar">
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+    <navigator url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{datas}}" wx:key="index">
+      <view class="cu-avatar lg" style="background-image:url({{item.imgs[0].cover}});"></view>
       <view class="content flex-sub">
         <view class="text-grey">
-        <text class="text-cut">正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔正义天使 凯尔
+        <text class="text-cut">{{item.msg}}
         </text>
         </view>
         <view class="text-gray text-sm flex justify-between">
-          十天前
+          {{item.createTime}}
           <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+            <text class="cuIcon-favorfill margin-lr-xs"></text> {{item.counts[3]||0}}
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.counts[1]||0}}
+            <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.counts[2]||0}}
           </view>
         </view>
       </view>
-    </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="cu-avatar lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">正义天使 凯尔</view>
-        <view class="text-gray text-sm flex justify-between">
-          十天前
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-            <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-          </view>
-        </view>
-      </view>
-    </view>
+    </navigator>
   </view>
 
 </navBar>

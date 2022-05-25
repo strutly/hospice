@@ -1,5 +1,4 @@
-.horse-race-lamp {
-  position: relative;
+.horse-race-lamp {  
   height: 100%;
 }
 .example {
@@ -30,6 +29,11 @@
   border: 1px solid #FFFFFF;
   display: inline-block;
   margin-right: 20rpx;
+}
+.user-good{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left:10rpx;
 }
 
 .marquee-monomer {
@@ -65,14 +69,14 @@
   height: 100rpx;
   position:absolute;
   left:50rpx;
-  bottom:100px;
+  bottom:150px;
 }
 .right{
   width: 100rpx;
   height: 100rpx;
   position: absolute;
-  bottom: 70px;
-  right:70px;
+  bottom: 200rpx;
+  right:80rpx;
 }
 .mask{
   background-color: rgb(0,0,0,0.5);

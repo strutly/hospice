@@ -17,30 +17,31 @@
         </view>
       </view>
     </view>
-
-    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
-    <view class="grid col-2">
-      <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="0">
-        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
-          <view class="text-df">#美食分享#</view>
+    <block wx:if="{{formData.source==0}}">
+      <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
+      <view class="grid col-2">
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="0">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
+            <view class="text-df">#这一口有味道#</view>
+          </view>
+        </view>
+        <view class="padding-left padding-tb-sm " bindtap="chooseType" data-type="1">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
+            <view class="text-df">#这一眼还可以#</view>
+          </view>
+        </view>
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="2">
+          <view class="{{formData.type==2?'bg-orange':''}} solid padding-sm radius text-center shadow-blur ">
+            <view class="text-df">#这一句让我感动#</view>
+          </view>
+        </view>
+        <view class="padding-left padding-tb-sm" bindtap="chooseType" data-type="3">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==3?'bg-orange':''}}">
+            <view class="text-df">#这个瞬间非常留恋#</view>
+          </view>
         </view>
       </view>
-      <view class="padding-left padding-tb-sm " bindtap="chooseType" data-type="1">
-        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
-          <view class="text-df">#服装分享#</view>
-        </view>
-      </view>
-      <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="2">
-        <view class="{{formData.type==2?'bg-orange':''}} solid padding-sm radius text-center shadow-blur ">
-          <view class="text-df">#书籍影视分享#</view>
-        </view>
-      </view>
-      <view class="padding-left padding-tb-sm" bindtap="chooseType" data-type="3">
-        <view class="solid padding-sm radius text-center shadow-blur {{formData.type==3?'bg-orange':''}}">
-          <view class="text-df">#点滴故事分享#</view>
-        </view>
-      </view>
-    </view>
+    </block>
 
 
     <view class="open-switch">是否公开?<view class="switch {{formData.open?'switch-active':''}}" bindtap="open"></view>

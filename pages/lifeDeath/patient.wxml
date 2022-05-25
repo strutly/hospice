@@ -13,7 +13,7 @@
     </view>
   </view>
 
-  <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" wx:if="{{swiperList.length>0}}">
     <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
       <image src="{{item.pic}}" mode="aspectFill"></image>
     </swiper-item>
@@ -71,7 +71,7 @@
       </view>
     </view>
   </view>
-  <navigator url="/pages/share/index" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
+  <navigator url="/pages/share/index?source=1" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
     <image class="margin" style="width:60rpx;height:60rpx" src="http://gridpic.tsing-tec.com/hospice/patient-7.png"></image>
     <view class="flex-sub text-black share">品质生活分享</view>
   </navigator>

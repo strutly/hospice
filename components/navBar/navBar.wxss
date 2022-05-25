@@ -120,8 +120,7 @@ page {
 }
 
 .lxy-nav-bar__inner .lxy-nav-bar__center {
-  font-size: 17px;
-  line-height: 17px;
+  
   text-align: center;
   position: relative;
   flex: 1;
@@ -140,6 +139,7 @@ page {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  font-size: 22px;
 }
 
 .lxy-nav-bar__inner .lxy-nav-bar__loading {

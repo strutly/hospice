@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText":"我的评论"
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar"
+  }
 }

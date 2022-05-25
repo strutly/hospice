@@ -12,12 +12,13 @@ Page({
     size: 14,
     canIUseGetUserProfile: false,
     authModal: false,
-    auth: wx.getStorageSync('auth') || false
+    auth: wx.getStorageSync('auth') || false,
+    viewHtml:"<view class='bg-red'>红色</view>"
   },
   async onLoad(options) {
     that = this;
     let res = await Api.getBarrage({
-      pageSize: 10
+      pageSize: 8
     });
     console.log(res);
     if (res.code == 0) {
@@ -111,8 +112,9 @@ Page({
   async submit(e) {
     console.log(e);
     let data = e.detail.value;
-    let content = e.detail.value.content;
+    let content = data.content;
     if (content) {
+      data.content = "我已经做到了"+content;
       let res = await Api.addBarrage(data);
       console.log(res);
       if (res.code == 0) {

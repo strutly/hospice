@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "videoPlay":"/components/video/video"
+    "videoPlay":"/components/video/video",
+    "navBar": "/components/navBar/navBar"
   }
 }

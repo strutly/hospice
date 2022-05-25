@@ -1,7 +1,10 @@
 <view class="horse-race-lamp">
-  <view class="marquee-text" wx:for="{{horseRaceLampList}}" wx:key="index" style="font-size: {{size/14}}rem;left:{{(index%4)*100+marqueeDistance}}px;top:{{index*80+30}}px">
+  <view class="marquee-text" bindtap="{{tabIndex==index?'':'showGood'}}" data-index="{{index}}" wx:for="{{horseRaceLampList}}" wx:key="index" style="font-size: {{size/14}}rem;left:{{tabIndex==index?(index%4)*100+fixedLeft:(index%4)*100+marqueeDistance}}px;top:{{index*80+30}}px">
     <view class="marquee-con">
-      <image class="user-head" src="{{item.maUser.avatarUrl}}"></image>{{item.content}}
+      <image class="user-head" src="{{item.maUser.avatarUrl}}"></image>
+      {{item.content}}
+      <image class="user-good" bindtap="{{tap?'praise':''}}" src="/images/like{{item.ifPraise?0:1}}.png" data-id="{{item.id}}" wx:if="{{tabIndex==index}}"></image>
+      <text style="margin-left:10rpx;font-size:22rpx;" wx:if="{{tabIndex==index}}">{{item.praiseNum}}</text>
     </view>
   </view>
   <view wx:if="{{firework}}">

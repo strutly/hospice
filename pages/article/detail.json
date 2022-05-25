@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "videoPlay":"/components/video/video"
-  }
+  },
+  "navigationStyle": "default"
 }

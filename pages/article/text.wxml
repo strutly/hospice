@@ -1,15 +1,9 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='{{title}}' iconTheme="white" color="#fff" back="true">
+<navBar title='{{listData.title}}' iconTheme="white" color="#fff" back="true">
   <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
-    <view class="padding-tb text-center text-xxl main-title">{{title}}</view>
+    <view class="padding-tb text-center text-xxl main-title">{{listData.title}}</view>
   </view>
-
-  <view class="cu-list menu sm-border margin-top">
-    <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{articles}}">
-      <view class="content">        
-        <text class="text-cut text-lg padding-left" style="border-left:3px solid #e99149;">{{item.name}}</text>
-      </view>
-    </navigator>
+  <view class="padding">
+    <z-tree treeArr="{{listData.children}}" child="{{false}}" wx:key="index"></z-tree>
   </view>
-
 </navBar>

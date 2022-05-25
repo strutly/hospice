@@ -1,0 +1,10 @@
+<view wx:for="{{treeArr}}" wx:key="index" class="tree-item">
+  <view class="tree-title {{child?'tree-title-child':''}}" data-index="{{index}}" bindtap="{{item.url==''?'':'detail'}}" data-id="{{item.id}}">
+    <text class="item-index" wx:if="{{!child}}">0{{index+1}}</text>
+    <text class="item-icon-title" wx:else></text>
+    {{item.title}}
+  </view>
+  <view class="left40">
+    <z-tree wx:if="{{item.children.length>0}}" treeArr="{{item.children}}" child="true"></z-tree>
+  </view>
+</view>

@@ -7,30 +7,78 @@ Page({
     like:0,
     store:0,
     comment:false,
+    uid:wx.getStorageSync('uid')||"",
     confirmMsg:"确认删除这条评论吗?",
     url:'http://pic.strutly.cn/mylove/e649640d-5c37-4a86-9597-a8a0128345ac.mp4',
     full:false,
     playVideo:false
   },
-  async onLoad(options){
+  onLoad(options){
     console.log(options)
     that = this;
     let id = options.id;
-    let res = await api.getRecordDetail({id:id});
-    let detail = res.data;
-    let imgs=[];
-    detail.imgs.forEach(img=>{
-      if(img.type==0){
-        imgs.push(img.url)
-      }
-    })
-    console.log(imgs);
     that.setData({
-      imgs:imgs,
-      detail:res.data,
-      id:id,
       options:options,
+      id:id
     })
+  },
+  screenChange(e){
+    console.log(e);
+    that.setData({
+      full:e.detail.fullScreen
+    })
+  },
+  video(e){
+    that.setData({
+      playVideo:true,
+      url:e.currentTarget.dataset.src
+    })
+  },
+
+  hiddenVideo(){
+    that.setData({
+      playVideo:false
+    })    
+  },
+  async onShow(){
+    let id = that.data.id;
+    let res = await api.getRecordDetail({id:id});
+    console.log(res)
+    if(res.data!=null){
+      let detail = res.data;
+      let imgs=[];
+      detail.imgs.forEach(img=>{
+        if(img.type==0){
+          imgs.push(img.url)
+        }
+      })
+      console.log(imgs);
+      that.setData({
+        imgs:imgs,
+        detail:res.data,
+        likes:res.data.counts[1]||[],
+        replys:res.data.counts[2]||[],
+        id:id
+      })
+    }else{
+      that.setData({
+        noData:true,
+        noDataTo:"/pages/index/index",
+        noDataMsg:"该内容不存在或已经隐藏,去主页看看吧!",
+        noDataBtn:"主页"
+      })
+    } 
+  },
+  async onReady(){
+    let auth = wx.getStorageSync('auth')||false;
+    if(auth){
+      let res = await api.commentDetail({id:that.data.id});
+      that.setData({
+        like:res.data.like?1:0,
+        store:res.data.store?1:0,
+      })
+    };
+      
   },
   comment(e){
     let auth = wx.getStorageSync('auth');
@@ -135,10 +183,19 @@ Page({
       })      
     } 
   },
+  onShareAppMessage(e){
+    console.log(e);
+  },
   onShareAppMessage: function (res) {
     return {
-      title: '详细',
-      path: '/pages/life/detail?id='+that.data.id
+      title: 'Baby-Record',
+      path: '/pages/index/detail?id='+that.data.id
+    }
+  },
+  onShareTimeline:function(res){
+    return {
+      title: 'Baby-Record',
+      path: '/pages/index/detail?id='+that.data.id
     }
   },
   previewImage: function (e) {
@@ -149,8 +206,32 @@ Page({
       urls: that.data.imgs // 需要预览的图片http链接列表  
     })
   },
+  userHome(e){
+    let auth = wx.getStorageSync('auth')||false;
+    if(auth){
+      let uid = e.currentTarget.dataset.uid;
+      let id = wx.getStorageSync('uid');
+      if(uid != id){
+        wx.navigateTo({
+          url: "/pages/index/you?uid="+uid,
+        })
+      }else{
+        wx.switchTab({
+          url:"/pages/index/my"
+        })
+      }
+      
+    }else{
+      that.setData({
+        auth:true,
+        callBack:function(){
+          that.userHome(e)
+        }
+      })
+    }    
+  },
   async handle(type){
-    let userInfo = wx.getStorageSync('userInfo')||{nickName:'微信用户'};
+    let userInfo = wx.getStorageSync('userInfo');
     let data = {
       rid:that.data.id,
       msg:that.data.detail.msg,
@@ -163,30 +244,40 @@ Page({
     console.log(data);
     let res = await api.addComment(JSON.stringify(data));
     if(res.code==0){
-      let detail = that.data.detail;
-      if(type==1){        
-        detail.like = !detail.like;
-        if(detail.like){
-          detail.likes.push({uid:that.data.uid,nickName:userInfo.nickName})
+      if(type==1){
+        let like = that.data.like;
+        like = -1*like + 1;
+        let likes = that.data.likes;
+        if(like==1){
+          likes.push({uid:that.data.uid,nickName:userInfo.nickName})
         }else{
-          let index =  detail.likes.findIndex(item => item.uid === that.data.uid);
-          console.log(index)          
-          detail.likes.splice(index,1);          
-        }        
-      }else if(type==3){        
-        detail.store = !detail.store;
+          let index =  likes.findIndex(item => item.uid === that.data.uid);
+          console.log(index);
+          likes.splice(index,1);
+          console.log(likes)
+        }
+        that.setData({
+          like:like,
+          likes:likes
+        })
+      }else if(type==3){
+        let store = that.data.store;
+        store = -1*store + 1;
+        that.setData({
+          store:store
+        })
       }else{
-        let replys = detail.replys;
+        let replys = that.data.replys;
         data.id = res.data;
         data.uid = that.data.uid;
         data.nickName = userInfo.nickName;
         data.avatarUrl = userInfo.avatarUrl;
         data.createTime = util.dateFormat(new Date(),'yyyy-MM-dd hh:mm:ss');
-        replys.push(data);
+        replys.push(data)
+        that.setData({
+          replys:replys
+        })
       }
-      that.setData({
-        detail:detail
-      })
     }else{
       that.showTips(res.msg,"error");
     };        

@@ -1,11 +1,11 @@
 <wxs src="../../utils/Tools.wxs" module="tools"/>
 <!--index.wxml-->
-<navBar title='{{titles[source]}}' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}" bindreachBottom="onReachBottom">
   <view class="cards">
-  <block wx:for="{{datas}}" wx:for-item="item" wx:key="index">
-    <navigator url="/pages/life/detail?id={{item.id}}" class="card solid-bottom">
+  <block wx:for="{{datas}}" wx:for-item="item">
+    <navigator url="/pages/life/detail?id={{item.id}}" class="card solid-bottom" wx:if="{{!tools.indexOf(black,item.miniUser.id)}}">
       <view class="card-head">
-        <image class="head-image" src="{{item.maUser.avatarUrl||'/images/head.jpg'}}" data-uid="{{item.miniUser.id}}"></image>
+        <image class="head-image" src="{{item.maUser.avatarUrl||'/images/head.jpg'}}" data-uid="{{item.miniUser.id}}" bindlongpress="{{uid==item.miniUser.id?'':'confirm'}}"></image>
         <view class="card-des">
           <view class="card-nickname">{{item.maUser.nickName||'未授权用户'}}</view>
           <view class="card-time">{{tools.dateFormat(item.createTime,'MM-dd hh:mm')}}</view>

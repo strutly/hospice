@@ -14,13 +14,11 @@ Page({
    */
   async onLoad(options) {
     that = this;
-    let res = await Api.getArticle({
-      catalogId:options.id
+    let res = await Api.getMaterilaTree({
+      id:options.id
     });
-    console.log(res);
     that.setData({
-      articles:res.data.content,
-      title:options.title
+      listData:res.data
     })
   },  
   onShow() {

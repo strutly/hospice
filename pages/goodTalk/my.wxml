@@ -1,0 +1,26 @@
+<include src="/pages/template/error.wxml"></include>
+<wxs src="../../utils/Tools.wxs" module="tools" />
+<navBar title='我的分享' iconTheme="white" color="#fff" back="true">
+  <view class="content">
+    <view class="panel" wx:for="{{myRecords}}" wx:for-index='key' wx:for-item="records">
+      <view class="panel-title">{{key}}</view>
+      <view class="media-box {{(move && item.id==moveIndex)?'media-active':''}}" wx:for="{{records}}">
+        <navigator url="/pages/life/detail?id={{item.id}}"   class="media-content" data-index="{{item.id}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+          <view class="media-hd">
+            <image mode="aspectFill" src="{{item.imgs[0].url}}"></image>
+          </view>
+          <view class="media-bd">
+            <view class="media-title">{{tools.dateFormat(item.createTime,'MM月dd日')}}</view>
+            <view class="media-des">{{item.msg}}</view>
+          </view>
+        </navigator>
+        <view class="media-delete">
+          <view class="media-delete-item {{delete?'hide':''}}" bindtap="{{put?'handle':'confirm'}}" data-id="{{item.id}}" data-type="put">{{item.open?'不公开':'公开'}}{{put?'这条记录':''}}</view>
+          <view class="media-delete-item media-delete-item-warm  {{put?'hide':''}}" bindtap="{{delete?'handle':'confirm'}}" data-id="{{item.id}}" data-type="delete">删除{{delete?'这条记录':''}}</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</navBar>

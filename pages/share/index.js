@@ -17,7 +17,8 @@ Page({
   async listRecord(pageNo) {
     let param = {
       pageNo: pageNo,
-      pageSize:4
+      pageSize:4,
+      source:0
     }
     let res = await Api.getRecord(param);
     that.setData({

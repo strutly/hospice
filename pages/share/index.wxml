@@ -8,9 +8,9 @@
   </view> -->
 
   <view class="share-box flex text-white">
-    <navigator style="background-color: #FF894B;" url="/pages/life/form" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator style="background-color: #FF894B;" url="/pages/life/form?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
-    <navigator style="background-color: #8170FD;" url="/pages/life/my" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator style="background-color: #8170FD;" url="/pages/life/my?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
   </view>
   <view class="cu-list menu">
@@ -23,29 +23,29 @@
 
   <view class="grid col-2 text-white">
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
-        <view class="text-df">#美食分享#</view>
+      <navigator url="/pages/life/index?type=0&source=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#这一口有味道#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=1" style="background-color: #4DA5FE;" class="padding radius text-center shadow-blur">
-        <view class="text-df">#服装分享#</view>
+      <navigator url="/pages/life/index?type=1&source=0" style="background-color: #4DA5FE;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#这一眼还可以#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=2" style="background-color: #47BD9B;" class="padding radius text-center shadow-blur">
-        <view class="text-df">#书籍影视分享#</view>
+      <navigator url="/pages/life/index?type=2&source=0" style="background-color: #47BD9B;" class="padding radius text-center shadow-blur">
+        <view class="text-df">#这一句让我感动#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator url="/pages/life/index?type=3" style="background-color: #CA93CA;"  class="padding radius text-center shadow-blur">
-        <view class="text-df">#点滴故事分享#</view>
+      <navigator url="/pages/life/index?type=3&source=0" style="background-color: #CA93CA;"  class="padding radius text-center shadow-blur">
+        <view class="text-df">#这个瞬间非常留恋#</view>
       </navigator>
     </view>
   </view>
 
   <view class="cu-list menu">
-    <navigator url="/pages/life/index" class="cu-item arrow">
+    <navigator url="/pages/life/index?source=0" class="cu-item arrow">
       <view class="content">
         <text class="text-bold text-lg">热门帖子</text>
       </view>

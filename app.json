@@ -19,17 +19,15 @@
     "pages/life/my",
     "pages/life/notice",
     "pages/life/comment",
-    "pages/life/detail"
+    "pages/life/detail",
+    "pages/goodbye/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#fff",
     "navigationStyle": "custom",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "发表Record"
-  },
-  "usingComponents": {
-    "navBar": "/components/navBar/navBar"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "清云守护安宁"
   },
   "disableScroll": true,
   "lazyCodeLoading": "requiredComponents",

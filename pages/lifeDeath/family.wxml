@@ -14,7 +14,7 @@
     </view>
   </view>
 
-  <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" wx:if="{{swiperList.length>0}}">
     <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
       <image src="{{item.pic}}" mode="aspectFill"></image>
     </swiper-item>
@@ -37,15 +37,15 @@
   </view>
 
   <view class="flex text-center align-center text-lg">
-    <navigator url="/pages/article/text?id=12&title=身体照护" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
+    <navigator url="/pages/article/text?id=3" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
       <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-1.png"></image>
       <text class="flex-sub" style="color:#e99149;">身体照护</text>
     </navigator>
-    <navigator url="/pages/article/text?id=13&title=心理照护" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
+    <navigator url="/pages/article/text?id=16" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
       <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-2.png"></image>
       <text class="flex-sub" style="color:#e99149;">心理照护</text>
     </navigator>
-    <navigator url="/pages/article/detail?id=28" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
+    <navigator url="/pages/article/detail?id=24" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
       <image class="fl" style="width:30rpx;height:30rpx; margin-right:10rpx" src="http://gridpic.tsing-tec.com/hospice/family-3.png"></image>
       <text class="flex-sub" style="color:#e99149;">紧急处理</text>
     </navigator>
@@ -61,11 +61,11 @@
   </view>
 
   <view class="flex justify-center text-center text-lg">
-    <navigator url="/pages/article/detail?id=9" class="flex-sub" bindtap="playVideo">
+    <navigator url="/pages/article/detail?id=27" class="flex-sub" bindtap="playVideo">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-4.png"></image>
       <view>医疗决策前提</view>
     </navigator>
-    <navigator url="/pages/article/text?id=16&title=告别如何说出口" class="flex-sub">
+    <navigator url="/pages/goodbye/index" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-5.png"></image>
       <view>告别如何说出口</view>
     </navigator>
@@ -90,7 +90,7 @@
       物品准备
     </navigator>
     <navigator url="/pages/article/detail?id=17" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
-      物流准备
+      流程准备
     </navigator>
   </view>
 

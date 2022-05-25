@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "toptips":"/components/topTips/index",
-    "tab":"/components/edition/index"
+    "tab":"/components/edition/index",
+    "navBar": "/components/navBar/navBar"
   }
 }

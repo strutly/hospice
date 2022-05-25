@@ -1,17 +1,18 @@
+import Api from "../../config/api";
 Component({
   properties: {
-    firework:{
-      type:Boolean,
-      value:false,
+    firework: {
+      type: Boolean,
+      value: false,
       observer: '_fireworkChange'
     },
-    showImg:{
-      type:Boolean,
-      value:false
+    showImg: {
+      type: Boolean,
+      value: false
     },
     marqueeDistance: {        //初始滚动距离
       type: [String, Number],
-      value: 0        
+      value: 0
     },
     size: {       // 字体大小
       type: Number,
@@ -35,10 +36,13 @@ Component({
     }
   },
   data: {
-    showImg:true
+    showImg: true,
+    tabIndex: -1,
+    fixedLeft: 0,
+    timeOut:null
   },
   methods: {
-    _fireworkChange(newVal){
+    _fireworkChange(newVal) {
       if (newVal) {
         setTimeout(() => {
           this.setData({
@@ -52,11 +56,46 @@ Component({
         firework: newVal
       });
     },
-    showImg(e){
+    showImg(e) {
       console.log(e)
       this.setData({
-        showImg:!this.data.showImg,
-        pic:e.currentTarget.dataset.pic
+        showImg: !this.data.showImg,
+        pic: e.currentTarget.dataset.pic
+      })
+    },
+    showGood(e) {
+     let timeOut = this.data.timeOut;
+      if(timeOut)clearTimeout(timeOut);
+      timeOut = setTimeout(() => {
+        this.setData({
+          tap: false,
+          tabIndex: -1,
+          fixedLeft: this.data.marqueeDistance
+        })
+      }, 3500);
+      this.setData({
+        timeOut:timeOut,
+        tap: true,
+        tabIndex: e.currentTarget.dataset.index,
+        fixedLeft: this.data.marqueeDistance
+      })
+    },
+    async praise(e) {
+      let res = await Api.addPraise({
+        bid: e.currentTarget.dataset.id,
+        type: 0
+      });
+      let index = this.data.tabIndex;
+      let list = this.data.horseRaceLampList;
+      if (res.code == 0) {
+        list[index].ifPraise = false;
+        list[index].praiseNum++;
+      }
+      this.setData({
+        horseRaceLampList: list,
+        tap: false,
+        tabIndex: -1,
+        fixedLeft: this.data.marqueeDistance
       })
     }
   }

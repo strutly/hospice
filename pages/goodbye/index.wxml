@@ -1,0 +1,91 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='告别如何说出口' iconTheme="white" color="#fff" back="true">
+  <view class="padding">
+  <view style="vertical-align:inherit;text-indent: 32px; line-height: 2em; margin-bottom: 10px;">
+    <text style="line-height: 150%; font-family: 宋体; font-size: 17px;">为了更好地了解您和病人的沟通状态，以便我们可以为您提供更准确的帮助，您觉得以下四个选项的描述，哪种描述更符合您和病人最近的沟通状态，请圈出对应的选项</text>
+  </view>
+  <view class="_135editor" data-tools="135编辑器" data-id="111792">
+    <view style="margin:10px auto">
+      <view style="padding:25px 10px 0;border-radius: 10px;border: 1px dashed #c7ebfa; box-shadow: -15px -15px 10px #f6fcfe, 15px 0px 10px #f6fcfe, 0px 15px 10px #f6fcfe;margin: 15px;">
+        <view class="box-edit _135editor" style="padding: 0 0 10px 0;">
+          <view style="display: flex;align-items: flex-start;">
+            <view style="display: flex;padding: 6px 0 0 0;">
+              <view class="assistant" style="box-sizing:border-box;width: 10px;height: 10px;background-color: #a6c954;flex-shrink: 1;"></view>
+            </view>
+            <view style="box-sizing:border-box;max-width: 93% !important;padding: 0 7px;width: 93%;" data-width="93%">
+              <view data-autoskip="1" class="135brush" style="text-align: justify;line-height:1.75em;letter-spacing: 1.5px;font-size:14px;color:#333;background: transparent;">
+                <navigator url="/pages/article/detail?id=2" style="vertical-align:inherit;" hm_fix="287:434">
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;text-indent: 32px;caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px;">A.</text><text style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px; font-family: 宋体;">我和病人不想沟通临终问题，我们在临终问题上没有沟通。</text>
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; cursor: text; font-size: 17px; text-indent: 32px; caret-color: #ff0000; text-decoration-thickness: initial; line-height: 25.5px; font-family: 宋体; text-decoration-line: underline; color: #ff0000; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important;">（点击查看支持方案）</text>                  
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_135editor" data-tools="135编辑器" data-id="111792">
+    <view style="margin:10px auto">
+      <view style="padding:25px 10px 0;border-radius: 10px;border: 1px dashed #c7ebfa; box-shadow: -15px -15px 10px #f6fcfe, 15px 0px 10px #f6fcfe, 0px 15px 10px #f6fcfe;margin: 15px;">
+        <view class="box-edit _135editor" style="padding: 0 0 10px 0;">
+          <view style="display: flex;align-items: flex-start;">
+            <view style="display: flex;padding: 6px 0 0 0;">
+              <view class="assistant" style="box-sizing:border-box;width: 10px;height: 10px;background-color: #a6c954;flex-shrink: 1;"></view>
+            </view>
+            <view style="box-sizing:border-box;max-width: 93% !important;padding: 0 7px;width: 93%;" data-width="93%">
+              <view data-autoskip="1" class="135brush" style="text-align: justify;line-height:1.75em;letter-spacing: 1.5px;font-size:14px;color:#333;background: transparent;">
+                <navigator url="/pages/article/detail?id=3"  style="vertical-align:inherit;" hm_fix="425:461">
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000;  font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px;">B.</text><text style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px; font-family: 宋体;">我有沟通临终问题的意愿，但我不敢和病人沟通临终问题，我们主要围绕临终问题外围的话题进行沟通，如疾病大致情况、商量治疗决策、身体状况、情绪变化和得病后的心结。</text>
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; cursor: text; font-size: 17px; text-indent: 32px; caret-color: #ff0000; text-decoration-thickness: initial; line-height: 25.5px; font-family: 宋体; text-decoration-line: underline; color: #ff0000; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important;">（点击查看支持方案）</text>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_135editor" data-tools="135编辑器" data-id="111792">
+    <view style="margin:10px auto">
+      <view style="padding:25px 10px 0;border-radius: 10px;border: 1px dashed #c7ebfa; box-shadow: -15px -15px 10px #f6fcfe, 15px 0px 10px #f6fcfe, 0px 15px 10px #f6fcfe;margin: 15px;">
+        <view class="box-edit _135editor" style="padding: 0 0 10px 0;">
+          <view style="display: flex;align-items: flex-start;">
+            <view style="display: flex;padding: 6px 0 0 0;">
+              <view class="assistant" style="box-sizing:border-box;width: 10px;height: 10px;background-color: #a6c954;flex-shrink: 1;"></view>
+            </view>
+            <view style="box-sizing:border-box;max-width: 93% !important;padding: 0 7px;width: 93%;" data-width="93%">
+              <view data-autoskip="1" class="135brush" style="text-align: justify;line-height:1.75em;letter-spacing: 1.5px;font-size:14px;color:#333;background: transparent;">
+                <navigator url="/pages/article/detail?id=4" style="vertical-align:inherit;">
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000;  font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px;">C.</text><text style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px; font-family: 宋体;">我有沟通临终问题的意愿，但我对于沟通临终问题缺乏技巧和经验，我们主要围绕临终问题外围的话题进行沟通，如疾病大致情况、商量治疗决策、身体状况、情绪变化和得病后的心结。</text>
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; cursor: text; font-size: 17px; text-indent: 32px; caret-color: #ff0000; text-decoration-thickness: initial; line-height: 25.5px; font-family: 宋体; text-decoration-line: underline; color: #ff0000; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important;">（点击查看支持方案）</text>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_135editor" data-tools="135编辑器" data-id="111792">
+    <view style="margin:10px auto">
+      <view style="padding:25px 10px 0;border-radius: 10px;border: 1px dashed #c7ebfa; box-shadow: -15px -15px 10px #f6fcfe, 15px 0px 10px #f6fcfe, 0px 15px 10px #f6fcfe;margin: 15px;">
+        <view class="box-edit _135editor" style="padding: 0 0 10px 0;">
+          <view style="display: flex;align-items: flex-start;">
+            <view style="display: flex;padding: 6px 0 0 0;">
+              <view class="assistant" style="box-sizing:border-box;width: 10px;height: 10px;background-color: #a6c954;flex-shrink: 1;"></view>
+            </view>
+            <view style="box-sizing:border-box;max-width: 93% !important;padding: 0 7px;width: 93%;" data-width="93%">
+              <view data-autoskip="1" class="135brush" style="text-align: justify;line-height:1.75em;letter-spacing: 1.5px;font-size:14px;color:#333;background: transparent;">
+                <navigator url="/pages/article/detail?id=5" style="vertical-align:inherit;">
+                  <text class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px;">D.</text><text style="max-inline-size: 100%; margin: 0px; padding: 0px; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important; cursor: text; color: #000000; font-size: 17px;        text-indent: 32px;      caret-color: #ff0000;  text-decoration-thickness: initial;   line-height: 25.5px; font-family: 宋体;">我和病人都知道疾病是不可治愈的，我们沟通了一些临终问题，如疾病的不可治愈性和对疾病不可治愈的恐惧、临终阶段的治疗原则（不遭罪、减轻疼痛、避免无效治疗）、花钱治疗的意义、死亡预感和病人走之前想见的人。或者我和病人比较想得开，我们可以开放自然地讨论临终问题，包括死亡来临时的具体安排，如临终紧急救护措施、临终阶段生命维持治疗、对家人未来生活的嘱托、病人的身后事和死亡态度。</text><text  class="text-bold" style="max-inline-size: 100%; margin: 0px; padding: 0px; cursor: text; font-size: 17px; text-indent: 32px; caret-color: #ff0000; text-decoration-thickness: initial; line-height: 25.5px; font-family: 宋体; text-decoration-line: underline; color: #ff0000; box-sizing: border-box !important; overflow-wrap: break-word !important; outline: none 0px !important;">（点击查看支持方案）</text>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</navBar>
