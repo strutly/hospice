@@ -38,5 +38,23 @@ Page({
     wx.navigateTo({
       url: e.currentTarget.dataset.url,
     })
+  },
+  search(){
+    that.setData({
+      search:!that.data.search,
+      searchData:[]
+    })
+  },
+  async submit(e){
+    console.log(e);
+    let msg = e.detail.value;
+    if(!msg) return;
+    let res = await Api.getRecord({
+      source:0,
+      msg:msg
+    });
+    that.setData({
+      searchData:res.data.content
+    })    
   }
 })

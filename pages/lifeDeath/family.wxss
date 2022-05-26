@@ -8,3 +8,10 @@
 .bg-blue{
   background-color: #7ccef3;
 }
+.search-box {
+  background-color: #fff;
+  z-index: 100;
+  position: fixed;
+  height: -webkit-fill-available;
+  width: 100%;
+}

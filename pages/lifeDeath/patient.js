@@ -28,4 +28,25 @@ Page({
       })      
     });
   },
+  search(){
+    that.setData({
+      search:!that.data.search,
+      searchData:[]
+    })
+  },
+  async submit(e){
+    console.log(e);
+    let title = e.detail.value;
+    if(!title) return that.setData({
+      msg:"请输入关键词再搜索",
+      show:true
+    })
+    let res = await Api.searchMaterila({
+      source:0,
+      title:e.detail.value
+    });
+    that.setData({
+      searchData:res.data
+    })    
+  }
 })

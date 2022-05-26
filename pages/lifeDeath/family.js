@@ -34,5 +34,24 @@ Page({
       msg:"该功能正在开发中~",
       type:"error"
     })
+  },
+  search(){
+    that.setData({
+      search:!that.data.search,
+      searchData:[]
+    })
+  },
+  async submit(e){
+    console.log(e);
+    let title = e.detail.value;
+    if(!title) return;
+    
+    let res = await Api.searchMaterila({
+      source:1,
+      title:e.detail.value
+    });
+    that.setData({
+      searchData:res.data
+    })    
   }
 })

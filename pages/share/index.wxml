@@ -1,11 +1,35 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='分享社区' iconTheme="white" color="#fff" back="true"> 
-  <!-- <view class="cu-bar bg-white search" :style="[{top:CustomBar + 'px'}]">
+  <view class="search-box" wx:if="{{search}}">
+    <view class="cu-bar bg-white search">
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input focus="true" type="text" placeholder="输入搜索的关键词" confirm-type="search" bindconfirm="submit"></input>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-orange shadow-blur round" bindtap="search">取消</button>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <navigator url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{searchData}}" wx:key="index">
+        <view class="cu-avatar radius lg" style="background-image:url({{item.imgs[0].cover}});"></view>
+        <view class="content">
+          <view class="text-black">
+            <view class="text-cut">{{item.msg}}</view>
+          </view>
+          <view class="text-gray text-sm flex">
+            <view class="text-cut">{{item.createTime}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-bar bg-white search" bindtap="search">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
-      <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+      <input disabled="true" type="text" placeholder="输入搜索的关键词"></input>
     </view>
-  </view> -->
+  </view>
 
   <view class="share-box flex text-white">
     <navigator style="background-color: #FF894B;" url="/pages/life/form?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
