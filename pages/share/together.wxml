@@ -11,7 +11,7 @@
   </view>
 
   <view class="cu-list menu solid-bottom margin-top">
-    <navigator url="/pages/life/index?source=1" class="cu-item arrow">
+    <navigator hover-class="none"  url="/pages/life/index?source=1" class="cu-item arrow">
       <view class="content">
         <text class="cuIcon-titles text-orange"></text>其言也善
       </view>
@@ -23,7 +23,7 @@
 
 
   <view class="cu-list menu-avatar">
-    <navigator url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{datas}}" wx:key="index">
+    <navigator hover-class="none"  url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{datas}}" wx:key="index">
       <view class="cu-avatar lg" style="background-image:url({{item.imgs[0].cover}});"></view>
       <view class="content flex-sub">
         <view class="text-grey">
@@ -42,9 +42,9 @@
     </navigator>
   </view>
   <view class="share-box flex text-white">
-    <navigator style="background-color: #FF894B;" url="/pages/life/form?source=1" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none"  style="background-color: #FF894B;" url="/pages/life/form?source=1" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
-    <navigator style="background-color: #8170FD;" url="/pages/life/my?source=1" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none"  style="background-color: #8170FD;" url="/pages/life/my?source=1" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
   </view>
 

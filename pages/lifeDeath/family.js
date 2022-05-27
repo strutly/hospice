@@ -44,8 +44,11 @@ Page({
   async submit(e){
     console.log(e);
     let title = e.detail.value;
-    if(!title) return;
-    
+    if(!title) return that.setData({
+      show:true,
+      msg:"请输入关键词再进行搜索~",
+      type:"error"
+    });    
     let res = await Api.searchMaterila({
       source:1,
       title:e.detail.value

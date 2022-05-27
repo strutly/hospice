@@ -1,0 +1,26 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='互动空间--患者' iconTheme="white" color="#fff" back="true">
+  <view class="padding margin-top-xl des-msg bg-white-50 margin-bottom-xl">
+    生命的流逝，就像河流入海，在人生长河中，让我们互相支持，彼此欣赏。品当下生活滋味，集生活点滴过往，寄真挚祝福、期望……
+  </view>
+  <view class="padding-xl"></view>
+  <view class="btn-box padding-lg margin-lr-xl">  
+    <navigator hover-class="none"  url="/pages/share/index?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Finteraction-01.png"></image>
+      <view class="text-xl margin-left-lg">品质生活分享</view>    
+    </navigator>
+  </view>
+  <view class="btn-box padding-lg margin-lr-xl">  
+    <navigator hover-class="none"  url="/pages/share/together" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Finteraction-02.png"></image>
+      <view class="text-xl margin-left-lg">一生相伴</view>    
+    </navigator>
+  </view>
+  <view class="btn-box padding-lg margin-lr-xl">  
+    <navigator hover-class="none"  url="/pages/share/forever" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Finteraction-03.png"></image>
+      <view class="text-xl margin-left-lg">我心永在</view>    
+    </navigator>
+  </view>
+
+</navBar>

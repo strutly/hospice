@@ -28,6 +28,13 @@ Page({
       })      
     });
   },
+  develop(){
+    that.setData({
+      show:true,
+      msg:"该功能正在开发中~",
+      type:"error"
+    })
+  },
   search(){
     that.setData({
       search:!that.data.search,

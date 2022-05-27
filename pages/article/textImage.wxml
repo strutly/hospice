@@ -32,7 +32,7 @@
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{bingfang}}">
+    <navigator hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{bingfang}}">
       <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
         <view class="text-grey">
@@ -59,7 +59,7 @@
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{tuandui}}">
+    <navigator hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{tuandui}}">
       <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
         <view class="text-grey">

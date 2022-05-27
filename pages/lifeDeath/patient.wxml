@@ -14,7 +14,7 @@
       </view>
     </view>
     <view class="cu-list menu-avatar">
-      <navigator url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{searchData}}" wx:key="index">
+      <navigator hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{searchData}}" wx:key="index">
         <view class="cu-avatar radius lg" style="background-image:url({{item.pic}});"></view>
         <view class="content">
           <view class="text-pink">
@@ -41,10 +41,10 @@
     </swiper-item>
   </swiper>
   <view class="flex text-center align-center text-lg">
-    <navigator url="/pages/article/text?id=28&title=生前预嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前预嘱</text>
+    <navigator hover-class="none"  url="/pages/article/text?id=28&title=生前预嘱" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">生前预嘱</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </navigator>
-    <navigator url="/pages/article/textImage" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
+    <navigator hover-class="none"  url="/pages/article/textImage" class="bg-blue flex-sub margin-lr padding radius-xl align-center flex"><text class="flex-sub">安宁疗护</text>
       <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </navigator>
   </view>
@@ -56,8 +56,8 @@
     </view>
   </view>
   <view class="flex text-center align-center text-lg text-white">
-    <navigator url="/pages/article/detail?id=48" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">科学认识疼痛</navigator>
-    <navigator url="/pages/article/text?id=26&title=缓解疼痛方法" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">缓解疼痛方法</navigator>
+    <navigator hover-class="none"  url="/pages/article/detail?id=48" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">科学认识疼痛</navigator>
+    <navigator hover-class="none"  url="/pages/article/text?id=26&title=缓解疼痛方法" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">缓解疼痛方法</navigator>
   </view>
   <view class="cu-list menu margin-top">
     <view class="cu-item">
@@ -68,19 +68,19 @@
   </view>
 
   <view class="flex justify-center text-center text-lg">
-    <navigator url="/pages/article/detail?id=29" class="flex-sub">
+    <navigator hover-class="none"  url="/pages/article/detail?id=29" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-3.png"></image>
       <view>重要嘱托</view>
     </navigator>
-    <navigator url="/pages/article/detail?id=34" class="flex-sub">
+    <navigator hover-class="none"  url="/pages/article/detail?id=34" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
       <view>遗体器官捐献</view>
     </navigator>
-    <navigator url="/pages/article/detail?id=36" class="flex-sub">
+    <navigator hover-class="none"  url="/pages/article/detail?id=36" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
       <view>遗愿清单</view>
     </navigator>
-    <navigator url="/pages/article/video?id=30&title=四道人生" class="flex-sub">
+    <navigator hover-class="none"  url="/pages/article/video?id=30&title=四道人生" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
       <view>四道人生</view>
     </navigator>
@@ -89,11 +89,17 @@
   <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold text-xl">维持品质生活</text>
+        <text class="text-bold text-xl">互动专区</text>
       </view>
     </view>
   </view>
-  <navigator url="/pages/share/index?source=1" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
+  <navigator hover-class="none"  url="/pages/interaction/patient" class="margin-lr">
+    <image src="http://gridpic.tsing-tec.com/hospice%2Finteract.png" mode="widthFix" style="width: 100%;"></image>
+  </navigator>
+
+  <!--
+  
+  <navigator hover-class="none"  url="/pages/share/index?source=1" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
     <image class="margin" style="width:60rpx;height:60rpx" src="http://gridpic.tsing-tec.com/hospice/patient-7.png"></image>
     <view class="flex-sub text-black share">品质生活分享</view>
   </navigator>
@@ -107,7 +113,7 @@
   </view>
 
   <view class="flex margin-lr">
-    <navigator url="/pages/share/together" class="flex-sub padding margin-right radius-xl" style="background-color: #dbe3f8;">
+    <navigator hover-class="none"  url="/pages/share/together" class="flex-sub padding margin-right radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">一生相伴</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-8.png"></image>
@@ -118,7 +124,7 @@
       </view>
 
     </navigator>
-    <navigator url="/pages/share/forever" class="flex-sub padding margin-left radius-xl" style="background-color: #dbe3f8;">
+    <navigator hover-class="none"  url="/pages/share/forever" class="flex-sub padding margin-left radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">我心永在</view>
         <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-9.png"></image>
@@ -128,6 +134,8 @@
       </view>
     </navigator>
   </view>
+  -->
+
 
 
 

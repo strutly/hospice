@@ -10,7 +10,7 @@
       <checkbox class="radio checkbox-sm orange margin-right-xs"></checkbox>同意并签署《安宁疗护免责条款》
     </lable> -->
     <view class="padding-xl flex align-center flex-direction">
-      <navigator url="/pages/index/identity" class="cu-btn bg-orange margin-tb-sm padding-lr-xl padding-tb-lg radius-xl">扬帆起航</navigator>
+      <navigator hover-class="none"  url="/pages/index/identity" class="cu-btn bg-orange margin-tb-sm padding-lr-xl padding-tb-lg radius-xl">扬帆起航</navigator>
     </view>
   </view>
 </navBar>

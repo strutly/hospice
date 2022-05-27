@@ -14,7 +14,9 @@ Page({
   },  
   async onLoad(options) {
     that = this;
-    
+    that.setData({
+      source:options.source||0
+    })
     that.recordList(1);
   },
   async onShow(){
@@ -23,7 +25,7 @@ Page({
 
   async recordList(pageNo){
     let datas = that.data.datas||[];    
-    let res = await api.getRecordMy({pageNo:pageNo});
+    let res = await api.getRecordMy({pageNo:pageNo,source:that.data.source||0});
     datas = datas.concat(res.data.content);
     let arr = util.groupBy(datas,(data)=>{
       return util.dateFormat(data.createTime,'yyyy年MM月')

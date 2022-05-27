@@ -19,7 +19,9 @@
     "pages/life/my",
     "pages/life/notice",
     "pages/life/comment",
-    "pages/life/detail"
+    "pages/life/detail",
+    "pages/interaction/patient"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
