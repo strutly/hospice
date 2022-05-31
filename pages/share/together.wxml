@@ -24,7 +24,8 @@
 
   <view class="cu-list menu-avatar">
     <navigator hover-class="none"  url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{datas}}" wx:key="index">
-      <view class="cu-avatar lg" style="background-image:url({{item.imgs[0].cover}});"></view>
+      <view class="cu-avatar lg" style="background-image:url({{item.imgs[0].cover}});" wx:if="{{item.imgs.length>0}}"></view>
+      <view class="cu-avatar lg" style="background-image:url(https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png);" wx:else></view>
       <view class="content flex-sub">
         <view class="text-grey">
         <text class="text-cut">{{item.msg}}

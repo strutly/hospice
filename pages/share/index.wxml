@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='分享社区' iconTheme="white" color="#fff" back="true"> 
+<navBar title='分享社区' iconTheme="white" color="#fff" back="true">
   <view class="search-box" wx:if="{{search}}">
     <view class="cu-bar bg-white search">
       <view class="search-form round">
@@ -11,7 +11,7 @@
       </view>
     </view>
     <view class="cu-list menu-avatar">
-      <navigator hover-class="none"  url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{searchData}}" wx:key="index">
+      <navigator hover-class="none" url="/pages/life/detail?id={{item.id}}" class="cu-item" wx:for="{{searchData}}" wx:key="index">
         <view class="cu-avatar radius lg" style="background-image:url({{item.imgs[0].cover}});"></view>
         <view class="content">
           <view class="text-black">
@@ -32,9 +32,9 @@
   </view>
 
   <view class="share-box flex text-white">
-    <navigator hover-class="none"  style="background-color: #FF894B;" url="/pages/life/form?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享    <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
-    <navigator hover-class="none"  style="background-color: #8170FD;" url="/pages/life/my?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/life/my?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
   </view>
   <view class="cu-list menu">
@@ -47,29 +47,29 @@
 
   <view class="grid col-2 text-white">
     <view class="padding-lr padding-tb-sm">
-      <navigator hover-class="none"  url="/pages/life/index?type=0&source=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
+      <navigator hover-class="none" url="/pages/life/index?type=0&source=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这一口有味道#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator hover-class="none"  url="/pages/life/index?type=1&source=0" style="background-color: #4DA5FE;" class="padding radius text-center shadow-blur">
+      <navigator hover-class="none" url="/pages/life/index?type=1&source=0" style="background-color: #4DA5FE;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这一眼还可以#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator hover-class="none"  url="/pages/life/index?type=2&source=0" style="background-color: #47BD9B;" class="padding radius text-center shadow-blur">
+      <navigator hover-class="none" url="/pages/life/index?type=2&source=0" style="background-color: #47BD9B;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这一句让我感动#</view>
       </navigator>
     </view>
     <view class="padding-lr padding-tb-sm">
-      <navigator hover-class="none"  url="/pages/life/index?type=3&source=0" style="background-color: #CA93CA;"  class="padding radius text-center shadow-blur">
+      <navigator hover-class="none" url="/pages/life/index?type=3&source=0" style="background-color: #CA93CA;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这个瞬间非常留恋#</view>
       </navigator>
     </view>
   </view>
 
   <view class="cu-list menu">
-    <navigator hover-class="none"  url="/pages/life/index?source=0" class="cu-item arrow">
+    <navigator hover-class="none" url="/pages/life/index?source=0" class="cu-item arrow">
       <view class="content">
         <text class="text-bold text-lg">热门帖子</text>
       </view>
@@ -82,16 +82,17 @@
 
   <view class="grid margin-bottom col-2">
     <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
-        <view class="image video-thumb">
-          <image src="{{item.imgs[0].cover}}" style="height:320rpx;"></image>
-        </view>
-        <view class="cu-item">
-          <view class="content padding-sm">
-            <view class="text-cut">{{item.msg}}</view>
-          </view>
+      <view class="image video-thumb">
+        <image src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
+        <image src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-sm">
+          <view class="text-cut">{{item.msg}}</view>
         </view>
       </view>
     </view>
+  </view>
 
 
 

@@ -20,8 +20,13 @@
     "pages/life/notice",
     "pages/life/comment",
     "pages/life/detail",
-    "pages/interaction/patient"
-    
+    "pages/interaction/patient",
+    "pages/interaction/family",
+    "pages/letter/index",
+    "pages/letter/form",
+    "pages/share/treeHole",
+    "pages/letter/list",
+    "pages/letter/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

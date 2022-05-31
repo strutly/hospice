@@ -89,7 +89,7 @@
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-5.png"></image>
       <view>告别如何说出口</view>
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=13" class="flex-sub">
+    <navigator hover-class="none"  url="/pages/article/detail?id=34" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-6.png"></image>
       <view>参考专业建议</view>
     </navigator>
@@ -103,13 +103,13 @@
     </view>
   </view>
   <view class="flex justify-center text-center text-lg">
-    <navigator hover-class="none"  url="/pages/article/text?id=18&title=如何选择" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/text?id=35" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
       如何选择
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=16" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/detail?id=41" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
       物品准备
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/text?id=42" class="flex-sub bg-blue light margin-lr-sm padding-sm radius-xl">
       流程准备
     </navigator>
   </view>
@@ -121,10 +121,10 @@
     </view>
   </view>
   <view class="flex justify-center text-center text-lg">
-    <navigator hover-class="none"  url="/pages/article/detail?id=18" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl">
       <text class="font-orange">认识哀伤</text>
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=16" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
+    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
       <text class="font-orange">如何应对</text>
     </navigator>
     <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
@@ -197,9 +197,9 @@
       </view>
     </view>
   </view>
-  <view class="margin-lr" bindtap="develop">
+  <navigator hover-class="none" url="/pages/interaction/family" class="margin-lr">
     <image src="http://gridpic.tsing-tec.com/hospice%2Fpass.png" mode="widthFix" style="width: 100%;"></image>
-  </view>
+  </navigator>
 
 
 

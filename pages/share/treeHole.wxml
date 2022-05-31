@@ -1,0 +1,38 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='树洞倾诉' iconTheme="white" color="#fff" back="true">
+  <image class="padding" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Ftreehole-bg.png" style="width: 100%;"></image>
+
+
+
+  <view class="share-box flex text-white">
+    <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source=2" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
+    <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/life/my?source=2" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
+  </view>
+
+  <view class="cu-list menu">
+    <navigator hover-class="none" url="/pages/life/index?source=2" class="cu-item arrow">
+      <view class="content">
+        <text class="text-bold text-lg">热门帖子</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-df">查看全部</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="grid margin-bottom col-2">
+    <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
+      <view class="image video-thumb">
+        <image src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
+        <image src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-sm">
+          <view class="text-cut">{{item.msg}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</navBar>

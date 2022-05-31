@@ -1,0 +1,44 @@
+<navBar title='写信' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view class="padding">
+    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="编辑信件内容..." />
+    <view class="image-box">
+      <view class="image-item" wx:for="{{formData.pics}}">
+        <image class="image-thumb" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item}}" src="{{item}}"></image>
+        <view class="image-delete-box {{delete?'':'hide'}}" bindlongpress="handleLongPress" bindtap="remove" data-index="{{index}}">
+          <image src="/images/delete.png" class="image-delete"></image>
+        </view>
+      </view>
+      <view class="image-item" wx:if="{{formData.pics.length<9}}">
+        <view class="add" bindtap="addImg">
+          <image class="image-add" src="/images/add.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="push bg-orange" bindtap="submit" wx:if="{{auth}}">塞进信箱</button>
+  <button class="push bg-orange" bindtap="authModal" wx:else>塞进信箱</button>
+
+
+  <view class="cu-modal {{authModal?'show':''}}">
+    <view class="cu-dialog sm">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">授权申请</view>
+        <view class="action" bindtap="authModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <view class="padding-xl">
+        为了更好的展示信息内容,需要申请获取您的昵称以及头像信息,是否同意?
+      </view>
+      <view class="cu-bar bg-white justify-end">
+        <view class="action">
+          <button class="cu-btn line-green text-green" bindtap="authModal">拒绝</button>
+          <button class="cu-btn bg-green margin-left" bindtap="getUserProfile">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</navBar>

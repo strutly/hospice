@@ -12,7 +12,7 @@ Page({
     let param = {
       pageNo: pageNo,
       pageSize:4,
-      source:0
+      source:2
     }
     let res = await Api.getRecord(param);
     that.setData({

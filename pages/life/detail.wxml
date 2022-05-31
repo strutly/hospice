@@ -11,14 +11,14 @@
         </view>
       </view>
       <view class="card-content">{{detail.msg}}</view>
-      <view class="card-images">
+      <view class="card-images" wx:if="{{detail.imgs.length>0}}">
         <view class="image-item {{detail.imgs.length==1?'image-one':''}} {{detail.imgs.length==2?'image-two':''}}" wx:for="{{detail.imgs}}" wx:for-item="src">
           <image bindtap="{{src.type?'video':'previewImage'}}" data-src="{{src.url}}" class="card-image {{detail.imgs.length==1?'image-one':''}} {{detail.imgs.length==2?'image-two':''}}  {{src.type?'image-video':''}}" mode="aspectFill" src="{{src.cover}}?imageMogr2"></image>
         </view>
       </view>
       <view class="card-handles">
         <view class="handle-item" bindtap="like" data-type="3">
-          <image src="/images/store{{detail.store?1:0}}.png"></image>          
+          <image src="/images/store{{detail.store?1:0}}.png"></image>
         </view>
         <view class="handle-item" bindtap="like" data-type="1">
           <image src="/images/like{{detail.like?1:0}}.png"></image>

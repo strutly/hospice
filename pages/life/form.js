@@ -77,7 +77,7 @@ Page({
     let imgs = that.data.formData.imgs;
     let res = await Api.uploadImg(tempFilePaths);
 
-    let data = JSON.parse(res.data);
+    let data = JSON.parse(res);
     if (data.code != 0) {
       return util.warn(that, data.msg);
     }
@@ -154,10 +154,7 @@ Page({
     if (formData.msg == "") {
       return that.topTips("请输入内容后再提交", 'error');
     }
-    if (formData.imgs.length < 1) {
-
-      return that.topTips("请至少添加一张图片", 'error');
-    }
+    
     let res = await Api.addRecord(JSON.stringify(formData));
     if (res.code == 0) {
       wx.removeStorageSync('formData');
