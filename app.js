@@ -16,7 +16,7 @@ App({
   },
   globalData: {
     normalFontSize:"14px",
-    elderlyFontSize:"22px",
+    elderlyFontSize:"20px",
     auth: false,
     login: false,
     systemFontSize:"14px",

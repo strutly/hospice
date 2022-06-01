@@ -248,7 +248,7 @@ switch .wx-switch-input::after {
 
 switch .wx-switch-input.wx-switch-input-checked::after {
 	margin: auto;
-	left: 22px;
+	left: 20px;
 	box-shadow: none;
 	transform: scale(0.9, 0.9);
 }

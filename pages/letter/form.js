@@ -122,15 +122,16 @@ Page({
   },
   async submit(e) {
     console.log(e);
+    let tmpID = "wCU3LJudvCOktVftBcl6eGl62OEszTPvxAooJbpVUyY";
     let data = that.data.formData;
     if(!data.msg && data.pics.length==0){
       return that.showTopTips("请编辑信件内容或者上传信件图片后再提交","error");
     }
     let tmpResp = await wx.requestSubscribeMessage({
-      tmplIds: ['meqUlICQ5p8nTqB5y0TM4LLQkWs46KLqnHhTs7tF4M8']
+      tmplIds: [tmpID]
     })
     console.log(tmpResp);
-    data.ifAccept = tmpResp['meqUlICQ5p8nTqB5y0TM4LLQkWs46KLqnHhTs7tF4M8'] === 'accept' ? true : false;
+    data.ifAccept = tmpResp[tmpID] === 'accept' ? true : false;
     let res = await Api.addLetter(JSON.stringify(data));
     console.log(res);
     if(res.code==0){

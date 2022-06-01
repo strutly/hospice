@@ -121,13 +121,13 @@
     </view>
   </view>
   <view class="flex justify-center text-center text-lg">
-    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/text?id=45" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl">
       <text class="font-orange">认识哀伤</text>
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
+    <navigator hover-class="none"  url="/pages/article/detail?id=48" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
       <text class="font-orange">如何应对</text>
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=17" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
+    <navigator hover-class="none"  url="/pages/article/detail?id=49" class="flex-sub bg-yellow light margin-lr-sm padding-sm radius-xl font-orange">
       <text class="font-orange">寻求支持</text>
     </navigator>
   </view>

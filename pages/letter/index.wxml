@@ -1,9 +1,9 @@
 <navBar title="走过哀伤" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <view class="padding-lg margin text-white text-index2 des-msg">刚刚经历亲人逝去的你心中可能有不舍、难过、悲痛和还没来的及对他说的话，在这里你可以尽情抒发你的感想，写下你的难过与思念，爱与坚强，为一封送往天堂的信。</view>
   <navigator hover-class="none" url="/pages/letter/form" class="btn-box padding margin-lr-xl text-center">
-    <image style="width: 80%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Fletter-write.png"></image>
+    <image style="width: 60%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Fletter-write.png"></image>
   </navigator>
   <navigator hover-class="none" url="/pages/letter/list" class="btn-box padding margin-lr-xl text-center">
-    <image style="width: 80%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Fletter-mailbox.png"></image>
+    <image style="width: 60%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Fletter-mailbox.png"></image>
   </navigator>
 </navBar>

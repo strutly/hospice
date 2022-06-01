@@ -28,7 +28,7 @@ Page({
   change(){
     console.log(1)
     let systemFontSize = wx.getStorageSync('systemFontSize')||"14px";
-    systemFontSize = systemFontSize=="14px"?'22px':'14px'
+    systemFontSize = systemFontSize=="14px"?'20px':'14px'
     that.setData({
       systemFontSize:systemFontSize
     })

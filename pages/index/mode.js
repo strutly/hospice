@@ -11,7 +11,7 @@ Page({
   mode(e){
     console.log(e);
     let mode = e.currentTarget.dataset.mode;
-    wx.setStorageSync('systemFontSize', mode==1?'22px':'14px');
+    wx.setStorageSync('systemFontSize', mode==1?'20px':'14px');
     wx.navigateTo({
       url: '/pages/index/identity',
     })

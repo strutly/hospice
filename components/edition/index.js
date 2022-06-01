@@ -13,7 +13,7 @@ Component({
     switch(e) {
       console.log(e)
       let systemFontSize = wx.getStorageSync('systemFontSize') || "14px";
-      systemFontSize = systemFontSize == "14px" ? '22px' : '14px';
+      systemFontSize = systemFontSize == "14px" ? '20px' : '14px';
       wx.setStorageSync('systemFontSize', systemFontSize);
       getApp().globalData.systemFontSize = systemFontSize;
     }

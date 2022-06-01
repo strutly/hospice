@@ -9,7 +9,8 @@
 }
 .des-msg{
   font-size: 1.4rem;
-  line-height: 1.4;  
+  line-height: 1.4;
+  text-align: justify;  
 }
 .text-index2{
   text-indent: 2rem;
