@@ -1,11 +1,9 @@
-<navBar title='写信' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+<navBar title='提交需求' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="padding">
 
-    <view class="margin-tb flex">
-      标题<input class="flex-sub margin-left" placeholder="邮件标题" name="title" bindblur="bindInputBlur" value="{{formData.title}}"></input>
-    </view>
-    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="编辑信件内容..." />
+    
+    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="编辑修复需求内容..." />
     <view class="image-box">
       <view class="image-item" wx:for="{{formData.pics}}">
         <image class="image-thumb" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item}}" src="{{item}}"></image>
@@ -13,15 +11,15 @@
           <image src="/images/delete.png" class="image-delete"></image>
         </view>
       </view>
-      <view class="image-item" wx:if="{{formData.pics.length<9}}">
+      <view class="image-item" wx:if="{{formData.pics.length<1}}">
         <view class="add" bindtap="addImg">
           <image class="image-add" src="/images/add.png"></image>
         </view>
       </view>
     </view>
   </view>
-  <button class="push bg-orange" bindtap="submit" wx:if="{{auth}}">塞进信箱</button>
-  <button class="push bg-orange" bindtap="authModal" wx:else>塞进信箱</button>
+  <button class="push bg-orange" bindtap="submit" wx:if="{{auth}}">提交需求</button>
+  <button class="push bg-orange" bindtap="authModal" wx:else>提交需求</button>
 
 
   <view class="cu-modal {{authModal?'show':''}}">

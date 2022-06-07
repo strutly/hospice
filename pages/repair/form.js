@@ -9,7 +9,7 @@ Page({
   onLoad(options) {
     that = this;
     that.setData({
-      formData:wx.getStorageSync('letterData')||{ pics: [],msg:"",type:1}
+      formData:wx.getStorageSync('repairData')||{ pics: [],msg:"",type:2}
     })
   },
   bindTextAreaBlur(e) {
@@ -18,14 +18,14 @@ Page({
       ['formData.msg']: e.detail.value
     })
     console.log(that.data);
-    wx.setStorageSync('letterData', that.data.formData);
+    wx.setStorageSync('repairData', that.data.formData);
   },
   bindInputBlur(e){
     console.log(e);
     that.setData({
       ['formData.title']: e.detail.value
     })
-    wx.setStorageSync('letterData', that.data.formData);
+    wx.setStorageSync('repairData', that.data.formData);
   },
   showTopTips(msg,type){
     that.setData({
@@ -41,7 +41,7 @@ Page({
     let imgs = that.data.formData.pics;
     // 微信 Api 选择图片（从相册）
     let res = await wx.chooseMedia({
-      count: 9 - imgs.length,
+      count: 1,
       mediaType: ['image']
     })
     console.log(res);
@@ -63,7 +63,7 @@ Page({
     that.setData({
       ['formData.pics']: pics
     })
-    wx.setStorageSync('letterData', that.data.formData)
+    wx.setStorageSync('repairData', that.data.formData)
   },
   handleLongPress() {
     let de = that.data.delete;
@@ -81,7 +81,7 @@ Page({
     that.setData({
       ['formData.pics']: pics
     })
-    wx.setStorageSync('letterData', that.data.formData);
+    wx.setStorageSync('repairData', that.data.formData);
   },
   previewImage(e) {
     var current = e.currentTarget.dataset.src;
@@ -129,10 +129,10 @@ Page({
   },
   async submit(e) {
     console.log(e);
-    let tmpID = "wCU3LJudvCOktVftBcl6eGl62OEszTPvxAooJbpVUyY";
+    let tmpID = "BzOWSPuNZFuhBYxEg1g1w6o-9VyKIXRQBv-kCg9TcuY";
     let data = that.data.formData;
-    if(!data.msg && data.pics.length==0){
-      return that.showTopTips("请编辑信件内容或者上传信件图片后再提交","error");
+    if(!data.msg || data.pics.length==0){
+      return that.showTopTips("请上传照片并填写需求再提交","error");
     }
     let tmpResp = await wx.requestSubscribeMessage({
       tmplIds: [tmpID]
@@ -142,8 +142,8 @@ Page({
     let res = await Api.addLetter(JSON.stringify(data));
     console.log(res);
     if(res.code==0){
-      that.showTopTips("信件投递成功","success");
-      wx.removeStorageSync('letterData');
+      that.showTopTips("照片修复需求提交成功","success");
+      wx.removeStorageSync('repairData');
       setTimeout(function(){
         wx.navigateBack({
           delta: 1,

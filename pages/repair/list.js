@@ -19,7 +19,7 @@ Page({
   async getList(index, page) {
     let param = {
       pageNo: page,
-      type: 1      
+      type: 2      
     }
     if(that.data.reply){
       param.reply = that.data.reply;

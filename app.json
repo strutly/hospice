@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/share/forever",
     "pages/share/index",
@@ -26,7 +27,11 @@
     "pages/letter/form",
     "pages/share/treeHole",
     "pages/letter/list",
-    "pages/letter/detail"
+    "pages/letter/detail",
+    "pages/repair/index",
+    "pages/repair/list",
+    "pages/repair/detail",
+    "pages/repair/form"
   ],
   "window": {
     "backgroundTextStyle": "light",

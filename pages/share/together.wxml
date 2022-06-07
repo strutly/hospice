@@ -6,7 +6,7 @@
     <view class="padding-tb text-center text-xxl main-title">一生相伴</view>
   </view>
   <view class="flex text-center align-center" bindtap="develop">
-    <view class="bg-gradual-orange flex-sub margin-lr padding radius-xl">全家福定制</view>
+    <navigator url="/pages/repair/index" class="bg-gradual-orange flex-sub margin-lr padding radius-xl">照片修复</navigator>
     <view class="bg-gradual-pink flex-sub margin-lr padding radius-xl">时光相册</view>
   </view>
 

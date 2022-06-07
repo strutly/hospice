@@ -1,6 +1,8 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='树洞倾诉' iconTheme="white" color="#fff" back="true">
-  <image class="padding" style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Ftreehole-bg.png"></image>
+  <view class="padding">
+    <image style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Ftreehole-bg.png"></image>
+  </view>
   <view class="share-box flex text-white">
     <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source=2" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
