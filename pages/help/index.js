@@ -105,6 +105,7 @@ Page({
       });
       wx.setStorageSync('auth', true);
     } else {
+      wx.removeStorageSync('code');
       that.showTips(res.msg, "error");
     }
   },

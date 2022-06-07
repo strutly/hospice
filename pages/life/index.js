@@ -75,9 +75,10 @@ Page({
         })
 
       } else {
+        wx.removeStorageSync('code');
         that.showTips(authRes.msg);
       }
-    } else {
+    } else {      
       that.showTips("授权失败,请重试~");
     }
   },

@@ -19,7 +19,7 @@
     </view>
     <view class="flex flex-wrap justify-between">
       <view class="margin-sm flex-sub" style="min-width: 30%;" wx:for="{{detail.pics}}" wx:for-item="src">
-        <image bindtap="previewImage" style="width: 100%;" data-src="{{src}}" data-srcs="{{detail.pics}}" class="" mode="aspectFill" src="{{src}}?imageMogr2"></image>
+        <image bindtap="previewImage" style="width: 100%;" data-src="{{src}}" data-srcs="{{detail.pics}}" class="" mode="widthFix" src="{{src}}?imageMogr2"></image>
       </view>
     </view>
   </view>
@@ -28,6 +28,6 @@
     <view class="margin">
       <text class="cuIcon-titles text-blue"></text>回复内容
     </view>
-    <view class="margin">{{detail.reply}}</view>
+    <image class="margin-sm flex-sub" bindtap="previewImage" style="width: 100%;" data-src="{{detail.reply}}" data-srcs="[{{detail.reply}}]" class="" mode="widthFix" src="{{detail.reply}}?imageMogr2"></image>
   </view>
 </navBar>

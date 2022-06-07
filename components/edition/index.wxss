@@ -12,3 +12,9 @@
   width: 80rpx;
   height: 80rpx;
 }
+.big{
+  font-size: 24px;
+}
+.small{
+  font-size: 16px;
+}

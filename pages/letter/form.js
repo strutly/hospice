@@ -124,6 +124,7 @@ Page({
       });
       wx.setStorageSync('auth', true);
     } else {
+      wx.removeStorageSync('code');
       that.showTopTips(res.msg,"error");
     }
   },

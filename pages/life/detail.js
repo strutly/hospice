@@ -78,6 +78,7 @@ Page({
         })
         that.data.callBack();
       } else {
+        wx.removeStorageSync('code');
         that.showTips(authRes.msg);
       }
     } else {
