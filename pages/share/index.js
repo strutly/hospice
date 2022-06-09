@@ -6,19 +6,12 @@ Page({
   },
   onLoad(options) {
     that = this;
-    that.listRecord(1);
+    that.listRecord();
   },
-  async listRecord(pageNo) {
-    let param = {
-      pageNo: pageNo,
-      pageSize:4,
-      source:0
-    }
-    let res = await Api.getRecord(param);
+  async listRecord() {
+    let res = await Api.getTopRecord({source:0});
     that.setData({
-      pageNo: pageNo,
-      endline: res.data.last,
-      datas: res.data.content
+      datas: res.data
     });
   },  
   onShow() {    

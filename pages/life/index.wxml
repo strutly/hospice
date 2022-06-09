@@ -22,8 +22,8 @@
               </view>
             </view>
           </view>
-          <view class="margin-top-sm">
-            <view class="text-gray text-sm fr">              
+          <view class="padding-tb-sm text-right">
+            <view class="text-gray text-sm">              
               <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.counts[1]||0}}
               <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.counts[2]||0}}
               <text class="cuIcon-favorfill margin-lr-xs"></text> {{item.counts[3]||0}}

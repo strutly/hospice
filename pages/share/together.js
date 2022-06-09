@@ -11,17 +11,10 @@ Page({
     that.listRecord(1);
   },
   async listRecord(pageNo) {
-    let param = {
-      pageNo: pageNo,
-      pageSize:4,
-      source:1
-    }
-    let res = await Api.getRecord(param);
+    let res = await Api.getTopRecord({source:1});
     console.log(res)
     that.setData({
-      pageNo: pageNo,
-      endline: res.data.last,
-      datas: res.data.content
+      datas: res.data
     });
   }, 
   onShow() {    

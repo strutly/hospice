@@ -14,10 +14,10 @@
   </view>
 
 
-  <view class="cu-card case flex-wrap margin-sm" bindtap="{{videoThumb?'':'playVideo'}}" data-url="{{article.videos}}" style="position: relative;">
+  <view class="cu-card case flex-wrap margin-sm" bindtap="playVideo" data-url="http://1308944528.vod2.myqcloud.com/d7a37936vodtranscq1308944528/85e32c4f387702301770995420/v.f80000.mp4" style="position: relative;">
     <view class="cu-item shadow">
       <view class="image video-thumb">
-        <image src="{{article.videosPics}}" mode="widthFix"></image>
+        <image src="http://1308944528.vod2.myqcloud.com/00b98b8evodcq1308944528/85e32c4f387702301770995420/387702301770792782.png" mode="widthFix"></image>
         <text class="cuIcon-video margin-right-xs play"></text>
       </view>
       
