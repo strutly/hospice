@@ -1,7 +1,6 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 
 <navBar title='安宁疗护' iconTheme="white" color="#fff" back="true">
-
   
   <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
     <view class="padding-tb text-center text-xxl main-title">安宁疗护</view>
@@ -24,73 +23,44 @@
     </view>
     <videoPlay id="video" vstyle="{{videoStyle}}"></videoPlay>
   </view>
-  
 
-  <view class="cu-bar bg-white solid-bottom margin-top">
+
+  <block wx:for="{{datas.children}}" wx:key="index">
+    <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">病房故事</text>
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">{{item.title}}</text>
     </view>
   </view>
   <view class="cu-list menu-avatar">
-    <navigator hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{bingfang}}">
+    <block wx:if="{{item.children.length>0}}">
+      <navigator hover-class="none"  url="/pages/article/detail?id={{article.id}}" class="cu-item" wx:for="{{item.children}}" wx:for-item="article">
+      <view class="cu-avatar lg" style="background-image:url({{article.pic}});"></view>
+      <view class="content flex-sub">
+        <view class="text-black">
+          <text class="text-cut">{{article.title}}
+          </text>
+        </view>
+        <view class="text-gray text-sm flex justify-between">
+          {{article.createTime}}
+        </view>
+      </view>
+    </navigator>
+    </block>
+    <navigator wx:else hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item">
       <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
-        <view class="text-grey">
-          <text class="text-cut">{{item.name}}
+        <view class="text-black">
+          <text class="text-cut">{{item.title}}
           </text>
         </view>
         <view class="text-gray text-sm flex justify-between">
           {{item.createTime}}
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.hits}}
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.enjoyCount}}
-            <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.reviewCount}}
-          </view>
         </view>
       </view>
     </navigator>
 
 
-  </view>
-
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class="action">
-      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">团队故事</text>
-    </view>
-  </view>
-  <view class="cu-list menu-avatar">
-    <navigator hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item" wx:for="{{tuandui}}">
-      <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
-      <view class="content flex-sub">
-        <view class="text-grey">
-          <text class="text-cut">{{item.name}}
-          </text>
-        </view>
-        <view class="text-gray text-sm flex justify-between">
-          {{item.createTime}}
-          <view class="text-gray text-sm">
-            <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.hits}}
-            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.enjoyCount}}
-            <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.reviewCount}}
-          </view>
-        </view>
-      </view>
-    </navigator>
-  </view>
-
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class="action">
-      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">安宁资源</text>
-    </view>
-  </view>
-
-  <view class="cu-card case flex-wrap margin-sm" bindtap="previewImage" data-url="{{ziyuan.pic}}">
-    <view class="cu-item shadow">
-      <view class="image video-thumb">
-        <image src="{{ziyuan.pic}}" mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-
-
+    
+  </view>  
+  </block>
 </navBar>

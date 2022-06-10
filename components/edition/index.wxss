@@ -8,10 +8,7 @@
   border-radius: 40rpx 0 0 40rpx;
   z-index: 100000000;  
 }
-.tab image{  
-  width: 80rpx;
-  height: 80rpx;
-}
+
 .big{
   font-size: 24px;
 }

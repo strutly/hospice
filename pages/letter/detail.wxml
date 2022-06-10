@@ -28,6 +28,9 @@
     <view class="margin">
       <text class="cuIcon-titles text-blue"></text>回复内容
     </view>
-    <view class="margin">{{detail.reply}}</view>
+    <view class="margin" wx:if="{{detail.type==1}}">{{detail.reply}}</view>
+    <view class="margin" wx:else>
+      <image src="{{detail.reply}}" mode="widthFix" style="width: 100%;" bindtap="previewImage" data-srcs="[{{detail.reply}}]"></image>
+    </view>
   </view>
 </navBar>

@@ -8,9 +8,9 @@
     </view>
   </view>
   <view wx:if="{{firework}}">
-    <image class="firework right" bindtap="showImg" data-pic="help-03.png" src="http://gridpic.tsing-tec.com/hospice/help-01.png"></image>
-    <image class="firework left" bindtap="showImg" data-pic="help-04.jpg" src="http://gridpic.tsing-tec.com/hospice/help-02.png"></image>
+    <image class="firework right" bindtap="showPic" data-pic="help-03.png" src="http://gridpic.tsing-tec.com/hospice/help-01.png"></image>
+    <image class="firework left" bindtap="showPic" data-pic="help-04.jpg" src="http://gridpic.tsing-tec.com/hospice/help-02.png"></image>
   </view>
-  <view class="mask" bindtap="showImg" wx:if="{{showImg}}"></view>
+  <view class="mask" bindtap="showPic" wx:if="{{showImg}}"></view>
   <image class="scan"  wx:if="{{showImg}}" src="http://gridpic.tsing-tec.com/hospice/{{pic}}" mode="widthFix"></image>
 </view>

@@ -11,7 +11,7 @@ Component({
       value: false
     },
     marqueeDistance: {        //初始滚动距离
-      type: [String, Number],
+      type: Number,
       value: 0
     },
     size: {       // 字体大小
@@ -27,7 +27,7 @@ Component({
       value: 'left'
     },
     interval: {       // 时间间隔
-      type: [String, Number],
+      type: Number,
       value: 20
     },
     marqueePace: {      // 滚动速度
@@ -36,7 +36,6 @@ Component({
     }
   },
   data: {
-    showImg: true,
     tabIndex: -1,
     fixedLeft: 0,
     timeOut:null
@@ -56,7 +55,7 @@ Component({
         firework: newVal
       });
     },
-    showImg(e) {
+    showPic(e) {
       console.log(e)
       this.setData({
         showImg: !this.data.showImg,

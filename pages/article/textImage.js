@@ -18,26 +18,11 @@ Page({
   async onLoad(options) {
     that = this;
     that.video = that.selectComponent("#video");
-    let articleRes = await Api.getArticleDetail({
-      id:66
-    });
-    console.log(articleRes);
-    
-    let bingfangRes = await Api.getArticle({
-      catalogId:34
-    });
-    let tuanduiRes = await Api.getArticle({
-      catalogId:35
-    })
-    let ziyuanRes = await Api.getArticleDetail({
-      id:68
-    });
-
-    that.setData({
-      article:articleRes.data,
-      ziyuan:ziyuanRes.data,
-      bingfang:bingfangRes.data.content,
-      tuandui:tuanduiRes.data.content
+    let res = await Api.getMaterilaTree({
+      id:53
+    });  
+    that.setData({      
+      datas:res.data
     })
 
   },  

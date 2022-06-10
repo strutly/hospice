@@ -9,19 +9,19 @@
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
     <navigator hover-class="none" url="/pages/help/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Fpass-01.png"></image>
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-01.png"></image>
       <view class="text-xl margin-left-lg">学会求助</view>
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <navigator hover-class="none" url="/pages/share/treeHole?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Fpass-02.png"></image>
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-02.png"></image>
       <view class="text-xl margin-left-lg">树洞倾诉</view>
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <navigator hover-class="none" url="/pages/letter/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice%2Fpass-03.png"></image>
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-03.png"></image>
       <view class="text-xl margin-left-lg">走过哀伤</view>
     </navigator>
   </view>

@@ -1,11 +1,6 @@
 .container{
   position: relative;  
   width: calc(100% - 100rpx);
-  /* background-position-y: 100rpx;
-  background-position-x: 20%;
-  background-image: url("http://gridpic.tsing-tec.com/hospice/choose.png?v=1");
-  background-size: 100%;
-  background-repeat:no-repeat;   */
   margin: 0 50rpx 0;
   box-sizing: border-box;  
 }
