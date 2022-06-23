@@ -9,7 +9,7 @@
     <button url="/pages/life/index" class="cu-btn lines-orange margin-tb-sm padding professional radius-xl text-lg" bindtap="showTips">专业人士</button>
     
     <view class="padding-xxl flex flex-direction stranger">
-      <button url="/pages/life/index" class="cu-btn  bg-orange margin-tb-sm padding-lg radius-xl text-lg" bindtap="showTips">我是路人</button>
+      <navigator hover-class="none" url="/pages/lifeDeath/stranger" class="cu-btn  bg-orange margin-tb-sm padding-lg radius-xl text-lg">我是路人</navigator>
     </view>
   </view>
  

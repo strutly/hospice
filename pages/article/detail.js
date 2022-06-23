@@ -3,7 +3,7 @@ import Api from "../../config/api";
 Page({
   data: {
     domain:Api.domain,
-    article:{}
+    article:{url:1}
   },
   async onLoad(options) {
     that = this;

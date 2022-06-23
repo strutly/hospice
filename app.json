@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/share/forever",
     "pages/share/index",
@@ -12,7 +11,7 @@
     "pages/life/index",
     "pages/index/mode",
     "pages/index/identity",
-    "pages/life/living",
+    "pages/article/living",
     "pages/article/video",
     "pages/share/together",
     "pages/help/index",
@@ -31,7 +30,8 @@
     "pages/repair/index",
     "pages/repair/list",
     "pages/repair/detail",
-    "pages/repair/form"
+    "pages/repair/form",
+    "pages/lifeDeath/stranger"
   ],
   "window": {
     "backgroundTextStyle": "light",

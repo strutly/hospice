@@ -3829,7 +3829,7 @@ scroll-view.cu-steps .cu-item {
 .text-cut {
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .text-bold {
