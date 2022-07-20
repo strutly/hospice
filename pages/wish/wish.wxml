@@ -1,0 +1,23 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='安宁疗护' iconTheme="white" color="#fff">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}" delay="{{2000}}"></topTips>
+  <view class="beijing">
+    <image class="pingzi" mode="widthFix" bindtap="showWish" src="http://gridpic.tsing-tec.com/hospice/kpz.png"></image>
+    <view class="wave-content ">
+      <view class="wave wave1 "></view>
+      <view class="wave wave2 "></view>
+      <view class="wave wave3 "></view>
+      <view class="wave wave4"></view>
+    </view>
+    <image class="ax {{(isWish||wishwin)&&'hide'}}" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/ax.gif?1"></image>
+    <image class="jz {{!isWish&&'hide'}} {{pingzismall}}" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/jz.png"></image>
+    <view class="wish {{(isWish||wishwin)&&'hide'}}">许愿</view>
+  </view>
+  <view class="wishWin {{wishwin}}">
+    <textarea style="padding: 3rem 3rem 1rem;width: 100%;"  bindinput="bindTextAreaBlur"placeholder="写下你的愿望..."  value="{{formData.msg}}"></textarea>
+    <image src="http://gridpic.tsing-tec.com/hospice/wbk.png" mode="widthFix" style="width:100%;position: absolute;top:0%;z-index: -1;"></image>
+    <button style="width:4.6rem;margin-top: 1rem;line-height:2rem;" bindtap="addWish">确认</button>
+  </view>
+  <navigator url="/pages/wish/my" class="mywish">我的愿望
+  </navigator>
+</navBar>

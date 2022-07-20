@@ -1,7 +1,8 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
-<tab systemFontSize="{{systemFontSize}}"></tab>
+
 <navBar title='选择身份' iconTheme="white" color="#fff" back="true">
+  
   <view>
     <image class="" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/choose.png?v=1"  style="width: 100%;margin-top: 100rpx;height:auto;" />
     <navigator hover-class="none"  url="/pages/lifeDeath/patient" class="cu-btn lines-orange margin-tb-sm padding patient radius-xl text-lg">我是患者</navigator>

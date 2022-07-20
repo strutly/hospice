@@ -39,6 +39,10 @@ Component({
     delta: {
       type: Number,
       value: 1
+    },
+    systemFontSize: {
+      type: String,
+      value: wx.getStorageSync('systemFontSize')||"14px"
     }
   },
   created: function () {
@@ -141,8 +145,9 @@ Component({
     },
     // 返回事件
     back: function () {
+      console.log(getCurrentPages());
       wx.navigateBack({
-        delta: -1,
+        delta: 1,
       })
     },
     home: function () {

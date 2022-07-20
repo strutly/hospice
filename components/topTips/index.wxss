@@ -35,3 +35,13 @@
 .weui-toptips_info {
   background-color: var(--blue)
 }
+.weui-toptips_success_center {
+  background-color: var(--white);
+  color:#000;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  width: 80%;
+}

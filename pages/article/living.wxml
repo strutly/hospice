@@ -2,22 +2,22 @@
 <navBar title='{{listData.title}}' iconTheme="white" color="#fff" back="true">
   <block wx:for="{{listData.children}}" wx:key="index">
     <view class="cu-bar">
-      <view class="action">
+      <view class="action text-xl text-bold">
         <text class="cuIcon-titles text-orange"></text> {{item.title}}
       </view>
-      <view class="action text-grey text-sm" bindtap="more" data-index="{{index}}" wx:if="{{item.children.length>2}}">
+      <view class="action text-grey" bindtap="more" data-index="{{index}}" wx:if="{{item.children.length>2}}">
 				查看更多>
 			</view>
     </view>
     <block wx:if="{{item.title=='书籍推荐'}}">
       <view class="books flex" style="flex-direction:column-reverse;">
-        <navigator wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" url="/pages/article/detail?id={{article.id}}" class="margin-sm book light {{i%2==0?'bg-blue':'bg-brown'}} padding radius-lg align-center flex" wx:if="{{i>(item.children.length-3) || open[index]}}">
+        <navigator hover-class="none" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" url="/pages/article/detail?id={{article.id}}" class="margin-sm book light {{i%2==0?'bg-blue':'bg-brown'}} padding radius-lg align-center flex" wx:if="{{i>(item.children.length-3) || open[index]}}">
           <view class="cover-box margin-right">
             <image mode="scaleToFill" class="radius-lg cover-img" src="{{article.pic}}"></image>
           </view>
           <view class="flex-sub text-news">
             <view class="text-black text-bold text-cut text-lg">{{article.title}}</view>
-            <view class="text-grey margin-top text-sm text-des">{{article.des}}</view>
+            <view class="text-grey margin-top text-des">{{article.des}}</view>
           </view>
         </navigator>
       </view>

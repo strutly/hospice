@@ -2,7 +2,10 @@ const app = getApp();
 import util from '../../utils/util.js';
 import api from '../../config/api.js';
 var that;
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     like: 0,
     store: 0,
@@ -85,11 +88,6 @@ Page({
       that.showTips("授权失败,请重试~");
     }
   },
-  authModal() {
-    that.setData({
-      auth: !that.data.auth
-    })
-  },
   showTips(msg, type = "error") {
     that.setData({
       show: true,
@@ -147,8 +145,8 @@ Page({
     console.log(e)
     var current = e.target.dataset.src;
     wx.previewImage({
-      current: current, // 当前显示图片的http链接  
-      urls: that.data.imgs // 需要预览的图片http链接列表  
+      current: current, // 当前显示图片的http链接
+      urls: that.data.imgs // 需要预览的图片http链接列表
     })
   },
   async handle(type) {
@@ -207,12 +205,21 @@ Page({
     that.yes = async () => {
       let res = await api.deleteComment({ id: e.currentTarget.dataset.id });
       console.log(res);
-      let replys = that.data.replys;
-      replys.splice(index, 1);
-      that.setData({
-        confirm: false,
-        replys: replys
-      })
+      if(res.code==0){
+        // let replys = that.data.detail.replys;
+        // replys.splice(index, 1);
+        var detail = that.data.detail;
+        detail.replys.splice(index, 1);
+        that.setData({
+          confirm: false,
+          detail: detail
+        })
+      }else{
+        that.setData({
+          confirm: false
+        })
+        that.showTips(res.msg, "error");
+      }
     }
     that.no = () => {
       that.setData({
@@ -220,4 +227,4 @@ Page({
       })
     }
   }
-})
+}));

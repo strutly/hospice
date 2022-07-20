@@ -1,7 +1,10 @@
 var that;
 const api = require("../../config/api");
 const util = require("../../utils/util");
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data:{
     lists:[],
     noDataMsg:"您还为评论任何人哦!去主页看看吧!",
@@ -28,7 +31,7 @@ Page({
         that.setData({
           endline:true
         })
-    }else{      
+    }else{
       that.setData({
         pageNo:pageNo,
         lists:lists.concat(res.data)
@@ -40,7 +43,7 @@ Page({
     if(!endline){
       let pageNo = that.data.pageNo + 1;
       that.pageComment(pageNo);
-    }    
+    }
   },
   handleLongPress(e){
     console.log(e);
@@ -58,7 +61,7 @@ Page({
         confirm:false,
         lists:comments
       })
-      util.warn(that,res.msg);    
+      util.warn(that,res.msg);
     }
     that.no =()=>{
       that.setData({
@@ -66,4 +69,4 @@ Page({
       })
     }
   }
-})
+}));

@@ -1,0 +1,46 @@
+<include src="/pages/template/error.wxml"></include>
+<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <progress percent="{{progress}}" color="#e75e58" active wx:if="{{upload}}" />
+  <view class="padding">
+    <view class="margin-tb flex text-lg align-center">
+      标题<input class="flex-sub margin-left"bindblur="bindTitleBlur" placeholder="点击此处输入标题" name="title" value="{{formData.title}}"></input>
+    </view>
+    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="开始分享您的内容..." />
+    <view class="image-box">
+      <view class="image-item" wx:for="{{formData.imgs}}">
+        <image class="image-thumb {{item.type?'image-video':''}}" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item.cover}}" src="{{item.cover}}"></image>
+        <view class="image-delete-box {{delete?'':'hide'}}" bindlongpress="handleLongPress" bindtap="remove" data-index="{{index}}">
+          <image src="/images/delete.png" class="image-delete"></image>
+        </view>
+      </view>
+      <view class="image-item" wx:if="{{formData.imgs.length<9}}">
+        <view class="add" bindtap="addImg">
+          <image class="image-add" src="/images/add.png"></image>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{formData.source==3}}">
+      <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>发布类型</view>
+      <view class="grid col-2">
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="0">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
+            <view class="text-df">#亲历身边事#</view>
+          </view>
+        </view>
+        <view class="padding-left padding-tb-sm " bindtap="chooseType" data-type="1">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
+            <view class="text-df">#影音中的故事#</view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+    <view class="open-switch">是否匿名?<view class="switch {{formData.anonymous?'switch-active':''}}" bindtap="anonymous"></view>
+    </view>
+    <view class="open-switch">允许评论?<view class="switch {{formData.comment?'switch-active':''}}" bindtap="comment"></view>
+    </view>
+    <view class="push bg-orange" bindtap="form">点击发布</view>
+  </view>
+</navBar>

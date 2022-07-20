@@ -1,0 +1,191 @@
+.beijing{
+  background:url(https://this.tsing-care.com/20220621/8abc5abe-d557-4c97-8366-ce1217cedc0c.jpg);
+  width: 100vw;
+  height: calc(100vh - 131.25px);
+  position: relative;
+  display: block;
+  background-size: 100vw calc(100vh - 131.25px);
+}
+.pingzi{
+  z-index: 2;
+	position:absolute;
+	width:40%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+.ax{
+  pointer-events: none;
+  position:absolute;
+	width:30%;
+	top: 53%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.jz{
+  width:50%;
+}
+.wave-content {
+  z-index: 1;
+  width: 90vw;
+  height: 60vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  
+  transform: translate(-50%,-50%);padding: 0;
+}
+
+.wave {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    transform-origin: center center;
+    background-color: transparent;
+    border: 1px solid #979797;
+    animation-duration: 2s;
+    animation-name: wv;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.wave1 {
+    animation-delay: 0s;
+    background: #fff;
+}
+
+.wave2 {
+    animation-delay: 0.5s;
+    background: #fff;
+}
+
+.wave3 {
+    animation-delay: 1s;
+    background: #fff;
+}
+
+.wave4 {
+    animation-delay: 1.5s;
+    background: #fff;
+}
+
+@keyframes wv {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    30% {
+        opacity: 0.3;
+        transform: scale(0.65);
+    }
+
+    70% {
+        opacity: 0.1;
+        transform: scale(0.85);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+.wish{
+  pointer-events: none;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  color:#fff;
+  font-size: 1rem;
+}
+.wishWin{
+  position: absolute;
+  top: 40%;
+  display:none;
+  width: 100%;
+  z-index: 4;
+}
+.wishShow{display:block;
+  animation-duration: 0.5s;
+  animation-name: tobig;
+  animation-timing-function: linear;
+  
+  animation-fill-mode: forwards;
+}
+.wishHide{display:block;
+  animation-duration: 0.5s;
+  animation-name: tosmall;
+  animation-timing-function: linear;
+  
+  animation-fill-mode: forwards;
+}
+@keyframes tobig {
+  0% {
+    /* transform: scale(0.01); */
+    z-index: 4;
+    opacity: 0;
+  }
+  100% {
+    /* transform: scale(1); */
+    opacity: 1;
+    z-index: 4;
+  }
+}
+@keyframes tosmall {
+  0% {
+    /* transform: scale(1); */
+    z-index: 4;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    /* transform: scale(0.01); */
+    z-index: -1;
+  }
+}
+@keyframes scaleSmall {
+  0% {
+    transform:translate(-50%,-50%) scale(1);
+    /* width: 40%; */
+    /* scale: 1; */
+  }
+  100% {
+    transform:translate(-50%,-50%) scale(0.01);
+    /* scale: 0.01; */
+    /* width: 0; */
+  }
+}
+.pingzismall{
+  animation-duration: 2s;
+  animation-name: scaleSmall;
+  animation-timing-function: linear;
+  
+  animation-fill-mode: forwards;
+}
+.hide{
+  display:none;
+}
+.mywish{
+  position: fixed;
+  top: 25vh;
+  right: 0rpx;
+  padding:20rpx 20rpx 20rpx 60rpx;
+  background-color: rgba(187, 181, 181, 0.65);
+  border-radius: 80rpx 0 0 80rpx;
+  z-index: 100000000;  
+  color: #fff;
+}
+.safe-bottom{
+  padding-bottom: 0;
+}

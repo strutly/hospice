@@ -1,7 +1,10 @@
 
 var that;
 import Api from "../../config/api";
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     auth: wx.getStorageSync('auth') || false,
     formData: { pics: [],msg:"",type:1}
@@ -86,8 +89,8 @@ Page({
   previewImage(e) {
     var current = e.currentTarget.dataset.src;
     wx.previewImage({
-      current: current, // 当前显示图片的http链接  
-      urls: [current] // 需要预览的图片http链接列表  
+      current: current, // 当前显示图片的http链接
+      urls: [current] // 需要预览的图片http链接列表
     })
   },
   authModal() {
@@ -120,7 +123,7 @@ Page({
     if (res.code == 0) {
       that.showTopTips("授权成功,请重新将信件塞入信箱~","success");
       that.setData({
-        auth: true        
+        auth: true
       });
       wx.setStorageSync('auth', true);
     } else {
@@ -152,6 +155,6 @@ Page({
       },2000);
     }else{
       that.showTopTips(res.msg,"error");
-    }    
+    }
   }
-})
+}));

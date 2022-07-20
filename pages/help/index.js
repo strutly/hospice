@@ -1,7 +1,10 @@
 
 var that, interval;
 import Api from "../../config/api";
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     horseRaceLampList: [],// 跑马灯内容
     marqueePace: 1,// 跑马灯滚动速度
@@ -29,9 +32,7 @@ Page({
     }
   },
   onShow() {
-    that.setData({
-      systemFontSize: wx.getStorageSync('systemFontSize') || "14px"
-    });
+    page.onShow.call(this);
     if (interval) {
       clearInterval(interval);
     }
@@ -131,4 +132,4 @@ Page({
       that.showTips("请输入弹幕内容再发送", "error");
     }
   }
-})
+}));

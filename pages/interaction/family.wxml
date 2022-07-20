@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='互动空间--家属' iconTheme="white" color="#fff">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
-  <view class="padding margin-top-xl des-msg bg-white-50 margin-bottom-xl">
+  <view class="padding des-msg bg-white-50 margin-bottom-xl">
     <view class="text-index2">每个人都期待生如夏花之绚烂，死如秋叶之静美。</view>
     <view class="text-index2">亲人的临终和离世是人生很大的挑战，您的照护无奈和哀伤情绪亦是人之常情。</view>
     <view class="text-index2">让我们敞开胸怀，一起走出照护困境和哀伤阴霾</view>

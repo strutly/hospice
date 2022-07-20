@@ -1,0 +1,50 @@
+/* pages/bank/bank.wxss */
+.beijing{
+  background:url(http://gridpic.tsing-tec.com/hospice/shalou.png);
+  width: 100vw;
+  height: calc(100vh - 131.25px);
+  position: relative;
+  display: block;
+  background-size: 100vw calc(100vh - 131.25px);
+}
+.safe-bottom{
+  padding-bottom: 0;
+}
+.white{
+  color:#fff;
+}
+.bgwhite5{
+  background-color: rgba(255,255,255,0.5);
+}
+.bank-title{
+  margin:1.3rem 0 1.2rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.bank-title>.cuIcon-time{
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+.bank-link{
+  padding:0.7rem 0.5rem 0.7rem 0.9rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  margin:0.7rem;
+  font-size: 1.05rem;
+}
+.bank-link>.cuIcon-round{
+  font-size:0.7rem;
+  color:#000;
+  font-weight: 900;
+  margin-right: 0.2rem;
+}
+.bank-link>.cuIcon-right{
+  color:rgba(255,255,255,0.5);
+  text-align: right;
+  flex:1;
+}

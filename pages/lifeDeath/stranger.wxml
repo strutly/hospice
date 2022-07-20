@@ -1,8 +1,9 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <videoPlay id="video"></videoPlay>
-<tab systemFontSize="{{systemFontSize}}"></tab>
+
 
 <navBar title='生死两相安--路人' iconTheme="white" color="#fff" back="true">
+  <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="search-box" wx:if="{{search}}">
     <view class="cu-bar bg-white search">
@@ -81,9 +82,20 @@
       </view>
     </view>
   </view>
-  <navigator hover-class="none" url="/pages/interaction/family" class="margin-lr">
-    <image src="http://gridpic.tsing-tec.com/hospice%2Fpass.png" mode="widthFix" style="width: 100%;"></image>
-  </navigator>
+  <view class="flex text-center align-center text-lg margin-lr-xs">
+    <navigator hover-class="none" url="/pages/wish/wish" class="margin-lr-xs flex-sub">
+      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/20220627/46c85c40-424e-4cc3-9004-fad047db4487.png"></image>
+      <view>许愿池</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/story/index" class="margin-lr-xs flex-sub">
+      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png"></image>
+      <view>生命故事</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/bank/bank" class="margin-lr-xs flex-sub">
+      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/sjyh.png"></image>
+      <view>时间银行</view>
+    </navigator>
+  </view>
 
 
 

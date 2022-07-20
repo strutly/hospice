@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/index/index","pages/share/album",
+    "pages/wish/my",
+    "pages/test/test",
+    "pages/lifeDeath/stranger",
+    "pages/story/index",
+    "pages/wish/wish",
     "pages/share/forever",
     "pages/share/index",
     "pages/article/detail",
@@ -31,7 +36,10 @@
     "pages/repair/list",
     "pages/repair/detail",
     "pages/repair/form",
-    "pages/lifeDeath/stranger"
+    "pages/story/form",
+    "pages/story/my",
+    "pages/bank/bank"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

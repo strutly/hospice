@@ -2,7 +2,10 @@ import util from "../../utils/util";
 import Api from "../../config/api";
 const app = getApp();
 var that;
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     navHeight: app.globalData.navHeight,
     navTop: app.globalData.navTop,
@@ -51,8 +54,8 @@ Page({
   previewImage(e) {
     var current = e.currentTarget.dataset.src;
     wx.previewImage({
-      current: current, // 当前显示图片的http链接  
-      urls: [current] // 需要预览的图片http链接列表  
+      current: current, // 当前显示图片的http链接
+      urls: [current] // 需要预览的图片http链接列表
     })
   },
   addImg() {
@@ -154,7 +157,7 @@ Page({
     if (formData.msg == "") {
       return that.topTips("请输入内容后再提交", 'error');
     }
-    
+
     let res = await Api.addRecord(JSON.stringify(formData));
     if (res.code == 0) {
       wx.removeStorageSync('formData');
@@ -187,12 +190,5 @@ Page({
     that.setData({
       auth: false
     })
-  },
-  handlerGohomeClick() {
-    let url = app.globalData.url
-    console.log(url)
-    wx.switchTab({
-      url
-    })
   }
-});
+}));;

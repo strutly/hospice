@@ -6,8 +6,8 @@
 }
 .checkbox-sm .wx-checkbox-input {
   border-radius: 50%;
-  width: 30rpx;
-  height: 30rpx;  
+  width: 2.142rem;
+  height: 2.142rem;  
 }
 checkbox::before {	
   font-size: 0.8rem;

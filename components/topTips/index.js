@@ -31,7 +31,8 @@ Component({
       warn: 'weui-toptips_warn',
       info: 'weui-toptips_info',
       success: 'weui-toptips_success',
-      error: 'weui-toptips_error'
+      error: 'weui-toptips_error',
+      successCenter:"weui-toptips_success_center"
     }
   },
 

@@ -1,4 +1,5 @@
 // components/video.js
+//多个缩略图对应一个视频播放器
 var videoContext;
 Component({
   properties: {

@@ -1,0 +1,38 @@
+/* components/left-touch/index.wxss */
+.top{
+  width:100%;
+  overflow: hidden;
+  display: flex;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  flex-wrap: nowrap;
+}
+.main{
+  width:100%;
+  margin-left: -300rpx;
+  transform: translateX(300rpx);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  display: inline-block;
+}
+
+.media-delete{
+  display: inline-block;
+  -webkit-transform: translateX(300rpx);
+  transform: translateX(300rpx); 
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* 
+.media-delete-item{
+  flex:1;
+  height: 100%;
+  line-height: 200rpx;
+}
+.media-delete-item-warm{
+  background-color: orangered;
+}
+.media-active .media-content,.media-active .media-delete{
+  -webkit-transform: translateX(0);
+  transform: translateX(0rpx);
+} */

@@ -1,6 +1,6 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='互动空间--患者' iconTheme="white" color="#fff" back="true">
-  <view class="padding margin-top-xl des-msg bg-white-50 margin-bottom-xl">
+  <view class="padding des-msg bg-white-50 margin-bottom-xl">
     <view class="text-index2">生命的流逝，就像河流入海，在人生长河中，让我们互相支持，彼此欣赏。品当下生活滋味，集生活点滴过往，寄真挚祝福、期望……</view>
   </view>
   <view class="padding-xl"></view>

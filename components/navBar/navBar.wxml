@@ -42,7 +42,9 @@
   </view>
 </view>
 <view style="width: 100%;height:{{imgHeight}}px;"></view>
+<tab top="{{imgHeight}}"></tab>
 <!-- height 公式为 整体高度 减去头部高度-->
-<view class="container safe-bottom" style="min-height: calc(100vh - {{imgHeight}}px);">
+<view class="container safe-bottom" style="height: calc(100vh - {{imgHeight}}px);position: relative;">
+  
   <slot></slot>
 </view>

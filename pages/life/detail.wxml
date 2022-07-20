@@ -4,9 +4,9 @@
   <view class="container" wx:if="{{detail}}">
     <view class="card">
       <view class="card-head">
-        <image class="head-image" src="{{detail.maUser.avatarUrl||'/images/head.jpg'}}"></image>
+        <image class="head-image" src="{{(detail.anonymous&&detail.maUser.avatarUrl)?'/images/head.jpg':detail.maUser.avatarUrl}}"></image>
         <view class="card-des">
-          <view class="card-nickname">{{detail.maUser.nickName||'微信用户'}}</view>
+          <view class="card-nickname">{{(detail.anonymous&&detail.maUser.nickName)?'微信用户':detail.maUser.nickName}}</view>
           <view class="card-time">{{detail.createTime}}</view>
         </view>
       </view>
@@ -24,7 +24,7 @@
           <image src="/images/like{{detail.like?1:0}}.png"></image>
           <view>{{detail.likes.length}}</view>
         </view>
-        <view class="handle-item" bindtap="comment">
+        <view class="handle-item" bindtap="comment" wx:if="{{detail.comment}}">
           <image src="/images/comment.png"></image>
           <view>{{detail.replys.length}}</view>
         </view>
@@ -39,7 +39,7 @@
         <view class="like-name" wx:for="{{detail.likes}}">{{item.nickName}}</view>
       </view>
     </view>
-    <view class="card-comments">
+    <view class="card-comments"  wx:if="{{detail.comment}}">
       <view class="comment-item" wx:for="{{detail.replys}}">
         <view class="comment-head">
           <image class="comment-image" src="{{item.avatarUrl}}"></image>
@@ -47,6 +47,7 @@
             <view class="comment-nickname">{{item.nickName}}</view>
             <view class="comment-time">{{item.createTime}}</view>
           </view>
+          <view class="blue" wx:if="{{detail.isMine}}" bindtap="confirm" data-id="{{item.id}}" data-index="{{index}}">删除</view>
         </view>
         <view class="comment-content" bindtap="comment" data-id="{{item.id}}" data-oid="{{item.uid}}" data-othername="{{item.nickName}}" data-index="{{index}}">
           {{item.content}}
@@ -76,6 +77,20 @@
           <button class="cu-btn bg-green margin-left" bindtap="auth">确定</button>
         </view>
       </view>
+    </view>
+  </view>
+  <view class='mask' wx:if="{{confirm}}"  catchtouchmove='ture'>
+    <view class='modal-content'>
+      <view class="modal-cancle" bindtap="no">
+        <image class="cancle-image" src="/images/cancle.png"></image>
+      </view>
+      <icon class="modal-icon" type="info" color="#FFB13B" size="90"></icon>
+      <view class='modal-title'>
+        {{confirmMsg}}
+      </view>    
+      <view class='modal-btns'>          
+          <button class='modal-btn' bindtap="yes">确认</button>
+      </view>    
     </view>
   </view>
 </navBar>

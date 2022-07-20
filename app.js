@@ -22,6 +22,8 @@ App({
     systemFontSize:"14px",
     change:false
   },
+  //当前页面的that,可以不定义，定义是为了避免报错
+  currThat: {},
   watch(method) {
     var obj = this.globalData;
     Object.defineProperty(obj, 'systemFontSize', {

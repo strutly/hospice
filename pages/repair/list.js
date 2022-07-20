@@ -1,6 +1,9 @@
 var that;
 import Api from "../../config/api";
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     letters: [[], []],
     index: 0,
@@ -11,15 +14,10 @@ Page({
     that = this;
     that.getList(0, 1);
   },
-  onShow() {    
-    this.setData({
-      systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
-    })
-  },
   async getList(index, page) {
     let param = {
       pageNo: page,
-      type: 2      
+      type: 2
     }
     if(that.data.reply){
       param.reply = that.data.reply;
@@ -37,7 +35,7 @@ Page({
       pageNo: pageNo,
       endline:endline,
       letters: letters
-    });    
+    });
   },
   changeTab(e) {
     console.log(e);
@@ -59,4 +57,4 @@ Page({
     }
   }
 
-})
+}));

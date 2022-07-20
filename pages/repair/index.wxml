@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title="走过哀伤" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
-  <view class="padding-xl margin-top-xl"></view>
-  <view class="padding-lg margin text-white text-index2 des-msg">岁月催人老,不老的是亲情。无论我们身在何境，身在何地，亲人永远是我们最坚实的精神支柱，最理想的感情寄托。</view>
+  <view class="padding-xl "></view>
+  <view class="padding-lg margin text-index2 des-msg">岁月催人老,不老的是亲情。无论我们身在何境，身在何地，亲人永远是我们最坚实的精神支柱，最理想的感情寄托。</view>
 
   <view class="flex margin-xl text-center">
     <navigator hover-class="none" url="/pages/repair/form" class="flex-sub bg-gray radius-xl padding-sm margin-lg">我要修复</navigator>

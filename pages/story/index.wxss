@@ -1,0 +1,4 @@
+/* pages/story/index.wxss */
+.cur{
+  border-bottom:4rpx solid;
+}

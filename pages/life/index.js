@@ -1,7 +1,10 @@
 const app = getApp();
 import Api from '../../config/api.js';
 var that;
-Page({
+var basePage = require("../../utils/basePage.js");
+//以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
+var oys={},page = basePage.buildBasePage.call(this,oys);
+Page(Object.assign({},page,{
   data: {
     index: 0,
     endline: false,
@@ -78,7 +81,7 @@ Page({
         wx.removeStorageSync('code');
         that.showTips(authRes.msg);
       }
-    } else {      
+    } else {
       that.showTips("授权失败,请重试~");
     }
   },
@@ -90,4 +93,4 @@ Page({
       that.listRecord(pageNo);
     }
   }
-})
+}));

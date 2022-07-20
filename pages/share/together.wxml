@@ -7,7 +7,7 @@
   </view>
   <view class="flex text-center align-center text-white">
     <navigator url="/pages/repair/index" style="background-color: #FE6756;" class=" flex-sub margin-lr padding radius-xl">照片修复</navigator>
-    <view style="background-color: #4DA5FE;" class="flex-sub margin-lr padding radius-xl" bindtap="develop">时光相册</view>
+    <view data-url="/pages/share/album" bindtap="toUrl" style="background-color: #4DA5FE;" class="flex-sub margin-lr padding radius-xl">时光相册</view>
   </view>
 
   <view class="cu-list menu solid-bottom margin-top">
