@@ -1,1 +1,4 @@
 /* pages/share/forever.wxss */
+.grid.col-2>navigator {
+  width: 50%;
+}

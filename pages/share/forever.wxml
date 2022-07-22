@@ -7,12 +7,12 @@
   </view>
   
   <view class="grid col-2 padding" bindtap="develop">
-    <view class="text-center padding-sm">
-      <view  style="background-color: #FE6756;"  class="padding-xl">
+    <navigator hover-class="none" url="/pages/message/index"  class="text-center padding-sm">
+      <view style="background-color: #FE6756;"  class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-1.png"></image>
       </view>
       <view class="margin-top">寄语</view>
-    </view>
+    </navigator>
     <view class="text-center padding-sm">
       <view  style="background-color: #4DA5FE;" class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-2.png"></image>

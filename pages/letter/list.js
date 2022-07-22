@@ -53,7 +53,7 @@ Page(Object.assign({},page,{
     let index = that.data.index;
     if(!endline[index]){
       let pageNo = that.data.pageNo[index] + 1;
-      that.listRecord(index,pageNo);
+      that.getList(index,pageNo);
     }
   }
 

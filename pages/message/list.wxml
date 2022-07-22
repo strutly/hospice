@@ -1,2 +1,26 @@
-<!--pages/message/list.wxml-->
-<text>pages/message/list.wxml</text>
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='我的寄语' iconTheme="white" color="#fff">
+  <view class="padding bg-white">
+    <image src="http://gridpic.tsing-tec.com/hospice%2Fmy-message.png" mode="widthFix" style="width: 100%;"></image>
+  </view>
+  <view class="flex text-center bg-white">
+    <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="0">
+      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">带发送</view>
+    </view>
+    <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="1" data-stauts='1'>
+      <view class="tab padding-tb-sm {{index==1?'tab-cur':''}}">发送成功</view>
+    </view>
+    <view class=" padding-lr  flex-sub" bindtap="changeTab" data-index="2" data-stauts='2'>
+      <view class="tab padding-tb-sm {{index==2?'tab-cur':''}}">发送失败</view>
+    </view>
+  </view>
+  <view class="content">
+    <view url="/pages/letter/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{datas[index]}}" wx:key="index">
+      <view class="solids-bottom padding-bottom-sm">
+        <text class="cuIcon-title text-orange"></text>寄语{{index+1}}
+      </view>
+      <view class="margin-top-xs text-cut">{{item.content||'[图片寄语]'}}</view>
+      <view class="margin-top-sm text-sm text-right">{{item.createTime}}</view>
+    </view>
+  </view>
+</navBar>

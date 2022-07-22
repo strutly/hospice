@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index","pages/share/album",
+    "pages/message/index","pages/message/form","pages/index/index","pages/share/album",
     "pages/wish/my",
     "pages/test/test",
     "pages/lifeDeath/stranger",
@@ -38,7 +38,10 @@
     "pages/repair/form",
     "pages/story/form",
     "pages/story/my",
-    "pages/bank/bank"
+    "pages/bank/bank",
+    
+    
+    "pages/message/list"
     
   ],
   "window": {
