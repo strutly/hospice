@@ -1,3 +1,4 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <topTips show="{{show}}" msg="{{msg}}" type="error"></topTips>
 <navBar title='寄语' iconTheme="white" color="#fff" back="true">
   <form bindsubmit="submit">

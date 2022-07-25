@@ -6,7 +6,7 @@
     <view class="padding-tb text-center text-xxl main-title">我心永在</view>
   </view>
   
-  <view class="grid col-2 padding" bindtap="develop">
+  <view class="grid col-2 padding">
     <navigator hover-class="none" url="/pages/message/index"  class="text-center padding-sm">
       <view style="background-color: #FE6756;"  class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-1.png"></image>

@@ -1,9 +1,15 @@
 .container{
   
   width: 100%;  
-  background-image: url("http://gridpic.tsing-tec.com/hospice%2Fmessage-bg.png?imageMogr2");  
+  background-image: url("http://gridpic.tsing-tec.com/hospice/jiyu.jpg");  
   background-repeat:no-repeat;
   box-sizing: border-box;
   background-size: 100% 100%;
   padding-bottom: 0;
+}
+.my-btn{
+  display: inline-block;
+  margin: auto;
+  padding: 40rpx;
+  border-radius: 20rpx;
 }

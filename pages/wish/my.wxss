@@ -1,5 +1,11 @@
 
-
+.container{  
+  width: 100%;
+  background-image: url("http://gridpic.tsing-tec.com/hospice/wdywbj.jpg");
+  background-size: 100%;
+  background-repeat:no-repeat;
+  padding-bottom: 0;
+}
 .head{
   width:100%;
   background-image: url(http://pic.strutly.cn/9ca119ee1ffd17975bdd2ceb5380a59.png);

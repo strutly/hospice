@@ -1,6 +1,7 @@
 {
-  "pages": [
-    "pages/message/index","pages/message/form","pages/index/index","pages/share/album",
+  "pages": ["pages/index/index","pages/message/index","pages/professional/hdkj",
+    "pages/message/form","pages/message/list",
+    "pages/share/album","pages/letter/index",
     "pages/wish/my",
     "pages/test/test",
     "pages/lifeDeath/stranger",
@@ -27,7 +28,6 @@
     "pages/life/detail",
     "pages/interaction/patient",
     "pages/interaction/family",
-    "pages/letter/index",
     "pages/letter/form",
     "pages/share/treeHole",
     "pages/letter/list",
@@ -39,10 +39,7 @@
     "pages/story/form",
     "pages/story/my",
     "pages/bank/bank",
-    
-    
-    "pages/message/list"
-    
+    "pages/professional/professional"
   ],
   "window": {
     "backgroundTextStyle": "light",

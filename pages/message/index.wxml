@@ -1,14 +1,14 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title="寄语" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <view class="padding"></view>
-  <view class="margin-lg padding" style="background-color: #FFF7B7;">
-    斗转星移，时光荏苒，在未来的某个时刻，您也许已经悄然离逝，但在一些特殊的日子，您仍然有一些祝福和心里话要对某人说，现在，请把这些话留下来吧，我们会帮您在未来时空中传达……</view>
+  <view class="margin-lg padding text-lg" style="background-color: #FFF7B7;font-size: 1.4rem;line-height: 1.4;">
+    斗转星移，在未来的某个时刻，您也许有一些祝福和心里话要在特殊的日子对某人说，请把这些话留下来吧，我们会帮您在未来时空中传达……</view>
   <view class="padding-xl margin-xl"></view>
   <view class="padding text-center">
-    <navigator hover-class="none" url="/pages/message/form" class="cu-btn radius-lg" style="background-color: #FFF7B7;">发送寄语</navigator>
+    <navigator hover-class="none" url="/pages/message/form" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">发送寄语</navigator>
   </view>
   <view class="margin-top-lg padding text-center">
-    <navigator hover-class="none" url="/pages/message/list" class="cu-btn radius-lg" style="background-color: #FFF7B7;">我的寄语</navigator>
+    <navigator hover-class="none" url="/pages/message/list" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">我的寄语</navigator>
   </view>
 
 </navBar>

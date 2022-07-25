@@ -3,8 +3,8 @@
 <navBar title='时光相册' iconTheme="white" color="#fff" back="true">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <form bindsubmit="formSubmit">
-    <pics pics="{{pics}}" >
-      <input class="img-upload" name="pics" value="{{value}}"/>
+    <pics pics="{{pics}}" name="pics">
+      <input name="pics" value="{{pics}}"/>
     </pics>
     <view class="btn-area" style="padding:25rpx;flex:1">
       <button bindtap="send" style="background-color:#01BF81;width:100%" formType="submit" type="primary">确认</button>

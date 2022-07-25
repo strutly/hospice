@@ -1,37 +1,39 @@
 <include src="/pages/template/error.wxml"></include>
 <wxs src="../../utils/Tools.wxs" module="tools" />
 <navBar title='我的愿望' iconTheme="white" color="#fff" back="true">
-  <image src="http://gridpic.tsing-tec.com/hospice/wdxy.png?1" mode="widthFix" class="top-img"/>
-  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
-  <view class="flex text-center margin-bottom padding-lr text-bold">
-    <view class="{{'flex-sub'}} {{index==tabIndex?'text-red':''}}" wx:for="{{navs}}" wx:key="index" bindtap="tabSelect" data-index="{{index}}" data-come-true="{{comeTrues[index]}}">
-      <text class="padding-bottom-xs {{index==tabIndex?'cur':''}}">{{item}}</text>
+  <scroll-view scroll-y="{{true}}" style="width: 100%;height: 100%;overflow-y: auto;" bindscroll="onReachBottom">
+    <image src="http://gridpic.tsing-tec.com/hospice/wdxy.png?1" mode="widthFix" class="top-img"/>
+    <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+    <view class="flex text-center margin-bottom padding-lr text-bold">
+      <view class="{{'flex-sub'}} {{index==tabIndex?'text-red':''}}" wx:for="{{navs}}" wx:key="index" bindtap="tabSelect" data-index="{{index}}" data-come-true="{{comeTrues[index]}}">
+        <text class="padding-bottom-xs {{index==tabIndex?'cur':''}}">{{item}}</text>
+      </view>
     </view>
-  </view>
-  <view class="content">
-    <leftTouch wx:for="{{myRecords[tabIndex]}}" left="{{200}}" move="{{move}}">
-      <!-- <view class="media-bd" slot="panel">
-        <view class="media-title">{{item.msg}}</view>
-        <view class="media-des">发布时间:{{tools.dateFormat(item.createTime,'yyyy年MM月dd日')}}</view>
-      </view> -->
-      <view hover-class="none"   class="media-content" data-index="{{item.id}}" slot="panel">
-        <!-- <view class="media-hd">
-          <image mode="aspectFill" src="{{item.imgs[0].url}}" wx:if="{{item.imgs.length>0}}"></image>
-          <image src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" mode="aspectFill" wx:else></image>
-        </view> -->
-        <image class="gouxuan" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/{{item.comeTrue?'gouxuan':'bugouxuan'}}.png"data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"/>
-        <!-- <view class="switch {{item.comeTrue?'switch-active':''}}" data-key="{{key}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"></view> -->
-        <view class="media-bd">
+    <view class="content">
+      <leftTouch wx:for="{{myRecords[tabIndex]}}" left="{{200}}" move="{{move}}">
+        <!-- <view class="media-bd" slot="panel">
           <view class="media-title">{{item.msg}}</view>
           <view class="media-des">发布时间:{{tools.dateFormat(item.createTime,'yyyy年MM月dd日')}}</view>
+        </view> -->
+        <view hover-class="none"   class="media-content" data-index="{{item.id}}" slot="panel">
+          <!-- <view class="media-hd">
+            <image mode="aspectFill" src="{{item.imgs[0].url}}" wx:if="{{item.imgs.length>0}}"></image>
+            <image src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" mode="aspectFill" wx:else></image>
+          </view> -->
+          <image class="gouxuan" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/{{item.comeTrue?'gouxuan':'bugouxuan'}}.png"data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"/>
+          <!-- <view class="switch {{item.comeTrue?'switch-active':''}}" data-key="{{key}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"></view> -->
+          <view class="media-bd">
+            <view class="media-title">{{item.msg}}</view>
+            <view class="media-des">发布时间:{{tools.dateFormat(item.createTime,'yyyy年MM月dd日')}}</view>
+          </view>
         </view>
-      </view>
-      <view slot="menu" class="media-delete">
-        <view class="media-delete-item media-delete-item-warm" bindtap="delete" data-id="{{item.id}}"data-index="{{index}}">删除</view>
-      </view>
-    </leftTouch>
-    
+        <view slot="menu" class="media-delete">
+          <view class="media-delete-item media-delete-item-warm" bindtap="delete" data-id="{{item.id}}"data-index="{{index}}">删除</view>
+        </view>
+      </leftTouch>
+      
 
 
-  </view>
+    </view>
+  </scroll-view>
 </navBar>
