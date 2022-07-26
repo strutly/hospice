@@ -1,7 +1,12 @@
 {
-  "pages": ["pages/index/index","pages/message/index","pages/professional/hdkj",
-    "pages/message/form","pages/message/list",
-    "pages/share/album","pages/letter/index",
+  "pages": [ 
+    "pages/index/index",
+    "pages/message/index",
+    "pages/professional/hdkj",
+    "pages/message/form",
+    "pages/message/list",
+    "pages/share/album",
+    "pages/letter/index",
     "pages/wish/my",
     "pages/test/test",
     "pages/lifeDeath/stranger",
@@ -39,7 +44,8 @@
     "pages/story/form",
     "pages/story/my",
     "pages/bank/bank",
-    "pages/professional/professional"
+    "pages/professional/professional",
+    "pages/scale/symptom"
   ],
   "window": {
     "backgroundTextStyle": "light",
