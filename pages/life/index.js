@@ -9,7 +9,7 @@ Page(Object.assign({},page,{
     index: 0,
     endline: false,
     datas: [],
-    titles:['分享社区','其言也善','树洞']
+    titles:['分享社区','其言也善','树洞','生命故事叙事','照护经验分享']
   },
   async onLoad(options) {
     that = this;

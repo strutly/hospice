@@ -56,7 +56,7 @@
     </view>
   </view>
   <view class="flex justify-center text-center text-lg margin-lr">
-    <view hover-class="none"  data-url="/pages/scale/symptom" class="flex-sub" bindtap="toUrl">
+    <view hover-class="none"  data-url="/pages/scale/patient/list" class="flex-sub" bindtap="toUrl">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/zzpg.png"></image>
       <view>症状评估</view>
     </view>
@@ -98,7 +98,7 @@
     </view>
   </view>
   <view class="flex justify-center text-center text-lg">
-    <navigator hover-class="none"  url="/pages/article/detail?id=144" class="flex-sub shzc light margin-lr padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/text?id=144" class="flex-sub shzc light margin-lr padding-sm radius-xl">
       <text class="">社会支持简介</text>
     </navigator>
     <navigator hover-class="none"  url="/pages/article/text?id=145" class="flex-sub shzc light margin-lr padding-sm radius-xl ">
@@ -126,7 +126,7 @@
       </view>
     </view>
   </view>
-  <view class="margin-lr tupianbiao "bindtap="toUrl"data-url="">
+  <view class="margin-lr tupianbiao "bindtap="toUrl"data-url="/pages/article/detail?id=150">
     <view class="text-lg">安宁疗护家庭会议</view>
     <image src="http://gridpic.tsing-tec.com/hospice/anlhjthy.png?1" mode="widthFix" style="width: 100%;"></image>
   </view>

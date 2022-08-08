@@ -23,7 +23,7 @@ Component({
       that.setData({
         playVideo: true,
         direction: 90,
-        zindex:100000000,
+        zindex:100,
         url: url
       })
     },

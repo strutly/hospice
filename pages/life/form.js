@@ -10,7 +10,9 @@ Page(Object.assign({},page,{
     navHeight: app.globalData.navHeight,
     navTop: app.globalData.navTop,
     delete: false,
-    pageName: '发表日志'
+    pageName: '发表日志',
+    types:[['这一口有味道#','这一眼还可以#','这一句让我感动#','这个瞬间非常留恋#'],
+      [],[],['亲历身边事','影音中的故事'],['自我照护经验分享','病人照护经验分享','求助贴']]
   },
   onLoad(options) {
     that = this;
@@ -71,14 +73,14 @@ Page(Object.assign({},page,{
         console.log(tempFilePaths);
         console.log(res);
         for (var i = 0; i < res.tempFilePaths.length; i++) {
-          that.uploadImg(tempFilePaths[i]);
+          that.uploadImg(tempFilePaths[i],res.tempFiles[i]);
         }
       }
     })
   },
-  async uploadImg(tempFilePaths) {
+  async uploadImg(tempFilePaths,tempFiles) {
     let imgs = that.data.formData.imgs;
-    let res = await Api.uploadImg(tempFilePaths);
+    let res = await Api.uploadImg(tempFilePaths,tempFiles);
 
     let data = JSON.parse(res);
     if (data.code != 0) {

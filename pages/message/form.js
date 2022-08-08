@@ -12,6 +12,12 @@ Page(Object.assign({},page,{
   },
   onLoad(options) {
     that = this;
+    let dateTime = new Date();
+    dateTime = dateTime.setDate(dateTime.getDate()+1);
+    dateTime = new Date(dateTime);
+    that.setData({
+      minDate:dateTime.toLocaleDateString()
+    })
     that.initValidate();
   },
   initValidate() {
@@ -25,10 +31,10 @@ Page(Object.assign({},page,{
       },
       content: {
         required: true
-      },
-      pics:{
-        min:1
-      }       
+      }//,
+      // pics:{
+      //   min:1
+      // }       
     };
     const messages = {
       email:{
@@ -40,10 +46,10 @@ Page(Object.assign({},page,{
       },
       content: {
         required: "请输入寄语内容"
-      },
-      pics:{
-        min:"请至少上传一张照片"
-      }   
+      }//,
+      // pics:{
+      //   min:"请至少上传一张照片"
+      // }   
     };
     that.WxValidate = new WxValidate(rules, messages);
   },
@@ -119,6 +125,16 @@ Page(Object.assign({},page,{
     data.pics = that.data.pics;
     let res = await Api.addMessage(data);
     console.log(res);
+    if(res.code==0){
+      that.showTips("提交成功","success");      
+      setTimeout(function(){
+        wx.navigateBack({
+          delta: 1,
+        })
+      },2000);
+    }else{
+      that.showTips(res.msg,"error");
+    }
   }
 
 }))

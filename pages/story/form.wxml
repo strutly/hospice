@@ -1,3 +1,4 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <include src="/pages/template/error.wxml"></include>
 <navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
@@ -7,6 +8,7 @@
       标题<input class="flex-sub margin-left"bindblur="bindTitleBlur" placeholder="点击此处输入标题" name="title" value="{{formData.title}}"></input>
     </view>
     <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="开始分享您的内容..." />
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>图片上传(长按可删除)</view>
     <view class="image-box">
       <view class="image-item" wx:for="{{formData.imgs}}">
         <image class="image-thumb {{item.type?'image-video':''}}" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item.cover}}" src="{{item.cover}}"></image>

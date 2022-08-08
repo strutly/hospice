@@ -5,7 +5,7 @@
   </view>
   <view class="flex text-center bg-white">
     <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="0">
-      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">带发送</view>
+      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">待发送</view>
     </view>
     <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="1" data-stauts='1'>
       <view class="tab padding-tb-sm {{index==1?'tab-cur':''}}">发送成功</view>

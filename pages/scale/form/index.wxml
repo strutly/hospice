@@ -1,0 +1,21 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<navBar title="患者信息统计" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+<block wx:if="{{changeShow}}">
+  <view class="cu-bar bg-white  margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text>题目切换
+    </view>
+    <view class="action"></view>
+  </view>
+  <view class="flex flex-wrap align-center text-center padding justify-between">
+    <view class="" wx:for="{{19}}">
+      <view bindtap="changeQuestion" data-index="{{item}}" style="line-height:50rpx;width:50rpx;height: 50rpx;" class="text-sm margin-xs {{indexTab==item?'bg-blue':'cu-tag line-black'}} round">{{item+1}}</view>
+    </view>
+  </view>
+  <canvas canvas-id="myChart" disable-scroll="true" class="canvas margin-top-xl"></canvas>
+</block>
+  <view class="padding flex flex-direction margin-tb-xl safe-bottom">
+    <view bindtap="toUrl" data-url="/pages/scale/form/symptom?fid={{fid}}&pid={{pid}}" class="cu-btn bg-orange lg">测评</view>
+  </view>
+</navBar>

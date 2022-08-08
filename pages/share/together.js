@@ -1,30 +1,14 @@
-var that;
-import Api from "../../config/api";
 var basePage = require("../../utils/basePage.js");
 //以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
-var oys={},page = basePage.buildBasePage.call(this,oys);
+var oys={},page = basePage.buildBasePage.call(this,oys),that;
 Page(Object.assign({},page,{
-
-  data: {
-
+	onLoad(options) {
+    page.onLoad.call(this,options);
+    that=this;
+    that.topTips1 = that.selectComponent("#topTips1");
+    // that.topTips1.alert("下载中",null,0);that.topTips1.hide();
   },
-
-  async onLoad(options) {
-    that = this;
-    that.listRecord(1);
-  },
-  async listRecord(pageNo) {
-    let res = await Api.getTopRecord({source:1});
-    console.log(res)
-    that.setData({
-      datas: res.data
-    });
-  },
-  develop(){
-    that.setData({
-      show:true,
-      msg:"该功能正在开发中~",
-      type:"error"
-    })
+  onShow() {
+    page.onShow.call(this);
   }
 }));

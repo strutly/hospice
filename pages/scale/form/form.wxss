@@ -1,0 +1,82 @@
+
+page{
+  background-color: #f2f2f2;
+}
+.q-speed{  
+  height: 0.3rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.q-title{
+  font-size: 34rpx;
+  padding:30rpx;
+}
+.q-need{
+  position: relative;
+  text-indent:30rpx;
+}
+.q-need::before{
+  content: "*";
+  color: #e75e58;
+  position: absolute;
+  left:0rpx;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.q-option{
+  background-color: #fff;
+  padding:30rpx;
+}
+.q-option-item{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.q-input{
+  margin: 0;
+}
+.q-list .q-item-list:last-of-type{  
+  margin-bottom: 30rpx;
+}
+.q-radio-group .q-option-item:first-child{
+  margin-top: 0rpx;
+}
+.q-option-lable{
+  font-size: 32rpx;
+}
+.q-option-des{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color:#e75e58;
+}
+
+
+checkbox .wx-checkbox-input {
+  width: 40rpx;
+  height: 40rpx;
+  border: 4rpx solid #aaa !important;/* 设置边框（外圆） */
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 4rpx solid #41b592 !important;
+  background:#fff !important;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  text-align: center;
+  color: #41b592;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #fff !important;
+  font-size: 24rpx;
+  font-weight: bolder;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+

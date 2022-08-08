@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='分享社区' iconTheme="white" color="#fff" back="true">
+<navBar title='{{sources[source]}}' iconTheme="white" color="#fff" back="true">
   <view class="search-box" wx:if="{{search}}">
     <view class="cu-bar bg-white search">
       <view class="search-form round">
@@ -32,9 +32,9 @@
   </view>
 
   <view class="share-box flex text-white">
-    <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source={{source}}" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
-    <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/life/my?source=0" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/life/my?source={{source}}" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
   </view>
   <view class="cu-list menu">
@@ -46,7 +46,12 @@
   </view>
 
   <view class="grid col-2 text-white">
-    <view class="padding-lr padding-tb-sm">
+    <view class="padding-lr padding-tb-sm" wx:for="{{types[source]}}">
+      <navigator hover-class="none" url="/pages/life/index?type={{index}}&source={{source}}" style="background-color: {{colors[index]}};" class="padding radius text-center shadow-blur">
+        <view class="text-df">#{{item}}</view>
+      </navigator>
+    </view>
+    <!-- <view class="padding-lr padding-tb-sm">
       <navigator hover-class="none" url="/pages/life/index?type=0&source=0" style="background-color: #FE6756;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这一口有味道#</view>
       </navigator>
@@ -65,7 +70,7 @@
       <navigator hover-class="none" url="/pages/life/index?type=3&source=0" style="background-color: #CA93CA;" class="padding radius text-center shadow-blur">
         <view class="text-df">#这个瞬间非常留恋#</view>
       </navigator>
-    </view>
+    </view> -->
   </view>
 
   <view class="cu-list menu">

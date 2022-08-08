@@ -1,14 +1,9 @@
 {
-  "pages": [ 
-    "pages/index/index",
-    "pages/message/index",
-    "pages/professional/hdkj",
-    "pages/message/form",
-    "pages/message/list",
-    "pages/share/album",
-    "pages/letter/index",
+  "pages": [
+    "pages/index/index","pages/message/index","pages/professional/hdkj","pages/album/album",
+    "pages/message/form","pages/message/list",
+    "pages/letter/index","pages/album/index",
     "pages/wish/my",
-    "pages/test/test",
     "pages/lifeDeath/stranger",
     "pages/story/index",
     "pages/wish/wish",
@@ -45,7 +40,14 @@
     "pages/story/my",
     "pages/bank/bank",
     "pages/professional/professional",
-    "pages/scale/symptom"
+    "pages/album/my",
+    "pages/share/qiyanyeshan",
+    "pages/scale/form/symptom",
+    "pages/scale/form/index",
+    "pages/scale/form/form",
+    "pages/scale/patient/list",
+    "pages/scale/patient/form"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,3 +1,4 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <wxs src="../../utils/Tools.wxs" module="tools"/>
 <view class="cards">  
   <view class="card" wx:for="{{lists}}" bindlongpress="handleLongPress" data-index="{{index}}" bindtap="toUrl" data-url="/pages/index/detail?id={{item.rid}}" wx:key>

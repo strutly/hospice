@@ -1,0 +1,35 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<navBar title="患者信息编辑" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <form bindsubmit="submit">
+    <input hidden name="id" value="{{patient.id}}"></input>
+    <view class="cu-form-group margin-top">
+      <text class="title" space="ensp">姓    名</text>
+      <input placeholder="请输入姓名" name="name" value="{{patient.name}}" ></input>
+    </view>
+    <view class="cu-form-group">
+      <text class="title" space="ensp">性    别</text>
+      <picker mode="selector" name="gender" range="{{sexArr}}" bindchange="pickerChange" data-type="gender" value="{{patient.gender}}">
+					<view class="picker text-left">
+						{{sexArr[patient.gender]}}
+					</view>
+				</picker>
+    </view>
+    <view class="cu-form-group">
+      <text class="title" space="ensp">手 机 号</text>
+      <input placeholder="请输入手机号" name="phone" type="number" value="{{patient.phone}}"></input>
+    </view>
+    <view class="cu-form-group solid-bottom">
+      <view class="title">出生日期</view>
+      <picker mode="date" name="birthday" value="{{patient.birthday||''}}" start="1920-01-01" end="{{endDay}}" bindchange="pickerChange" data-type="birthday">
+					<view class="picker">
+						{{patient.birthday||'请选择出生日期'}}
+					</view>
+				</picker>
+    </view>
+
+    <view class="padding flex flex-direction margin-top-xl">
+      <button class="cu-btn bg-orange lg" form-type="submit">提交</button>
+    </view>
+  </form>
+</navBar>

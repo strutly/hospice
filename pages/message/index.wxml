@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title="寄语" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <view class="padding"></view>
-  <view class="margin-lg padding text-lg" style="background-color: #FFF7B7;font-size: 1.4rem;line-height: 1.4;">
+  <view class="margin-lg padding text-lg" style="background-color: rgb(255, 255,255,0.5);font-size: 1.4rem;line-height: 1.4;">
     斗转星移，在未来的某个时刻，您也许有一些祝福和心里话要在特殊的日子对某人说，请把这些话留下来吧，我们会帮您在未来时空中传达……</view>
   <view class="padding-xl margin-xl"></view>
   <view class="padding text-center">

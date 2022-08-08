@@ -9,7 +9,7 @@
     </view>
     <view class="cu-form-group">
       <view class="title">发送日期</view>
-      <picker mode="date" name="sendDay" value="{{sendDay}}" start="{{minDate}}" bindchange="dateChange">
+      <picker mode="date" name="sendDay" value="{{sendDay||minDate}}" start="{{minDate}}" bindchange="dateChange">
         <view class="picker">
           {{sendDay||'请选择发送日期'}}
         </view>

@@ -1,0 +1,47 @@
+.weui-toptips_show.weui-toptips {
+  display: block
+}
+.weui-toptips {
+  display: none;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 150px;
+  left: 8px;
+  right: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 115000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.weui-toptips_show {
+  -webkit-transform: translateZ(0) translateY(0);
+  transform: translateZ(0) translateY(0);
+  opacity: 1
+}
+
+.weui-toptips_success {
+  background-color: var(--green)
+}
+
+.weui-toptips_error {
+  background-color: var(--red)
+}
+
+.weui-toptips_info {
+  background-color: var(--blue)
+}
+.weui-toptips_success_center {
+  background-color: var(--white);
+  color:#000;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  width: 80%;
+}

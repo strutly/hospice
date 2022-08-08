@@ -1,3 +1,4 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <wxs src="../../utils/Tools.wxs" module="tools" />
 <!--index.wxml-->
 <navBar title='{{titles[source]}}' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">

@@ -18,10 +18,10 @@ Page(Object.assign({},page,{
   onShow() {
     
     page.onShow.call(this);
-    var fontsize = parseInt(wx.getStorageSync('systemFontSize'));
-    if(fontsize>16){fontsize=18;}else{fontsize=16;}console.log(obj)
-    obj.that.setData({
-      systemFontSize:fontsize+"px"
-    })
+    // var fontsize = parseInt(wx.getStorageSync('systemFontSize'));
+    // if(fontsize>16){fontsize=18;}else{fontsize=16;}console.log(obj)
+    // obj.that.setData({
+    //   systemFontSize:fontsize+"px"
+    // })
   }
 }));

@@ -4,7 +4,7 @@
 <navBar title='选择身份' iconTheme="white" color="#fff" back="true">
   
   <view>
-    <image class="" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/choose.png?v=1"  style="width: 100%;margin-top: 100rpx;height:auto;" />
+    <image class="" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/choose1.png"  style="width: 100%;margin-top: 100rpx;height:auto;" />
     <navigator hover-class="none"  url="/pages/lifeDeath/patient" class="cu-btn lines-orange margin-tb-sm padding patient radius-xl text-lg">我是患者</navigator>
     <navigator hover-class="none"  url="/pages/lifeDeath/family" class="cu-btn lines-orange margin-tb-sm padding family radius-xl text-lg">我是家属</navigator>
     <button data-url="/pages/professional/professional" class="cu-btn lines-orange margin-tb-sm padding professional radius-xl text-lg" bindtap="toUrl">专业人士</button>

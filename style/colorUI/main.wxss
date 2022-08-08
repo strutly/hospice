@@ -688,7 +688,6 @@ radio.white[checked] .wx-radio-input {
 	justify-content: center;
 	box-sizing: border-box;
 	padding: 0 30rpx;
-	font-size: 1.000rem;
 	height: 64rpx;
 	line-height: 1;
 	text-align: center;
@@ -1703,7 +1702,8 @@ button.icon.lg {
 	padding-right: 30rpx;
 	height: 64rpx;
 	line-height: 64rpx;
-	font-size: 0.929rem;
+  /* font-size: 0.929rem; */
+  font-size: 1.143rem;
 	background-color: transparent;
 }
 
@@ -3023,6 +3023,10 @@ scroll-view.cu-steps .cu-item {
 
 .grid.col-5>view {
 	width: 20%;
+}
+
+.grid.col-10>view {
+	width: 10%;
 }
 
 /*  -- 内外边距 -- */

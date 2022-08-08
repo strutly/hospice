@@ -1,1 +1,67 @@
 /* pages/share/album.wxss */
+.sort-panel{
+  display:flex;
+  color:#666666;
+}
+.sort-panel>view{
+  flex:1;
+  position: relative;
+}
+.sort-panel>view::after{
+  content: ' ';
+  transform: rotate(45deg);
+  height: 0.7rem;
+  width: 0.7rem;
+  border-width: 9rpx 9rpx 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  display: inline-block;
+  top: 0.3rem;
+  right:0;
+  position: absolute;
+  margin-left: 2px;
+
+}
+.sort-panel>.asc::after{
+  top: 4rpx;
+  border-color: #666666;
+  transform: rotate(-45deg);
+}
+.sort-panel>.desc::after{
+  top: -4rpx;
+  border-color: #666666;
+  transform: rotate(135deg);
+}
+.gray{
+  color: #aaaaaa;
+}
+
+.wode>button{
+  color: unset;
+  background-color: unset;
+  border:0;
+  border-radius: unset;
+  box-sizing: unset;
+  color: unset;
+  cursor: unset;
+  display: block;
+  line-height: unset;
+  
+  margin:0;
+  padding:0;
+  text-align: unset;
+}
+button::after {
+  border: none;
+}
+.push{
+  height: 88rpx;
+  background-color:#FFB13B;
+  color: #fff;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 44rpx;
+  font-size: 36rpx;
+  margin: 36rpx 160rpx;
+  
+}

@@ -4,13 +4,13 @@ var formatNumber = function (n) {
 };
 var regYear = getRegExp("(y+)", "i");
 var dateFormat = function (timestamp, format) {
-  
+
   if (!format) {
     format = "yyyy-MM-dd hh:mm:ss"
   }
   if (typeof timestamp === "string") {
-    var reg =getRegExp('-','g');// 获取正则表达式，全局替换
-    var str =timestamp.replace(reg,'/');
+    var reg = getRegExp('-', 'g');// 获取正则表达式，全局替换
+    var str = timestamp.replace(reg, '/');
     var time = getDate(str);
     if (!time || time.toUTCString() == "Invalid Date") {
       return '';
@@ -44,29 +44,29 @@ var dateFormat = function (timestamp, format) {
   }
   return format
 };
-var timeAfter = function(timestamp){
-  
+var timeAfter = function (timestamp) {
+
   var reg = getRegExp("-", "g");
   timestamp = timestamp.replace(reg, '/');
-  
+
   var publishTime = getDate(timestamp).getTime() / 1000;
   var nowTime = getDate().getTime() / 1000;
   var diffValue = nowTime - publishTime;
-  if(diffValue >= 0){
+  if (diffValue >= 0) {
     return timeago(timestamp);
   }
 
   var diff_days = parseInt(Math.abs(diffValue) / 86400);
-  if(diff_days < 30){
+  if (diff_days < 30) {
     return diff_days + "天后";
-  }else if(diff_days >= 30 && diff_days < 360){
+  } else if (diff_days >= 30 && diff_days < 360) {
     return Math.round(diff_days / 30) + "个月后";
-  }else{
+  } else {
     return Math.round(diff_days / 360) + "年后";
   }
 };
 var timeago = function (timestamp) {
-  
+
   var reg = getRegExp("-", "g");
   timestamp = timestamp.replace(reg, '/');
 
@@ -98,35 +98,44 @@ var timeago = function (timestamp) {
   var nowTime = getDate().getTime() / 1000, //获取此时此刻日期的秒数
     diffValue = nowTime - publishTime, // 获取此时 秒数 与 要处理的日期秒数 之间的差值
     diff_days = parseInt(diffValue / 86400);
-    if(diff_days < 30){
-      return diff_days + "天前";
-    }else if(diff_days >= 30 && diff_days < 360){
-      return Math.round(diff_days / 30) + "个月前";
-    }else{
-      return Math.round(diff_days / 360) + "年前";
-    }  
+  if (diff_days < 30) {
+    return diff_days + "天前";
+  } else if (diff_days >= 30 && diff_days < 360) {
+    return Math.round(diff_days / 30) + "个月前";
+  } else {
+    return Math.round(diff_days / 360) + "年前";
+  }
 }
 function indexOf(arr, value) {
-  
+
   if (arr.indexOf(value) < 0) {
-      return false;
+    return false;
   }
-  return true;  
+  return true;
 }
-function include(examination,enName){
-  if(examination==null || examination.length==0) {
+function include(examination, enName) {
+  if (examination == null || examination.length == 0) {
     return false;
   };
-  return examination.some(function(e){    
+  return examination.some(function (e) {
     return e.enName == enName;
   })
+}
+
+function checked(qid, val, checkList){
+  return checkList.some(function(item){
+    return item.options.some(function(ele){
+      return ele.value === val && item.qid == qid;
+    })
+  });
 }
 
 
 module.exports = {
   dateFormat: dateFormat,
   timeago: timeago,
-  indexOf:indexOf,
-  timeAfter:timeAfter,
-  include:include
+  indexOf: indexOf,
+  timeAfter: timeAfter,
+  include: include,
+  checked: checked
 };

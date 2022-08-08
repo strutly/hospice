@@ -1,6 +1,6 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='安宁疗护' iconTheme="white" color="#fff">
-  <view class="padding-xl text-lg">
+  <view class="padding-xl text-xl">
     <view class="padding-top-xl text-center text-bold text-xl">我的奇妙之旅</view>
     <view class="text-right margin-right-xl margin-bottom">—— 起航须知</view>
     <view class="padding-lr padding-tb-sm" style="text-align: justify;">1、本次的浏览踪迹信息将会严格保密。请放心观赏旅途中的美景；</view>
@@ -9,7 +9,7 @@
     <!-- <lable class="padding-xl text-sm">
       <checkbox class="radio checkbox-sm orange margin-right-xs"></checkbox>同意并签署《安宁疗护免责条款》
     </lable> -->
-    <view class="padding-xl flex align-center flex-direction">
+    <view class="padding-xl flex align-center flex-direction  text-lg">
       <navigator hover-class="none"  url="/pages/index/identity" class="cu-btn bg-orange margin-tb-sm padding-lr-xl padding-tb-lg radius-xl">扬帆起航</navigator>
     </view>
   </view>

@@ -30,7 +30,13 @@
   color: transparent;
   font-size: 2rem;
   letter-spacing: 6px;
+  /* letter-spacing单独设置会导致不居中，因为最后一个字符也有右间距，解决方法是加首缩进 */
+  text-indent: 6px;
 }
 .hide{
   display:none;
 }
+/**添加老年版切换动画效果*/
+/* view,navigator,button,text{
+  transition: all .3s linear 0s;
+} */

@@ -1,11 +1,12 @@
 <!--components/pics/pics.wxml-->
 <view class="layui-input-block">
-  <view class="img-upload-top" style="display: block;margin:9px;">
+  <view class="img-uploading" wx:if="{{isUpload}}"></view>
+  <view class="img-upload-top" style="display: block;padding:30rpx 30rpx 0 30rpx;display: flex;align-items: center;flex-wrap: wrap;">
     <!-- <slot></slot> -->
     <!-- <input class="img-upload" name="avatar" value="" max="1" imgonly="true" required="" cutimg="500,700" oninvalid="Szfy.alert('请上传照片');return false;"/> -->
-    <view class="uploadImgs" style="position: relative;" data-src="" xhr="13" wx:for="{{picList}}"bindtap="showImage" data-src="{{item.name}}">
+    <view class="uploadImgs" style="position: relative;" data-src="" xhr="13" wx:for="{{picList}}"bindtap="showImage" data-src="{{item.src}}">
     	<view class="jindu {{item.jindu||'hide'}}">{{item.jindu?item.jindu:'0%'}}</view>
-      <image src="{{item.name}}" class="weui_uploader_file" mode="heightFix" />
+      <image src="{{item.src||'https://hospice.tsing-care.com/images/wenjian.jpg'}}" class="weui_uploader_file" mode="aspectFill" />
       <view class="weui_icon_cancel" data-index="{{index}}" catchtap="delPic"></view>
     </view>
     <view class="weui_uploader_input_wrp" style="display:inline-block;" bindtap="uploadPics">

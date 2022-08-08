@@ -4,6 +4,7 @@
 
     
     <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="编辑修复需求内容..." />
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>图片上传(长按可删除)</view>
     <view class="image-box">
       <view class="image-item" wx:for="{{formData.pics}}">
         <image class="image-thumb" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item}}" src="{{item}}"></image>
