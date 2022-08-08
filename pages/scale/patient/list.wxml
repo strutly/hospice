@@ -24,7 +24,7 @@
         </view>
       </view>
       <view class="action text-right">
-        <text class="lg text-blue cuIcon-{{item.sex==1?'male':'female'}}"></text>
+        <text class="lg text-{{item.gender==1?'blue':'red'}} cuIcon-{{item.gender==1?'male':'female'}}"></text>
         <view>{{item.age}}</view>
       </view>
       <view class="move">
