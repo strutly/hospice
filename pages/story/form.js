@@ -77,81 +77,20 @@ Page(Object.assign({},page,{
         console.log(tempFilePaths);
         console.log(res);
         for (var i = 0; i < res.tempFilePaths.length; i++) {
-          that.uploadImg(tempFilePaths[i]);
+          that.uploadImg(tempFilePaths[i],res.tempFiles[i]);
         }
       }
     })
   },
-  async uploadImg(tempFilePaths) {
+  async uploadImg(tempFilePaths,tempFiles) {
     let imgs = that.data.formData.imgs;
-    let res = await Api.uploadImg(tempFilePaths);
+    let res = await Api.uploadImg(tempFilePaths,tempFiles);
 
     let data = JSON.parse(res);
     if (data.code != 0) {
       return util.warn(that, data.msg);
     }
     let item = { type: 0, url: data.data.src, cover: data.data.src };
-    imgs.push(item);
-    that.setData({
-      ['formData.imgs']: imgs
-    })
-    wx.setStorageSync('formData', that.data.formData)
-  },
-  addVideo() {
-    wx.chooseMedia({
-      mediaType: ['video'],
-      sourceType: ['album', 'camera'], // album 从相册选视频，camera 使用相机拍摄
-      maxDuration: 60, // 拍摄视频最长拍摄时间，单位秒。最长支持60秒
-      camera: 'back',//默认拉起的是前置或者后置摄像头，默认back
-      compressed: true,//是否压缩所选择的视频文件
-      success: function (res) {
-        console.log(res)
-        let tempFile = res.tempFiles[0];//选择定视频的临时文件路径（本地路径）
-        let duration = tempFile.duration //选定视频的时间长度
-        let size = parseFloat(tempFile.size / 1024 / 1024).toFixed(1) //选定视频的数据量大小
-        that.data.duration = duration
-        if (parseFloat(size) > 100) {
-          that.setData({
-            clickFlag: true,
-            duration: ''
-          })
-          let beyondSize = parseFloat(size) - 100
-          wx.showToast({
-            title: '上传的视频大小超限，超出' + beyondSize + 'MB,请重新上传',
-            //image: '',//自定义图标的本地路径，image的优先级高于icon
-            icon: 'none'
-          })
-        } else {
-          console.log(tempFile)
-          //2.本地视频资源上传到服务器
-          that.upload(tempFile.tempFilePath, tempFile.thumbTempFilePath);
-        }
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-      }
-    })
-  },
-  async upload(tempFilePath, cover) {
-    console.log(tempFilePath)
-    let imgs = that.data.formData.imgs;
-    let res = await Api.uploadFile(tempFilePath);
-    let res2 = await Api.uploadImg(cover);
-    console.log(res);
-    console.log(res2);
-    let data = JSON.parse(res.data);
-    let data2 = JSON.parse(res2.data);
-    if (data.code != 0) {
-      return that.topTips(data.msg, 'error');
-    }
-    if (data2.code != 0) {
-      return that.topTips("封面" + data2.msg, 'error');
-    }
-
-    let item = { type: 1, url: data.data.src, cover: data2.data.src };
     imgs.push(item);
     that.setData({
       ['formData.imgs']: imgs

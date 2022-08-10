@@ -129,6 +129,14 @@ function checked(qid, val, checkList){
     })
   });
 }
+function val(qid,checkList){
+  console.log(JSON.stringify(checkList))
+  var checks = checkList.find(function(item){
+    console.log(item)
+    return item.qid==qid;
+  });
+  return checks.options?checks.options[0].value:'';
+}
 
 
 module.exports = {
@@ -137,5 +145,6 @@ module.exports = {
   indexOf: indexOf,
   timeAfter: timeAfter,
   include: include,
-  checked: checked
+  checked: checked,
+  val:val
 };

@@ -14,7 +14,7 @@
  * */
 const api = require("../../config/api");
 const qiniuUploader = require("../../utils/qiniuUploader");
-var that,currThat,name,currTask,uploading;
+var that,currThat,name,currTask,uploading,taskNum=0;
 Component({
   /**
    * 组件的属性列表
@@ -58,8 +58,6 @@ Component({
   methods: {
     //上传图片
     uploadPics:function(e){
-      // 初始化七牛云配置
-      initQiniu();
       wx.chooseMedia({
         count: 9,
         mediaType: ['image'],
@@ -69,6 +67,8 @@ Component({
       }).then(async res => {
         console.log(res);
         let token = await api.getToken();
+        // 初始化七牛云配置
+        initQiniu(token);
         var picList = that.data.picList;
         var index = picList.length;
         //多线程上传图片会内存溢出，所以改成一张一张上传，让用户一次选择
@@ -82,20 +82,25 @@ Component({
             }else
               data.quality=80;
             data.jindu="等待中";
-              compressImage(tempFilePath,data,function(tempFilePath,data){//异步与原逻辑脱离
-                var picList = that.data.picList;
-                var index = picList.indexOf(data);
-                if(index==-1){//目标已被删除，不需要操作了
-                  console.log("目标已被删除，不需要操作了");
-                  return;
-                }else{
-                  picList[index].name=tempFilePath;
-                  picList[index].jindu="上传中";
-                }
-                that.setData({picList:picList});
-              });
+            picList.push(data);
+            compressImage(tempFilePath,data,function(tempFilePath,data){//异步与原逻辑脱离
+              var picList = that.data.picList;
+              var index = picList.indexOf(data);
+              if(index==-1){//目标已被删除，不需要操作了
+                console.log("目标已被删除，不需要操作了");
+                return;
+              }else{
+                picList[index].name=tempFilePath;
+                picList[index].jindu="上传中";
+              }
+              that.setData({picList:picList});
+              uploadQiniu(data,token)
+            });
+          }else{
+            picList.push(data);
+            uploadQiniu(data,token)
           }
-          picList.push(data);
+          taskNum++;
         }
         console.log(picList);
         //上传前渲染
@@ -103,7 +108,8 @@ Component({
         var temp = {};
         temp[uploading]=true;
         currThat.setData(temp);
-        startUpload();
+        // startUpload();
+        checkTaskNum();
       });
     },
     //删除图片
@@ -247,12 +253,16 @@ function uploadQiniu(data,token){
         // currThat.setData(temp);
         // console.log(temp);
         // callBack();
+        taskNum--;
+        checkTaskNum();
       }
     }, (error) => {
       picList = that.data.picList;
       picList[index].jindu="上传失败";
       that.setData({picList:picList});
       console.error('error: ' + JSON.stringify(error));
+      taskNum--;
+      checkTaskNum();
     },
     null,
     (res) => {
@@ -357,7 +367,7 @@ function compressImage(tmpPath,data,callBack){
 }
 
 // 初始化七牛云相关配置
-async function initQiniu() {
+async function initQiniu(token) {
   console.log(api.QINIU)
   var options = {
       // bucket所在区域，这里是华北区。ECN, SCN, NCN, NA, ASG，分别对应七牛云的：华东，华南，华北，北美，新加坡 5 个区域
@@ -377,9 +387,19 @@ async function initQiniu() {
       // 微信自动生成的 filename较长，导致fileURL较长。推荐使用{qiniuShouldUseQiniuFileName: true} + "通过fileURL下载文件时，自定义下载名" 的组合方式。
       // 自定义上传key 需要两个条件：1. 此处shouldUseQiniuFileName值为false。 2. 通过修改qiniuUploader.upload方法传入的options参数，可以进行自定义key。（请不要直接在sdk中修改options参数，修改方法请见demo的index.js）
       // 通过fileURL下载文件时，自定义下载名，请参考：七牛云“对象存储 > 产品手册 > 下载资源 > 下载设置 > 自定义资源下载名”（https://developer.qiniu.com/kodo/manual/1659/download-setting）。本sdk在README.md的"常见问题"板块中，有"通过fileURL下载文件时，自定义下载名"使用样例。
-      shouldUseQiniuFileName: false
+      shouldUseQiniuFileName: false,
+      serverToken:token
   };
-  options.serverToken = await api.getToken();
   // 将七牛云相关配置初始化进本sdk
   qiniuUploader.init(options);
+}
+function checkTaskNum(){
+  if(taskNum==0){
+    //全部图片已上传完成
+    var temp = {};
+    temp[uploading]=false;
+    console.log(temp)
+    currThat.setData(temp);
+    that.setData({isUpload:false});
+  }
 }

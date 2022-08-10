@@ -121,7 +121,7 @@ Page(Object.assign({},page,{
     
     var id = e.currentTarget.dataset.id;
     that.confirm("确认删除吗",async function(){
-      let res = await Api.deleteWish({id:id});
+      let res = await Api.deleteAlbum({id:id});
       if (res.code == 0) {console.log(obj.myRecords[i][index]);
         obj.myRecords[i].splice(index,1);
         console.log(obj.myRecords[i][index]);

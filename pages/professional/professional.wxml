@@ -85,7 +85,7 @@
     <navigator hover-class="none"  url="/pages/article/detail?id=141" class="flex-sub myblue light margin-lr padding-sm radius-xl">
       病人
     </navigator>
-    <navigator hover-class="none"  url="/pages/article/detail?id=143" class="flex-sub myblue light margin-lr padding-sm radius-xl">
+    <navigator hover-class="none"  url="/pages/article/text?id=143" class="flex-sub myblue light margin-lr padding-sm radius-xl">
       家属
     </navigator>
     

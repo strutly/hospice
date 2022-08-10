@@ -12,7 +12,7 @@ Page(Object.assign({},page,{
     domain:Api.domain,
     article:{},
     videoThumb:"",
-    videoStyle:'position: absolute;left:0;top:0;'
+    videoStyle:'height:calc((100vw - 40rpx) * 0.5625);'
   },
 
   /**

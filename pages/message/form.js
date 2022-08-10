@@ -96,14 +96,14 @@ Page(Object.assign({},page,{
         console.log(tempFilePaths);
         console.log(res);
         for (var i = 0; i < tempFilePaths.length; i++) {
-          that.uploadImg(tempFilePaths[i].tempFilePath);
+          that.uploadImg(tempFilePaths[i].tempFilePath,tempFilePaths[i]);
         }
       }
     })
   },
-  async uploadImg(tempFilePaths) {
+  async uploadImg(tempFilePaths,tempFiles) {
     let pics = that.data.pics;
-    let res = await Api.uploadImg(tempFilePaths);
+    let res = await Api.uploadImg(tempFilePaths,tempFiles);
     let data = JSON.parse(res);
     if (data.code != 0) {
       return that.showTips(data.msg);

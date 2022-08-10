@@ -52,12 +52,12 @@ Page(Object.assign({},page,{
     console.log(tempFiles);
 
     for (var i = 0; i < tempFiles.length; i++) {
-      that.uploadImg(tempFiles[i].tempFilePath);
+      that.uploadImg(tempFiles[i].tempFilePath,tempFiles[i]);
     }
   },
-  async uploadImg(filePath) {
+  async uploadImg(filePath,tempFiles) {
     let pics = that.data.formData.pics;
-    let res = await Api.uploadImg(filePath);
+    let res = await Api.uploadImg(filePath,tempFiles);
     res = JSON.parse(res);
     if (res.code != 0) {
       return that.showTopTips(res.msg,"error");

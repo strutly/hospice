@@ -1,6 +1,7 @@
 .hide{
-  display: none;
+  display: none !important;
 }
 video{
   width:100%;
+  
 }

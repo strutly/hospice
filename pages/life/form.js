@@ -131,6 +131,7 @@ Page(Object.assign({},page,{
       }
     })
   },
+  //这功能好像没用上，不改了
   async upload(tempFilePath, cover) {
     console.log(tempFilePath)
     let imgs = that.data.formData.imgs;
