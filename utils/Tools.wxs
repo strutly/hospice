@@ -129,13 +129,15 @@ function checked(qid, val, checkList){
     })
   });
 }
-function val(qid,checkList){
-  console.log(JSON.stringify(checkList))
-  var checks = checkList.find(function(item){
-    console.log(item)
-    return item.qid==qid;
-  });
-  return checks.options?checks.options[0].value:'';
+function values(qid,checkList){
+  var check = {};
+  for(var i=0;i<checkList.length;i++){
+    if(checkList[i].qid==qid){
+      check = checkList[i];
+      break;
+    }
+  }  
+  return check.options?check.options[0].value:'';
 }
 
 
@@ -146,5 +148,5 @@ module.exports = {
   timeAfter: timeAfter,
   include: include,
   checked: checked,
-  val:val
+  values:values
 };

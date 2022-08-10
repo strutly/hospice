@@ -9,7 +9,16 @@
           <view class="bgwhite5 bank-link" data-index="{{index}}" bindtap="{{item.url==''?'':'detail'}}" data-id="{{item.id}}"><text class="cuIcon-round"></text>{{item.title}}<text class="cuIcon-right"></text></view>
         </block>
       </block>
-      
+
+      <view class=" white bank-title"><text class="cuIcon-time"></text>建户意愿调查</view>
+
+      <view class="bgwhite5 bank-link" bindtap="toUrl" data-url="/pages/bank/form"><text clas="cuIcon-round"></text>建户意愿调查<text class="cuIcon-right"></text></view>
+
+
+
+
+
+
       <!-- <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"概述介绍<text class="cuIcon-right"></text></view>
       <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"服务内容<text class="cuIcon-right"></text></view>
       <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"实施流程<text class="cuIcon-right"></text></view>

@@ -1,2 +1,10 @@
-<!--pages/share/qiyanyeshan.wxml-->
-<text>pages/share/qiyanyeshan.wxml</text>
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title="其言也善" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <view class="padding-xl "></view>
+  <view class="padding-lg margin text-index2 des-msg">古人云：人之将死，其言也善。历经沧桑，参悟人生道理，留给后人的是忠告与警醒。</view>
+
+  <view class="flex margin-xl text-center text-lg">
+    <navigator hover-class="none" url="/pages/life/form?source=1" class="flex-sub bg-gray radius-xl padding-sm margin-lg">我要分享</navigator>
+    <navigator hover-class="none" url="/pages/life/my?source=1" class="flex-sub bg-gray radius-xl padding-sm margin-lg">我的分享</navigator>  
+  </view>  
+</navBar>
