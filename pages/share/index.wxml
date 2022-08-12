@@ -37,6 +37,12 @@
     <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/life/my?source={{source}}" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
     </navigator>
   </view>
+  <view class="share-box flex text-white">
+    <navigator hover-class="none" style="background-color: #47BD9B;" url="/pages/life/my?source={{source}}&commentType=3" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的收藏 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
+    <navigator hover-class="none" style="background-color: #CA93CA;" url="/pages/life/my?source={{source}}&commentType=1" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的点赞<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </navigator>
+  </view>
   <view class="cu-list menu">
     <view class="cu-item">
       <view class="content">
@@ -74,7 +80,7 @@
   </view>
 
   <view class="cu-list menu">
-    <navigator hover-class="none" url="/pages/life/index?source=0" class="cu-item arrow">
+    <navigator hover-class="none" url="/pages/life/index?source={{source}}" class="cu-item arrow">
       <view class="content">
         <text class="text-bold text-lg">热门帖子</text>
       </view>
@@ -94,6 +100,13 @@
       <view class="cu-item">
         <view class="content padding-sm">
           <view class="text-cut">{{item.msg}}</view>
+        </view>
+      </view>
+      <view class="padding-top-sm text-right">
+        <view class="text-gray text-sm flex">              
+          <view class="flex-sub text-center"><text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.counts[1]||0}}</view>
+          <view class="flex-sub text-center"><text class="cuIcon-messagefill margin-lr-xs"></text> {{item.counts[2]||0}}</view>
+          <view class="flex-sub text-center"><text class="cuIcon-favorfill margin-lr-xs"></text> {{item.counts[3]||0}}</view>
         </view>
       </view>
     </view>

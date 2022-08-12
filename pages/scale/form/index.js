@@ -1,4 +1,4 @@
-var that,yuelineChart;
+var that, yuelineChart;
 import Api from "../../../config/api";
 import wxCharts from "../../../utils/wxChart";
 var basePage = require("../../../utils/basePage.js");
@@ -6,38 +6,40 @@ var basePage = require("../../../utils/basePage.js");
 var oys = {}, page = basePage.buildBasePage.call(this, oys);
 Page(Object.assign({}, page, {
   data: {
-    indexTab:0
+    indexTab: 0,
+    open:[true,false]
   },
   async onLoad(options) {
     that = this;
     console.log(options);
     that.setData({
-      options:options
+      options: options
     })
-       
   },
   async onShow() {
-    
+
     page.onShow.call(this);
     let options = that.data.options;
     let res = await Api.getEvaluationStatistics({
-      pid:options.id,
-      fid:2
+      pid: options.id,
+      fid: 2
     })
     console.log(res);
     that.setData({
-      fid:2,
-      pid:options.id,
-      times:res.data.times,
-      vals:res.data.vals,
-      changeShow:res.data.times.length>0?true:false
+      fid: 2,
+      pid: options.id,
+      times: res.data.times,
+      titles:res.data.titles,
+      vals: res.data.vals,
+      info:res.data.info,
+      changeShow: res.data.times.length > 0 ? true : false
     })
     console.log(res);
-    if(res.data.times.length>0){
+    if (res.data.times.length > 0) {
       that.showLine(0);
-    } 
+    }
   },
-  showLine(index){
+  showLine(index) {
     let vals = that.data.vals;
     let times = that.data.times;
     console.log(1)
@@ -48,19 +50,19 @@ Page(Object.assign({}, page, {
     } catch (e) {
       console.error('getSystemInfoSync failed!');
     }
-    yuelineChart = new wxCharts({ 
+    yuelineChart = new wxCharts({
       canvasId: 'myChart',
       type: 'line',
-      categories: times, 
+      categories: times,
       animation: true,
       series: [{
-        name: 'A',
+        name: '日期',
         data: vals[index],
         format: function (val, name) {
-          return val + '';
+          console.log(val)
+          return val+'';
         }
-      },
-      ],
+      }],
       xAxis: {
         disableGrid: true
       },
@@ -69,7 +71,7 @@ Page(Object.assign({}, page, {
         format: function (val) {
           return val;
         },
-        max:10,        
+        max: 10,
         min: 0
       },
       width: windowWidth,
@@ -81,16 +83,26 @@ Page(Object.assign({}, page, {
       }
     });
   },
-  changeQuestion(e){
+  changeQuestion(e) {
     console.log(e);
     let index = e.target.dataset.index;
     that.setData({
-      indexTab:index
+      indexTab: index
     })
     yuelineChart.updateData({
-      series: [{        
+      series: [{
+        name: '日期',
         data: that.data.vals[index],
       }]
+    })
+  },
+  open(e){
+    console.log(e);
+    let index = e.currentTarget.dataset.index;
+    let open = that.data.open;
+    open[index] = !open[index]
+    that.setData({
+      open:open
     })
   }
 }))

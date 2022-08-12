@@ -38,8 +38,11 @@ Page(Object.assign({},page,{
   },
   playVideo(e){
     console.log(e);
-    that.video.playVideo(e.currentTarget.dataset.url);
-    that.setData({videoThumb:"hide"});
+    // that.video.playVideo(e.currentTarget.dataset.url);
+    // that.setData({videoThumb:"hide"});
+    wx.navigateTo({
+      url: "/pages/article/detail?id=163"
+    });
   },
   previewImage(e){
     wx.previewImage({

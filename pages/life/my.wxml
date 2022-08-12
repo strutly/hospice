@@ -1,6 +1,6 @@
 <include src="/pages/template/error.wxml"></include>
 <wxs src="../../utils/Tools.wxs" module="tools" />
-<navBar title='我的分享' iconTheme="white" color="#fff" back="true">
+<navBar title='{{titleArr[commentType||0]}}' iconTheme="white" color="#fff" back="true">
   <view class="content">
     <view class="panel" wx:for="{{myRecords}}" wx:for-index='key' wx:for-item="records">
       <view class="panel-title">{{key}}</view>

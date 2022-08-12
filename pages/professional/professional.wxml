@@ -1,5 +1,4 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<videoPlay id="video"></videoPlay>
 <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
 
 <navBar title='专业人员' iconTheme="white" color="#fff" back="true">

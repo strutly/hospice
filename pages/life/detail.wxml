@@ -11,6 +11,7 @@
           <view class="card-time">{{detail.createTime}}</view>
         </view>
       </view>
+      <view class="blue">#{{types[detail.source][detail.type]}}</view>
       <view class="card-content">{{detail.msg}}</view>
       <view class="card-images" wx:if="{{detail.imgs.length>0}}">
         <view class="image-item {{detail.imgs.length==1?'image-one':''}} {{detail.imgs.length==2?'image-two':''}}" wx:for="{{detail.imgs}}" wx:for-item="src">

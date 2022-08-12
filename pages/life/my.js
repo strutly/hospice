@@ -13,22 +13,30 @@ Page(Object.assign({},page,{
     index:1,
     user:wx.getStorageSync('userInfo'),
     num:app.globalData.num,
-    myRecords:[]
+    myRecords:[],
+    titleArr:["我的分享","我的点赞","","我的收藏"]
   },
   async onLoad(options) {
     that = this;
-    that.setData({
-      source:options.source||0
-    })
-    that.recordList(1);
+    var data = {
+      source:options.source||0,
+      commentType:options.commentType
+    };
+    that.setData(data);
+    
   },
   async onShow(){
-
+    that.setData({datas:[]});
+    that.recordList(1);
+    page.onShow.call(this);
+    
   },
 
   async recordList(pageNo){
     let datas = that.data.datas||[];
-    let res = await api.getRecordMy({pageNo:pageNo,source:that.data.source||0});
+    var data = {pageNo:pageNo,source:that.data.source||0};
+    that.data.commentType&&(data.commentType=that.data.commentType);
+    let res = await api.getRecordMy(data);
     datas = datas.concat(res.data.content);
     let arr = util.groupBy(datas,(data)=>{
       return util.dateFormat(data.createTime,'yyyy年MM月')

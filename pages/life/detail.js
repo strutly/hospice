@@ -5,6 +5,7 @@ var that;
 var basePage = require("../../utils/basePage.js");
 //以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
 var oys={},page = basePage.buildBasePage.call(this,oys);
+var sourceType = require("../../config/sourceType.js");
 Page(Object.assign({},page,{
   data: {
     like: 0,
@@ -13,7 +14,8 @@ Page(Object.assign({},page,{
     confirmMsg: "确认删除这条评论吗?",
     url: 'http://pic.strutly.cn/mylove/e649640d-5c37-4a86-9597-a8a0128345ac.mp4',
     full: false,
-    playVideo: false
+    playVideo: false,
+    types:sourceType.types
   },
   async onLoad(options) {
     console.log(options)

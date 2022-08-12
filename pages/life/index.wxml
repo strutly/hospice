@@ -12,6 +12,7 @@
             <view class="card-time">{{tools.dateFormat(item.createTime,'MM-dd hh:mm')}}</view>
           </view>
         </view>
+        <view class="blue">#{{types[item.source][item.type]}}</view>
         <view>
           <view class="card-content">{{item.msg}}</view>
           <view class="card-images">

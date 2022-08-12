@@ -23,7 +23,8 @@ Page(Object.assign({},page,{
   },
   playVideo(e){
     console.log(e);
-    that.video.playVideo(e.currentTarget.dataset.url);
+    // that.video.playVideo(e.currentTarget.dataset.url);
     // that.video.fullScreen();
+    that.setData({vid:e.currentTarget.dataset.url})
   }
 }));

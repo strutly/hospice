@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "videoPlay":"/components/video/video",
-    "navBar": "/components/navBar/navBar"
+    "navBar": "/components/navBar/navBar",
+    "txv-video": "plugin://tencentvideo/video"
   }
 }

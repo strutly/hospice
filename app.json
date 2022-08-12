@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/message/index",
     "pages/professional/hdkj",
@@ -53,7 +52,9 @@
     "pages/scale/form/form",
     "pages/scale/patient/list",
     "pages/bank/form",
-    "pages/scale/patient/form"
+    "pages/scale/patient/form",
+    "pages/scale/form/list",
+    "pages/scale/form/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -64,5 +65,11 @@
   },
   "disableScroll": true,
   "lazyCodeLoading": "requiredComponents",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.3.18",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
 }

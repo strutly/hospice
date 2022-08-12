@@ -100,5 +100,7 @@ page{
   height: 48rpx;
   margin-right: 4rpx;
 }
-
+.blue{
+  color:blue;
+}
 

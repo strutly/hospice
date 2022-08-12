@@ -4,12 +4,14 @@ var that;
 var basePage = require("../../utils/basePage.js");
 //以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
 var oys={},page = basePage.buildBasePage.call(this,oys);
+var sourceType = require("../../config/sourceType.js");
 Page(Object.assign({},page,{
   data: {
     index: 0,
     endline: false,
     datas: [],
-    titles:['分享社区','其言也善','树洞','生命故事叙事','照护经验分享']
+    titles:sourceType.sources,
+    types:sourceType.types
   },
   async onLoad(options) {
     that = this;

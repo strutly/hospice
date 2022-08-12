@@ -16,16 +16,16 @@ Component({
   },
   methods: {
     playVideo:function(url) {
-      let that = this;
-      //执行全屏方法  
-      videoContext = wx.createVideoContext('myvideo', that);
-      // videoContext.requestFullScreen();
-      that.setData({
-        playVideo: true,
-        direction: 90,
-        zindex:100,
-        url: url
-      })
+      // let that = this;
+      // videoContext = wx.createVideoContext('myvideo', that);
+      // //执行全屏方法  
+      // // videoContext.requestFullScreen();
+      // that.setData({
+      //   playVideo: true,
+      //   direction: 90,
+      //   zindex:100,
+      //   url: url
+      // })
     },
     stop:function(){
       videoContext.stop();
