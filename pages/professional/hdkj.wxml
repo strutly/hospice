@@ -7,7 +7,7 @@
   </view>
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <view hover-class="none" data-url="/pages/article/detail?id=162" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
+    <view hover-class="none" data-url="/pages/selfCare/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/zwgh.png"></image>
       <view class="text-xl margin-left-lg">自我关怀</view>
     </view>

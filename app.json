@@ -54,7 +54,9 @@
     "pages/bank/form",
     "pages/scale/patient/form",
     "pages/scale/form/list",
-    "pages/scale/form/detail"
+    "pages/scale/form/detail",
+    "pages/selfCare/index",
+    "pages/selfCare/form"
   ],
   "window": {
     "backgroundTextStyle": "light",

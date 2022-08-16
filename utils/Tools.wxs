@@ -139,6 +139,9 @@ function values(qid,checkList){
   }  
   return check.options?check.options[0].value:'';
 }
+function replace(str,old,new_val){
+  return str.replace(old,new_val)
+}
 
 
 module.exports = {
@@ -148,5 +151,6 @@ module.exports = {
   timeAfter: timeAfter,
   include: include,
   checked: checked,
-  values:values
+  values:values,
+  replace:replace
 };

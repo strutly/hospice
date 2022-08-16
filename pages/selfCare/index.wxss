@@ -1,0 +1,11 @@
+.item-index {
+  font-style: italic;
+  margin-right: 10rpx;
+}
+.tree-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  padding: 20rpx 0;
+  line-height: 100%;
+}

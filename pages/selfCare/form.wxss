@@ -1,0 +1,13 @@
+
+.cu-form-group {
+  justify-content: start;
+  align-items: center;
+}
+.cu-form-group .title{
+  text-align: left;
+  padding-left:30rpx;
+  height: auto;
+}
+.cu-form-group .padding0{
+  padding-left:0;
+}
