@@ -9,7 +9,7 @@
       <view class="action"></view>
     </view>
     <view class="cu-list menu solids-bottom arrow">
-      <view class="cu-item" wx:for="{{item}}" wx:key="index" bindtap="toUrl" data-url="/pages/scale/form/detail?id={{item.id}}">
+      <view class="cu-item" wx:for="{{item}}" wx:key="index">
         <view class="content">{{index+1}}:{{item.title}}</view>
         <view class="action text-{{item.color}}">{{item.options[0].value}}分</view>
         <view class="action margin-left text-{{item.color}}">{{item.options[0].des}}</view>
