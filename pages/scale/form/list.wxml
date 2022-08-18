@@ -2,7 +2,7 @@
 <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
 <navBar title="患者信息统计" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <view class="cu-list menu solids-bottom arrow">
-    <view class="cu-item" wx:for="{{lists}}" wx:key="index" bindtap="toUrl" data-url="/pages/scale/form/detail?id={{item.id}}">
+    <view class="cu-item" wx:for="{{lists}}" wx:key="index" bindtap="toUrl" data-url="/pages/scale/form/detail?id={{item.id}}&fid=3">
       <view class="content">测评时间</view>
       <view class="action">{{item.createTime}}</view>
     </view>

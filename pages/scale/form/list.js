@@ -19,8 +19,10 @@ Page(Object.assign({}, page, {
   async getList(pageNum){
     let lists = that.data.lists||[];
     let pid = that.data.pid;
+    let fid = that.data.fid;
     let res = await Api.getEvaluationPage({
       pid:pid,
+      fid:fid,
       pageNum:pageNum    
     })
     console.log(res);

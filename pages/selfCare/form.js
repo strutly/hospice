@@ -17,11 +17,12 @@ Page(Object.assign({}, page, {
     console.log(res);
     let scaleForm = res.data;
     let checks = {};
-    let evaluation = scaleForm.evaluation || { fid: 1, checkList: [] }
+    let evaluation = scaleForm.evaluation || {pid:options.pid,fid: 1, checkList: [] }
     evaluation.checkList.forEach(c => {
       checks[c.qid] = c;
     })
     that.setData({
+      pid:options.pid,
       scaleForm: scaleForm,
       checks: checks,
       evaluation: evaluation

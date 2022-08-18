@@ -52,7 +52,7 @@
     <canvas canvas-id="myChart" disable-scroll="true" class="canvas margin-top-xl padding-bottom"></canvas>
   </view>
   <view class="padding flex justify-between margin-tb-xl safe-bottom">
-    <view bindtap="toUrl" data-url="/pages/scale/form/list?pid={{pid}}" class="cu-btn bg-orange lg flex-sub margin">测评记录</view>
+    <view bindtap="toUrl" data-url="/pages/scale/form/list?pid={{pid}}&fid={{fid}}" class="cu-btn bg-orange lg flex-sub margin">测评记录</view>
     <view bindtap="toUrl" data-url="/pages/scale/form/symptom?fid={{fid}}&pid={{pid}}" class="cu-btn bg-orange lg flex-sub margin">测评</view>
   </view>
 </navBar>

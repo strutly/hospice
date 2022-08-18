@@ -6,10 +6,10 @@
   </view>
   <view class="padding-lr">
     <view class="margin-top">
-      <view class="tree-title" bindtap="toUrl" data-url="/pages/article/detail?id=164"><text class="item-index">01</text>自我关怀</view>
+      <view class="tree-title" bindtap="toUrl" data-url="/pages/article/detail?id=164"><text class="item-index">01</text>专业人员如何自我关怀</view>
     </view>
     <view class="margin-top">
-      <view class="tree-title" bindtap="toUrl" data-url="/pages/selfCare/form"><text class="item-index">02</text>护士自我关怀量表及其维度内涵</view>
+      <view class="tree-title" bindtap="toUrl" data-url="/pages/selfCare/statistics"><text class="item-index">02</text>自我关怀量表评估</view>
     </view>
   </view>
 </navBar>

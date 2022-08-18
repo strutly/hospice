@@ -1,0 +1,7 @@
+.cu-form-group input{
+  text-align: right;
+}
+.canvas {
+  width: 750rpx;
+  height: 600rpx;
+}
