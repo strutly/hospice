@@ -18,6 +18,12 @@
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
+    <navigator hover-class="none" url="/pages/wish/wish?type=1" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/yyqd.png"></image>
+      <view class="text-xl margin-left-lg">遗愿清单</view>
+    </navigator>
+  </view>
+  <view class="btn-box padding-lg margin-lr-xl">
     <navigator hover-class="none" url="/pages/share/forever" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Finteraction-03.png"></image>
       <view class="text-xl margin-left-lg">我心永在</view>

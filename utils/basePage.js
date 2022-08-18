@@ -5,10 +5,13 @@ module.exports = {
   //构建每个页面基础page数据
   buildBasePage:function(obj){
     return {
+      //这下子，onLoad也得加方法了page.onLoad.call(this);
       onLoad(options) {
         console.log(options)
         that = obj.that=this;
+        goAnyWay()
       },
+      //自己声明onShow时添加page.onShow.call(this);
       onShow(){//将当前页面的this共享给所有人
         console.log("show")
         this.setData({
@@ -22,10 +25,20 @@ module.exports = {
         // });
       },
       onShareAppMessage: function (res) {
+        var data = [];
+        //将数据简化传递json做页面参数
+        getCurrentPages().forEach(function(currentPage,k){
+          if(k==0)return;
+          var d = {};
+          d.url ='/' + currentPage.route; //当前页面url
+          d.options = currentPage.options; 
+          data.push(d);
+        })
         return {//靠默认值就够了
           // title: '',
           // imageUrl:'http://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png',
           // path: getCurrentPageUrlWithArgs()
+          path:"/pages/index/index?urls="+JSON.stringify(data)
         }
       },
       toUrl: function (event) {
@@ -87,4 +100,26 @@ module.exports = {
   }
   urlWithArgs = urlWithArgs.substring(0, urlWithArgs.length - 1);
   return urlWithArgs;
+}
+/**控制跳转路径*/
+function goAnyWay(){
+  var arr = getApp().arr;
+  console.log(arr);
+  if(arr&&arr.length!=0){
+    var url=arr[0].url+"?";
+    var options = arr[0].options;
+    for (var key in options) {
+      var value = options[key];
+      url += key + '=' + value + '&';
+    }
+    url = url.substring(0, url.length - 1);
+    arr.splice(0,1);
+    console.log("发车前往"+url);
+    wx.navigateTo({
+      url: url,
+      success:function(){
+        getApp().arr=arr;
+      }
+    });
+  }
 }

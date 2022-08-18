@@ -9,6 +9,7 @@ Page(Object.assign({},page,{
   },
   onLoad(options) {
     that = this;
+    page.onLoad.call(this);
   },
   showTips(){
     console.log(2)

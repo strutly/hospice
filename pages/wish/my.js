@@ -7,7 +7,7 @@ const app = getApp()
 var that;
 var basePage = require("../../utils/basePage.js");
 //以对象形式传参能是参数共享起来,以后要用this,用oys.that,在不声明onload的前提下
-var oys={},page = basePage.buildBasePage.call(this,oys);
+var oys={},page = basePage.buildBasePage.call(this,oys),type;
 Page(Object.assign({},page,{
   data: {
     tabIndex:0,
@@ -17,13 +17,17 @@ Page(Object.assign({},page,{
     navs:["全部","待完成","已完成"],
     comeTrues:[null,0,1],
     pageNo: [0, 0,0],
-    endline:[false,false,false]
+    endline:[false,false,false],
+    titleArr:["我的愿望","遗愿清单"],
+    imgArr:['http://gridpic.tsing-tec.com/hospice/wdxy.png','http://gridpic.tsing-tec.com/hospice/yiyuanqingdan.png']
   },
   async onLoad(options) {
     that = this;
-    // that.setData({
-    //   source:options.source||0
-    // })
+    type = options.type||0;
+    that.setData({
+      // source:options.source||0
+      type:type
+    });
     // that.recordList(1);
   },
   onShow() {
@@ -38,6 +42,7 @@ Page(Object.assign({},page,{
     if(that.data.comeTrue!=null){
       param.comeTrue = that.data.comeTrue;
     }
+    param.type=type;
     console.log(index)
     let res = await Api.getWishMy(param);
 

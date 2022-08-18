@@ -12,6 +12,13 @@ Page(Object.assign({},page,{
       url: '../logs/logs'
     })
   },
+  onLoad(options){
+    
+    if(options.urls){
+      getApp().arr=JSON.parse(options.urls);
+    }
+    page.onLoad.call(this);
+  },
   /**
    * 生命周期函数--监听页面显示
    */

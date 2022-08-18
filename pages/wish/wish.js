@@ -11,7 +11,8 @@ Page(Object.assign({},page,{
    */
   data: {
     wishwin:"",
-    isWish:false
+    isWish:false,
+    titleArr:["我的愿望","遗愿清单"]
   },
 
   /**
@@ -20,6 +21,7 @@ Page(Object.assign({},page,{
   onLoad(options) {
     that = this;
     let formData = {msg:"" };
+    formData.type = options.type||0;
     that.setData({
       formData: formData
     })
@@ -41,7 +43,7 @@ Page(Object.assign({},page,{
           setTimeout(function(){
             that.setData({pingzismall:"",['formData.msg']:""});
             that.topTips("许愿成功", "successCenter");
-            setTimeout(function(){wx.navigateBack({})},2000);
+            // setTimeout(function(){wx.navigateBack({})},2000);
           },1500);
         })();
       },500);

@@ -29,10 +29,12 @@ Page(Object.assign({},page,{
       ['formData.type']: e.currentTarget.dataset.type
     })
   },
-  open() {
+  switchType(e){
     let open = that.data.formData.open;
+    let name = e.currentTarget.dataset.name;
+    let val = that.data.formData[name];
     that.setData({
-      ['formData.open']: 1 ^ open,
+      ['formData.'+name]: 1 ^ val,
     })
   },
   handleLongPress() {
@@ -164,8 +166,8 @@ Page(Object.assign({},page,{
     let res = await Api.addRecord(JSON.stringify(formData));
     if (res.code == 0) {
       wx.removeStorageSync('formData');
-
-      that.topTips("分享成功", "success");
+      page.alert('树洞已收到您的分享');
+      // that.topTips("分享成功", "success");
       setTimeout(function () {
         wx.navigateBack({
           delta: 1

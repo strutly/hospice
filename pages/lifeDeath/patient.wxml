@@ -2,7 +2,7 @@
 
 <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
 <toptips show="{{show}}" msg="{{msg}}" type="error"></toptips>
-<navBar title='生死两相安--患者' iconTheme="white" color="#fff" back="true">
+<navBar title='我是患者' iconTheme="white" color="#fff" back="true">
   <view class="search-box" wx:if="{{search}}">
     <view class="cu-bar bg-white search">
       <view class="search-form round">

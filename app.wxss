@@ -40,3 +40,13 @@
 /* view,navigator,button,text{
   transition: all .3s linear 0s;
 } */
+.bg-white-50 {
+  background-color: rgb(255, 255, 255,0.5);
+}
+.des-msg {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.text-index2 {
+  text-indent: 2rem;
+}

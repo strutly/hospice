@@ -1,10 +1,19 @@
 .beijing{
-  background:url(https://this.tsing-care.com/20220621/8abc5abe-d557-4c97-8366-ce1217cedc0c.jpg);
+  /* background:url(https://this.tsing-care.com/20220621/8abc5abe-d557-4c97-8366-ce1217cedc0c.jpg);
   width: 100vw;
   height: calc(100vh - 131.25px);
   position: relative;
   display: block;
   background-size: 100vw calc(100vh - 131.25px);
+  background-repeat:no-repeat; */
+}
+.container{  
+  width: 100%;
+  background:url(https://this.tsing-care.com/20220621/8abc5abe-d557-4c97-8366-ce1217cedc0c.jpg);
+  background-size: 100%;
+  background-repeat:no-repeat;
+  padding-bottom: 0;
+  background-size: 100% 100%;
 }
 .pingzi{
   z-index: 2;
@@ -182,8 +191,10 @@
   display:none;
 }
 .mywish{
-  position: fixed;
-  top: 25vh;
+  /* position: fixed;
+  top: 25vh; */
+  margin-top: 3vh;
+  float:right;
   right: 0rpx;
   padding:20rpx 20rpx 20rpx 60rpx;
   background-color: rgba(187, 181, 181, 0.65);
