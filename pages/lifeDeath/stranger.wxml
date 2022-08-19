@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='生死两相安--路人' iconTheme="white" color="#fff" back="true">
+<navBar title='我是路人' iconTheme="white" color="#fff" back="true">
   <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="search-box" wx:if="{{search}}">

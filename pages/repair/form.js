@@ -133,7 +133,7 @@ Page(Object.assign({},page,{
   },
   async submit(e) {
     console.log(e);
-    let tmpID = "BzOWSPuNZFuhBYxEg1g1w6o-9VyKIXRQBv-kCg9TcuY";
+    let tmpID = "jm7Cj-7sLodfq_kxMk4P3XxASG5FMP-eVGX02Ry9vfA";
     let data = that.data.formData;
     if(!data.msg || data.pics.length==0){
       return that.showTopTips("请上传照片并填写需求再提交","error");

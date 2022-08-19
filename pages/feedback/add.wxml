@@ -1,0 +1,19 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='意见反馈' iconTheme="white" color="#fff">
+  <topTips1 id="topTips1"></topTips1>
+  <form bindsubmit="formSubmit">
+    <!-- <view class="margin flex text-lg align-center">
+      标题<input class="flex-sub margin-left"placeholder="点击此处输入标题" name="name" value="{{name}}"></input>
+    </view> -->
+    <view class="padding">
+      <textarea maxlength="-1" name="content" class="content" auto-height="true" value="{{content}}" style="min-height:200rpx;" placeholder="请输入您的意见" />
+    </view>
+      <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>上传截图</view>
+      <pics pics="{{pic}}" name="pic" uploading="picStatus">
+        <!-- <textarea name="pic" value="{{pic}}"/> -->
+      </pics>
+      <view class="wode push">
+        <button bindtap="send" class="" formType="submit" type="primary">确认</button>
+      </view>
+  </form>
+</navBar>

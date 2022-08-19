@@ -53,6 +53,16 @@ Component({
         x: 30,
         y: 30
       })
+    },
+    toUrl: function (event) {
+      var url = event.currentTarget.dataset.url;
+      if (url) {
+        wx.navigateTo({
+          url: url
+        });
+      }else{
+        this.alert("目前正在建设或完善中，敬请期待");
+      }
     }
   }
 })

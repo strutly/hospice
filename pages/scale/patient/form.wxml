@@ -3,7 +3,7 @@
 <navBar title="患者信息编辑" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <form bindsubmit="submit">
     <input hidden name="id" value="{{patient.id}}"></input>
-    <input hidden name="type" value="1"></input>
+    <input hidden name="type" value="0"></input>
     <view class="cu-form-group margin-top">
       <text class="title" space="ensp">姓    名</text>
       <input placeholder="请输入姓名" name="name" value="{{patient.name}}" ></input>

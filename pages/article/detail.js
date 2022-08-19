@@ -24,14 +24,15 @@ Page(Object.assign({},page,{
       loading:false,
       article:article
     })
+    page.onLoad.call(this);
   },
 
-  onShareAppMessage(){
-    return {
-      title: that.data.article.name,
-      path: '/pages/article/detail?id='+that.data.article.id
-    }
-  },
+  // onShareAppMessage(){
+  //   return {
+  //     title: that.data.article.name,
+  //     path: '/pages/article/detail?id='+that.data.article.id
+  //   }
+  // },
   loadsuccess(){
     that.setData({
       loading:false

@@ -27,7 +27,7 @@ Page(Object.assign({},page,{
     that.setData({
       datas:res.data
     })
-
+    page.onLoad.call(this);
   },
   onReady(){
 

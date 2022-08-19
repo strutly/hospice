@@ -1,3 +1,6 @@
 <movable-area style="height: calc(100vh - {{top}}px);margin-top: {{top}}px;">
-  <movable-view x="{{x}}" y="{{y}}" bindchange="onChange" direction="all" animation="{{false}}"class="tab {{systemFontSize=='14px'?'big':'small'}}" style="font-size: {{systemFontSize=='14px'?'20px':'15px'}};" bindtap="switch">{{systemFontSize=="14px"?"敬老版":"普通版"}}</movable-view>
+  <movable-view x="{{x}}" y="{{y}}" bindchange="onChange" direction="all" animation="{{false}}"class="tab {{systemFontSize=='14px'?'big-movable':'small-movable'}}" style="font-size: {{systemFontSize=='14px'?'20px':'15px'}};" >
+    <view class="jinlao {{systemFontSize=='14px'?'big':'small'}}"bindtap="switch">{{systemFontSize=="14px"?"敬老版":"普通版"}}</view>
+    <!-- <view class="jinlao {{systemFontSize=='14px'?'big':'small'}}"bindtap="toUrl" data-url="/pages/feedback/add">意见反馈</view> -->
+  </movable-view>
 </movable-area>

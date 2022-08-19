@@ -133,7 +133,7 @@ Page(Object.assign({},page,{
   },
   async submit(e) {
     console.log(e);
-    let tmpID = "wCU3LJudvCOktVftBcl6eGl62OEszTPvxAooJbpVUyY";
+    let tmpID = "5_kxTNtJ4-SKiE5HS2MJiLZGDCdvhYeWX7_07f5l3mY";
     let data = that.data.formData;
     if(!data.msg && data.pics.length==0){
       return that.showTopTips("请编辑信件内容或者上传信件图片后再提交","error");

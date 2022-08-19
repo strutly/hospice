@@ -22,6 +22,7 @@ Page(Object.assign({},page,{
     });
     that.setData({
       listData:res.data
-    })
+    });
+    page.onLoad.call(this);
   }
 }));

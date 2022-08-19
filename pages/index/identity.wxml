@@ -11,6 +11,8 @@
     
     <view class="padding-xxl flex flex-direction stranger">
       <navigator hover-class="none" url="/pages/lifeDeath/stranger" class="cu-btn  bg-orange margin-tb-sm padding-lg radius-xl text-lg">我是路人</navigator>
+      <view class="lianjie" bindtap="toUrl" data-url="/pages/feedback/add">意见反馈</view>
+
     </view>
   </view>
  

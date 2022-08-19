@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
 
-<navBar title='专业人员' iconTheme="white" color="#fff" back="true">
+<navBar title='专业人士' iconTheme="white" color="#fff" back="true">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="search-box" wx:if="{{search}}">
     <view class="cu-bar bg-white search">

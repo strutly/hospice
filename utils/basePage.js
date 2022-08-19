@@ -25,20 +25,20 @@ module.exports = {
         // });
       },
       onShareAppMessage: function (res) {
-        var data = [];
-        //将数据简化传递json做页面参数
-        getCurrentPages().forEach(function(currentPage,k){
-          if(k==0)return;
-          var d = {};
-          d.url ='/' + currentPage.route; //当前页面url
-          d.options = currentPage.options; 
-          data.push(d);
-        })
+        // var data = [];
+        // //将数据简化传递json做页面参数
+        // getCurrentPages().forEach(function(currentPage,k){
+        //   if(k==0)return;
+        //   var d = {};
+        //   d.url ='/' + currentPage.route; //当前页面url
+        //   d.options = currentPage.options; 
+        //   data.push(d);
+        // })
         return {//靠默认值就够了
           // title: '',
           // imageUrl:'http://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png',
-          // path: getCurrentPageUrlWithArgs()
-          path:"/pages/index/index?urls="+JSON.stringify(data)
+          path: getCurrentPageUrlWithArgs()//默认的会丢失参数，故这个必传
+          // path:"/pages/index/index?urls="+JSON.stringify(data)
         }
       },
       toUrl: function (event) {

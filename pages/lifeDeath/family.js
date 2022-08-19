@@ -20,6 +20,7 @@ Page(Object.assign({},page,{
     that.setData({
       swiperList:res.data.content
     })
+    page.onLoad.call(this);
   },
   develop(){
     that.setData({

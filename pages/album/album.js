@@ -31,7 +31,7 @@ Page(Object.assign({},page,{
     if(!musicIndex){topTips.error("请选择音乐");return;}
     data.pic = this.data.pic;
     data.music=this.data.musics[musicIndex];//{id:this.data.musics[musicIndex].id,url:this.data.musics[musicIndex].url};
-    let tmpID = "BzOWSPuNZFuhBYxEg1g1wxnvGmKSSzw9bUTubga8klQ";
+    let tmpID = "jm7Cj-7sLodfq_kxMk4P3aCvs33bQT9tFWTzgnzuan0";
     let tmpResp = await wx.requestSubscribeMessage({
       tmplIds: [tmpID]
     })

@@ -57,7 +57,8 @@
     "pages/scale/form/detail",
     "pages/selfCare/index",
     "pages/selfCare/form",
-    "pages/selfCare/statistics"
+    "pages/selfCare/statistics",
+    "pages/feedback/add"
   ],
   "window": {
     "backgroundTextStyle": "light",
