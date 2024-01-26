@@ -9,10 +9,10 @@
   <videoPlay id="video"></videoPlay>
   <view class="bg-white">
   <txv-video vid="{{vid}}" playerid="txv1" class="{{vid||'hide'}}"></txv-video>
-    <view class="grid margin-bottom col-{{systemFontSize=='14px'?2:1}}">
+    <view class="grid margin-bottom col-{{systemFontSize=='16px'?2:1}}">
       <view bindtap="playVideo" data-url="{{item.videos}}" class="padding-lr-sm padding-tb" wx:for="{{articles}}" wx:key="index">
         <view class="image video-thumb">
-          <image src="{{item.videosPics}}" style="height: {{systemFontSize=='14px'?'200rpx':'320rpx'}};"></image>
+          <image src="{{item.videosPics}}" style="height: {{systemFontSize=='16px'?'200rpx':'320rpx'}};"></image>
           <text class="cuIcon-video margin-right-xs play"></text>
         </view>
         <view class="cu-item">

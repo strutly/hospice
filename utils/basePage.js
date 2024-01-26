@@ -15,7 +15,7 @@ module.exports = {
       onShow(){//将当前页面的this共享给所有人
         console.log("show")
         this.setData({
-          systemFontSize:wx.getStorageSync('systemFontSize')||"14px"
+          systemFontSize:wx.getStorageSync('systemFontSize')||"16px"
         });
         getApp().currThat=this;
         // getApp().watch(function (value) {

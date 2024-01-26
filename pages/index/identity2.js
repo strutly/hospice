@@ -19,13 +19,4 @@ Page(Object.assign({},page,{
       msg:"该功能开发中~"
     })
   }
-  // ,change(){
-  //   console.log(1)
-  //   let systemFontSize = wx.getStorageSync('systemFontSize')||"16px";
-  //   systemFontSize = systemFontSize=="16px"?'20px':'16px'
-  //   that.setData({
-  //     systemFontSize:systemFontSize
-  //   })
-  //   wx.setStorageSync('systemFontSize', systemFontSize);
-  // }
 }));

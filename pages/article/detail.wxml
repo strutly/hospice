@@ -5,4 +5,4 @@
 <view class="container padding margin text-lg text-center" wx:else>
   <text class="lg text-blue cuIcon-warn margin-right-sm"></text>加载中
 </view>
-<web-view decode="true" bindload="loadsuccess" src="{{systemFontSize=='14px'?article.url:article.oldUrl||article.url}}" ></web-view>
+<web-view decode="true" bindload="loadsuccess" src="{{systemFontSize=='16px'?article.url:article.oldUrl||article.url}}" ></web-view>

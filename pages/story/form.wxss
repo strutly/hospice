@@ -117,3 +117,6 @@
 .warn{
   top:160rpx;
 }
+.solids-red{
+  border:2rpx solid red;
+}

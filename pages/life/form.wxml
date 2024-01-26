@@ -23,7 +23,7 @@
       <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
       <view class="grid col-2">
         <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="{{index}}" wx:for="{{types[formData.source]}}">
-          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==index?'bg-orange':''}}">
+          <view class="solid padding-sm radius-xl text-center shadow-blur {{formData.type==index?'bg-orange':''}}">
             <view class="text-df">#{{item}}</view>
           </view>
         </view>

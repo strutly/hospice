@@ -1,0 +1,27 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
+
+<navBar title='选择身份' iconTheme="white" color="#fff" back="true">
+  <view class="flex flex-direction margin-xl padding-xl">
+    <view bindtap="toUrl" data-url="/pages/lifeDeath/patient" class="bg-main2 flex align-center radius-xl margin-top-xl padding-xl text-xl">
+      <image src="http://gridpic.tsing-tec.com/id-1.png"></image>
+      <view class="margin-left-xl">我是患者</view>
+    </view>
+    <view bindtap="toUrl" data-url="/pages/lifeDeath/family" class="bg-main2 flex align-center radius-xl margin-top-xl padding-xl text-xl">
+      <image src="http://gridpic.tsing-tec.com/id-2.png"></image>
+      <view class="margin-left-xl">我是家属</view>
+    </view>
+    <view bindtap="toUrl" data-url="/pages/lifeDeath/professional" class="bg-main2 flex align-center radius-xl margin-top-xl padding-xl text-xl">
+      <image src="http://gridpic.tsing-tec.com/id-3.png"></image>
+      <view class="margin-left-xl">专业人士</view>
+    </view>
+    <view bindtap="toUrl" data-url="/pages/lifeDeath/stranger" class="bg-main2 flex align-center radius-xl margin-top-xl padding-xl text-xl">
+      <image src="http://gridpic.tsing-tec.com/id-4.png"></image>
+      <view class="margin-left-xl">我是路人</view>
+    </view>
+
+  </view>
+
+
+
+</navBar>

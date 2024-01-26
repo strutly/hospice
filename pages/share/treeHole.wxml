@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='树洞倾诉' iconTheme="white" color="#fff" back="true">
   <view class="padding">
-    <image style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice%2Ftreehole-bg.png"></image>
+    <image style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/tree-hold-bg.png"></image>
   </view>
   <view class="share-box flex text-white">
     <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/life/form?source=2" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
@@ -24,8 +24,8 @@
   <view class="grid margin-bottom col-2">
     <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
       <view class="image video-thumb">
-        <image src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
-        <image src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
+        <image class="round" src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
+        <image class="round" src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
       </view>
       <view class="cu-item">
         <view class="content padding-sm">

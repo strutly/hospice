@@ -58,7 +58,8 @@
     "pages/selfCare/index",
     "pages/selfCare/form",
     "pages/selfCare/statistics",
-    "pages/feedback/add"
+    "pages/feedback/add",
+    "pages/index/identity2"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -72,7 +73,7 @@
   "sitemapLocation": "sitemap.json",
   "plugins": {
     "tencentvideo": {
-      "version": "1.3.18",
+      "version": "2.4.0",
       "provider": "wxa75efa648b60994b"
     }
   }

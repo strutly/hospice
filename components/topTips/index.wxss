@@ -11,7 +11,7 @@
   right: 8px;
   padding: 10px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: #fff;
   z-index: 115000;

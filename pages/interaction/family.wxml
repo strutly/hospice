@@ -2,27 +2,27 @@
 <navBar title='互动空间--家属' iconTheme="white" color="#fff">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view style="height:30rpx;"></view>
-  <view class="padding des-msg bg-white-50 margin-bottom-xl">
+  <view class="padding des-msg bg-white margin-bottom-xl">
     <view class="text-index2">每个人都期待生如夏花之绚烂，死如秋叶之静美。</view>
     <view class="text-index2">亲人的临终和离世是人生很大的挑战，您的照护无奈和哀伤情绪亦是人之常情。</view>
     <view class="text-index2">让我们敞开胸怀，一起走出照护困境和哀伤阴霾</view>
   </view>
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/help/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-01.png"></image>
-      <view class="text-xl margin-left-lg">学会求助</view>
+    <navigator hover-class="none" url="/pages/help/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-4.png"></image>
+      <view class="text-xl margin-left-lg">照护成就</view>
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/treeHole?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-02.png"></image>
+    <navigator hover-class="none" url="/pages/share/treeHole?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-5.png"></image>
       <view class="text-xl margin-left-lg">树洞倾诉</view>
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/letter/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Fpass-03.png"></image>
+    <navigator hover-class="none" url="/pages/letter/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-6.png"></image>
       <view class="text-xl margin-left-lg">走过哀伤</view>
     </navigator>
   </view>

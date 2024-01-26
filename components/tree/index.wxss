@@ -10,12 +10,16 @@
   font-size: 1.3rem;
   line-height: 1.4;
   padding: 20rpx 0;
-  line-height: 100%;
+  background-color: #E9CFA2;
+  padding:20rpx;
+  border-radius: 10rpx;
 }
 .tree-title-child{
   font-weight: 300;
   font-size: 1.2rem;
-  position: relative;  
+  position: relative;
+  background-color: #FFD285;
+  margin-top: 20rpx;  
 }
 .item-icon-title{
   width: 20rpx;

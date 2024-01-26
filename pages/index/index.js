@@ -4,7 +4,7 @@ var basePage = require("../../utils/basePage.js");
 var obj={},page = basePage.buildBasePage.call(this,obj),that;
 Page(Object.assign({},page,{
   data: {
-    systemFontSize:"14px"
+    systemFontSize:"16px"
   },
   // 事件处理函数
   bindViewTap() {

@@ -26,8 +26,8 @@ movable-view {
   
 }
 .jinlao{
-  color: var(--orange);
-  background-color: rgba(249,175,100, 0.5);
+  color: var(--white);
+  
   border-radius:100%;
   display: flex;
   align-items: center;
@@ -48,10 +48,27 @@ movable-view {
   /* line-height: 120rpx; */
 }
 .big-movable{
-  width: 150rpx;
-  height: 150rpx;
-}
-.small-movable{
+  font-size: 16px;
   width: 120rpx;
   height: 120rpx;
+  background-color: var(--green);
+  box-shadow: 2px 2px 15px var(--green);
+  border: 1px solid var(--brown);
+}
+.small-movable{
+  font-size: 16px;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: var(--brown);
+  border: 1px solid var(--green);
+  box-shadow: 2px 2px 15px var(--brown);
+}
+
+.tab-mask{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index:100;
 }

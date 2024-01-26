@@ -42,7 +42,7 @@ Component({
     },
     systemFontSize: {
       type: String,
-      value: wx.getStorageSync('systemFontSize')||"14px"
+      value: wx.getStorageSync('systemFontSize')||"16px"
     }
   },
   created: function () {

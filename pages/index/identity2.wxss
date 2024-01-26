@@ -1,0 +1,5 @@
+/* pages/index/identity2.wxss */
+image{
+  width: 60rpx;
+  height: 60rpx;
+}

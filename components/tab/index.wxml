@@ -1,6 +1,16 @@
+<!--
 <movable-area style="height: calc(100vh - {{top}}px);margin-top: {{top}}px;">
-  <movable-view x="{{x}}" y="{{y}}" bindchange="onChange" direction="all" animation="{{false}}"class="tab {{systemFontSize=='14px'?'big-movable':'small-movable'}}" style="font-size: {{systemFontSize=='14px'?'20px':'15px'}};" >
-    <view class="jinlao {{systemFontSize=='14px'?'big':'small'}}"bindtap="switch">{{systemFontSize=="14px"?"敬老版":"普通版"}}</view>
-    <!-- <view class="jinlao {{systemFontSize=='14px'?'big':'small'}}"bindtap="toUrl" data-url="/pages/feedback/add">意见反馈</view> -->
+  <movable-view x="{{x}}" y="{{y}}" bindchange="onChange" direction="all" animation="{{false}}"class="tab {{systemFontSize=='16px'?'big-movable':'small-movable'}}" style="font-size: {{systemFontSize=='16px'?'20px':'15px'}};" >
+    <view class="jinlao {{systemFontSize=='16px'?'big':'small'}}"bindtap="switch">{{systemFontSize=="16px"?"敬老版":"普通版"}}</view>
   </movable-view>
 </movable-area>
+-->
+
+
+<view style="position: fixed;bottom:6rem;right:20rpx;z-index:100;">
+  <image bindtap="maskStatus" src="/images/logo.png" class="" style="background-color:white;border-radius:50%;overflow:hidden;width: 4.5rem;height: 4.5rem;"></image>
+</view>
+<view class="tab-mask" bindtap="maskStatus" wx:if="{{tabMask}}">
+  <view data-num="16px" style="position: fixed;bottom:9rem;right:4.8rem;z-index:100;" class="{{systemFontSize=='16px'?'big-movable':'small-movable'}} jinlao" bindtap="change">普通版</view>
+  <view data-num="20px" style="position: fixed;bottom:4rem;right:5rem;z-index:100;" class="{{systemFontSize=='20px'?'big-movable':'small-movable'}} jinlao" bindtap="change">敬老版</view>
+</view>

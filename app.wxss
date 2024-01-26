@@ -50,3 +50,15 @@
 .text-index2 {
   text-indent: 2rem;
 }
+page{
+  --main:#008B34;
+  --main2:#9F7A3A;
+}
+.bg-main{
+  background-color: var(--main);
+  color: var(--white);
+}
+.bg-main2{
+  background-color: var(--main2);
+  color: var(--white);
+}

@@ -1,31 +1,35 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <navBar title='互动空间--患者' iconTheme="white" color="#fff" back="true">
   <view style="height:30rpx;"></view>
-  <view class="padding des-msg bg-white-50 margin-bottom-xl">
+  <view class="padding des-msg bg-white margin-bottom-xl">
     <view class="text-index2">生命的流逝，就像河流入海，在人生长河中，让我们互相支持，彼此欣赏。品当下生活滋味，集生活点滴过往，寄真挚祝福、期望……</view>
   </view>
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/index?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Finteraction-01.png"></image>
+    <navigator hover-class="none" url="/pages/share/index?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-1-1.png"></image>
       <view class="text-xl margin-left-lg">品质生活分享</view>
     </navigator>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/together" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Finteraction-02.png"></image>
+    <navigator hover-class="none" url="/pages/share/together" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-2-1.png"></image>
       <view class="text-xl margin-left-lg">一生相伴</view>
     </navigator>
   </view>
+  <!--
+
+  
   <view class="btn-box padding-lg margin-lr-xl">
     <navigator hover-class="none" url="/pages/wish/wish?type=1" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/yyqd.png"></image>
       <view class="text-xl margin-left-lg">遗愿清单</view>
     </navigator>
   </view>
+  -->
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/forever" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice%2Finteraction-03.png"></image>
+    <navigator hover-class="none" url="/pages/share/forever" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-3-1.png"></image>
       <view class="text-xl margin-left-lg">我心永在</view>
     </navigator>
   </view>

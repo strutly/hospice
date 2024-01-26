@@ -53,7 +53,7 @@
 
   <view class="grid col-2 text-white">
     <view class="padding-lr padding-tb-sm" wx:for="{{types[source]}}">
-      <navigator hover-class="none" url="/pages/life/index?type={{index}}&source={{source}}" style="background-color: {{colors[index]}};" class="padding radius text-center shadow-blur">
+      <navigator hover-class="none" url="/pages/life/index?type={{index}}&source={{source}}" style="background-color: {{colors[index]}};" class="padding radius-xl text-center shadow-blur">
         <view class="text-df">#{{item}}</view>
       </navigator>
     </view>
@@ -94,8 +94,8 @@
   <view class="grid margin-bottom col-2">
     <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
       <view class="image video-thumb">
-        <image src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
-        <image src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
+        <image class="round" src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
+        <image class="round" src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
       </view>
       <view class="cu-item">
         <view class="content padding-sm">

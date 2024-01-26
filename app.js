@@ -15,11 +15,11 @@ App({
     });
   },
   globalData: {
-    normalFontSize:"14px",
+    normalFontSize:"16px",
     elderlyFontSize:"20px",
     auth: false,
     login: false,
-    systemFontSize:"14px",
+    systemFontSize:"16px",
     change:false
   },
   //当前页面的that,可以不定义，定义是为了避免报错

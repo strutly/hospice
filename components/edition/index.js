@@ -6,14 +6,14 @@ Component({
   properties: {
     systemFontSize: {
       type: String,
-      value: "14px"
+      value: "16px"
     }
   },
   methods: {
     switch(e) {
       console.log(e)
-      let systemFontSize = wx.getStorageSync('systemFontSize') || "14px";
-      systemFontSize = systemFontSize == "14px" ? '20px' : '14px';
+      let systemFontSize = wx.getStorageSync('systemFontSize') || "16px";
+      systemFontSize = systemFontSize == "16px" ? '20px' : '16px';
       wx.setStorageSync('systemFontSize', systemFontSize);
       getApp().globalData.systemFontSize = systemFontSize;
     }
