@@ -2,7 +2,7 @@
 
 <navBar title='安宁疗护' iconTheme="white" color="#fff" back="true">
   
-  <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
+  <view class="padding-xl margin radius-xl bg-main2">
     <view class="padding-tb text-center text-xxl main-title">安宁疗护</view>
   </view>
 
@@ -33,7 +33,7 @@
   </view>
   <view class="cu-list menu-avatar">
     <block wx:if="{{item.children.length>0}}">
-      <navigator hover-class="none"  url="/pages/article/detail?id={{article.id}}" class="cu-item" wx:for="{{item.children}}" wx:for-item="article">
+      <view hover-class="none"  bind:tap="toUrl" data-url="/pages/article/detail?id={{article.id}}" class="cu-item" wx:for="{{item.children}}" wx:for-item="article">
       <view class="cu-avatar lg" style="background-image:url({{article.pic}});"></view>
       <view class="content flex-sub">
         <view class="text-black">
@@ -44,9 +44,9 @@
           {{article.createTime}}
         </view>
       </view>
-    </navigator>
+    </view>
     </block>
-    <navigator wx:else hover-class="none"  url="/pages/article/detail?id={{item.id}}" class="cu-item">
+    <view wx:else hover-class="none"  bind:tap="toUrl" data-url="/pages/article/detail?id={{item.id}}" class="cu-item">
       <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
       <view class="content flex-sub">
         <view class="text-black">
@@ -57,7 +57,7 @@
           {{item.createTime}}
         </view>
       </view>
-    </navigator>
+    </view>
 
 
     

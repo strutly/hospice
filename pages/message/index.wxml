@@ -5,10 +5,10 @@
     斗转星移，在未来的某个时刻，您也许有一些祝福和心里话要在特殊的日子对某人说，请把这些话留下来吧，我们会帮您在未来时空中传达……</view>
   <view class="padding-xl margin-xl"></view>
   <view class="padding text-center">
-    <navigator hover-class="none" url="/pages/message/form" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">发送寄语</navigator>
+    <view bind:tap="toUrl" data-url="/pages/message/form" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">发送寄语</view>
   </view>
   <view class="margin-top-lg padding text-center">
-    <navigator hover-class="none" url="/pages/message/list" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">我的寄语</navigator>
+    <view bind:tap="toUrl" data-url="/pages/message/list" class="radius-lg text-xl my-btn" style="background-color: #FFF7B7;">我的寄语</view>
   </view>
 
 </navBar>

@@ -9,8 +9,8 @@
         <view class="text-index2">当生命开始倒计时，如何度过才会让其价值最大化？您还有哪些心愿需要达成？记录下来，逐一去实现吧……</view>
       </view>
     </block>
-    <navigator url="/pages/wish/my?type={{formData.type}}" class="mywish">{{titleArr[formData.type]}}
-  </navigator>
+    <view bind:tap="toUrl" data-url="/pages/wish/my?type={{formData.type}}" class="mywish">{{titleArr[formData.type]}}
+  </view>
     <image class="pingzi" mode="widthFix" bindtap="showWish" src="http://gridpic.tsing-tec.com/hospice/kpz.png"></image>
     <view class="wave-content ">
       <view class="wave wave1 "></view>

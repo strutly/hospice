@@ -1,5 +1,6 @@
 // var app = getApp();
-
+import Api from "../config/api";
+import SourceMenuArr from "../utils/menu";
 var that;
 module.exports = {
   //构建每个页面基础page数据
@@ -42,10 +43,23 @@ module.exports = {
         }
       },
       toUrl: function (event) {
-        var url = event.currentTarget.dataset.url;
-        if (url) {
+        let dataset = event.currentTarget.dataset;
+        if (dataset.url) {
           wx.navigateTo({
-            url: url
+            url: dataset.url,
+            success: function(res) {
+              if(dataset.sourceIndex!=undefined){
+                let data = SourceMenuArr.find((item,index)=>{
+                  return item.sourceId==dataset.sourceIndex
+                })||{
+                  "sourceId":-1,
+                  "parentId":-1,
+                  "title":"扬帆起航",
+                  "parentTitle":"扬帆起航"
+                };
+                Api.addClickRecord(JSON.stringify(data));
+              }              
+            }
           });
         }else{
           this.alert("目前正在建设或完善中，敬请期待");

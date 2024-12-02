@@ -10,12 +10,12 @@
     </view>
   </view>
   <view class="content">
-    <navigator url="/pages/repair/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{letters[index]}}" wx:key="index">
+    <view bind:tap="toUrl" data-url="/pages/repair/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{letters[index]}}" wx:key="index">
       <view class="solids-bottom padding-bottom-sm">
         <text class="cuIcon-title text-orange"></text>照片修复{{(index+1)}}
       </view>
       <view class="margin-top-xs text-cut">{{item.msg}}</view>
       <view class="margin-top-sm text-sm text-right">{{item.createTime}}</view>
-    </navigator>
+    </view>
   </view>
 </navBar>

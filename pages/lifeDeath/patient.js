@@ -14,13 +14,17 @@ Page(Object.assign({},page,{
   },
   async onLoad(options) {
     that = this;
-    let res = await Api.getArticle({
+    Api.getArticle({
       catalogId:32
+    }).then(res=>{
+      that.setData({
+        swiperList:res.data?res.data.content:[]
+      });
+      page.onLoad.call(that);
+    },err=>{
+      console.log(err);
     });
-    that.setData({
-      swiperList:res.data.content
-    });
-    page.onLoad.call(this);
+    
   },
   develop(){
     that.setData({

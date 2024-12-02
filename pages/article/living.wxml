@@ -11,7 +11,7 @@
     </view>
     <block wx:if="{{item.title=='书籍推荐'}}">
       <view class="books flex" style="flex-direction:column-reverse;">
-        <navigator hover-class="none" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" url="/pages/article/detail?id={{article.id}}" class="margin-sm book light {{i%2==0?'bg-blue':'bg-brown'}} padding radius-lg align-center flex" wx:if="{{i>(item.children.length-3) || open[index]}}">
+        <view bind:tap="toUrl" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" data-url="/pages/article/detail?id={{article.id}}" class="margin-sm book light {{i%2==0?'bg-blue':'bg-brown'}} padding radius-lg align-center flex" wx:if="{{i>(item.children.length-3) || open[index]}}">
           <view class="cover-box margin-right">
             <image mode="scaleToFill" class="radius-lg cover-img" src="{{article.pic}}"></image>
           </view>
@@ -19,12 +19,12 @@
             <view class="text-black text-bold text-cut text-lg">{{article.title}}</view>
             <view class="text-grey margin-top text-des">{{article.des}}</view>
           </view>
-        </navigator>
+        </view>
       </view>
     </block>
     <block wx:else>
       <view class="flex padding-bottom-xl">
-        <navigator hover-class="" class="cu-card case flex flex-wrap margin-sm" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" url="/pages/article/detail?id={{article.id}}" wx:if="{{i==(item.children.length-1)}}">
+        <view bind:tap="toUrl" class="cu-card case flex flex-wrap margin-sm" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" data-url="/pages/article/detail?id={{article.id}}" wx:if="{{i==(item.children.length-1)}}">
           <view class="cu-item shadow">
             <view class="image video-thumb">
               <image src="{{article.pic}}" style="width: 100%;height: 320rpx;" mode="scaleToFill"></image>
@@ -39,7 +39,7 @@
               </view>
             </view>
           </view>
-        </navigator>
+        </view>
       </view>
     </block>
   </block>

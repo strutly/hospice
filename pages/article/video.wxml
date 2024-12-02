@@ -2,7 +2,7 @@
 
 <navBar title='{{title}}' iconTheme="white" color="#fff" back="true"> 
   
-  <view class="padding-xl margin radius-xl text-white" style="background-color: #e99149;">
+  <view class="padding-xl margin radius-xl text-white bg-main2">
     <view class="padding-tb text-center text-xxl main-title">{{title}}</view>
     <view class="text-center text-xs">视频来源:腾讯视频</view>
   </view>

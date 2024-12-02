@@ -7,13 +7,13 @@
   </view>
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <view hover-class="none" data-url="/pages/selfCare/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
+    <view data-url="/pages/selfCare/index" data-source-index="47" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/zwgh.png"></image>
       <view class="text-xl margin-left-lg">自我关怀</view>
     </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <view hover-class="none" data-url="/pages/share/index?source=4" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50"bindtap="toUrl">
+    <view data-source-index="48" data-url="/pages/share/index?source=4" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50"bindtap="toUrl">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/zhjyfx.png"></image>
       <view class="text-xl margin-left-lg">照护经验分享</view>
     </view>

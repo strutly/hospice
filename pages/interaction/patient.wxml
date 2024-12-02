@@ -6,31 +6,31 @@
   </view>
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/index?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+    <view bind:tap="toUrl" data-url="/pages/share/index?source=0" data-source-index="13" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-1-1.png"></image>
       <view class="text-xl margin-left-lg">品质生活分享</view>
-    </navigator>
+    </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/together" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+    <view bind:tap="toUrl" data-url="/pages/share/together" data-source-index="14" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-2-1.png"></image>
       <view class="text-xl margin-left-lg">一生相伴</view>
-    </navigator>
+    </view>
   </view>
   <!--
 
   
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/wish/wish?type=1" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+    <view bind:tap="toUrl" data-url="/pages/wish/wish?type=1" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/yyqd.png"></image>
       <view class="text-xl margin-left-lg">遗愿清单</view>
-    </navigator>
+    </view>
   </view>
   -->
   <view class="btn-box padding-lg margin-lr-xl">
-    <navigator hover-class="none" url="/pages/share/forever" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+    <view bind:tap="toUrl" data-url="/pages/share/forever" data-source-index="15" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-3-1.png"></image>
       <view class="text-xl margin-left-lg">我心永在</view>
-    </navigator>
+    </view>
   </view>
 </navBar>

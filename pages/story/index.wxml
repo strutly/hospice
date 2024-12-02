@@ -3,17 +3,17 @@
 <navBar title="生命故事" background='#FFB13B' iconTheme="white" color="#fff">
 
   <view class="share-box flex text-white">
-    <navigator hover-class="none" style="background-color: #FF894B;" url="/pages/story/form?source=3" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
-    </navigator>
-    <navigator hover-class="none" style="background-color: #8170FD;" url="/pages/story/my?source=3" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
-    </navigator>
+    <view bind:tap="toUrl" data-url="/pages/story/form?source=3" style="background-color: #FF894B;" class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我要分享 <view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </view>
+    <view bind:tap="toUrl" data-url="/pages/story/my?source=3" style="background-color: #8170FD;"  class="flex-sub padding-tb-lg padding-lr-sm margin-sm radius-xl align-center">我的分享<view class='cu-tag line-white round fr'>Go<text class="lg text-white cuIcon-forward margin-left-sm"></text></view>
+    </view>
   </view>
   <view class="flex text-center margin-top padding-lr">
     <view class="{{index==0?'flex-sub':'flex-treble'}} {{index==tabIndex?'text-red':''}}" wx:for="{{navs}}" wx:key="index" bindtap="tabSelect" data-index="{{index}}" data-type="{{types[index]}}">
       <text class="padding-bottom {{index==tabIndex?'cur':''}}">{{item}}</text>
     </view>
   </view>
-  <navigator class="padding margin solids-bottom" wx:for="{{stores[tabIndex]}}" url="/pages/life/detail?id={{item.id}}">
+  <view class="padding margin solids-bottom" wx:for="{{stores[tabIndex]}}" bind:tap="toUrl" data-url="/pages/life/detail?id={{item.id}}">
     <view class="flex align-center">
       <view class="flex-sub text-blod text-cut">{{item.title||item.msg}}</view>
       <view class="cu-tag radius {{item.type==0?'light bg-red':'light bg-blue'}}">{{item.type==0?'亲历的身边事':'影音中的故事'}}</view>
@@ -29,5 +29,5 @@
       </view>
       
     </view>
-  </navigator>
+  </view>
 </navBar>

@@ -4,7 +4,7 @@
 <navBar title='{{titles[source]}}' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
   <view class="cards">
     <block wx:for="{{datas}}" wx:for-item="item" wx:key="index">
-      <navigator hover-class="none" url="/pages/life/detail?id={{item.id}}" class="card solid-bottom">
+      <view bind:tap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="card solid-bottom">
         <view class="card-head">
           <image class="head-image" src="{{(item.anonymous&&item.maUser.avatarUrl)?'/images/head.jpg':item.maUser.avatarUrl}}" data-uid="{{item.miniUser.id}}"></image>
           <view class="card-des">
@@ -32,7 +32,7 @@
             </view>
           </view>
         </view>
-      </navigator>
+      </view>
     </block>
   </view>
 

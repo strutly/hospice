@@ -5,7 +5,7 @@
     <view class="panel" wx:for="{{myRecords}}" wx:for-index='key' wx:for-item="records">
       <view class="panel-title">{{key}}</view>
       <view class="media-box {{(move && item.id==moveIndex)?'media-active':''}}" wx:for="{{records}}">
-        <navigator hover-class="none"  url="/pages/life/detail?id={{item.id}}"   class="media-content" data-index="{{item.id}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+        <view bind:tap="toUrl" data-url="/pages/life/detail?id={{item.id}}"   class="media-content" data-index="{{item.id}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
           <view class="media-hd">
             <image mode="aspectFill" src="{{item.imgs[0].url}}" wx:if="{{item.imgs.length>0}}"></image>
             <image src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" mode="aspectFill" wx:else></image>
@@ -14,7 +14,7 @@
             <view class="media-title">{{tools.dateFormat(item.createTime,'MM月dd日')}}</view>
             <view class="media-des">{{item.msg}}</view>
           </view>
-        </navigator>
+        </view>
         <view class="media-delete">
           <view class="media-delete-item {{delete?'hide':''}}" bindtap="{{put?'handle':'confirm'}}" data-id="{{item.id}}" data-type="put">{{item.open?'不公开':'公开'}}{{put?'这条记录':''}}</view>
           <view class="media-delete-item media-delete-item-warm  {{put?'hide':''}}" bindtap="{{delete?'handle':'confirm'}}" data-id="{{item.id}}" data-type="delete">删除{{delete?'这条记录':''}}</view>

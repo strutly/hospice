@@ -4,7 +4,7 @@
   <view class="padding-lg margin text-index2 des-msg">时间是留不住的，稍纵即逝，而唯一能留住时光的，就是那蕴含温暖的相册。翻开相册，一张张照片呈现的是我们最美的回忆……</view>
 
   <view class="flex margin-xl text-center text-lg">
-    <navigator hover-class="none" url="/pages/album/album" class="flex-sub bg-gray radius-xl padding-sm margin-lg">创建相册</navigator>
-    <navigator hover-class="none" url="/pages/album/my" class="flex-sub bg-gray radius-xl padding-sm margin-lg">我的相册</navigator>  
+    <view bindTap="toUrl" data-url="/pages/album/album" class="flex-sub bg-gray radius-xl padding-sm margin-lg">创建相册</view>
+    <view  bindTap="toUrl" data-url="/pages/album/my" class="flex-sub bg-gray radius-xl padding-sm margin-lg">我的相册</view>  
   </view>  
 </navBar>
