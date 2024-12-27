@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='一生相伴' iconTheme="white" color="#fff">
+<navBar title='影像与心声' iconTheme="white" color="#fff">
   <topTips1 id="topTips1"></topTips1>
   <view class="margin padding"></view>
   <view class="btn-box padding-lg margin-lr-xl">

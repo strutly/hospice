@@ -81,7 +81,7 @@
   </view>
 
   <view class="flex justify-center text-center text-lg">
-    <view bind:tap="toUrl" data-url="/pages/article/detail?id=27" data-source-index="21" class="flex-sub" bindtap="playVideo">
+    <view bind:tap="toUrl" data-url="/pages/article/detail?id=27" data-source-index="21" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/family-4.png"></image>
       <view>医疗决策前提</view>
     </view>

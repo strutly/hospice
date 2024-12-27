@@ -6,6 +6,8 @@ var oys={},page = basePage.buildBasePage.call(this,oys);
 Page(Object.assign({},page,{
   data: {
     datas: [[], [],[]],
+    colorArr:['orange','green','red'],
+    statusArr:['待发送','发送成功','发送失败'],
     index: 0,
     pageNo: [0, 0,0],
     endline:[false,false,false]

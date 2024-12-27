@@ -62,7 +62,10 @@ module.exports = {
             }
           });
         }else{
-          this.alert("目前正在建设或完善中，敬请期待");
+          wx.showToast({
+            title: '正在开发中~',
+            icon:'none'
+          })
         }
       },
       alert(text,fun) {

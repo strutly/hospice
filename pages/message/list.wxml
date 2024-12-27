@@ -5,7 +5,7 @@
   </view>
   <view class="flex text-center bg-white">
     <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="0">
-      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">待发送</view>
+      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">全部</view>
     </view>
     <view class=" padding-lr flex-sub" bindtap="changeTab" data-index="1" data-stauts='1'>
       <view class="tab padding-tb-sm {{index==1?'tab-cur':''}}">发送成功</view>
@@ -16,8 +16,9 @@
   </view>
   <view class="content">
     <view url="/pages/letter/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{datas[index]}}" wx:key="index">
-      <view class="solids-bottom padding-bottom-sm">
-        <text class="cuIcon-title text-orange"></text>寄语{{index+1}}
+      <view class="solids-bottom padding-bottom-sm flex">
+        <text class="cuIcon-title text-{{colorArr[item.status]}}"></text>寄语{{index+1}}
+        <text class="flex-sub text-right">{{statusArr[item.status]}}</text>
       </view>
       <view class="margin-top-xs text-cut">{{item.content||'[图片寄语]'}}</view>
       <view class="margin-top-sm text-sm text-right">{{item.createTime}}</view>

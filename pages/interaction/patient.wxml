@@ -14,7 +14,7 @@
   <view class="btn-box padding-lg margin-lr-xl">
     <view bind:tap="toUrl" data-url="/pages/share/together" data-source-index="14" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-2-1.png"></image>
-      <view class="text-xl margin-left-lg">一生相伴</view>
+      <view class="text-xl margin-left-lg">影像与心声</view>
     </view>
   </view>
   <!--
@@ -30,7 +30,7 @@
   <view class="btn-box padding-lg margin-lr-xl">
     <view bind:tap="toUrl" data-url="/pages/share/forever" data-source-index="15" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
       <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-3-1.png"></image>
-      <view class="text-xl margin-left-lg">我心永在</view>
+      <view class="text-xl margin-left-lg">美好派送站</view>
     </view>
   </view>
 </navBar>

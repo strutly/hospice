@@ -1,7 +1,7 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
 <toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
 
-<navBar title='学会求助' iconTheme="white" color="#fff" back="true">
+<navBar title='照护成就' iconTheme="white" color="#fff" back="true">
   <horseRace horseRaceLampList="{{horseRaceLampList}}" marqueeDistance="{{marqueeDistance}}" interval="{{interval}}" orientation="{{orientation}}" size="{{size}}" marqueePace="{{marqueePace}}" firework="{{firework}}"></horseRace>
   <form bindsubmit="submit">
 

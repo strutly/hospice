@@ -1,9 +1,9 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='我心永在' iconTheme="white" color="#fff" back="true">
+<navBar title='美好派送站' iconTheme="white" color="#fff" back="true">
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   
   <view class="padding-xl margin radius-xl" style="background-color: #e99149;">
-    <view class="padding-tb text-center text-xxl main-title">我心永在</view>
+    <view class="padding-tb text-center text-xxl main-title">美好派送站</view>
   </view>
   
   <view class="grid col-2 padding">
@@ -13,19 +13,19 @@
       </view>
       <view class="margin-top">寄语</view>
     </view>
-    <view class="text-center padding-sm">
+    <view bind:tap="toUrl" class="text-center padding-sm">
       <view  style="background-color: #4DA5FE;" class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-2.png"></image>
       </view>
       <view class="margin-top">点歌</view>
     </view>
-    <view class="text-center padding-sm">
+    <view bind:tap="toUrl" class="text-center padding-sm">
       <view  style="background-color: #47BD9B;" class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-3.png"></image>
       </view>
       <view class="margin-top">送花</view>
     </view>
-    <view class="text-center padding-sm">
+    <view bind:tap="toUrl" class="text-center padding-sm">
       <view style="background-color: #CA93CA;" class="padding-xl">
         <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-4.png"></image>
       </view>
