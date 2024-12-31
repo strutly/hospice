@@ -77,11 +77,11 @@
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
       <view>遗体器官捐献</view>
     </view>
-    <view bind:tap="toUrl" data-url="/pages/article/detail?id=88" data-source-index="10" class="flex-sub">
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=88" data-source-index="10" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
       <view>遗愿清单</view>
     </view>
-    <view bind:tap="toUrl" data-url="/pages/article/video?id=30&title=四道人生" data-source-index="11" class="flex-sub">
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=183&title=四道人生" data-source-index="11" class="flex-sub">
       <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
       <view>四道人生</view>
     </view>

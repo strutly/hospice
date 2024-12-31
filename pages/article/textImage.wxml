@@ -11,16 +11,11 @@
       <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">安宁概述</text>
     </view>
   </view>
-
-
-  <view class="cu-card case flex-wrap margin-sm" bindtap="toUrl" data-url="/pages/article/detail?id=163" style="position: relative;">
-    <view class="cu-item shadow">
-      <view class="image video-thumb">
-        <image src="{{datas.pic}}" mode="widthFix"></image>
-        <text class="cuIcon-video margin-right-xs play"></text>
-      </view>      
-    </view>
+  <view class="padding">
+    <z-tree treeArr="{{datas.children[0].children}}" child="{{false}}" wx:key="index"></z-tree>
   </view>
+  
+
 
 
   <block wx:for="{{datas.children}}" wx:key="index">

@@ -22,7 +22,7 @@ Page(Object.assign({},page,{
     that = this;
     that.video = that.selectComponent("#video");
     let res = await Api.getMaterilaTree({
-      id:53
+      id:169
     });
     that.setData({
       datas:res.data
