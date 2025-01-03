@@ -67,7 +67,7 @@
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/text?id=24" data-source-index="20" class="bg-yellow light flex-sub margin-lr-sm padding-sm radius align-center flex">
       <image class="fl item-icon margin-right-xs" src="http://gridpic.tsing-tec.com/hospice/family-3.png"></image>
-      <text class="flex-sub font-orange">紧急处理</text>
+      <text class="flex-sub font-orange">紧急转运</text>
     </view>
   </view>
 

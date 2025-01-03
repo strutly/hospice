@@ -15,10 +15,7 @@
     <z-tree treeArr="{{datas.children[0].children}}" child="{{false}}" wx:key="index"></z-tree>
   </view>
   
-
-
-
-  <block wx:for="{{datas.children}}" wx:key="index">
+  <block wx:for="{{datas.children}}" wx:key="index" wx:if="{{index>0}}">
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
       <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">{{item.title}}</text>
@@ -50,10 +47,9 @@
           {{item.createTime}}
         </view>
       </view>
-    </view>
+    </view> 
 
-
-    
   </view>  
   </block>
+  <view class="safe-bottom"></view>
 </navBar>
