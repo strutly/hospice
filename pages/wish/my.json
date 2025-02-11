@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "topTips":"/components/topTips/index",
+    "leftTouch":"/components/left-touch/index"
+  }
+}

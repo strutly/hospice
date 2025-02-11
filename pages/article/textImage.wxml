@@ -1,0 +1,55 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+
+<navBar title='安宁疗护' iconTheme="white" color="#fff" back="true">
+  
+  <view class="padding-xl margin radius-xl bg-main2">
+    <view class="padding-tb text-center text-xxl main-title">安宁疗护</view>
+  </view>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">安宁概述</text>
+    </view>
+  </view>
+  <view class="padding">
+    <z-tree treeArr="{{datas.children[0].children}}" child="{{false}}" wx:key="index"></z-tree>
+  </view>
+  
+  <block wx:for="{{datas.children}}" wx:key="index" wx:if="{{index>0}}">
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> <text class="text-xl text-bold">{{item.title}}</text>
+    </view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <block wx:if="{{item.children.length>0}}">
+      <view hover-class="none"  bind:tap="toUrl" data-url="/pages/article/detail?id={{article.id}}" class="cu-item" wx:for="{{item.children}}" wx:for-item="article">
+      <view class="cu-avatar lg" style="background-image:url({{article.pic}});"></view>
+      <view class="content flex-sub">
+        <view class="text-black">
+          <text class="text-cut">{{article.title}}
+          </text>
+        </view>
+        <view class="text-gray text-sm flex justify-between">
+          {{article.createTime}}
+        </view>
+      </view>
+    </view>
+    </block>
+    <view wx:else hover-class="none"  bind:tap="toUrl" data-url="/pages/article/detail?id={{item.id}}" class="cu-item">
+      <view class="cu-avatar lg" style="background-image:url({{item.pic}});"></view>
+      <view class="content flex-sub">
+        <view class="text-black">
+          <text class="text-cut">{{item.title}}
+          </text>
+        </view>
+        <view class="text-gray text-sm flex justify-between">
+          {{item.createTime}}
+        </view>
+      </view>
+    </view> 
+
+  </view>  
+  </block>
+  <view class="safe-bottom"></view>
+</navBar>

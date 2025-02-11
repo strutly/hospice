@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "z-tree":"/components/tree/index"
+  }
+}

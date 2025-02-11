@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topTips":"/components/topTips/index",
+    "tab":"/components/edition/index",
+    "navBar": "/components/navBar/navBar"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "component": true,
+  "usingComponents": {"videoPlay":"/components/video/video","tab":"/components/tab/index"}
+}

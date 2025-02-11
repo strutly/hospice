@@ -1,0 +1,24 @@
+.container{
+  position: absolute;  
+  width: 100%;  
+  background-image: url("http://gridpic.tsing-tec.com/hospice/shiguangxiangce.png");  
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  padding-bottom: 0;
+}
+.des-msg{
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: justify;  
+}
+.text-index2{
+  text-indent: 2rem;
+}
+.icon-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.bg-white-50{
+  background-color: rgb(255, 255, 255,0.5);
+}

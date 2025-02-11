@@ -1,0 +1,1 @@
+<view class="tab {{systemFontSize=='16px'? 'big':'small'}}" bindtap="switch">{{systemFontSize=="16px"?"敬老版":"普通版"}}</view>

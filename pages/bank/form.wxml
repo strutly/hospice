@@ -1,0 +1,55 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='{{scaleForm.title}}' iconTheme="white" color="#fff">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <wxs src="/utils/Tools.wxs" module="Tools" />
+  <template name="radio">
+    <view class="cu-bar bg-white solid-bottom margin-top">
+      <view class="action"><text class='text-red' wx:if="{{question.required}}">*</text>{{index+1}}:{{question.showTitle}}</view>
+    </view>
+    <radio-group class="block solids-bottom" bindchange="radioChange" data-qid="{{question.id}}" data-group-name="{{question.questionGroup.title}}" data-type="{{question.type}}" data-title="{{question.title}}" data-show-title="{{question.showTitle}}" data-group-sort="{{question.questionGroup.sort}}" data-sort="{{question.sort}}" data-options="{{question.options}}" value="" name="{{question.id}}">
+      <view class="cu-form-group" wx:for="{{question.options}}" wx:for-item="option" wx:for-index="i" wx:key="i">
+        <radio disabled="{{evaluation.id}}" class='blue radio' value="{{option.value}}" checked="{{Tools.checked(question.id,option.value,evaluation.checkList)}}"></radio>
+        <view class="title flex-sub">{{option.lable}}</view>
+        <view class="">
+          <progress percent="{{option.proportion}}" show-info stroke-width="3"  wx:if="{{evaluation.id && option.proportion>0}}"/>
+        </view>
+      </view>
+
+    </radio-group>
+  </template>
+
+  <template name="checkbox">
+    <view class="cu-bar bg-white solid-bottom margin-top">
+      <view class="action"><text class='text-red' wx:if="{{question.required}}">*</text>{{index+1}}:{{question.showTitle}}</view>
+    </view>
+    <checkbox-group disabled="true" class="block solids-bottom" bindchange="checkboxChange" data-qid="{{question.id}}" data-group-name="{{question.questionGroup.title}}" data-type="{{question.type}}" data-title="{{question.title}}" data-show-title="{{question.showTitle}}" data-group-sort="{{question.questionGroup.sort}}" data-sort="{{question.sort}}" data-options="{{question.options}}" value="" name="{{question.id}}">
+      <view class="cu-form-group" wx:for="{{question.options}}" wx:for-item="option" wx:for-index="i" wx:key="i">
+        <checkbox disabled="{{evaluation.id}}" class='round blue' value="{{option.value}}" checked="{{Tools.checked(question.id,option.value,evaluation.checkList)}}"></checkbox>
+        <view class="title flex-sub">{{option.lable}}</view>
+        <progress percent="{{option.proportion}}" show-info stroke-width="3" wx:if="{{evaluation.id && option.proportion>0}}"/>
+      </view>
+    </checkbox-group>
+  </template>
+
+  <template name="input">
+    <view class="cu-form-group margin-top solids-bottom">
+      <view class="title padding0"><text class='text-red' wx:if="{{question.required}}">*</text>{{index+1}}:{{question.showTitle}}</view>
+      <input disabled="{{evaluation.id}}" class="q-option-item q-input" name="{{question.id}}" placeholder="请输入{{question.title}}" type="{{question.inputType||'text'}}" bindblur="inputChange" data-qid="{{question.id}}" data-group-name="{{question.questionGroup.title}}" data-type="{{question.type}}" data-title="{{question.title}}" data-show-title="{{question.showTitle}}" data-group-sort="{{question.questionGroup.sort}}" data-sort="{{question.sort}}" data-options="{{question.options}}" value="{{Tools.values(question.id,evaluation.checkList)}}"></input>
+    </view>
+  </template>
+
+
+  <form bindsubmit="submit">
+    <view class="q-list">
+      <block wx:for="{{scaleForm.questionGroups[0].questions}}" wx:for-item="question">
+        <view id="item{{question.id}}">
+          <template is="{{question.type}}" data="{{...{evaluation:evaluation,question:question,index:index} }}" />
+        </view>
+      </block>
+    </view>
+    <view class="padding margin-top flex flex-direction bg-white safe-bottom">
+      <button class="cu-btn bg-blue lg" form-type="submit" wx:if="{{!evaluation.id}}">提交</button>
+      <button class="cu-btn bg-blue lg" disabled="true" form-type="submit" wx:else>您已提交</button>
+    </view>
+  </form>
+</navBar>

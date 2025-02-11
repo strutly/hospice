@@ -1,0 +1,27 @@
+.container{
+  position: absolute;  
+  width: 100%;  
+  background-image: url("http://gridpic.tsing-tec.com/hospice/huahua.jpg?1");  
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  /* safe-bottom定义了下边距，这里删除他 */
+  padding-bottom: 0;
+  /* 增加这行，让背景不会滚动 */
+  overflow-y: auto;
+}
+.des-msg{
+  font-size: 1.4rem;
+  line-height: 1.4;  
+}
+.text-index2{
+  text-indent: 2rem;
+}
+
+.icon-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.bg-white-50{
+  background-color: rgb(255, 255, 255,0.5);
+}

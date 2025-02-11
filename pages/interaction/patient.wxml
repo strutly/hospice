@@ -1,0 +1,36 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='互动空间--患者' iconTheme="white" color="#fff" back="true">
+  <view style="height:30rpx;"></view>
+  <view class="padding des-msg bg-white margin-bottom-xl">
+    <view class="text-index2">生命的流逝，就像河流入海，在人生长河中，让我们互相支持，彼此欣赏。品当下生活滋味，集生活点滴过往，寄真挚祝福、期望……</view>
+  </view>
+  <view class="padding-xl"></view>
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view bind:tap="toUrl" data-url="/pages/share/index?source=0" data-source-index="13" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-1-1.png"></image>
+      <view class="text-xl margin-left-lg">品质生活分享</view>
+    </view>
+  </view>
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view bind:tap="toUrl" data-url="/pages/share/together" data-source-index="14" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-2-1.png"></image>
+      <view class="text-xl margin-left-lg">影像与心声</view>
+    </view>
+  </view>
+  <!--
+
+  
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view bind:tap="toUrl" data-url="/pages/wish/wish?type=1" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/yyqd.png"></image>
+      <view class="text-xl margin-left-lg">遗愿清单</view>
+    </view>
+  </view>
+  -->
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view bind:tap="toUrl" data-url="/pages/share/forever" data-source-index="15" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-3-1.png"></image>
+      <view class="text-xl margin-left-lg">美好派送站</view>
+    </view>
+  </view>
+</navBar>

@@ -1,0 +1,74 @@
+
+movable-area {
+  position: fixed;
+  width: 100%;
+  height:100%;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 100;
+  pointer-events: none;
+}
+movable-view {
+  pointer-events: auto;
+  
+  z-index: 100000000;  
+  width:auto;
+  height:auto;
+  /* width: 160rpx;
+  height: 160rpx; */
+  text-align: center;
+  
+  
+  /* border-radius: 160rpx; */
+  
+  
+}
+.jinlao{
+  color: var(--white);
+  
+  border-radius:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.big{
+  font-size: 20px;
+  width: 150rpx;
+  height: 150rpx;
+  /* line-height: 150rpx; */
+  /* line-height: 1rem; */
+}
+.small{
+  font-size: 15px;
+  width: 120rpx;
+  height: 120rpx;
+  
+  /* line-height: 120rpx; */
+}
+.big-movable{
+  font-size: 16px;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: var(--green);
+  box-shadow: 2px 2px 15px var(--green);
+  border: 1px solid var(--brown);
+}
+.small-movable{
+  font-size: 16px;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: var(--brown);
+  border: 1px solid var(--green);
+  box-shadow: 2px 2px 15px var(--brown);
+}
+
+.tab-mask{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index:100;
+}

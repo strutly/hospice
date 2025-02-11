@@ -1,0 +1,6 @@
+<view class="weui-toptips {{className}} {{extClass}} {{show ? 'weui-toptips_show' :  ''}}" bindtap="hide">
+    <block wx:if="{{msg}}">{{msg}}</block>
+    <block wx:else>
+        <slot></slot>
+    </block>
+</view>

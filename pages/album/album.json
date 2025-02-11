@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "topTips":"/components/topTips1/index",
+    "pics": "/components/pics/pics"
+  }
+}

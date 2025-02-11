@@ -1,0 +1,65 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<include src="/pages/template/error.wxml"></include>
+<navBar title='分享' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <progress percent="{{progress}}" color="#e75e58" active wx:if="{{upload}}" />
+  <view class="padding">
+    <textarea maxlength="-1" bindblur="bindTextAreaBlur" class="content" auto-height="true" value="{{formData.msg}}" style="min-height:200rpx;" placeholder="开始分享您的内容..." />
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>图片上传(长按可删除)</view>
+    <view class="image-box">
+      <view class="image-item" wx:for="{{formData.imgs}}">
+        <image class="image-thumb {{item.type?'image-video':''}}" bindlongpress="handleLongPress" bindtap="previewImage" mode="aspectFill" data-src="{{item.cover}}" src="{{item.cover}}"></image>
+        <view class="image-delete-box {{delete?'':'hide'}}" bindlongpress="handleLongPress" bindtap="remove" data-index="{{index}}">
+          <image src="/images/delete.png" class="image-delete"></image>
+        </view>
+      </view>
+      <view class="image-item" wx:if="{{formData.imgs.length<9}}">
+        <view class="add" bindtap="addImg">
+          <image class="image-add" src="/images/add.png"></image>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{types[formData.source]!=0}}">
+      <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
+      <view class="grid col-2">
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="{{index}}" wx:for="{{types[formData.source]}}">
+          <view class="solid padding-sm radius-xl text-center shadow-blur {{formData.type==index?'bg-orange':''}}">
+            <view class="text-df">#{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- <block wx:if="{{formData.source==0}}">
+      <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>标签类型</view>
+      <view class="grid col-2">
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="0">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==0?'bg-orange':''}}">
+            <view class="text-df">#这一口有味道#</view>
+          </view>
+        </view>
+        <view class="padding-left padding-tb-sm " bindtap="chooseType" data-type="1">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==1?'bg-orange':''}}">
+            <view class="text-df">#这一眼还可以#</view>
+          </view>
+        </view>
+        <view class="padding-right padding-tb-sm" bindtap="chooseType" data-type="2">
+          <view class="{{formData.type==2?'bg-orange':''}} solid padding-sm radius text-center shadow-blur ">
+            <view class="text-df">#这一句让我感动#</view>
+          </view>
+        </view>
+        <view class="padding-left padding-tb-sm" bindtap="chooseType" data-type="3">
+          <view class="solid padding-sm radius text-center shadow-blur {{formData.type==3?'bg-orange':''}}">
+            <view class="text-df">#这个瞬间非常留恋#</view>
+          </view>
+        </view>
+      </view>
+    </block> -->
+
+
+    <view class="open-switch">是否公开?<view class="switch {{formData.open?'switch-active':''}}" bindtap="switchType" data-name="open"></view>
+    </view>
+    <view class="open-switch">是否匿名?<view class="switch {{formData.anonymous?'switch-active':''}}" bindtap="switchType" data-name="anonymous"></view>
+    </view>
+    <view class="push bg-orange" bindtap="form">点击发布</view>
+  </view>
+</navBar>

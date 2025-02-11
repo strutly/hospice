@@ -1,0 +1,21 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='我的照片' iconTheme="white" color="#fff">
+  
+  <view class="flex text-center bg-white">
+    <view class="margin-lr-xl padding-lr-xl flex-sub" bindtap="changeTab" data-index="0">
+      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">已发出</view>
+    </view>
+    <view class="margin-lr-xl  padding-lr-xl  flex-sub" bindtap="changeTab" data-index="1" data-reply="已处理">
+      <view class="tab padding-tb-sm {{index==1?'tab-cur':''}}">已处理</view>
+    </view>
+  </view>
+  <view class="content">
+    <view bind:tap="toUrl" data-url="/pages/repair/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{letters[index]}}" wx:key="index">
+      <view class="solids-bottom padding-bottom-sm">
+        <text class="cuIcon-title text-orange"></text>照片修复{{(index+1)}}
+      </view>
+      <view class="margin-top-xs text-cut">{{item.msg}}</view>
+      <view class="margin-top-sm text-sm text-right">{{item.createTime}}</view>
+    </view>
+  </view>
+</navBar>

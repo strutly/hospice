@@ -1,0 +1,36 @@
+<navBar title='详细' iconTheme="white" color="#fff" back="true">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view wx:if="{{detail.title}}">
+    <view class="margin">
+      <text class="cuIcon-titles text-blue"></text>标题
+    </view>
+    <view class="margin">{{detail.title}}</view>
+  </view>
+  <view wx:if="{{detail.msg}}">
+    <view class="margin">
+      <text class="cuIcon-titles text-blue"></text>内容
+    </view>
+    <view class="margin">{{detail.msg}}</view>
+  </view>
+
+  <view wx:if="{{detail.pics.length>0}}">
+    <view class="margin">
+      <text class="cuIcon-titles text-blue"></text>图片内容
+    </view>
+    <view class="flex flex-wrap justify-between">
+      <view class="margin-sm flex-sub" style="min-width: 30%;" wx:for="{{detail.pics}}" wx:for-item="src">
+        <image bindtap="previewImage" style="width: 100%;" data-src="{{src}}" data-srcs="{{detail.pics}}" class="" mode="aspectFill" src="{{src}}?imageMogr2"></image>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{detail.reply}}">
+    <view class="margin">
+      <text class="cuIcon-titles text-blue"></text>回复内容
+    </view>
+    <view class="margin" wx:if="{{detail.type==1}}">{{detail.reply}}</view>
+    <view class="margin" wx:else>
+      <image src="{{detail.reply}}" mode="widthFix" style="width: 100%;" bindtap="previewImage" data-srcs="[{{detail.reply}}]"></image>
+    </view>
+  </view>
+</navBar>

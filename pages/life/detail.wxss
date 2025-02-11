@@ -1,0 +1,266 @@
+.container{
+  padding-bottom: 5rem;
+}
+
+.card{
+  padding: 32rpx;
+  background-color: #fff;
+  margin-top: 28rpx;
+}
+.card-head{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.head-image{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+}
+.card-des{
+  margin-left: 24rpx;
+}
+.card-nickname{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+}
+.card-time{
+  color:#999;
+  font-size: 26rpx;
+}
+.card-content{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.4;
+  text-align: justify;
+}
+.card-images{
+  display: flex; 
+  flex-wrap: wrap;
+  text-align: justify;
+  margin-top: 12rpx;
+}
+.image-item{
+  flex:1;
+  height: 240rpx;
+  position: relative;
+  margin:8rpx 0; 
+  min-width: 30%;
+}
+.image-item:nth-child(3n+2){
+  margin-left:16rpx;
+}
+.image-item:nth-child(3n+3){
+  margin-left:16rpx;
+}
+.card-image{
+  width: 100%;
+  height: 100%;
+}
+.image-one{
+  height: 360rpx;
+}
+.image-two{
+  height: 320rpx;
+}
+.image-video:before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  height: 0;
+  border-style: solid;
+  border-width: 1em 0 1em 2em;
+  border-color: transparent transparent transparent #fff;
+}
+.card-handles{
+  text-align: right;
+  margin-top: 24rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+.handle-item{
+  display: inline-block;
+  margin-left: 24rpx;
+}
+.handle-item image{
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  margin: 0 12rpx;
+}
+.handle-item view{  
+  display: inline-block;
+  vertical-align: top;
+  color:#666;
+}
+.share{
+  display: inline-block;
+  width: fit-content;
+  height: 36rpx;
+  margin: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: 32rpx;
+  line-height: 36rpx;
+  background-color: #fff;
+}
+button::after {
+  border: none;
+}
+.card-likes{
+  vertical-align: middle;
+  border-top: 0.05rem solid #e3e3e3;
+  margin-top: 30rpx;
+  padding-top: 16rpx;
+  line-height: 1.2;
+}
+.like-image{
+  width:36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+.like-name{
+  color:#FFB13B;
+  display: inline-block;
+  margin-right: 12rpx;
+  font-size: 30rpx;
+}
+
+
+.panel{
+  margin-top: 1rem;
+}
+.card-comments{
+  background-color: #fff;
+}
+.comment-item{
+  padding: 12rpx 32rpx;
+}
+.comment-head{
+  display: flex;
+}
+.comment-image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 12rpx;
+  border-radius: 50%;
+}
+.comment-des{
+  flex:1;
+}
+.comment-nickname{
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+.comment-time{
+  color:#999;
+  font-size: 26rpx;
+}
+.comment-content{
+  margin-left: 92rpx;
+  margin-top: 12rpx;
+  padding-bottom: 24rpx;
+  font-size: 28rpx;
+  line-height: 1.4;
+  color: #666;
+  border-bottom: 0.05rem solid #e3e3e3;
+}
+.comment-item:last-child .comment-content{
+  border-bottom: none;
+}
+
+
+
+.comment-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1rpx solid #e3e3e3;
+}
+.comment-box input{
+  width:100%;
+  height: 100%;
+  padding:32rpx;
+  margin-bottom:32rpx;
+}
+.blue{
+  color:blue;
+}
+
+/*授权样式*/
+.mask{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 999999999999;
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  width: 72%;  
+  background-color: #fff;
+  border-radius: 32rpx;
+  position: relative;
+  margin-bottom: 160rpx;
+}
+.modal-cancle{
+  position: absolute;
+  top:16rpx;
+  left:16rpx;
+  width: 54rpx;
+  height: 54rpx;
+}
+.modal-cancle image{
+  width: 100%;
+  height:100%;
+}
+.modal-logo{
+  margin: 100rpx auto 80rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+.modal-title{
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+.modal-icon{
+  margin: 80rpx auto;
+}
+.modal-logo image{
+  width: 100%;
+  height: 100%;
+  border: 6rpx solid #FFB13B;
+  border-radius: 32rpx;
+}
+.modal-title image{
+  width: 80%;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+.modal-btns{
+  margin: 48rpx 48rpx 80rpx;
+  text-align: center;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-btn{
+  flex: 1;
+  border-radius: 48rpx;
+  margin: 0 24rpx;
+  background-color: #FFB13B;
+  color: #fff;
+}

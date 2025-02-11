@@ -1,0 +1,21 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<navBar title="{{questionList[pageNo].title}}" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <progress class="q-speed" percent="{{((pageNo+1)/questionList.length)*100}}" activeColor="#41B592"></progress>
+  <form class="safe-bottom" bindsubmit="submitForm">
+    <view class="text-gray padding">{{questionList[pageNo].des}}</view>
+    <view class="solid-bottom margin-bottom" wx:for="{{questionList[pageNo].questions}}" wx:key="index">
+      <view class="padding bg-white"><text class="text-red margin-right-sm text-xl text-bold" wx:if="{{item.required}}">*</text>{{item.showTitle}}</view>
+      <radio-group class="block" bindchange="radioChange" data-pid="{{item.id}}" data-group-name="">
+        <view class="cu-form-group" wx:for="{{item.options}}" wx:for-item="option">          
+          <radio class="checked" checked value="{{option.value}}"></radio>
+          <view class="margin-left-sm title flex-sub">{{option.lable}}</view>
+        </view>
+      </radio-group>
+    </view>
+    <view class="padding flex safe-bottom">
+      <button class="cu-btn bg-orange flex-sub margin-right" form-type="submit">提交</button>
+      <button class="cu-btn bg-orange flex-sub margin-left" form-type="submit">提交</button>
+    </view>
+  </form>
+</navBar>

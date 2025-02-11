@@ -1,0 +1,22 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='互动空间--专业人士' iconTheme="white" color="#fff">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view style="height:30rpx;"></view>
+  <view class="padding des-msg bg-white-50 margin-bottom-xl">
+    <view class="text-index2">作为终末期病人和家属的照护者，在临床需要面对很多复杂特殊的情景，如果处理不好，则容易出现负性感受。所以学会自我关怀对于每一位专业人员来说都是必要的。</view>
+  </view>
+  <view class="padding-xl"></view>
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view data-url="/pages/selfCare/index" data-source-index="47" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/zwgh.png"></image>
+      <view class="text-xl margin-left-lg">自我关怀</view>
+    </view>
+  </view>
+  <view class="btn-box padding-lg margin-lr-xl">
+    <view data-source-index="48" data-url="/pages/share/index?source=4" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50"bindtap="toUrl">
+      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/zhjyfx.png"></image>
+      <view class="text-xl margin-left-lg">照护经验分享</view>
+    </view>
+  </view>
+
+</navBar>

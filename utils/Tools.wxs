@@ -1,0 +1,156 @@
+var formatNumber = function (n) {
+  n = n.toString();
+  return n[1] ? n : "0" + n
+};
+var regYear = getRegExp("(y+)", "i");
+var dateFormat = function (timestamp, format) {
+
+  if (!format) {
+    format = "yyyy-MM-dd hh:mm:ss"
+  }
+  if (typeof timestamp === "string") {
+    var reg = getRegExp('-', 'g');// 获取正则表达式，全局替换
+    var str = timestamp.replace(reg, '/');
+    var time = getDate(str);
+    if (!time || time.toUTCString() == "Invalid Date") {
+      return '';
+    }
+    timestamp = time.getTime();
+  }
+  timestamp = parseInt(timestamp);
+
+  var realDate = getDate(timestamp);
+
+  var date = [
+    ["M+", formatNumber(realDate.getMonth() + 1)],
+    ["d+", formatNumber(realDate.getDate())],
+    ["h+", formatNumber(realDate.getHours())],
+    ["m+", formatNumber(realDate.getMinutes())],
+    ["s+", formatNumber(realDate.getSeconds())],
+    ["q+", Math.floor((realDate.getMonth() + 3) / 3)],
+    ["S+", realDate.getMilliseconds()],
+  ];
+  var reg1 = regYear.exec(format);
+  if (reg1) {
+    format = format.replace(reg1[1], (realDate.getFullYear() + "").substring(4 - reg1[1].length))
+  }
+  for (var i = 0; i < date.length; i++) {
+    var k = date[i][0];
+    var v = date[i][1];
+    var reg2 = getRegExp("(" + k + ")").exec(format);
+    if (reg2) {
+      format = format.replace(reg2[1], reg2[1].length == 1 ? v : ("00" + v).substring(("" + v).length))
+    }
+  }
+  return format
+};
+var timeAfter = function (timestamp) {
+
+  var reg = getRegExp("-", "g");
+  timestamp = timestamp.replace(reg, '/');
+
+  var publishTime = getDate(timestamp).getTime() / 1000;
+  var nowTime = getDate().getTime() / 1000;
+  var diffValue = nowTime - publishTime;
+  if (diffValue >= 0) {
+    return timeago(timestamp);
+  }
+
+  var diff_days = parseInt(Math.abs(diffValue) / 86400);
+  if (diff_days < 30) {
+    return diff_days + "天后";
+  } else if (diff_days >= 30 && diff_days < 360) {
+    return Math.round(diff_days / 30) + "个月后";
+  } else {
+    return Math.round(diff_days / 360) + "年后";
+  }
+};
+var timeago = function (timestamp) {
+
+  var reg = getRegExp("-", "g");
+  timestamp = timestamp.replace(reg, '/');
+
+  var publishTime = getDate(timestamp).getTime() / 1000,
+    date = getDate(timestamp), //获取dateStr的标准格式 console.log(date) 打印结果  Thu Sep 06 2018 18:47:00 GMT+0800 (中国标准时间)
+    // 获取date 中的 年 月 日 时 分 秒
+    Y = date.getFullYear(),
+    M = date.getMonth() + 1,
+    D = date.getDate(),
+    H = date.getHours(),
+    m = date.getMinutes(),
+    s = date.getSeconds();
+  // 对 月 日 时 分 秒 小于10时, 加0显示 例如: 09-09 09:01
+  if (M < 10) {
+    M = '0' + M;
+  }
+  if (D < 10) {
+    D = '0' + D;
+  }
+  if (H < 10) {
+    H = '0' + H;
+  }
+  if (m < 10) {
+    m = '0' + m;
+  }
+  if (s < 10) {
+    s = '0' + s;
+  }
+  var nowTime = getDate().getTime() / 1000, //获取此时此刻日期的秒数
+    diffValue = nowTime - publishTime, // 获取此时 秒数 与 要处理的日期秒数 之间的差值
+    diff_days = parseInt(diffValue / 86400);
+  if (diff_days < 30) {
+    return diff_days + "天前";
+  } else if (diff_days >= 30 && diff_days < 360) {
+    return Math.round(diff_days / 30) + "个月前";
+  } else {
+    return Math.round(diff_days / 360) + "年前";
+  }
+}
+function indexOf(arr, value) {
+
+  if (arr.indexOf(value) < 0) {
+    return false;
+  }
+  return true;
+}
+function include(examination, enName) {
+  if (examination == null || examination.length == 0) {
+    return false;
+  };
+  return examination.some(function (e) {
+    return e.enName == enName;
+  })
+}
+
+function checked(qid, val, checkList){
+  return checkList.some(function(item){
+    return item.options.some(function(ele){
+      return ele.value === val && item.qid == qid;
+    })
+  });
+}
+function values(qid,checkList){
+  var check = {};
+  for(var i=0;i<checkList.length;i++){
+    if(checkList[i].qid==qid){
+      check = checkList[i];
+      break;
+    }
+  }  
+  return check.options?check.options[0].value:'';
+}
+function replace(str,old,new_val){
+  return str.replace(old,new_val)
+}
+
+
+module.exports = {
+  dateFormat: dateFormat,
+  timeago: timeago,
+  indexOf: indexOf,
+  timeAfter: timeAfter,
+  include: include,
+  checked: checked,
+  values:values,
+  replace:replace
+};

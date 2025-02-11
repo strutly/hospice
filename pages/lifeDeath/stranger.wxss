@@ -1,0 +1,25 @@
+.cu-list.menu>.cu-item.arrow {
+  padding-right: 60rpx;
+}
+.icon-img{
+  width:80rpx;
+  height: 80rpx;
+}
+
+.item-icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+.bg-blue{
+  background-color: #7ccef3;
+}
+.font-orange{
+  color:#e99149;
+}
+.search-box {
+  background-color: #fff;
+  z-index: 100;
+  position: fixed;
+  height: -webkit-fill-available;
+  width: 100%;
+}

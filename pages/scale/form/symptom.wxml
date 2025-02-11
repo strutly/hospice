@@ -1,0 +1,27 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<wxs src="/utils/Tools.wxs" module="Tools" />
+<navBar title="{{scaleForm.title}}" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <form bindsubmit="submit">
+  <input name="id" hidden value="{{evaluation.id}}"></input>
+  <view class="margin-top-sm padding" wx:for="{{scaleForm.questionGroups}}" wx:for-index="i" wx:key="i">
+    <view class="">
+      <view class="text-lg">{{item.title}}</view>
+      <view class="text-gray margin-top-sm">{{item.des}}</view>
+      <view class="solids-bottom  padding-tb {{question.red?'red-border':''}}" wx:for="{{item.questions}}" wx:for-item="question"  wx:for-index="k" wx:key="k" id="item{{question.id}}">
+        <view class="margin-top-xs">{{1+k}}:{{question.title}}</view>
+        <radio-group class="flex margin-top justify-between" bindchange="radioChange" data-qid="{{question.id}}" data-group-name="{{question.questionGroup.title}}" data-type="{{question.type}}" data-title="{{question.title}}" data-show-title="{{question.showTitle}}" data-group-sort="{{question.questionGroup.sort}}" data-sort="{{question.sort}}" data-options="{{question.options}}"   value="" name="{{question.id}}" >
+          <view class="text-center" wx:for="{{question.options}}" wx:for-item="option" wx:key="index">
+            <radio class='blue radio' value="{{option.value}}" checked="{{Tools.checked(question.id,option.value,evaluation.checkList)}}"></radio>
+            <view class="margin-top-xs">{{option.value}}</view>
+          </view> 
+        </radio-group>
+        <view class="margin-top-sm text-{{question.color}}" wx:if="{{question.des}}">{{question.des}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="padding flex flex-direction bg-white">
+    <button class="cu-btn bg-blue lg" form-type="submit">保存</button>
+  </view>
+</form>
+</navBar>

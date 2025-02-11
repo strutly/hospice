@@ -1,0 +1,9 @@
+<view class="no-data-box" wx:if="{{noData}}">
+  <view class="no-data">
+    <view class="no-data-icon">
+      <image class="no-data-image" src="/images/no-data.png"></image>
+    </view>
+    <view class="no-data-msg">{{noDataMsg}}</view>
+    <view bindtap="home" class="no-data-btn" wx:if="{{noDataTo}}">{{noDataBtn}}</view>    
+  </view>  
+</view>

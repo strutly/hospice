@@ -1,0 +1,37 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<navBar title="患者列表" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <form bindsubmit="submit">
+    <view class="cu-bar bg-white search">
+      <view class=" search-form round">
+        <text class="cuIcon-search"></text>
+        <input name="name" type="text" placeholder="姓名/手机号"></input>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-grey round" form-type="submit">搜索</button>
+        <button class="margin-left cu-btn bg-yellow light round" bindtap="toUrl" data-url="/pages/scale/patient/form?id=0">新增</button>
+      </view>
+    </view>
+  </form>
+  <view class="cu-list menu sm-border">
+    <view bindtap="{{moveIndex!=index?'toUrl':''}}" data-url="/pages/scale/form/index?id={{item.id}}" class="cu-item {{moveIndex==index?'move-cur':''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{patients}}" wx:key="index">
+      <view class="content padding-tb-sm">
+        <view>
+          {{item.name}}
+        </view>
+        <view class="text-gray text-sm">
+          {{item.phone}}
+        </view>
+      </view>
+      <view class="action text-right">
+        <text class="lg text-{{item.gender==1?'blue':'red'}} cuIcon-{{item.gender==1?'male':'female'}}"></text>
+        <view>{{item.age}}</view>
+      </view>
+      <view class="move">
+        <view class="bg-grey" bindtap="toUrl" data-url="/pages/scale/patient/form?id={{item.id}}">编辑</view>
+        <view class="bg-red" bindtap="delete" data-id="{{item.id}}">删除</view>
+      </view>
+    </view>
+
+  </view>
+</navBar>

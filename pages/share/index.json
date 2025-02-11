@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "horse-race-lamp":"/components/horse-race-lamp/index",
+    "navBar": "/components/navBar/navBar"
+  }
+}

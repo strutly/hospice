@@ -1,0 +1,39 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<wxs src="../../utils/Tools.wxs" module="tools" />
+<!--index.wxml-->
+<navBar title='{{titles[source]}}' background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <view class="cards">
+    <block wx:for="{{datas}}" wx:for-item="item" wx:key="index">
+      <view bind:tap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="card solid-bottom">
+        <view class="card-head">
+          <image class="head-image" src="{{(item.anonymous&&item.maUser.avatarUrl)?'/images/head.jpg':item.maUser.avatarUrl}}" data-uid="{{item.miniUser.id}}"></image>
+          <view class="card-des">
+            <view class="card-nickname">{{(item.anonymous&&item.maUser.nickName)?'微信用户':item.maUser.nickName}}</view>
+            <view class="card-time">{{tools.dateFormat(item.createTime,'MM-dd hh:mm')}}</view>
+          </view>
+        </view>
+        <view class="blue" wx:if="{{types[item.source][item.type]}}">#{{types[item.source][item.type]}}</view>
+        <view>
+          <view class="card-content">{{item.msg}}</view>
+          <view class="card-images">
+            <view class="image-item {{item.imgs.length==1?'image-one':''}} {{item.imgs.length==2?'image-two':''}}" wx:for="{{item.imgs}}" wx:for-item="src" wx:if="{{index<3}}">
+              <image class="card-image {{item.imgs.length==1?'image-one':''}} {{item.imgs.length==2?'image-two':''}}" mode="aspectFill" src="{{src.cover}}"></image>
+              <view class="image-delete-box" wx:if="{{item.imgs.length>3 && index==2}}">
+                <image src="/images/more.png" class="image-delete"></image>
+                <text class="image-more">{{item.imgs.length-3}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="padding-top-sm text-right">
+            <view class="text-gray text-sm">              
+              <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.counts[1]||0}}
+              <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.counts[2]||0}}
+              <text class="cuIcon-favorfill margin-lr-xs"></text> {{item.counts[3]||0}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</navBar>

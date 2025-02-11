@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "toptips":"/components/topTips/index",
+    "tab":"/components/edition/index",
+    "horseRace":"/components/horse-race-lamp/index",
+    "navBar": "/components/navBar/navBar"
+  }
+}

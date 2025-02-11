@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "topTips":"/components/topTips/index"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationStyle":"custom",
+  "backgroundColor":"#FFB13B"
+}

@@ -1,0 +1,21 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+<navBar title="测评详细" background='#FFB13B' iconTheme="white" color="#fff" back="{{true}}">
+  <block wx:for="{{lists}}" wx:key="index">
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="action">
+        <text class="cuIcon-titles text-orange"></text>{{index}}
+      </view>
+      <view class="action"></view>
+    </view>
+    <view class="cu-list menu solids-bottom arrow">
+      <view class="cu-item" wx:for="{{item}}" wx:key="index">
+        <view class="content">{{index+1}}:{{item.title}}</view>
+        <view class="action text-{{item.color}}">{{item.options[0].value}}分</view>
+        <view class="action margin-left text-{{item.color}}">{{item.options[0].des}}</view>
+      </view>
+    </view>
+  </block>
+
+
+</navBar>

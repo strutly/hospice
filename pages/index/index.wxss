@@ -1,0 +1,25 @@
+.container{  
+  position: absolute;  
+  width: 100%;  
+  
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  /* safe-bottom定义了下边距，这里删除他 */
+  padding-bottom: 0;
+  /* 增加这行，让背景不会滚动 */
+  overflow-y: auto;
+}
+.checkbox-sm .wx-checkbox-input {
+  border-radius: 50%;
+  width: 2.142rem;
+  height: 2.142rem;  
+}
+checkbox::before {	
+  font-size: 0.8rem;
+  left:20%;	
+}
+
+
+
+

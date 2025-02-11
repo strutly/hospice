@@ -1,0 +1,3 @@
+.red-border {
+  border:4rpx solid var(--red);
+}

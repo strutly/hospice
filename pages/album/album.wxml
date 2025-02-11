@@ -1,0 +1,29 @@
+<!--pages/share/album.wxml-->
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='时光相册' iconTheme="white" color="#fff" back="true">
+  <topTips id="topTips"></topTips>
+  <form bindsubmit="formSubmit" >
+    <view class="margin flex text-lg align-center">
+      标题<input class="flex-sub margin-left"placeholder="点击此处输入标题" name="name" value="{{name}}"></input>
+    </view>
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>图片上传</view>
+    <pics pics="{{pic}}" name="pic" uploading="picStatus">
+      <!-- <textarea name="pic" value="{{pic}}"/> -->
+    </pics>
+    <view class="margin-top text-lg"><text class="cuIcon-titles text-orange"></text>音乐选择</view>
+    
+    <picker bindchange="playAudio" value="{{index}}" range="{{array}}">
+      <view class="sort-panel asc">
+        <view class="picker text-lg margin {{index==undefined&&'gray'}}">
+          {{index==undefined?"请选择音乐":array[index]}}
+        </view>
+      </view>
+    </picker>
+    <!-- <view wx:for="{{musics}}">
+      <view bindtap="playAudio" data-url="{{item.url}}">{{item.name}}</view>
+    </view> -->
+    <view class="wode push">
+      <button bindtap="send" class="" formType="submit" type="primary">确认</button>
+    </view>
+  </form>
+</navBar>

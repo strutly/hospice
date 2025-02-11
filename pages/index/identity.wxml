@@ -1,0 +1,20 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
+
+<navBar title='选择身份' iconTheme="white" color="#fff" back="true">
+  
+  <view>
+    <image class="" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/choose1.png"  style="width: 100%;margin-top: 100rpx;height:auto;" />
+    <view bind:tap="toUrl" data-url="/pages/lifeDeath/patient" class="cu-btn lines-orange margin-tb-sm padding patient radius-xl text-lg">我是患者</view>
+    <view bind:tap="toUrl" data-url="/pages/lifeDeath/family" class="cu-btn lines-orange margin-tb-sm padding family radius-xl text-lg">我是照护者</view>
+    <button data-url="/pages/professional/professional" class="cu-btn lines-orange margin-tb-sm padding professional radius-xl text-lg" bindtap="toUrl">专业人士</button>
+    
+    <view class="padding-xxl flex flex-direction stranger">
+      <view bind:tap="toUrl" data-url="/pages/lifeDeath/stranger" class="cu-btn  bg-orange margin-tb-sm padding-lg radius-xl text-lg">社会公众</view>
+      <view class="lianjie" bindtap="toUrl" data-url="/pages/feedback/add">意见反馈</view>
+
+    </view>
+  </view>
+ 
+  
+</navBar>

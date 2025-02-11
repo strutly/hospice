@@ -1,0 +1,64 @@
+@import "/style/colorUI/animation.wxss";
+@import "/style/colorUI/icon.wxss";
+@import "/style/colorUI/main.wxss";
+.safe-bottom{
+  padding-bottom: calc(50rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(50rpx + env(safe-area-inset-bottom));
+}
+/* pages/life/index.wxss */
+.video-thumb{
+  display: flex;
+  width: 100%;
+}
+.cu-item{
+  
+  flex:1;
+}
+.cu-card>.cu-item{
+  margin:10rpx;
+}
+.play{
+  position: absolute;  
+  color:#fff;  
+  font-size: 80rpx;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%,-50%,0);
+}
+.main-title{
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-size: 2rem;
+  letter-spacing: 6px;
+  /* letter-spacing单独设置会导致不居中，因为最后一个字符也有右间距，解决方法是加首缩进 */
+  text-indent: 6px;
+}
+.hide{
+  display:none;
+}
+/**添加老年版切换动画效果*/
+/* view,navigator,button,text{
+  transition: all .3s linear 0s;
+} */
+.bg-white-50 {
+  background-color: rgb(255, 255, 255,0.5);
+}
+.des-msg {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.text-index2 {
+  text-indent: 2rem;
+}
+page{
+  --main:#008B34;
+  --main2:#9F7A3A;
+}
+.bg-main{
+  background-color: var(--main);
+  color: var(--white);
+}
+.bg-main2{
+  background-color: var(--main2);
+  color: var(--white);
+}

@@ -1,0 +1,32 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='时间银行' iconTheme="white" color="#fff">
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+  <view class="beijing">
+    <view style="width: 100%;padding: 10%;height: 100%;overflow-y: auto;">
+      <block wx:for="{{listData.children}}">
+        <view class=" white bank-title"><text class="cuIcon-time"></text>{{item.title}}</view>
+        <block wx:for="{{item.children}}">
+          <view class="bgwhite5 bank-link" data-index="{{index}}" bindtap="{{item.url==''?'':'detail'}}" data-id="{{item.id}}"><text class="cuIcon-round"></text>{{item.title}}<text class="cuIcon-right"></text></view>
+        </block>
+      </block>
+
+      <view class=" white bank-title"><text class="cuIcon-time"></text>建户意愿调查</view>
+
+      <view class="bgwhite5 bank-link" bindtap="toUrl" data-url="/pages/bank/form"><text clas="cuIcon-round"></text>建户意愿调查<text class="cuIcon-right"></text></view>
+
+
+
+
+
+
+      <!-- <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"概述介绍<text class="cuIcon-right"></text></view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"服务内容<text class="cuIcon-right"></text></view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"实施流程<text class="cuIcon-right"></text></view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"相关问答(上)<text class="cuIcon-right"></text></view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>"时间银行"相关问答(下)<text class="cuIcon-right"></text></view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>国外"时间银行"案例<text class="cuIcon-right"></text></view>
+      <view class="white bank-title"><text class="cuIcon-time"></text>建户意愿调查</view>
+      <view class="bgwhite5 bank-link"><text class="cuIcon-round"></text>建户意愿调查<text class="cuIcon-right"></text></view> -->
+    </view>
+  </view>
+</navBar>

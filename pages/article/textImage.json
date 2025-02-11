@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "videoPlay":"/components/video/video",
+    "navBar": "/components/navBar/navBar",
+    "z-tree":"/components/tree/index"
+  }
+}

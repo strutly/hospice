@@ -1,0 +1,47 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<topTips show="{{show}}" msg="{{msg}}" type="error"></topTips>
+<navBar title='寄语' iconTheme="white" color="#fff" back="true">
+  <form bindsubmit="submit">
+    <input value="{{pics.length}}" name="pics" hidden></input>
+    <view class="cu-form-group margin-top">
+      <view class="title">发送邮箱</view>
+      <input placeholder="请输入发送邮箱" name="email"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">发送日期</view>
+      <picker mode="date" name="sendDay" value="{{sendDay||minDate}}" start="{{minDate}}" bindchange="dateChange">
+        <view class="picker">
+          {{sendDay||'请选择发送日期'}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group align-start">
+      <view class="title">寄语内容</view>
+      <textarea maxlength="-1" placeholder="请输入寄语内容" name="content"></textarea>
+    </view>
+    <view class="cu-bar bg-white margin-top solid-top">
+      <view class="action">
+        寄语图片
+      </view>
+      <view class="action">
+        {{pics.length}}/9
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-3 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{pics}}" wx:key="index">
+          <image src="{{item}}" mode="aspectFill" bindtap="viewImage" data-url="{{item}}"></image>
+          <view class="cu-tag bg-red" bindtap="delImg" data-index="{{index}}">
+            <text class='cuIcon-close'></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="chooseImage" wx:if="{{pics.length<9}}">
+          <text class='cuIcon-cameraadd'></text>
+        </view>
+      </view>
+    </view>
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-orange lg" form-type="submit">提交</button>
+    </view>
+  </form>
+</navBar>

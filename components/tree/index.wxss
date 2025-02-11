@@ -1,0 +1,40 @@
+
+.left40{
+	margin-left: 40rpx;
+}
+.tree-item{
+  margin-top: 30rpx;
+}
+.tree-title{
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  padding: 20rpx 0;
+  background-color: #E9CFA2;
+  padding:20rpx;
+  border-radius: 10rpx;
+}
+.tree-title-child{
+  font-weight: 300;
+  font-size: 1.2rem;
+  position: relative;
+  background-color: #FFD285;
+  margin-top: 20rpx;  
+}
+.item-icon-title{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #e99149;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
+.item-index{
+  font-style: italic;
+  margin-right: 10rpx;
+}
+.text-right{
+  text-align: right;
+}
+

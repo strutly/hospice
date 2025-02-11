@@ -1,0 +1,9 @@
+<!--components/left-touch/index.wxml-->
+<view class="top">
+  <view class="main" style="margin-left: -{{left}}rpx;transform: translateX({{move?0:left}}rpx)" bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <slot name="panel"></slot>
+  </view>
+  <view class="media-delete" style="width:{{left}}rpx;transform: translateX({{move?0:left}}rpx)">
+    <slot name="menu"></slot>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='我的信箱' iconTheme="white" color="#fff">
+  <view class="padding bg-white">
+    <image src="http://gridpic.tsing-tec.com/hospice%2Fmy-mail.png" mode="widthFix" style="width: 100%;"></image>
+  </view>
+  <view class="flex text-center bg-white">
+    <view class="margin-lr-xl padding-lr-xl flex-sub" bindtap="changeTab" data-index="0">
+      <view class="tab padding-tb-sm {{index==0?'tab-cur':''}}">已发出</view>
+    </view>
+    <view class="margin-lr-xl  padding-lr-xl  flex-sub" bindtap="changeTab" data-index="1" data-reply="已回复">
+      <view class="tab padding-tb-sm {{index==1?'tab-cur':''}}">已回复</view>
+    </view>
+  </view>
+  <view class="content">
+    <view  bind:tap="toUrl" data-url="/pages/letter/detail?id={{item.id}}" class="margin bg-white padding-sm" wx:for="{{letters[index]}}" wx:key="index">
+      <view class="solids-bottom padding-bottom-sm">
+        <text class="cuIcon-title text-orange"></text>{{item.title||'未命名信件'+(index+1)}}
+      </view>
+      <view class="margin-top-xs text-cut">{{item.msg||'[图片信件]'}}</view>
+      <view class="margin-top-sm text-sm text-right">{{item.createTime}}</view>
+    </view>
+  </view>
+</navBar>

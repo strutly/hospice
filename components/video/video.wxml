@@ -1,0 +1,17 @@
+<video
+  wx:if="{{playVideo}}"
+  src="{{url}}"
+  id="myvideo"
+  style="z-index:{{zindex}};{{vstyle}}"
+  autoplay="{{playVideo}}"
+  direction="{{direction}}"
+  show-casting-button="true"
+  show-fullscreen-btn="true"
+  show-screen-lock-button="true"
+  enable-auto-rotation="true"
+  enable-progress-gesture="{{false}}"
+  auto-pause-if-navigate="true"
+  auto-pause-if-open-native="true"
+  bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' bindfullscreenchange="screenChange"
+  binderror="videoErrorCallback">
+</video>

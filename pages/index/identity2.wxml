@@ -1,0 +1,11 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<toptips msg="{{msg}}" type="{{type}}" show="{{show}}"></toptips>
+
+<navBar title='选择身份' iconTheme="white" color="#fff" back="true">
+  <view class="flex flex-direction margin-xl padding-xl">
+    <view wx:for="{{titleArr}}" bindtap="toUrl" data-title="{{item.title}}" data-source-index="{{index}}" data-url="{{item.url}}" class="bg-main2 flex align-center radius-xl margin-top-xl padding-xl text-xl">
+      <image src="http://gridpic.tsing-tec.com/{{item.icon}}"></image>
+      <view class="margin-left-xl">{{item.title}}</view>
+    </view>  
+  </view>
+</navBar>

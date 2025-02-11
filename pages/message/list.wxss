@@ -1,0 +1,11 @@
+page{
+  background-color: #f5f5f5;
+}
+.tab{
+  display: inline-block;
+}
+.tab-cur{
+  color: var(--orange);
+  border-bottom:4px solid;  
+  line-height: 1.4;
+}
