@@ -26,7 +26,7 @@ Page(Object.assign({},page,{
     console.log(e)
     let index = e.currentTarget.dataset.index;
     let open = that.data.open;
-    open[index] = true;
+    open[index] = !open[index];
     that.setData({
       open:open
     })
