@@ -5,7 +5,7 @@
       <view class="action text-xl text-bold">
         <text class="cuIcon-titles text-orange"></text> {{item.title}}
       </view>
-      <view class="action text-grey" bindtap="more" data-index="{{index}}" wx:if="{{item.children.length>2}}">
+      <view class="action text-grey" bindtap="more" data-index="{{index}}">
 				查看更多>
 			</view>
     </view>
@@ -23,8 +23,8 @@
       </view>
     </block>
     <block wx:else>
-      <view class="flex padding-bottom-xl">
-        <view bind:tap="toUrl" class="cu-card case flex flex-wrap margin-sm" wx:for="{{item.children}}" wx:for-item="article" wx:for-index="i" data-url="/pages/article/detail?id={{article.id}}" wx:if="{{i==(item.children.length-1)}}">
+      <view class="padding-bottom-xl">
+        <view bind:tap="toUrl" class="cu-card case flex flex-wrap margin-sm" wx:for="{{item.children}}" wx:for-item="article" wx:if="{{i>(item.children.length-2) || open[index]}}" wx:for-index="i" data-url="/pages/article/detail?id={{article.id}}">
           <view class="cu-item shadow">
             <view class="image video-thumb">
               <image src="{{article.pic}}" style="width: 100%;height: 320rpx;" mode="scaleToFill"></image>

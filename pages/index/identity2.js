@@ -11,7 +11,7 @@ Page(Object.assign({},page,{
       icon:"id-1.png",
       url:"/pages/lifeDeath/patient"
     },{
-      title:"我是家属",
+      title:"我是照护者",
       icon:"id-2.png",
       url:"/pages/lifeDeath/family"
     },{
@@ -19,7 +19,7 @@ Page(Object.assign({},page,{
       icon:"id-3.png",
       url:"/pages/professional/professional"
     },{
-      title:"我是路人",
+      title:"社会公众",
       icon:"id-4.png",
       url:"/pages/lifeDeath/stranger"
     }]

@@ -1,5 +1,5 @@
 <view class="lxy-nav-bar {{extClass}}" style="background: {{backgroundColorTop}};height: {{imgHeight}}px;">
-  <image class="backgroundimg" src="http://gridpic.tsing-tec.com/hospice/head-bg.png" style="width:100%;height:{{imgHeight}}px;z-index:2;" />
+  <image class="backgroundimg" src="https://gridpic.tsing-tec.com/hospice/head-bg.png" style="width:100%;height:{{imgHeight}}px;z-index:2;" />
 
   <view class="lxy-nav-bar__inner {{ios ? 'ios' : 'android'}}" style="{{navigationbarinnerStyle}}{{displayStyle}}">
 

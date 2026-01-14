@@ -4,19 +4,19 @@
   <view class="margin padding"></view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view hover-class="none" data-url="/pages/repair/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50" bindtap="toUrl">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/xiangce.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/xiangce.png"></image>
       <view class="text-xl margin-left-lg">照片修复</view>
     </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view hover-class="none" data-url="/pages/album/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50"bindtap="toUrl">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/shiping.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/shiping.png"></image>
       <view class="text-xl margin-left-lg">时光相册</view>
     </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view hover-class="none" data-url="/pages/share/qiyanyeshan" class="btn flex padding-sm margin-lr-sm align-center round bg-white-50"bindtap="toUrl">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/xiaoxi.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/xiaoxi.png"></image>
       <view class="text-xl margin-left-lg">其言也善</view>
     </view>
   </view>

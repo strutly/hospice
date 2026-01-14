@@ -95,7 +95,7 @@
     <view bindtap="toUrl" data-url="/pages/life/detail?id={{item.id}}" class="padding-lr-sm padding-tb" wx:for="{{datas}}" wx:key="index">
       <view class="image video-thumb">
         <image class="round" src="{{item.imgs[0].cover}}" style="height:320rpx;" wx:if="{{item.imgs.length>0}}"></image>
-        <image class="round" src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
+        <image class="round" src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" style="height:320rpx;" wx:else></image>
       </view>
       <view class="cu-item">
         <view class="content padding-sm">

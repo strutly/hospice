@@ -19,9 +19,9 @@
         <view hover-class="none"   class="media-content" data-index="{{item.id}}" slot="panel">
           <!-- <view class="media-hd">
             <image mode="aspectFill" src="{{item.imgs[0].url}}" wx:if="{{item.imgs.length>0}}"></image>
-            <image src="http://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" mode="aspectFill" wx:else></image>
+            <image src="https://gridpic.tsing-tec.com/hospice%2Fshare-logo-{{item.source}}.png" mode="aspectFill" wx:else></image>
           </view> -->
-          <image class="gouxuan" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/{{item.comeTrue?'gouxuan':'bugouxuan'}}.png"data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"/>
+          <image class="gouxuan" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/{{item.comeTrue?'gouxuan':'bugouxuan'}}.png"data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"/>
           <!-- <view class="switch {{item.comeTrue?'switch-active':''}}" data-key="{{key}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="comeTrue"></view> -->
           <view class="media-bd">
             <view class="media-title">{{item.msg}}</view>

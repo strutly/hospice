@@ -1,10 +1,10 @@
 <navBar title='选择版本' iconTheme="white" color="#fff" back="true">
   <view class="flex align-center flex-direction">
-    <image mode="aspectFit" src="http://gridpic.tsing-tec.com/hospice/tips.png"></image>
+    <image mode="aspectFit" src="https://gridpic.tsing-tec.com/hospice/tips.png"></image>
   </view>
 
   <view class="flex padding-xl">
-    <image mode="aspectFit" src="http://gridpic.tsing-tec.com/hospice/common.png?v=2" bindtap="mode" data-mode="0"></image>
-    <image mode="aspectFit" src="http://gridpic.tsing-tec.com/hospice/elder.png?v=2" bindtap="mode" data-mode="1"></image>
+    <image mode="aspectFit" src="https://gridpic.tsing-tec.com/hospice/common.png?v=2" bindtap="mode" data-mode="0"></image>
+    <image mode="aspectFit" src="https://gridpic.tsing-tec.com/hospice/elder.png?v=2" bindtap="mode" data-mode="1"></image>
   </view>
 </navBar>

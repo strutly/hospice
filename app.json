@@ -59,7 +59,8 @@
     "pages/selfCare/form",
     "pages/selfCare/statistics",
     "pages/feedback/add",
-    "pages/index/identity2"
+    "pages/index/identity2",
+    "pages/lifeDeath/cultural"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,7 +1,7 @@
 .container{
   position: absolute;  
   width: 100%;  
-  background-image: url("http://gridpic.tsing-tec.com/hospice/qiyanyeshan.jpg");  
+  background-image: url("https://gridpic.tsing-tec.com/hospice/qiyanyeshan.jpg");  
   background-repeat:no-repeat;
   box-sizing: border-box;
   background-size: 100% 100%;

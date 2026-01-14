@@ -1,5 +1,5 @@
 <page-meta root-font-size="{{systemFontSize}}"></page-meta>
-<navBar title='我是路人' iconTheme="white" color="#fff" back="true">
+<navBar title='社会公众' iconTheme="white" color="#fff" back="true">
   <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
   <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
   <view class="search-box" wx:if="{{search}}">
@@ -40,10 +40,10 @@
 
   <view class="flex text-center align-center text-lg margin">
     <view bind:tap="toUrl" data-url="/pages/article/text?id=50" data-source-index="49" class="bg-blue flex-sub padding radius-xl align-center flex margin-rignt"><text class="flex-sub">生前预嘱</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/textImage" data-source-index="50" class="bg-blue flex-sub padding radius-xl align-center flex margin-left"><text class="flex-sub">安宁疗护</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </view>
   </view>
   <view class="cu-list menu">
@@ -56,18 +56,18 @@
 
   <view class="flex text-center align-center text-lg">
     <view bind:tap="toUrl" data-url="/pages/article/living?id=89" data-source-index="51" class="margin-sm flex-sub">
-      <image style="width: 100%;" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/stranger-01.png"></image>
+      <image style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/stranger-01.png"></image>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/living?id=90" data-source-index="52" class="margin-sm flex-sub">
-      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/stranger-02.png"></image>
+      <image style="width: 100%;"  mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/stranger-02.png"></image>
     </view>
   </view>
   <view class="flex text-center align-center text-lg">
     <view bind:tap="toUrl" data-url="/pages/article/living?id=92" data-source-index="53" class="margin-lr-sm flex-sub">
-      <image style="width: 100%;" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/stranger-03.png"></image>
+      <image style="width: 100%;" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/stranger-03.png"></image>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/living?id=118" data-source-index="54" class="margin-lr-sm flex-sub">
-      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/stranger-04.png"></image>
+      <image style="width: 100%;"  mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/stranger-04.png"></image>
     </view>
   </view>
   
@@ -81,16 +81,16 @@
   </view>
   <view class="flex text-center align-center text-lg margin-lr-xs">
     <view bind:tap="toUrl" data-url="/pages/wish/wish" data-source-index="55" class="margin-lr-xs flex-sub">
-      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/20220627/46c85c40-424e-4cc3-9004-fad047db4487.png"></image>
+      <image style="width: 100%;"  mode="widthFix" src="https://gridpic.tsing-tec.com/20220627/46c85c40-424e-4cc3-9004-fad047db4487.png"></image>
       <view>许愿池</view>
     </view>
     <view bind:tap="toUrl" data-url="/pages/story/index" data-source-index="56" class="margin-lr-xs flex-sub">
-      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png"></image>
+      <image style="width: 100%;"  mode="widthFix" src="https://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png"></image>
       <view>生命故事</view>
     </view>
-    <view bind:tap="toUrl" data-url="/pages/bank/bank" data-source-index="57" class="margin-lr-xs flex-sub">
-      <image style="width: 100%;"  mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/sjyh.png"></image>
-      <view>时间银行</view>
+    <view bind:tap="toUrl" data-url="/pages/lifeDeath/cultural" data-source-index="57" class="margin-lr-xs flex-sub">
+      <image style="width: 100%;"  mode="widthFix" src="https://gridpic.tsing-tec.com/1d9325b6-ec31-45c4-ae44-2c886159a529.png"></image>
+      <view>文创专区</view>
     </view>
   </view>
 

@@ -10,19 +10,19 @@
   <view class="padding-xl"></view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view bind:tap="toUrl" data-url="/pages/help/index" data-source-index="31" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-4.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/share-logo-4.png"></image>
       <view class="text-xl margin-left-lg">照护成就</view>
     </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view bind:tap="toUrl" data-url="/pages/share/treeHole?source=0" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-5.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/share-logo-5.png"></image>
       <view class="text-xl margin-left-lg">树洞倾诉</view>
     </view>
   </view>
   <view class="btn-box padding-lg margin-lr-xl">
     <view bind:tap="toUrl" data-url="/pages/letter/index" class="btn flex padding-sm margin-lr-sm align-center round bg-white">
-      <image class="margin-left-sm icon-img" src="http://gridpic.tsing-tec.com/hospice/share-logo-6.png"></image>
+      <image class="margin-left-sm icon-img" src="https://gridpic.tsing-tec.com/hospice/share-logo-6.png"></image>
       <view class="text-xl margin-left-lg">走过哀伤</view>
     </view>
   </view>

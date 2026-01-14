@@ -43,12 +43,25 @@
 
   <view class="flex text-center align-center text-lg margin">
     <view bind:tap="toUrl" data-url="/pages/article/text?id=50" data-source-index="4" class="bg-blue flex-sub padding radius-xl align-center flex margin-rignt"><text class="flex-sub">生前预嘱</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/textImage" data-source-index="5" class="bg-blue flex-sub padding radius-xl align-center flex margin-left"><text class="flex-sub">安宁疗护</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </view>
   </view>
+  <view class="cu-list menu margin-top">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold text-xl">症状管理</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex text-center align-center text-lg text-white">
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=221" data-source-index="58" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">常见症状</view>
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=222" data-source-index="59" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">常见用药</view>
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=223" data-source-index="60" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">舒适护理</view>
+  </view>
+  <!--
   <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
@@ -56,37 +69,52 @@
       </view>
     </view>
   </view>
+
+
   <view class="flex text-center align-center text-lg text-white">
     <view bind:tap="toUrl" data-url="/pages/article/text?id=68" data-source-index="6" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">科学认识疼痛</view>
     <view bind:tap="toUrl" data-url="/pages/article/text?id=71" data-source-index="7" class="flex-sub margin-lr padding-sm radius-xl" style="background-color: #f9af64;">缓解疼痛方法</view>
   </view>
+
+  -->
   <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="text-bold  text-xl">告别准备</text>
+        <text class="text-bold  text-xl">人生安排</text>
       </view>
     </view>
   </view>
 
   <view class="flex justify-center text-center text-lg">
     <view bind:tap="toUrl" data-url="/pages/article/text?id=75" data-source-index="8" class="flex-sub">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-3.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-3.png"></image>
       <view>重要嘱托</view>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/text?id=80" data-source-index="9" class="flex-sub">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
-      <view>遗体器官捐献</view>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-4.png"></image>
+      <view>生命礼物</view>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/text?id=88" data-source-index="10" class="flex-sub">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
-      <view>遗愿清单</view>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-5.png"></image>
+      <view>心愿清单</view>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/text?id=183&title=四道人生" data-source-index="11" class="flex-sub">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-6.png"></image>
       <view>四道人生</view>
     </view>
   </view>
-
+  <view class="cu-list menu margin-top">
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-bold  text-xl">心理支持</text>
+      </view>
+    </view>
+  </view>
+  <view class="flex text-center align-center text-lg text-white">
+    <view bind:tap="toUrl" data-url="/pages/article/detail?id=214" data-source-index="61" class="flex-sub margin-left padding-xs padding-tb-sm radius-xl" style="background-color: #8d9ef0;">坏消息应对</view>
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=215" data-source-index="61" class="flex-sub margin-lr-sm padding-xs padding-tb-sm radius-xl"  style="background-color: #8d9ef0;">心理知识</view>
+    <view bind:tap="toUrl" data-url="/pages/article/text?id=216" data-source-index="63" class="flex-sub padding-xs margin-right padding-tb-sm radius-xl"  style="background-color: #8d9ef0;">冥想与放松</view>
+  </view>
   <view class="cu-list menu margin-top">
     <view class="cu-item">
       <view class="content">
@@ -95,13 +123,13 @@
     </view>
   </view>
   <view bind:tap="toUrl" data-url="/pages/interaction/patient" data-source-index="12" class="margin-lr">
-    <image src="http://gridpic.tsing-tec.com/hospice%2Finteract.png" mode="widthFix" style="width: 100%;"></image>
+    <image src="https://gridpic.tsing-tec.com/hospice%2Finteract.png" mode="widthFix" style="width: 100%;"></image>
   </view>
 
   <!--
   
   <view bind:tap="toUrl" data-url="/pages/share/index?source=1" class="bg-red light flex align-center margin-lr radius-xl text-lg padding-tb-sm">
-    <image class="margin" style="width:60rpx;height:60rpx" src="http://gridpic.tsing-tec.com/hospice/patient-7.png"></image>
+    <image class="margin" style="width:60rpx;height:60rpx" src="https://gridpic.tsing-tec.com/hospice/patient-7.png"></image>
     <view class="flex-sub text-black share">品质生活分享</view>
   </view>
 
@@ -117,7 +145,7 @@
     <view bind:tap="toUrl" data-url="/pages/share/together" class="flex-sub padding margin-right radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">一生相伴</view>
-        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-8.png"></image>
+        <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-8.png"></image>
       </view>
       <view class="text-grey text-sm">
         收集点点滴滴,满满的回忆及寄托,感谢此生,有你相伴.
@@ -128,7 +156,7 @@
     <view bind:tap="toUrl" data-url="/pages/share/forever" class="flex-sub padding margin-left radius-xl" style="background-color: #dbe3f8;">
       <view class="flex align-end">
         <view class="flex-sub text-black text-xl">我心永在</view>
-        <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/patient-9.png"></image>
+        <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/patient-9.png"></image>
       </view>
       <view class="text-grey text-sm">
         生活一点一滴消逝,不变的是我心永在.

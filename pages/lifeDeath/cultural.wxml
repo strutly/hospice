@@ -1,0 +1,17 @@
+<page-meta root-font-size="{{systemFontSize}}"></page-meta>
+<navBar title='文创专区' iconTheme="white" color="#fff" back="true">
+  <!-- <tab systemFontSize="{{systemFontSize}}"></tab> -->
+  <topTips show="{{show}}" msg="{{msg}}" type="{{type}}"></topTips>
+
+	<swiper class="screen-swiper square-dot margin" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" wx:if="{{swiperList.length>0}}">
+    <swiper-item class="radius-lg" wx:for="{{swiperList}}" wx:key="index">
+      <image src="{{item.pic}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+	<view class="grid margin-top text-center col-2">
+		<view wx:for="{{articles}}" class="padding-sm">
+			<image src="{{item.pic}}?imageMogr2" mode="widthFix" class="radius-lg"></image>
+			<view class="text-sm text-left text-cut">{{item.title}}</view>
+		</view>
+	</view>
+	</navBar>

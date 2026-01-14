@@ -11,20 +11,20 @@
     </block>
     <view bind:tap="toUrl" data-url="/pages/wish/my?type={{formData.type}}" class="mywish">{{titleArr[formData.type]}}
   </view>
-    <image class="pingzi" mode="widthFix" bindtap="showWish" src="http://gridpic.tsing-tec.com/hospice/kpz.png"></image>
+    <image class="pingzi" mode="widthFix" bindtap="showWish" src="https://gridpic.tsing-tec.com/hospice/kpz.png"></image>
     <view class="wave-content ">
       <view class="wave wave1 "></view>
       <view class="wave wave2 "></view>
       <view class="wave wave3 "></view>
       <view class="wave wave4"></view>
     </view>
-    <image class="ax {{(isWish||wishwin)&&'hide'}}" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/ax.gif?1"></image>
-    <image class="jz {{!isWish&&'hide'}} {{pingzismall}}" mode="widthFix" src="http://gridpic.tsing-tec.com/hospice/jz.png"></image>
+    <image class="ax {{(isWish||wishwin)&&'hide'}}" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/ax.gif?1"></image>
+    <image class="jz {{!isWish&&'hide'}} {{pingzismall}}" mode="widthFix" src="https://gridpic.tsing-tec.com/hospice/jz.png"></image>
     <view class="wish {{(isWish||wishwin)&&'hide'}}">许愿</view>
   </view>
   <view class="wishWin {{wishwin}}">
     <textarea style="padding: 3rem 3rem 1rem;width: 100%;"  bindinput="bindTextAreaBlur"placeholder="写下{{titleArr[formData.type]}}..."  value="{{formData.msg}}"></textarea>
-    <image src="http://gridpic.tsing-tec.com/hospice/wbk.png" mode="widthFix" style="width:100%;position: absolute;top:0%;z-index: -1;"></image>
+    <image src="https://gridpic.tsing-tec.com/hospice/wbk.png" mode="widthFix" style="width:100%;position: absolute;top:0%;z-index: -1;"></image>
     <button style="width:4.6rem;margin-top: 1rem;line-height:2rem;" bindtap="addWish">确认</button>
   </view>
  

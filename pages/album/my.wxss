@@ -1,7 +1,7 @@
 
 .container{  
   width: 100%;
-  /* background-image: url("http://gridpic.tsing-tec.com/hospice/wdywbj.jpg"); */
+  /* background-image: url("https://gridpic.tsing-tec.com/hospice/wdywbj.jpg"); */
   background-size: 100%;
   background-repeat:no-repeat;
   padding-bottom: 0;

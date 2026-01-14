@@ -19,7 +19,7 @@ Page(Object.assign({},page,{
     pageNo: [0, 0,0],
     endline:[false,false,false],
     titleArr:["我的愿望","遗愿清单"],
-    imgArr:['http://gridpic.tsing-tec.com/hospice/wdxy.png','http://gridpic.tsing-tec.com/hospice/yiyuanqingdan.png']
+    imgArr:['https://gridpic.tsing-tec.com/hospice/wdxy.png','https://gridpic.tsing-tec.com/hospice/yiyuanqingdan.png']
   },
   async onLoad(options) {
     that = this;

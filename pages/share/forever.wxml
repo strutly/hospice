@@ -9,25 +9,25 @@
   <view class="grid col-2 padding">
     <view bind:tap="toUrl" data-url="/pages/message/index"  class="text-center padding-sm">
       <view style="background-color: #FE6756;"  class="padding-xl">
-        <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-1.png"></image>
+        <image style="width: 3rem;height: 3rem;" src="https://gridpic.tsing-tec.com/hospice/forever-1.png"></image>
       </view>
       <view class="margin-top">寄语</view>
     </view>
     <view bind:tap="toUrl" class="text-center padding-sm">
       <view  style="background-color: #4DA5FE;" class="padding-xl">
-        <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-2.png"></image>
+        <image style="width: 3rem;height: 3rem;" src="https://gridpic.tsing-tec.com/hospice/forever-2.png"></image>
       </view>
       <view class="margin-top">点歌</view>
     </view>
     <view bind:tap="toUrl" class="text-center padding-sm">
       <view  style="background-color: #47BD9B;" class="padding-xl">
-        <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-3.png"></image>
+        <image style="width: 3rem;height: 3rem;" src="https://gridpic.tsing-tec.com/hospice/forever-3.png"></image>
       </view>
       <view class="margin-top">送花</view>
     </view>
     <view bind:tap="toUrl" class="text-center padding-sm">
       <view style="background-color: #CA93CA;" class="padding-xl">
-        <image style="width: 3rem;height: 3rem;" src="http://gridpic.tsing-tec.com/hospice/forever-4.png"></image>
+        <image style="width: 3rem;height: 3rem;" src="https://gridpic.tsing-tec.com/hospice/forever-4.png"></image>
       </view>
       <view class="margin-top">订蛋糕</view>
     </view>

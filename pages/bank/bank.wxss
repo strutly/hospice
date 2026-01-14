@@ -1,6 +1,6 @@
 /* pages/bank/bank.wxss */
 .beijing{
-  background:url(http://gridpic.tsing-tec.com/hospice/shalou.png);
+  background:url(https://gridpic.tsing-tec.com/hospice/shalou.png);
   width: 100vw;
   height: calc(100vh - 131.25px);
   position: relative;

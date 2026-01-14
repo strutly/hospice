@@ -37,7 +37,7 @@ module.exports = {
         // })
         return {//靠默认值就够了
           // title: '',
-          // imageUrl:'http://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png',
+          // imageUrl:'https://gridpic.tsing-tec.com/20220627/2680cec2-1a7b-4fc5-9201-32836242aa99.png',
           path: getCurrentPageUrlWithArgs()//默认的会丢失参数，故这个必传
           // path:"/pages/index/index?urls="+JSON.stringify(data)
         }

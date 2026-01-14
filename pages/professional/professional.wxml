@@ -41,10 +41,10 @@
 
   <view class="flex text-center align-center text-lg margin">
     <view bind:tap="toUrl" data-url="/pages/article/text?id=50" data-source-index="34" class="bg-blue flex-sub padding radius-xl align-center flex margin-rignt"><text class="flex-sub">生前预嘱</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-1.png"></image>
     </view>
     <view bind:tap="toUrl" data-url="/pages/article/textImage" data-source-index="35" class="bg-blue flex-sub padding radius-xl align-center flex margin-left"><text class="flex-sub">安宁疗护</text>
-      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="http://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
+      <image class="fr" style="width:50rpx;height:50rpx; margin-right:20rpx" src="https://gridpic.tsing-tec.com/hospice/patient-2.png"></image>
     </view>
   </view>
   <view class="cu-list menu">
@@ -56,19 +56,19 @@
   </view>
   <view class="flex justify-center text-center text-lg margin-lr">
     <view data-url="/pages/scale/patient/list" data-source-index="36" class="flex-sub" bindtap="toUrl">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/zzpg.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/zzpg.png"></image>
       <view>症状评估</view>
     </view>
     <view class="flex-sub" bindtap="toUrl" data-source-index="37" data-url="/pages/article/text?id=135">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/zzcl.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/zzcl.png"></image>
       <view>症状处理</view>
     </view>
     <view class="flex-sub" bindtap="toUrl" data-source-index="38" data-url="/pages/article/detail?id=139">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/sshl.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/sshl.png"></image>
       <view>舒适护理</view>
     </view>
     <view class="flex-sub" bindtap="toUrl" data-source-index="39" data-url="/pages/article/detail?id=140">
-      <image class="icon-img" src="http://gridpic.tsing-tec.com/hospice/fxzh.png"></image>
+      <image class="icon-img" src="https://gridpic.tsing-tec.com/hospice/fxzh.png"></image>
       <view>芳香照护</view>
     </view>
   </view>
@@ -114,7 +114,7 @@
   </view>
   <view bind:tap="toUrl" data-url="/pages/article/detail?id=148" data-source-index="44" class="margin-lr tupianbiao">
     <view class="text-lg">精神需要与照护</view>
-    <image src="http://gridpic.tsing-tec.com/hospice/jsxyyzh.png?1" mode="widthFix" style="width: 100%;"></image>
+    <image src="https://gridpic.tsing-tec.com/hospice/jsxyyzh.png?1" mode="widthFix" style="width: 100%;"></image>
   </view>
 
 
@@ -127,7 +127,7 @@
   </view>
   <view class="margin-lr tupianbiao "bindtap="toUrl"  data-source-index="45" data-url="/pages/article/detail?id=150">
     <view class="text-lg">安宁疗护家庭会议</view>
-    <image src="http://gridpic.tsing-tec.com/hospice/anlhjthy.png?1" mode="widthFix" style="width: 100%;"></image>
+    <image src="https://gridpic.tsing-tec.com/hospice/anlhjthy.png?1" mode="widthFix" style="width: 100%;"></image>
   </view>
 
 
@@ -139,7 +139,7 @@
     </view>
   </view>
   <view bind:tap="toUrl" data-url="/pages/professional/hdkj" data-source-index="46" class="margin-lr ">
-    <image src="http://gridpic.tsing-tec.com/hospice/zyryhdzq.png" mode="widthFix" style="width: 100%;"></image>
+    <image src="https://gridpic.tsing-tec.com/hospice/zyryhdzq.png" mode="widthFix" style="width: 100%;"></image>
   </view>
 
 
